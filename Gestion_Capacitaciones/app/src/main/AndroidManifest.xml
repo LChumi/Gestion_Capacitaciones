@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Gestion_Capacitaciones"
         tools:targetApi="31">
         <activity
-            android:name=".activities.VistaCursoEstudianteActivity"
+            android:name=".activities.VistaCursoDocenteActivity"
             android:exported="false" />
         <activity
             android:name=".activities.ListaCursoActivity"
