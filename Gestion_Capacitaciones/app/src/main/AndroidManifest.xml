@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.ista.gestion_capacitaciones">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -13,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gestion_Capacitaciones"
         tools:targetApi="31">
+        <activity
+            android:name=".view.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.Gestion_Capacitaciones" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
