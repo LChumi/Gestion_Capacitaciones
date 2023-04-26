@@ -13,4 +13,5 @@ public class VistaCursoDocenteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vista_curso_docente);
     }
+
 }
