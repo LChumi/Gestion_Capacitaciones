@@ -13,33 +13,31 @@
         android:theme="@style/Theme.Gestion_Capacitaciones"
         tools:targetApi="31">
         <activity
-            android:name=".activities.AsistenciasActivity"
+            android:name=".UI.SplashActivity"/>
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        <activity
+            android:name=".UI.AsistenciasActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.VistaCursoDocenteActivity"
+            android:name=".UI.VistaCursoDocenteActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.ListaCursoActivity"
+            android:name=".UI.ListaCursoActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.RegisterActivity"
+            android:name=".UI.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.LoginActivity"
+            android:name=".UI.LoginActivity"
             android:exported="false"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.Gestion_Capacitaciones" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
