@@ -26,14 +26,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Gestion_Capacitaciones" >
-        <activity android:name="com.ista.gestion_capacitaciones.UI.SplashActivity" />
-
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-
+        <activity
+            android:name="com.ista.gestion_capacitaciones.UI.SplashActivity"
+            android:exported="false" />
         <activity
             android:name="com.ista.gestion_capacitaciones.UI.AsistenciasActivity"
             android:exported="false" />
@@ -52,6 +47,11 @@
         <activity
             android:name="com.ista.gestion_capacitaciones.MainActivity"
             android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <provider

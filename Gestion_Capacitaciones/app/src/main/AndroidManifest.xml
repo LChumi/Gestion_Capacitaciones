@@ -13,11 +13,8 @@
         android:theme="@style/Theme.Gestion_Capacitaciones"
         tools:targetApi="31">
         <activity
-            android:name=".UI.SplashActivity"/>
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            android:name=".UI.SplashActivity"
+            android:exported="false"/>
         <activity
             android:name=".UI.AsistenciasActivity"
             android:exported="false" />
@@ -32,12 +29,14 @@
             android:exported="false" />
         <activity
             android:name=".UI.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login"
-            android:theme="@style/Theme.Gestion_Capacitaciones" />
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

@@ -22,7 +22,7 @@
 15-->[androidx.core:core:1.9.0] C:\Users\kevin\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 16
 17    <application
-17-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:5:5-40:19
+17-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:5:5-41:19
 18        android:allowBackup="true"
 18-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -43,57 +43,58 @@
 27        android:testOnly="true"
 28        android:theme="@style/Theme.Gestion_Capacitaciones" >
 28-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:13:9-60
-29        <activity android:name="com.ista.gestion_capacitaciones.UI.SplashActivity" />
-29-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:15:9-16:48
-29-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:16:13-46
-30
-31        <intent-filter>
-31-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:17:9-20:25
-32            <action android:name="android.intent.action.MAIN" />
-32-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:18:13-65
-32-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:18:21-62
-33
-34            <category android:name="android.intent.category.LAUNCHER" />
-34-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:19:13-73
-34-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:19:23-70
-35        </intent-filter>
-36
-37        <activity
-37-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:21:9-23:40
-38            android:name="com.ista.gestion_capacitaciones.UI.AsistenciasActivity"
-38-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:22:13-51
-39            android:exported="false" />
-39-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:23:13-37
-40        <activity
-40-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:24:9-26:40
-41            android:name="com.ista.gestion_capacitaciones.UI.VistaCursoDocenteActivity"
-41-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:25:13-57
-42            android:exported="false" />
-42-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:26:13-37
-43        <activity
-43-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:27:9-29:40
-44            android:name="com.ista.gestion_capacitaciones.UI.ListaCursoActivity"
-44-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:28:13-50
-45            android:exported="false" />
-45-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:29:13-37
-46        <activity
-46-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:30:9-32:40
-47            android:name="com.ista.gestion_capacitaciones.UI.RegisterActivity"
-47-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:31:13-48
-48            android:exported="false" />
-48-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:32:13-37
-49        <activity
-49-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:33:9-35:40
-50            android:name="com.ista.gestion_capacitaciones.UI.LoginActivity"
-50-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:34:13-45
-51            android:exported="false" />
-51-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:35:13-37
-52        <activity
-52-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:36:9-39:20
-53            android:name="com.ista.gestion_capacitaciones.MainActivity"
-53-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:37:13-41
-54            android:exported="true" >
-54-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:38:13-36
+29        <activity
+29-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:15:9-17:39
+30            android:name="com.ista.gestion_capacitaciones.UI.SplashActivity"
+30-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:16:13-46
+31            android:exported="false" />
+31-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:17:13-37
+32        <activity
+32-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:18:9-20:40
+33            android:name="com.ista.gestion_capacitaciones.UI.AsistenciasActivity"
+33-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:19:13-51
+34            android:exported="false" />
+34-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:20:13-37
+35        <activity
+35-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:21:9-23:40
+36            android:name="com.ista.gestion_capacitaciones.UI.VistaCursoDocenteActivity"
+36-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:22:13-57
+37            android:exported="false" />
+37-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:23:13-37
+38        <activity
+38-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:24:9-26:40
+39            android:name="com.ista.gestion_capacitaciones.UI.ListaCursoActivity"
+39-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:25:13-50
+40            android:exported="false" />
+40-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:26:13-37
+41        <activity
+41-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:27:9-29:40
+42            android:name="com.ista.gestion_capacitaciones.UI.RegisterActivity"
+42-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:28:13-48
+43            android:exported="false" />
+43-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:29:13-37
+44        <activity
+44-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:30:9-32:39
+45            android:name="com.ista.gestion_capacitaciones.UI.LoginActivity"
+45-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:31:13-45
+46            android:exported="false" />
+46-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:32:13-37
+47        <activity
+47-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:33:9-40:20
+48            android:name="com.ista.gestion_capacitaciones.MainActivity"
+48-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:34:13-41
+49            android:exported="true" >
+49-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:35:13-36
+50            <intent-filter>
+50-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:36:13-39:29
+51                <action android:name="android.intent.action.MAIN" />
+51-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:37:17-69
+51-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:37:25-66
+52
+53                <category android:name="android.intent.category.LAUNCHER" />
+53-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:38:17-77
+53-->C:\Users\kevin\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:38:27-74
+54            </intent-filter>
 55        </activity>
 56
 57        <provider
