@@ -32,7 +32,7 @@
             android:name=".UI.VistaCursoDocenteActivity"
             android:exported="false" />
         <activity
-            android:name=".UI.ListaCursoActivity"
+            android:name=".UI.ListaEstudianteActivity"
             android:exported="false" />
         <activity
             android:name=".UI.RegisterActivity"
