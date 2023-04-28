@@ -45,6 +45,7 @@ id nav_graph2
 id nombre_curso
 id nombre_estudiante_text
 id num_estudiante_text
+id textView
 id textview_first
 id textview_second
 id tvDirector
