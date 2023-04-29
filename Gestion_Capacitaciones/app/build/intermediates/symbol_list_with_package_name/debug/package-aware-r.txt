@@ -2045,6 +2045,8 @@ dimen abc_text_size_subhead_material
 dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
@@ -2772,6 +2774,8 @@ drawable fondo
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
+drawable ic_dashboard_black_24dp
+drawable ic_home_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -2782,6 +2786,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_notifications_black_24dp
 drawable ic_search_black_24
 drawable logo
 drawable m3_appbar_background
@@ -3191,7 +3196,10 @@ id navigation_bar_item_icon_view
 id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
+id navigation_dashboard
 id navigation_header_container
+id navigation_home
+id navigation_notifications
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
@@ -3500,7 +3508,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_asistencias
-layout activity_lista_curso
+layout activity_lista_estudiante
 layout activity_login
 layout activity_main
 layout activity_programa_cursos
@@ -3590,6 +3598,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph
@@ -3757,8 +3766,13 @@ string second_fragment_label
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string title_activity_bottom_menu
 string title_activity_login
+string title_activity_menu_inicio
 string title_activity_vista_cursos
+string title_dashboard
+string title_home
+string title_notifications
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.ista.gestion_capacitaciones.app-mergeDebugResources-39:/values-w600dp-v13/values-w600dp-v13.xml",
+            "outputFile": "com.ista.gestion_capacitaciones.app-mergeDebugResources-41:/values-w600dp-v13/values-w600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kevin\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "source": "C:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

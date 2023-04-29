@@ -27,6 +27,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.Gestion_Capacitaciones" >
         <activity
+            android:name="com.ista.gestion_capacitaciones.UI.ui.MenuInicioActivity"
+            android:exported="false"
+            android:label="@string/title_activity_menu_inicio" />
+        <activity
             android:name="com.ista.gestion_capacitaciones.UI.SplashActivity"
             android:exported="true" >
             <intent-filter>
@@ -42,7 +46,7 @@
             android:name="com.ista.gestion_capacitaciones.UI.VistaCursoDocenteActivity"
             android:exported="false" />
         <activity
-            android:name="com.ista.gestion_capacitaciones.UI.ListaCursoActivity"
+            android:name="com.ista.gestion_capacitaciones.UI.ListaEstudianteActivity"
             android:exported="false" />
         <activity
             android:name="com.ista.gestion_capacitaciones.UI.RegisterActivity"
