@@ -1,5 +1,4 @@
-package com.ista.gestion_capacitaciones.activities;
-
+package com.ista.gestion_capacitaciones.UI;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
