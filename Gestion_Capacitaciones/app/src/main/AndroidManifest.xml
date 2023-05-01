@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.ista.gestion_capacitaciones">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -13,6 +12,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gestion_Capacitaciones"
         tools:targetApi="31">
+        <activity
+            android:name=".UI.ui.MenuInicioActivity"
+            android:exported="false"
+            android:label="@string/title_activity_menu_inicio" />
+        <activity
+            android:name=".UI.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.AsistenciasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.VistaCursoDocenteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.ListaEstudianteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.LoginActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

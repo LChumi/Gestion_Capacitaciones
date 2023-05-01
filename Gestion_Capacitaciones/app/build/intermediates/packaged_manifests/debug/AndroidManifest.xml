@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ista.gestion_capacitaciones"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="22"
+        android:targetSdkVersion="33" />
+
+    <permission
+        android:name="com.ista.gestion_capacitaciones.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.ista.gestion_capacitaciones.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:debuggable="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.Gestion_Capacitaciones" >
+        <activity
+            android:name="com.ista.gestion_capacitaciones.UI.ui.MenuInicioActivity"
+            android:exported="false"
+            android:label="@string/title_activity_menu_inicio" />
+        <activity
+            android:name="com.ista.gestion_capacitaciones.UI.SplashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ista.gestion_capacitaciones.UI.AsistenciasActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ista.gestion_capacitaciones.UI.VistaCursoDocenteActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ista.gestion_capacitaciones.UI.ListaEstudianteActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ista.gestion_capacitaciones.UI.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ista.gestion_capacitaciones.UI.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ista.gestion_capacitaciones.MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.ista.gestion_capacitaciones.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+    </application>
+
+</manifest>
