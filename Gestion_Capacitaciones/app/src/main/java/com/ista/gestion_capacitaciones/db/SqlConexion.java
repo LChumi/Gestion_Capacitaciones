@@ -15,6 +15,7 @@ public class SqlConexion extends SQLiteOpenHelper {
     public static final String TABLE_CURSO= "t_cursos";
     public static final String TABLE_ASISTENCIA= "t_asistencia";
     public static final String TABLE_PARTICIPANTE= "t_participante";
+    public static final String TABLE_PERSONA="t_participante";
 
     public SqlConexion(@Nullable Context context){
         super(context,DATABASE_NOMBRE,null,DATABASE_VERSION);
