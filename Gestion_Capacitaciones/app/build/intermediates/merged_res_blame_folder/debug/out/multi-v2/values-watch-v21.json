@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "com.ista.gestion_capacitaciones.app-mergeDebugResources-38:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\kevin\\.gradle\\caches\\transforms-3\\7ba610368285ef737a15a687544ee720\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
+=======
+            "outputFile": "com.ista.gestion_capacitaciones.app-mergeDebugResources-41:/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\luisc\\.gradle\\caches\\transforms-3\\7ba610368285ef737a15a687544ee720\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

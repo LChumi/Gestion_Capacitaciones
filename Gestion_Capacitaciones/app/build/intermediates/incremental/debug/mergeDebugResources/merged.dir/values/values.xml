@@ -980,6 +980,11 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
+<<<<<<< HEAD
+=======
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
     <dimen name="appcompat_dialog_background_inset">16dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
@@ -1653,6 +1658,10 @@
     <item name="ghost_view" type="id"/>
     <item name="ghost_view_holder" type="id"/>
     <item name="home" type="id"/>
+<<<<<<< HEAD
+=======
+    <item name="is_pooling_container_tag" type="id"/>
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
     <item name="item_touch_helper_previous_elevation" type="id"/>
     <item name="line1" type="id"/>
     <item name="line3" type="id"/>
@@ -1675,6 +1684,10 @@
     <item name="navigation_bar_item_large_label_view" type="id"/>
     <item name="navigation_bar_item_small_label_view" type="id"/>
     <item name="parent_matrix" type="id"/>
+<<<<<<< HEAD
+=======
+    <item name="pooling_container_listener_holder_tag" type="id"/>
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="row_index_key" type="id"/>
@@ -1995,8 +2008,18 @@
     <string description="Title of the side sheet&apos;s accessibility pane that is spoken by TalkBack when the side sheet appears on screen. [CHAR_LIMIT=NONE]" name="side_sheet_accessibility_pane_title">Side Sheet</string>
     <string name="side_sheet_behavior" translatable="false">com.google.android.material.sidesheet.SideSheetBehavior</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+<<<<<<< HEAD
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_vista_cursos">VistaCursos</string>
+=======
+    <string name="title_activity_bottom_menu">BottomMenuActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_menu_inicio">MenuInicioActivity</string>
+    <string name="title_activity_vista_cursos">VistaCursos</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">Home</string>
+    <string name="title_notifications">Notifications</string>
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

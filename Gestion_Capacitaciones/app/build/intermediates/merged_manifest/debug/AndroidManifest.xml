@@ -6,7 +6,11 @@
 
     <uses-sdk
         android:minSdkVersion="22"
+<<<<<<< HEAD
         android:targetSdkVersion="32" />
+=======
+        android:targetSdkVersion="33" />
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
 
     <permission
         android:name="com.ista.gestion_capacitaciones.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -27,6 +31,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.Gestion_Capacitaciones" >
         <activity
+<<<<<<< HEAD
             android:name="com.ista.gestion_capacitaciones.activities.AsistenciasActivity"
             android:exported="false" />
         <activity
@@ -46,6 +51,35 @@
             android:exported="false"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.Gestion_Capacitaciones" />
+=======
+            android:name="com.ista.gestion_capacitaciones.UI.ui.MenuInicioActivity"
+            android:exported="false"
+            android:label="@string/title_activity_menu_inicio" />
+        <activity
+            android:name="com.ista.gestion_capacitaciones.UI.SplashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ista.gestion_capacitaciones.UI.AsistenciasActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ista.gestion_capacitaciones.UI.VistaCursoDocenteActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ista.gestion_capacitaciones.UI.ListaEstudianteActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ista.gestion_capacitaciones.UI.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ista.gestion_capacitaciones.UI.LoginActivity"
+            android:exported="false" />
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
         <activity
             android:name="com.ista.gestion_capacitaciones.MainActivity"
             android:exported="true" >

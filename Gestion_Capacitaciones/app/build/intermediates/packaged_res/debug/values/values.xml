@@ -11,6 +11,11 @@
     <color name="text_color">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#F1E57F</color>
+<<<<<<< HEAD
+=======
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
     <dimen name="fab_margin">16dp</dimen>
     <string name="app_name">Gestion_Capacitaciones</string>
     <string name="first_fragment_label">First Fragment</string>
@@ -53,8 +58,18 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="second_fragment_label">Second Fragment</string>
+<<<<<<< HEAD
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_vista_cursos">VistaCursos</string>
+=======
+    <string name="title_activity_bottom_menu">BottomMenuActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_menu_inicio">MenuInicioActivity</string>
+    <string name="title_activity_vista_cursos">VistaCursos</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">Home</string>
+    <string name="title_notifications">Notifications</string>
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
     <style name="Base.Theme.Gestion_Capacitaciones" parent="Theme.Material3.DayNight.NoActionBar">
         
         

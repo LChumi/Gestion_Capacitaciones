@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "merged": "com.ista.gestion_capacitaciones.app-merged_res-40:/drawable-xxhdpi_circle.png.flat",
         "source": "com.ista.gestion_capacitaciones.app-main-42:/drawable-xxhdpi/circle.png"
     },
@@ -334,5 +335,165 @@
     {
         "merged": "com.ista.gestion_capacitaciones.app-merged_res-40:/drawable-xxxhdpi_layers_color.png.flat",
         "source": "com.ista.gestion_capacitaciones.app-main-42:/drawable-xxxhdpi/layers_color.png"
+=======
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/navigation_nav_graph.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/layout_elemento_mis_cursos.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/elemento_mis_cursos.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/drawable/ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/drawable_estilo.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/drawable/estilo.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/layout_activity_login.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/navigation_nav_graph2.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/navigation/nav_graph2.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-pngs-39:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/layout_fragment_first.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/fragment_first.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/xml_data_extraction_rules.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/layout_activity_asistencias.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/activity_asistencias.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/layout_activity_programa_cursos.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/activity_programa_cursos.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/drawable_circle.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/drawable/circle.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/layout_lista_curso_layout.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/lista_curso_layout.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/layout_activity_splash.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/layout_activity_main.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/drawable/ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/xml_backup_rules.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/layout_activity_register.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/layout_activity_lista_estudiante.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/activity_lista_estudiante.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/layout_activity_vista_curso_docente.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/activity_vista_curso_docente.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/layout_elemenstos_programa_cursos.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/elemenstos_programa_cursos.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/drawable_fondo.jpg.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/drawable/fondo.jpg"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/drawable_logo.png.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/drawable/logo.png"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/layout_fragment_second.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/fragment_second.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/drawable_ic_home_black_24dp.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/drawable/ic_home_black_24dp.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/layout_activity_vista_curso_estudiante.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/activity_vista_curso_estudiante.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-43:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-45:/mipmap-hdpi/ic_launcher.webp"
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
     }
 ]

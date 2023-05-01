@@ -1,0 +1,45 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/num_estudiante_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="1"/>
+
+        <TextView
+            android:id="@+id/nombre_estudiante_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="-200dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:paddingStart="8dp"
+            android:text="Nombre del estudiante" />
+
+        <CheckBox
+            android:id="@+id/check_list_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:buttonTint="@android:color/holo_green_light"/>
+
+    </RelativeLayout>
+    
+</androidx.cardview.widget.CardView>
