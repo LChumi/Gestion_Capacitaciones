@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
+            "outputFile": "com.ista.gestion_capacitaciones.app-mergeDebugResources-38:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\kevin\\.gradle\\caches\\transforms-3\\bf6a9fc0cc64a6732cf913207b51114b\\transformed\\material-1.8.0\\res\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
+=======
             "outputFile": "com.ista.gestion_capacitaciones.app-mergeDebugResources-41:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\luisc\\.gradle\\caches\\transforms-3\\bf6a9fc0cc64a6732cf913207b51114b\\transformed\\material-1.8.0\\res\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

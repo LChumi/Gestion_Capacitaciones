@@ -4,6 +4,15 @@ package com.ista.gestion_capacitaciones.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.viewbinding.ViewBinding;
+import com.ista.gestion_capacitaciones.R;
+import java.lang.NullPointerException;
+import java.lang.Override;
+=======
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -16,11 +25,16 @@ import com.ista.gestion_capacitaciones.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
 
 public final class ActivityAsistenciasBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
+<<<<<<< HEAD
+  private ActivityAsistenciasBinding(@NonNull ConstraintLayout rootView) {
+    this.rootView = rootView;
+=======
   @NonNull
   public final Button button;
 
@@ -36,6 +50,7 @@ public final class ActivityAsistenciasBinding implements ViewBinding {
     this.button = button;
     this.listaEstudiantes = listaEstudiantes;
     this.nombreCurso = nombreCurso;
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
   }
 
   @Override
@@ -61,6 +76,13 @@ public final class ActivityAsistenciasBinding implements ViewBinding {
 
   @NonNull
   public static ActivityAsistenciasBinding bind(@NonNull View rootView) {
+<<<<<<< HEAD
+    if (rootView == null) {
+      throw new NullPointerException("rootView");
+    }
+
+    return new ActivityAsistenciasBinding((ConstraintLayout) rootView);
+=======
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
@@ -88,5 +110,6 @@ public final class ActivityAsistenciasBinding implements ViewBinding {
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
   }
 }

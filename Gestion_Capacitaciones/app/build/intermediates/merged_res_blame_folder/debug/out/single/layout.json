@@ -1,5 +1,45 @@
 [
     {
+<<<<<<< HEAD
+        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-39:/layout/activity_login.xml",
+        "source": "com.ista.gestion_capacitaciones.app-main-42:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-39:/layout/fragment_second.xml",
+        "source": "com.ista.gestion_capacitaciones.app-main-42:/layout/fragment_second.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-39:/layout/activity_asistencias.xml",
+        "source": "com.ista.gestion_capacitaciones.app-main-42:/layout/activity_asistencias.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-39:/layout/elemento_mis_cursos.xml",
+        "source": "com.ista.gestion_capacitaciones.app-main-42:/layout/elemento_mis_cursos.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-39:/layout/activity_lista_curso.xml",
+        "source": "com.ista.gestion_capacitaciones.app-main-42:/layout/activity_lista_curso.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-39:/layout/activity_register.xml",
+        "source": "com.ista.gestion_capacitaciones.app-main-42:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-39:/layout/activity_vista_curso_estudiante.xml",
+        "source": "com.ista.gestion_capacitaciones.app-main-42:/layout/activity_vista_curso_estudiante.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-39:/layout/activity_vista_curso_docente.xml",
+        "source": "com.ista.gestion_capacitaciones.app-main-42:/layout/activity_vista_curso_docente.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-39:/layout/fragment_first.xml",
+        "source": "com.ista.gestion_capacitaciones.app-main-42:/layout/fragment_first.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-39:/layout/activity_main.xml",
+        "source": "com.ista.gestion_capacitaciones.app-main-42:/layout/activity_main.xml"
+=======
         "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-42:/layout/activity_splash.xml",
         "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/activity_splash.xml"
     },
@@ -54,5 +94,6 @@
     {
         "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-42:/layout/activity_lista_estudiante.xml",
         "source": "com.ista.gestion_capacitaciones.app-main-45:/layout/activity_lista_estudiante.xml"
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
     }
 ]

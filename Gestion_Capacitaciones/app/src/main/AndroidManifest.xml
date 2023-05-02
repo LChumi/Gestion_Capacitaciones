@@ -13,7 +13,29 @@
         android:theme="@style/Theme.Gestion_Capacitaciones"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
+            android:name=".UI.Sing_Up_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AsistenciasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.VistaCursoDocenteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ListaCursoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.LoginActivity"
+=======
             android:name=".UI.ui.MenuInicioActivity"
+>>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
             android:exported="false"
             android:label="@string/title_activity_menu_inicio" />
         <activity
