@@ -24,7 +24,7 @@ public interface CursoApi {
     Call<Curso> crear(@Body Curso curso);
 
     @PUT("api/iCurso/actualizar/{id}")
-    Call<Curso> actualizarUsuario(@Path("id")Long id,@Body Curso curso);
+    Call<Curso> actualizarCurso(@Path("id")Long id,@Body Curso curso);
 
     @DELETE("api/iCurso/eliminar/{id}")
     Call<Void> eliminar(@Path("id")Long id);

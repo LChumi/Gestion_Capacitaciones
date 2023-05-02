@@ -26,7 +26,7 @@ public interface PersonaApi {
     Call<Persona> crear(@Body Persona persona);
 
     @PUT("api/persona/actualizar/{id}")
-    Call<Persona> actualizarUsuario(@Path("id")Long id,@Body Persona persona);
+    Call<Persona> actualizarPersona(@Path("id")Long id,@Body Persona persona);
 
     @DELETE("api/persona/eliminar/{id}")
     Call<Void> eliminar(@Path("id")Long id);

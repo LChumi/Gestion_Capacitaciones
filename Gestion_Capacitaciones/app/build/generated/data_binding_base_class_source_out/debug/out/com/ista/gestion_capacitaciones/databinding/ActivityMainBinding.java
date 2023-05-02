@@ -4,32 +4,29 @@ package com.ista.gestion_capacitaciones.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-<<<<<<< HEAD
 import android.widget.ImageView;
 import android.widget.TextView;
-=======
->>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
-<<<<<<< HEAD
 import androidx.viewbinding.ViewBindings;
 import com.ista.gestion_capacitaciones.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
-=======
-import com.ista.gestion_capacitaciones.R;
-import java.lang.NullPointerException;
-import java.lang.Override;
->>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
-<<<<<<< HEAD
+  @NonNull
+  public final AppCompatButton button;
+
+  @NonNull
+  public final AppCompatButton button1;
+
   @NonNull
   public final ImageView imageView;
 
@@ -48,20 +45,19 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final TextView textView3;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView imageView,
-      @NonNull ImageView imageView2, @NonNull ImageView imageView4, @NonNull TextView textView,
-      @NonNull TextView textView2, @NonNull TextView textView3) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull AppCompatButton button,
+      @NonNull AppCompatButton button1, @NonNull ImageView imageView, @NonNull ImageView imageView2,
+      @NonNull ImageView imageView4, @NonNull TextView textView, @NonNull TextView textView2,
+      @NonNull TextView textView3) {
     this.rootView = rootView;
+    this.button = button;
+    this.button1 = button1;
     this.imageView = imageView;
     this.imageView2 = imageView2;
     this.imageView4 = imageView4;
     this.textView = textView;
     this.textView2 = textView2;
     this.textView3 = textView3;
-=======
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView) {
-    this.rootView = rootView;
->>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
   }
 
   @Override
@@ -87,11 +83,22 @@ public final class ActivityMainBinding implements ViewBinding {
 
   @NonNull
   public static ActivityMainBinding bind(@NonNull View rootView) {
-<<<<<<< HEAD
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.button;
+      AppCompatButton button = ViewBindings.findChildViewById(rootView, id);
+      if (button == null) {
+        break missingId;
+      }
+
+      id = R.id.button1;
+      AppCompatButton button1 = ViewBindings.findChildViewById(rootView, id);
+      if (button1 == null) {
+        break missingId;
+      }
+
       id = R.id.imageView;
       ImageView imageView = ViewBindings.findChildViewById(rootView, id);
       if (imageView == null) {
@@ -128,17 +135,10 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, imageView, imageView2, imageView4,
-          textView, textView2, textView3);
+      return new ActivityMainBinding((ConstraintLayout) rootView, button, button1, imageView,
+          imageView2, imageView4, textView, textView2, textView3);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
-=======
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
-
-    return new ActivityMainBinding((ConstraintLayout) rootView);
->>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
   }
 }

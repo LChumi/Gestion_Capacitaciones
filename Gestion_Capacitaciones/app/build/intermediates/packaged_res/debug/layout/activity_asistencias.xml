@@ -4,9 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    tools:context=".activities.AsistenciasActivity">
-=======
     tools:context=".UI.AsistenciasActivity">
 
     <LinearLayout
@@ -47,6 +44,5 @@
             android:layout_below="@id/lista_estudiantes"/>
 
     </LinearLayout>
->>>>>>> 81f4386aa7c16ca9a8f3d607e9216bfba06cb350
 
 </androidx.constraintlayout.widget.ConstraintLayout>
