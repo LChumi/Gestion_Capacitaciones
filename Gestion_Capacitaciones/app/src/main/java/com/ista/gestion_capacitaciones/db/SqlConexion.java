@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -25,7 +26,7 @@ public class SqlConexion extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        crearTablas(db);
+        verificarTablas();
     }
 
     @Override
@@ -85,21 +86,25 @@ public class SqlConexion extends SQLiteOpenHelper {
     }
 
 
-    private String[] TABLAS = {TABLE_USUARIOS};
-    public void verificarTablas(){
-        SQLiteDatabase db= getWritableDatabase();
-
-        for (String tabla:TABLAS){
-            Cursor cursor=db.rawQuery("SELECT name " +
-                    "FROM sqliite_master " +
-                    "WHERE type='table' " +
-                    "AND name='" + tabla + "'",null);
-            if (cursor.getCount()==0){
-                crearTablas(db);
+    private String[] TABLAS = {TABLE_USUARIOS,TABLE_PERSONA,TABLE_PARTICIPANTE,TABLE_ASISTENCIA,TABLE_CURSO};
+    private void verificarTablas() {
+        try (
+                SQLiteDatabase db = getWritableDatabase();
+        ) {
+            for (String tabla : TABLAS) {
+                Cursor cursor = db.rawQuery("SELECT name " +
+                        "FROM sqlite_master " +
+                        "WHERE type='table' " +
+                        "AND name='" + tabla + "'", null);
+                if (cursor.getCount() == 0) {
+                    crearTablas(db);
+                }
+                cursor.close();
             }
-            cursor.close();
-            db.close();
+        } catch (Exception e) {
+            Log.e("DbAsistencia", "Error al verificar tablas: " + e.getMessage());
         }
     }
+
 }
 

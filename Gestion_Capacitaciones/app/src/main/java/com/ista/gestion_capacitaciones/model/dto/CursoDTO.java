@@ -30,6 +30,7 @@ public class CursoDTO {
     }
 
     public Long getCur_id() {
+
         return cur_id;
     }
 
