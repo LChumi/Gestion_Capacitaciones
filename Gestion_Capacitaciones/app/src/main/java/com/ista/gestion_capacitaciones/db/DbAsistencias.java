@@ -2,10 +2,15 @@ package com.ista.gestion_capacitaciones.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
+
+import com.ista.gestion_capacitaciones.model.Asistencia;
+
+import java.util.ArrayList;
 
 public class DbAsistencias extends SqlConexion{
 
@@ -33,4 +38,6 @@ public class DbAsistencias extends SqlConexion{
         }
         return result;
     }
+
+
 }

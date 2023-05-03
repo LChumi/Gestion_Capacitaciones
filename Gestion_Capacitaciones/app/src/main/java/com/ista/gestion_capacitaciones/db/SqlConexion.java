@@ -68,7 +68,7 @@ public class SqlConexion extends SQLiteOpenHelper {
                 "par_notaFinal REAL,"+
                 "par_notaPromedio REAL,"+
                 "par_observacion TEXT,"+
-                "PAR_ESTADO BOOLEAN,"+
+                "par_estado BOOLEAN,"+
                 "per_id INTEGER NOT NULL,"+
                 "FOREIGN KEY(per_id) REFERENCES "+TABLE_PERSONA+"(per_id) ON DELETE CASCADE)");
 
