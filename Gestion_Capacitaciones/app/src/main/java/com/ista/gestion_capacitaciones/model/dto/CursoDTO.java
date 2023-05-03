@@ -15,6 +15,9 @@ public class CursoDTO {
     private int cur_proceso;
     private boolean cur_estado;
 
+    public CursoDTO() {
+    }
+
     public CursoDTO(Curso curso) {
         this.cur_id = curso.getCurId();
         this.cur_codigo = Long.valueOf(curso.getCurCodigo());

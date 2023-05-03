@@ -13,6 +13,9 @@ public class AsistenciaDTO {
     private Date asi_fecha;
     private Long par_id;
 
+    public AsistenciaDTO() {
+    }
+
     public AsistenciaDTO(Asistencia asistencia) {
         this.asi_id = asistencia.getAsiId();
         this.asi_numAsistencia = Integer.parseInt(asistencia.getAsiNumfaltas());

@@ -10,6 +10,9 @@ public class UsuarioDTO {
 
     private Long per_id;
 
+    public UsuarioDTO() {
+    }
+
     public UsuarioDTO(Usuario usuario) {
         this.usu_id = usuario.getId_usuario();
         this.usu_usuario = usuario.getUsername();

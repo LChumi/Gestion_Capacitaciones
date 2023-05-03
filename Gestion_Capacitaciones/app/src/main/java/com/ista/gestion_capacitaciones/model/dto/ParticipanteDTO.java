@@ -13,6 +13,9 @@ public class ParticipanteDTO {
 
     private Long per_id;
 
+    public ParticipanteDTO() {
+    }
+
     public ParticipanteDTO(Participante participante) {
         this.par_id = participante.getParId();
         this.par_notaParcial = participante.getParNotaparcila();

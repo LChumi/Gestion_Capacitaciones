@@ -14,6 +14,9 @@ public class PersonaDTO {
     private String per_correo;
     private boolean per_estado;
 
+    public PersonaDTO() {
+    }
+
     public PersonaDTO(Persona persona) {
         this.per_id = persona.getId_persona();
         this.per_cedula = persona.getCedula();
