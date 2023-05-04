@@ -67,6 +67,28 @@ public class DbParticipantes extends SqlConexion{
         return participantes;
     }
 
+    public ParticipanteDTO obtenerParticipante(Long id){
+        ParticipanteDTO participanteDTO=null;
+        try(
+                SQLiteDatabase db=getReadableDatabase();
+                Cursor cursor=db.query(TABLE_PARTICIPANTE,null,"_rowid_=?",new String[]{String.valueOf(id)},null,null,null);
+                ){
+            if (cursor!=null && cursor.moveToFirst()){
+                participanteDTO=new ParticipanteDTO();
+                participanteDTO.setPar_id(cursor.getLong(0));
+                participanteDTO.setPar_notaParcial(cursor.getDouble(1));
+                participanteDTO.setPar_notaFinal(cursor.getDouble(2));
+                participanteDTO.setNotaPromedio(cursor.getDouble(3));
+                participanteDTO.setPar_observacion(cursor.getString(4));
+                participanteDTO.setPar_estado(cursor.getInt(5)==1);
+                participanteDTO.setPer_id(cursor.getLong(6));
+            }
+        }catch (Exception e){
+            Log.e("DbParticipante","Error al obtener usuario",e);
+        }
+        return participanteDTO;
+    }
+
     public int eliminarParticipante(Long id){
         int result=0;
         try(

@@ -53,6 +53,7 @@ public class DbUsuarios extends SqlConexion{
                 usuarioDTO.setUsu_id(cursor.getLong(0));
                 usuarioDTO.setUsu_usuario(cursor.getString(1));
                 usuarioDTO.setUsu_password(cursor.getString(2));
+
                 usuarioDTO.setPer_id(cursor.getLong(3));
                 usuarios.add(usuarioDTO);
                 }while(cursor.moveToNext());
@@ -61,6 +62,56 @@ public class DbUsuarios extends SqlConexion{
             Log.e("DbUsuario","Error al obtener Usuarios",e);
         }
         return usuarios;
+    }
+
+    public UsuarioDTO obtenerUsuario(Long id){
+        UsuarioDTO usuarioDTO=null;
+        try(
+                SQLiteDatabase db=getReadableDatabase();
+                Cursor cursor=db.query(TABLE_USUARIOS,null,"_rowid_=?",new String[]{String.valueOf(id)},null,null,null);
+                ){
+            if (cursor!=null && cursor.moveToFirst()){
+                usuarioDTO=new UsuarioDTO();
+                usuarioDTO.setUsu_id(cursor.getLong(0));
+                usuarioDTO.setUsu_usuario(cursor.getString(1));
+                usuarioDTO.setUsu_password(cursor.getString(2));
+
+                usuarioDTO.setPer_id(cursor.getLong(3));
+            }
+        }catch (Exception e){
+            Log.e("DbUsuario","Error al obtener usuario",e);
+        }
+        return usuarioDTO;
+    }
+
+    public int EliminarUsuario(Long id){
+        int result=0;
+        try(
+                SQLiteDatabase db=getWritableDatabase();
+                ){
+            result=db.delete(TABLE_USUARIOS,"_row_id=?",new String[]{String.valueOf(id)});
+        }catch(Exception e){
+            Log.e("DbUsusario","Error al eliminar persona",e);
+        }
+        return result;
+    }
+
+    public int Actualizar(Long id,String usuario,String password,Long per_id){
+        int result=0;
+        try(
+                SQLiteDatabase db=getWritableDatabase();
+                ){
+            ContentValues values=new ContentValues();
+            values.put("usu_id",id);
+            values.put("usu_usuario",usuario);
+            values.put("usu_password",password);
+            values.put("per_id",per_id);
+
+            result=db.update(TABLE_USUARIOS,values,"_rowid_=?",new String[]{String.valueOf(id)});
+        }catch (Exception e){
+            Log.e("DbUsuario","Error al actualizar Usuario",e);
+        }
+        return result;
     }
 
 }
