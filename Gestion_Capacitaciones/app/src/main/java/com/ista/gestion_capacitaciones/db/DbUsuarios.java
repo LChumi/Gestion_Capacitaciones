@@ -114,4 +114,21 @@ public class DbUsuarios extends SqlConexion{
         return result;
     }
 
+    public UsuarioDTO login(String username, String password) {
+        UsuarioDTO usuarioDTO = null;
+        try (SQLiteDatabase db = getReadableDatabase();
+             Cursor cursor = db.query(TABLE_USUARIOS, null, "usu_usuario=? AND usu_password=?", new String[]{username, password}, null, null, null)) {
+            if (cursor != null && cursor.moveToFirst()) {
+                usuarioDTO = new UsuarioDTO();
+                usuarioDTO.setUsu_id(cursor.getLong(0));
+                usuarioDTO.setUsu_usuario(cursor.getString(1));
+                usuarioDTO.setUsu_password(cursor.getString(2));
+                usuarioDTO.setPer_id(cursor.getLong(3));
+            }
+        } catch (Exception e) {
+            Log.e("DbUsuarios", "Error al obtener usuario", e);
+        }
+        return usuarioDTO;
+    }
+
 }

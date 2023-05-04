@@ -9,6 +9,7 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 import com.ista.gestion_capacitaciones.model.dto.PersonaDTO;
+import com.ista.gestion_capacitaciones.model.dto.UsuarioDTO;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
