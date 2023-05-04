@@ -15,25 +15,25 @@ import retrofit2.http.Path;
 
 public interface UsuarioApi {
 
-    @GET("api/usuarios/listar")
+    @GET("usuarios/users/list")
     Call<List<Usuario>> getUsuariosList();
 
-    @GET("api/usuarios/search/{username}")
+    @GET("usuarios/search/{username}")
     Call<Usuario> obtenerUsuario(@Path("username")String id);
 
-    @POST("api/usuarios/signin")
+    @POST("usuarios/signin")
     Call<Usuario> IniciarSesion(@Body Usuario usuario);
 
-    @POST("api/usuarios/signup")
+    @POST("usuarios/signup")
     Call<Usuario> create(@Body Usuario usuario);
 
-    @PUT("api/usuarios/actualizar/{id}")
+    @PUT("usuarios/actualizar/{id}")
     Call<Usuario> actualizarUsuario(@Path("id")Long id,@Body Usuario usuario);
 
-    @DELETE("api/usuarios/eliminar/{id}")
+    @DELETE("usuarios/delete/{usuarioId}")
     Call<Void> eliminar(@Path("id")Long id);
 
-    @GET("api/usuario/login/{username}/{password}")
+    @GET("usuarios/login/{username}/{password}")
     Call<Usuario> login(@Path("username") String username, @Path("password") String password);
 
 }
