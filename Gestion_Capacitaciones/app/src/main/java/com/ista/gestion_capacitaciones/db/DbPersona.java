@@ -25,11 +25,12 @@ public class DbPersona extends SqlConexion{
         this.context=context;
     }
 
-    public long insertaPersona(String cedula, String nombres, String apellidos, String fechaNacimiento, String correo, boolean estado) {
+    public long insertaPersona(Long id,String cedula, String nombres, String apellidos, String fechaNacimiento, String correo, boolean estado) {
         SQLiteDatabase db = this.getWritableDatabase();
         long result=-1;
         try {
             ContentValues valores = new ContentValues();
+            valores.put("per_id",id);
             valores.put("per_cedula", cedula);
             valores.put("per_nombres", nombres);
             valores.put("per_apellidos", apellidos);

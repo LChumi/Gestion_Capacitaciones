@@ -71,7 +71,9 @@ public class SqlConexion extends SQLiteOpenHelper {
                 "par_observacion TEXT,"+
                 "par_estado BOOLEAN,"+
                 "per_id INTEGER NOT NULL,"+
-                "FOREIGN KEY(per_id) REFERENCES "+TABLE_PERSONA+"(per_id) ON DELETE CASCADE)");
+                "cur_id INTEGER NOT NULL,"+
+                "FOREIGN KEY(per_id) REFERENCES "+TABLE_PERSONA+"(per_id) ON DELETE CASCADE,"+
+                "FOREIGN KEY(cur_id) REFERENCES "+TABLE_CURSO+"(cur_id) ON DELETE CASCADE)");
 
 
         db.execSQL("CREATE TABLE IF NOT EXISTS "+TABLE_PERSONA+ "("+

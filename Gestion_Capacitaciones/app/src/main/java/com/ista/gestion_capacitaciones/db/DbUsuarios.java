@@ -22,7 +22,7 @@ public class DbUsuarios extends SqlConexion{
         this.context=context;
     }
 
-    public long insertaUsuario(String username, String password, int personaId) {
+    public long insertaUsuario(String username, String password, Long personaId) {
         SQLiteDatabase db = this.getWritableDatabase();
         long result = -1;
         try{
