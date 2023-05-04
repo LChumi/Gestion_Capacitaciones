@@ -12,6 +12,10 @@
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-46:\\drawable\\logo.png"
     },
     {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-44:/layout_activity_login.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-46:/layout/activity_login.xml"
+    },
+    {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-44:\\drawable_ic_dashboard_black_24dp.xml.flat",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-46:\\drawable\\ic_dashboard_black_24dp.xml"
     },
@@ -256,16 +260,12 @@
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-46:\\drawable-xxxhdpi\\google.png"
     },
     {
-        "merged": "com.ista.gestion_capacitaciones.app-merged_res-44:/layout_activity_sing_up.xml.flat",
-        "source": "com.ista.gestion_capacitaciones.app-main-46:/layout/activity_sing_up.xml"
+        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-44:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-46:\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-44:\\navigation_nav_graph2.xml.flat",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-46:\\navigation\\nav_graph2.xml"
-    },
-    {
-        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-44:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-46:\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-44:\\drawable-xxhdpi_google.png.flat",

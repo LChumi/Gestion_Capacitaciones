@@ -11,4 +11,8 @@
     <color name="yellow">#F1E57F</color>
     <color name="red">#E82C1E</color>
     <color name="text_color">#FF000000</color>
+    <color name="colorPrimary">#3d95d0</color>
+    <color name="colorPrimaryDark">#489855</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorWhite">#fff</color>
 </resources>

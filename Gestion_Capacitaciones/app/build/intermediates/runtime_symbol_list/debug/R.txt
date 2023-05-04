@@ -1361,6 +1361,10 @@ int color cardview_dark_background 0x7f05002a
 int color cardview_light_background 0x7f05002b
 int color cardview_shadow_end_color 0x7f05002c
 int color cardview_shadow_start_color 0x7f05002d
+int color colorAccent 0x7f050288
+int color colorPrimary 0x7f050289
+int color colorPrimaryDark 0x7f05028a
+int color colorWhite 0x7f05028b
 int color design_bottom_navigation_shadow_color 0x7f05002e
 int color design_box_stroke_color 0x7f05002f
 int color design_dark_default_color_background 0x7f050030
@@ -2983,12 +2987,12 @@ int id bounce 0x7f080067
 int id bounceBoth 0x7f080068
 int id bounceEnd 0x7f080069
 int id bounceStart 0x7f08006a
+int id btnIngreso 0x7f080238
+int id btnLoguin 0x7f080236
+int id btnRegistro 0x7f080237
 int id button 0x7f08006b
-int id button1 0x7f08006c
 int id button3 0x7f08006d
 int id buttonPanel 0x7f08006e
-int id button_first 0x7f08006f
-int id button_second 0x7f080070
 int id cache_measures 0x7f080071
 int id callMeasure 0x7f080072
 int id cancel_button 0x7f080073
@@ -3399,8 +3403,6 @@ int id textinput_helper_text 0x7f080207
 int id textinput_placeholder 0x7f080208
 int id textinput_prefix_text 0x7f080209
 int id textinput_suffix_text 0x7f08020a
-int id textview_first 0x7f08020b
-int id textview_second 0x7f08020c
 int id time 0x7f08020d
 int id title 0x7f08020e
 int id titleDividerNoCustom 0x7f08020f
@@ -3419,6 +3421,8 @@ int id transition_transform 0x7f08021b
 int id triangle 0x7f08021c
 int id tvDirector 0x7f08021d
 int id tvTitulo 0x7f08021e
+int id txtPassword 0x7f080239
+int id txtUsername 0x7f08023a
 int id unchecked 0x7f08021f
 int id uniform 0x7f080220
 int id unlabeled 0x7f080221
@@ -3577,8 +3581,6 @@ int layout design_text_input_end_icon 0x7f0b0034
 int layout design_text_input_start_icon 0x7f0b0035
 int layout elemenstos_programa_cursos 0x7f0b0036
 int layout elemento_mis_cursos 0x7f0b0037
-int layout fragment_first 0x7f0b0038
-int layout fragment_second 0x7f0b0039
 int layout lista_curso_layout 0x7f0b003a
 int layout m3_alert_dialog 0x7f0b003b
 int layout m3_alert_dialog_actions 0x7f0b003c

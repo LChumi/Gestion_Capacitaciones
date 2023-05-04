@@ -1362,6 +1362,10 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
+color colorWhite
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -2984,12 +2988,12 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnIngreso
+id btnLoguin
+id btnRegistro
 id button
-id button1
 id button3
 id buttonPanel
-id button_first
-id button_second
 id cache_measures
 id callMeasure
 id cancel_button
@@ -3400,8 +3404,6 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
-id textview_first
-id textview_second
 id time
 id title
 id titleDividerNoCustom
@@ -3420,6 +3422,8 @@ id transition_transform
 id triangle
 id tvDirector
 id tvTitulo
+id txtPassword
+id txtUsername
 id unchecked
 id uniform
 id unlabeled
@@ -3578,8 +3582,6 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout elemenstos_programa_cursos
 layout elemento_mis_cursos
-layout fragment_first
-layout fragment_second
 layout lista_curso_layout
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

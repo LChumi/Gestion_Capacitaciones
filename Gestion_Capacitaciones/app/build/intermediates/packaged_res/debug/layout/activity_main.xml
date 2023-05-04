@@ -117,7 +117,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button"
+                android:id="@+id/btnLoguin"
                 style="@android:style/Widget.Button"
                 android:layout_width="287dp"
                 android:layout_height="50dp"
@@ -130,7 +130,7 @@
                 android:textSize="20dp"
                 android:textStyle="bold" />
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button1"
+                android:id="@+id/btnRegistro"
                 style="@android:style/Widget.Button"
                 android:layout_width="287dp"
                 android:layout_height="50dp"

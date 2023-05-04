@@ -22,10 +22,10 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final AppCompatButton button;
+  public final AppCompatButton btnLoguin;
 
   @NonNull
-  public final AppCompatButton button1;
+  public final AppCompatButton btnRegistro;
 
   @NonNull
   public final ImageView imageView;
@@ -45,13 +45,13 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final TextView textView3;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull AppCompatButton button,
-      @NonNull AppCompatButton button1, @NonNull ImageView imageView, @NonNull ImageView imageView2,
-      @NonNull ImageView imageView4, @NonNull TextView textView, @NonNull TextView textView2,
-      @NonNull TextView textView3) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView,
+      @NonNull AppCompatButton btnLoguin, @NonNull AppCompatButton btnRegistro,
+      @NonNull ImageView imageView, @NonNull ImageView imageView2, @NonNull ImageView imageView4,
+      @NonNull TextView textView, @NonNull TextView textView2, @NonNull TextView textView3) {
     this.rootView = rootView;
-    this.button = button;
-    this.button1 = button1;
+    this.btnLoguin = btnLoguin;
+    this.btnRegistro = btnRegistro;
     this.imageView = imageView;
     this.imageView2 = imageView2;
     this.imageView4 = imageView4;
@@ -87,15 +87,15 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button;
-      AppCompatButton button = ViewBindings.findChildViewById(rootView, id);
-      if (button == null) {
+      id = R.id.btnLoguin;
+      AppCompatButton btnLoguin = ViewBindings.findChildViewById(rootView, id);
+      if (btnLoguin == null) {
         break missingId;
       }
 
-      id = R.id.button1;
-      AppCompatButton button1 = ViewBindings.findChildViewById(rootView, id);
-      if (button1 == null) {
+      id = R.id.btnRegistro;
+      AppCompatButton btnRegistro = ViewBindings.findChildViewById(rootView, id);
+      if (btnRegistro == null) {
         break missingId;
       }
 
@@ -135,7 +135,7 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, button, button1, imageView,
+      return new ActivityMainBinding((ConstraintLayout) rootView, btnLoguin, btnRegistro, imageView,
           imageView2, imageView4, textView, textView2, textView3);
     }
     String missingId = rootView.getResources().getResourceName(id);
