@@ -49,14 +49,17 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    public void Login(String username,String password){
+    public void Login(String username, String password) {
+        UsuariosApiClient usuariosApiClient = new UsuariosApiClient();
+        retrofit2.Call<Usuario> call = usuariosApiClient.login(username, password);
 
-        usuariosApiClient.login(username, password).enqueue(new Callback<Usuario>() {
+        call.enqueue(new Callback<Usuario>() {
             @Override
             public void onResponse(retrofit2.Call<Usuario> call, Response<Usuario> response) {
-                if (response.isSuccessful()){
-                    Usuario usuario= response.body();
-                }else{
+                if (response.isSuccessful()) {
+                    Usuario usuario = response.body();
+                    Toast.makeText(LoginActivity.this, "Acceso correcto " + usuario.getUsername(), Toast.LENGTH_LONG).show();
+                } else {
                     Toast.makeText(LoginActivity.this, "Credenciales inválidas o problema de conexión", Toast.LENGTH_SHORT).show();
                     Log.e("LoginActivity", "Error al iniciar sesión: " + response.code() + " - " + response.message());
                 }
@@ -67,7 +70,6 @@ public class LoginActivity extends AppCompatActivity {
                 Log.e("Error", t.getMessage());
             }
         });
-
-
     }
+
 }

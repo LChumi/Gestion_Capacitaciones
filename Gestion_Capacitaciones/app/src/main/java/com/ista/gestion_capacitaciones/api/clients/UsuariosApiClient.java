@@ -14,7 +14,7 @@ public class UsuariosApiClient {
 
     private UsuarioApi usuarioApi;
 
-    private UsuariosApiClient(){
+    public UsuariosApiClient(){
         Retrofit retrofit=new Retrofit.Builder()
                 .baseUrl(ApiUrls.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
