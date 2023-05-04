@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 public class SqlConexion extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION=1;
-    private static  final String DATABASE_NOMBRE="gcomplexivoC2.db";
+    private static  final String DATABASE_NOMBRE="prueba1";
     public static final String TABLE_USUARIOS= "t_usuarios";
     public static final String TABLE_CURSO= "t_cursos";
     public static final String TABLE_ASISTENCIA= "t_asistencia";
@@ -26,12 +26,11 @@ public class SqlConexion extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        verificarTablas();
+        crearTablas(db);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS "+TABLE_USUARIOS);
         onCreate(db);
     }
 
