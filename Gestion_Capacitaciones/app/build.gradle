@@ -50,4 +50,28 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    implementation 'com.github.f0ris.sweetalert:library:1.6.2'
+
+    implementation "com.google.dagger:dagger-android:2.35.1"
+    annotationProcessor "com.google.dagger:dagger-android-processor:2.33"
+
+    // Picasso
+    implementation "com.squareup.picasso:picasso:2.71828"
+
+    // Stetho
+    implementation "com.facebook.stetho:stetho:1.5.1"
+    implementation "com.facebook.stetho:stetho-okhttp3:1.5.1"
+
+    //Libreia Spinner
+    implementation 'com.github.ganfra:material-spinner:2.0.0'
+
+    //ImagenView Circle
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Carrusel
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+
+    //PDF VIEWER
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
 }

@@ -516,6 +516,9 @@
     <attr format="boolean" name="state_with_icon"/>
     <attr format="color" name="strokeColor"/>
     <attr format="dimension" name="strokeWidth"/>
+    <attr format="reference" name="sweet_alert_bg_drawable"/>
+    <attr format="color|reference" name="sweet_alert_content_text_color"/>
+    <attr format="color|reference" name="sweet_alert_title_text_color"/>
     <attr format="reference" name="tabSecondaryStyle"/>
     <attr format="reference" name="tabStyle"/>
     <attr format="reference" name="targetId"/>
@@ -626,6 +629,8 @@
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
     <color name="black">#FF000000</color>
+    <color name="blue_btn_bg_color">#AEDEF4</color>
+    <color name="blue_btn_bg_pressed_color">#96BFD2</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -634,6 +639,7 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <color name="button_text_color">#FFFFFF</color>
     <color name="cardview_dark_background">#FF424242</color>
     <color name="cardview_light_background">#FFFFFFFF</color>
     <color name="cardview_shadow_end_color">#03000000</color>
@@ -642,6 +648,7 @@
     <color name="colorPrimary">#3d95d0</color>
     <color name="colorPrimaryDark">#489855</color>
     <color name="colorWhite">#fff</color>
+    <color name="custom_float_bg">#F27474</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_dark_default_color_background">#121212</color>
     <color name="design_dark_default_color_error">#CF6679</color>
@@ -681,10 +688,16 @@
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
+    <color name="disabled_color">#44000000</color>
+    <color name="error_color">#E7492E</color>
     <color name="error_color_material_dark">#ff7043</color>
     <color name="error_color_material_light">#ff5722</color>
+    <color name="error_stroke_color">#F27474</color>
+    <color name="float_transparent">#00000000</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
+    <color name="gray_btn_bg_color">#D0D0D0</color>
+    <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
     <color name="green">#10D118</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
@@ -822,10 +835,27 @@
     <color name="m3_sys_color_light_surface_variant">@color/m3_ref_palette_neutral_variant90</color>
     <color name="m3_sys_color_light_tertiary">@color/m3_ref_palette_tertiary40</color>
     <color name="m3_sys_color_light_tertiary_container">@color/m3_ref_palette_tertiary90</color>
+    <color name="main_blue_color">#2469df</color>
+    <color name="main_blue_stroke_color">#205ec7</color>
+    <color name="main_cyan_color">#05d9f7</color>
+    <color name="main_cyan_stroke_color">#05c7e2</color>
+    <color name="main_disabled_color">#838383</color>
+    <color name="main_disabled_stroke_color">#707070</color>
+    <color name="main_green_color">#6bd505</color>
+    <color name="main_green_stroke_color">#60bf04</color>
+    <color name="main_orange_color">#f77805</color>
+    <color name="main_orange_light_color">#f7b90d</color>
+    <color name="main_orange_light_stroke_color">#e4ab0c</color>
+    <color name="main_orange_stroke_color">#e66f04</color>
+    <color name="material_blue_grey_80">#ff37474f</color>
     <color name="material_blue_grey_800">#ff37474f</color>
+    <color name="material_blue_grey_90">#ff263238</color>
     <color name="material_blue_grey_900">#ff263238</color>
+    <color name="material_blue_grey_95">#ff21272b</color>
     <color name="material_blue_grey_950">#ff21272b</color>
+    <color name="material_deep_teal_20">#ff80cbc4</color>
     <color name="material_deep_teal_200">#ff80cbc4</color>
+    <color name="material_deep_teal_50">#ff009688</color>
     <color name="material_deep_teal_500">#ff008577</color>
     <color name="material_grey_100">#fff5f5f5</color>
     <color name="material_grey_300">#ffe0e0e0</color>
@@ -864,6 +894,8 @@
     <color name="material_personalized_color_surface_variant">#FFFFFF</color>
     <color name="material_personalized_color_tertiary">#FFFFFF</color>
     <color name="material_personalized_color_tertiary_container">#FFFFFF</color>
+    <color name="message_color">#797979</color>
+    <color name="message_color_dark">#fff</color>
     <color name="mtrl_btn_text_color_disabled">#61000000</color>
     <color name="mtrl_btn_transparent_bg_color">#00ffffff</color>
     <color name="mtrl_scrim_color">#52000000</color>
@@ -874,6 +906,7 @@
     <color name="mtrl_textinput_hovered_box_stroke_color">#DE000000</color>
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
+    <color name="notification_material_background_media_default_color">#ff424242</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -886,12 +919,17 @@
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="red">#E82C1E</color>
+    <color name="red_btn_bg_color">#DD6B55</color>
+    <color name="red_btn_bg_pressed_color">#CD5B55</color>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
+    <color name="success_stroke_color">#A5DC86</color>
+    <color name="sweet_dialog_bg_color">#FFFFFF</color>
+    <color name="sweet_dialog_bg_color_dark">#e6222222</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
@@ -899,8 +937,12 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="text_color">#FF000000</color>
+    <color name="title_color">#575757</color>
+    <color name="title_color_dark">#fff</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
+    <color name="trans_success_stroke_color">#33A5DC86</color>
+    <color name="warning_stroke_color">#F8BB86</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#F1E57F</color>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
@@ -986,11 +1028,14 @@
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="alert_width">290dp</dimen>
     <dimen name="appcompat_dialog_background_inset">16dp</dimen>
+    <dimen name="buttons_stroke_width">0sp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
     <dimen name="clock_face_margin_start">64dp</dimen>
+    <dimen name="common_circle_width">3dp</dimen>
     <dimen name="compat_button_inset_horizontal_material">4dp</dimen>
     <dimen name="compat_button_inset_vertical_material">6dp</dimen>
     <dimen name="compat_button_padding_horizontal_material">8dp</dimen>
@@ -998,6 +1043,7 @@
     <dimen name="compat_control_corner_material">2dp</dimen>
     <dimen name="compat_notification_large_icon_max_height">320dp</dimen>
     <dimen name="compat_notification_large_icon_max_width">320dp</dimen>
+    <dimen name="custom_image_size">53dp</dimen>
     <dimen name="def_drawer_elevation">10dp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
@@ -1049,10 +1095,14 @@
     <dimen name="design_textinput_caption_translate_y">5dp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="error_label_spacing">12dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="fastscroll_default_thickness">8dp</dimen>
     <dimen name="fastscroll_margin">0dp</dimen>
     <dimen name="fastscroll_minimum_range">50dp</dimen>
+    <dimen name="floating_label_bottom_spacing">8dp</dimen>
+    <dimen name="floating_label_inside_spacing">12dp</dimen>
+    <dimen name="floating_label_top_spacing">4dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
@@ -1063,6 +1113,7 @@
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
+    <dimen name="label_text_size">12sp</dimen>
     <dimen name="m3_alert_dialog_action_bottom_padding">14dp</dimen>
     <dimen name="m3_alert_dialog_action_top_padding">14dp</dimen>
     <dimen name="m3_alert_dialog_corner_size">28dp</dimen>
@@ -1394,6 +1445,7 @@
     <dimen name="material_time_picker_minimum_screen_height">560dp</dimen>
     <dimen name="material_time_picker_minimum_screen_width">340dp</dimen>
     <dimen name="material_timepicker_dialog_buttons_margin_top">24dp</dimen>
+    <dimen name="min_content_height">20dp</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_bottom">80dp</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_end">24dp</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_start">24dp</dimen>
@@ -1606,7 +1658,13 @@
     <dimen name="notification_subtext_size">13sp</dimen>
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
+    <dimen name="progress_circle_radius">34dp</dimen>
+    <dimen name="right_left_spinner_padding">8dp</dimen>
     <dimen name="sliding_pane_detail_pane_width">300dp</dimen>
+    <dimen name="subtitle_corner_radius">2dp</dimen>
+    <dimen name="subtitle_outline_width">2dp</dimen>
+    <dimen name="subtitle_shadow_offset">2dp</dimen>
+    <dimen name="subtitle_shadow_radius">2dp</dimen>
     <dimen name="tooltip_corner_radius">2dp</dimen>
     <dimen name="tooltip_horizontal_padding">16dp</dimen>
     <dimen name="tooltip_margin">8dp</dimen>
@@ -1615,6 +1673,8 @@
     <dimen name="tooltip_vertical_padding">6.5dp</dimen>
     <dimen name="tooltip_y_offset_non_touch">0dp</dimen>
     <dimen name="tooltip_y_offset_touch">16dp</dimen>
+    <dimen name="underline_bottom_spacing">4dp</dimen>
+    <dimen name="underline_top_spacing">8dp</dimen>
     <item name="material_ic_keyboard_arrow_next_black_24dp" type="drawable">@drawable/material_ic_keyboard_arrow_right_black_24dp</item>
     <item name="material_ic_keyboard_arrow_previous_black_24dp" type="drawable">@drawable/material_ic_keyboard_arrow_left_black_24dp</item>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
@@ -1799,6 +1859,7 @@
     <item quantity="one"><ns2:g id="count">%d</ns2:g> new notification</item>
     <item quantity="other"><ns2:g id="count">%d</ns2:g> new notifications</item>
   </plurals>
+    <string name="LOADING">Loading...</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_up_description">Navigate up</string>
     <string name="abc_action_menu_overflow_description">More options</string>
@@ -1840,6 +1901,10 @@
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
+    <string name="default_progressbar">Default Progressbar:</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_default_title">Here\'s a message!</string>
+    <string name="dialog_ok">OK</string>
     <string description="Screen reader announcement for when a checkbox is on error. [CHAR LIMIT=NONE]" name="error_a11y_label">
     Error: invalid
   </string>
@@ -5819,12 +5884,17 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
+    <style name="TextAppearance.Compat.Notification.Info.Media"/>
     <style name="TextAppearance.Compat.Notification.Line2" parent="TextAppearance.Compat.Notification.Info"/>
+    <style name="TextAppearance.Compat.Notification.Line2.Media" parent="TextAppearance.Compat.Notification.Info.Media"/>
+    <style name="TextAppearance.Compat.Notification.Media"/>
     <style name="TextAppearance.Compat.Notification.Time">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
+    <style name="TextAppearance.Compat.Notification.Time.Media"/>
     <style name="TextAppearance.Compat.Notification.Title" parent="@android:style/TextAppearance.StatusBar.EventContent.Title"/>
+    <style name="TextAppearance.Compat.Notification.Title.Media"/>
     <style name="TextAppearance.Design.CollapsingToolbar.Expanded" parent="TextAppearance.AppCompat.Display1">
     <item name="android:textColor">?android:attr/textColorPrimary</item>
   </style>
@@ -8814,6 +8884,38 @@
     <style name="Widget.Support.CoordinatorLayout" parent="android:Widget">
         <item name="statusBarBackground">#000000</item>
     </style>
+    <style name="alert_dialog_dark" parent="alert_dialog_light">
+        <item name="android:backgroundDimAmount">0.8</item>
+        <item name="sweet_alert_bg_drawable">@drawable/dialog_background_dark</item>
+        <item name="sweet_alert_title_text_color">@color/title_color_dark</item>
+        <item name="sweet_alert_content_text_color">@color/message_color_dark</item>
+    </style>
+    <style name="alert_dialog_light" parent="android:Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@color/float_transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+
+        <item name="sweet_alert_bg_drawable">@drawable/dialog_background</item>
+        <item name="sweet_alert_title_text_color">@color/title_color</item>
+        <item name="sweet_alert_content_text_color">@color/message_color</item>
+    </style>
+    <style name="dialog_blue_button" parent="android:Widget.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minWidth">85dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/green_button_background</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:paddingLeft">21dp</item>
+        <item name="android:paddingRight">21dp</item>
+        <item name="android:textColor">@color/button_text_color</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:lines">1</item>
+    </style>
     <declare-styleable name="ActionBar">
         
         <attr name="navigationMode">
@@ -9959,6 +10061,12 @@
     <attr format="reference" name="checkedChip"/>
 
   </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr format="dimension" name="civ_border_width"/>
+        <attr format="color" name="civ_border_color"/>
+        <attr format="boolean" name="civ_border_overlay"/>
+        <attr format="color" name="civ_circle_background_color"/>
+    </declare-styleable>
     <declare-styleable name="CircularProgressIndicator">
     
     <attr format="dimension" name="indicatorSize"/>
@@ -11612,6 +11720,7 @@
     
     <attr format="reference" name="shapeAppearanceOverlay"/>
   </declare-styleable>
+    <declare-styleable name="MaterialSpinner"><attr format="color" name="ms_baseColor"/><attr format="color" name="ms_highlightColor"/><attr format="color" name="ms_errorColor"/><attr format="string" name="ms_error"/><attr format="string" name="ms_hint"/><attr format="color" name="ms_hintColor"/><attr format="dimension" name="ms_hintTextSize"/><attr format="string" name="ms_floatingLabelText"/><attr format="color" name="ms_floatingLabelColor"/><attr format="boolean" name="ms_multiline"/><attr format="integer" name="ms_nbErrorLines"/><attr format="string" name="ms_typeface"/><attr format="boolean" name="ms_alignLabels"/><attr format="dimension" name="ms_thickness"/><attr format="dimension" name="ms_thickness_error"/><attr format="dimension" name="ms_arrowSize"/><attr format="color" name="ms_arrowColor"/><attr format="boolean" name="ms_enableFloatingLabel"/><attr format="boolean" name="ms_enableErrorLabel"/><attr format="boolean" name="ms_alwaysShowFloatingLabel"/><attr format="boolean" name="ms_isRtl"/><attr format="reference" name="ms_hintView"/><attr format="reference" name="ms_dropDownHintView"/></declare-styleable>
     <declare-styleable name="MaterialSwitch">
     
     <attr format="reference" name="thumbIcon"/>
@@ -12210,6 +12319,47 @@
         </attr>
 
     </declare-styleable>
+    <declare-styleable name="PageIndicatorView">
+        <attr name="piv_orientation">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+
+        <attr format="reference" name="piv_viewPager"/>
+        <attr format="integer" name="piv_select"/>
+
+        <attr format="integer" name="piv_count"/>
+        <attr format="boolean" name="piv_dynamicCount"/>
+
+        <attr format="dimension" name="piv_radius"/>
+        <attr format="dimension" name="piv_padding"/>
+        <attr format="dimension" name="piv_strokeWidth"/>
+        <attr format="float" name="piv_scaleFactor"/>
+        <attr format="boolean" name="piv_autoVisibility"/>
+
+        <attr format="color" name="piv_unselectedColor"/>
+        <attr format="color" name="piv_selectedColor"/>
+
+        <attr format="boolean" name="piv_interactiveAnimation"/>
+        <attr format="integer" name="piv_animationDuration"/>
+        <attr name="piv_animationType">
+            <enum name="none" value="0"/>
+            <enum name="color" value="1"/>
+            <enum name="scale" value="2"/>
+            <enum name="worm" value="3"/>
+            <enum name="slide" value="4"/>
+            <enum name="fill" value="5"/>
+            <enum name="thinWorm" value="6"/>
+            <enum name="drop" value="7"/>
+            <enum name="swap" value="8"/>
+            <enum name="scale_down" value="9"/>
+        </attr>
+        <attr name="piv_rtl_mode">
+            <enum name="on" value="0"/>
+            <enum name="off" value="1"/>
+            <enum name="auto" value="2"/>
+        </attr>
+    </declare-styleable>
     <declare-styleable name="PopupWindow">
         
         <attr format="boolean" name="overlapAnchor"/>
@@ -12220,6 +12370,7 @@
         
         <attr format="boolean" name="state_above_anchor"/>
     </declare-styleable>
+    <declare-styleable name="ProgressWheel"><attr format="boolean" name="matProg_progressIndeterminate"/><attr format="color" name="matProg_barColor"/><attr format="color" name="matProg_rimColor"/><attr format="dimension" name="matProg_rimWidth"/><attr format="float" name="matProg_spinSpeed"/><attr format="integer" name="matProg_barSpinCycleTime"/><attr format="dimension" name="matProg_circleRadius"/><attr format="boolean" name="matProg_fillRadius"/><attr format="dimension" name="matProg_barWidth"/><attr format="boolean" name="matProg_linearProgress"/></declare-styleable>
     <declare-styleable name="PropertySet">
         
         <attr name="android:visibility"/>
@@ -12270,9 +12421,15 @@
         <attr format="reference" name="fastScrollHorizontalThumbDrawable"/>
         <attr format="reference" name="fastScrollHorizontalTrackDrawable"/>
     </declare-styleable>
+    <declare-styleable name="Rotate3dAnimation"><attr format="enum" name="rollType">
+            <enum name="x" value="0"/>
+            <enum name="y" value="1"/>
+            <enum name="z" value="2"/>
+        </attr><attr format="float" name="fromDeg"/><attr format="float" name="toDeg"/><attr format="fraction" name="customPivotX"/><attr format="fraction" name="customPivotY"/></declare-styleable>
     <declare-styleable name="ScrimInsetsFrameLayout">
     <attr format="color|reference" name="insetForeground"/>
   </declare-styleable>
+    <declare-styleable name="ScrollBar"><attr format="color|reference" name="sb_handlerColor"/><attr format="color|reference" name="sb_indicatorColor"/><attr format="color|reference" name="sb_indicatorTextColor"/><attr format="boolean|reference" name="sb_horizontal"/></declare-styleable>
     <declare-styleable name="ScrollingViewBehavior_Layout">
     
     <attr format="dimension" name="behavior_overlapTop"/>
@@ -12431,6 +12588,61 @@
     
     <attr format="dimension" name="trackHeight"/>
   </declare-styleable>
+    <declare-styleable name="SliderView">
+
+        <attr name="sliderIndicatorOrientation">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+
+        <attr format="boolean" name="sliderIndicatorEnabled"/>
+        <attr format="dimension" name="sliderIndicatorRadius"/>
+        <attr format="dimension" name="sliderIndicatorPadding"/>
+        <attr format="dimension" name="sliderIndicatorMargin"/>
+        <attr format="dimension" name="sliderIndicatorMarginLeft"/>
+        <attr format="dimension" name="sliderIndicatorMarginRight"/>
+        <attr format="dimension" name="sliderIndicatorMarginTop"/>
+        <attr format="dimension" name="sliderIndicatorMarginBottom"/>
+
+        <attr name="sliderIndicatorGravity">
+            <flag name="bottom" value="80"/>
+            <flag name="center" value="17"/>
+            <flag name="center_horizontal" value="1"/>
+            <flag name="center_vertical" value="16"/>
+            <flag name="clip_horizontal" value="8"/>
+            <flag name="clip_vertical" value="128"/>
+            <flag name="end" value="8388613"/>
+            <flag name="fill" value="119"/>
+            <flag name="fill_horizontal" value="7"/>
+            <flag name="fill_vertical" value="112"/>
+            <flag name="left" value="3"/>
+            <flag name="right" value="5"/>
+            <flag name="start" value="8388611"/>
+            <flag name="top" value="48"/>
+        </attr>
+
+        <attr format="color" name="sliderIndicatorUnselectedColor"/>
+        <attr format="color" name="sliderIndicatorSelectedColor"/>
+        <attr format="integer" name="sliderIndicatorAnimationDuration"/>
+        <attr format="integer" name="sliderAnimationDuration"/>
+
+        <attr name="sliderIndicatorRtlMode">
+            <enum name="on" value="0"/>
+            <enum name="off" value="1"/>
+            <enum name="auto" value="2"/>
+        </attr>
+
+        <attr format="integer" name="sliderScrollTimeInSec"/>
+        <attr format="boolean" name="sliderAutoCycleEnabled"/>
+        <attr format="boolean" name="sliderStartAutoCycle"/>
+
+        <attr name="sliderAutoCycleDirection">
+            <enum name="right" value="0"/>
+            <enum name="left" value="1"/>
+            <enum name="back_and_forth" value="2"/>
+        </attr>
+
+    </declare-styleable>
     <declare-styleable name="Snackbar">
     
     <attr format="reference" name="snackbarStyle"/>
