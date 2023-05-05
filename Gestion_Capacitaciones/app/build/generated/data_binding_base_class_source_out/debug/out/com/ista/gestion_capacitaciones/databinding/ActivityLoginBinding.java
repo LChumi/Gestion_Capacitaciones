@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,15 +25,20 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final Button btnIngreso;
 
   @NonNull
+  public final ImageButton btnRegreso;
+
+  @NonNull
   public final TextInputEditText txtPassword;
 
   @NonNull
   public final TextInputEditText txtUsername;
 
   private ActivityLoginBinding(@NonNull LinearLayout rootView, @NonNull Button btnIngreso,
-      @NonNull TextInputEditText txtPassword, @NonNull TextInputEditText txtUsername) {
+      @NonNull ImageButton btnRegreso, @NonNull TextInputEditText txtPassword,
+      @NonNull TextInputEditText txtUsername) {
     this.rootView = rootView;
     this.btnIngreso = btnIngreso;
+    this.btnRegreso = btnRegreso;
     this.txtPassword = txtPassword;
     this.txtUsername = txtUsername;
   }
@@ -70,6 +76,12 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnRegreso;
+      ImageButton btnRegreso = ViewBindings.findChildViewById(rootView, id);
+      if (btnRegreso == null) {
+        break missingId;
+      }
+
       id = R.id.txtPassword;
       TextInputEditText txtPassword = ViewBindings.findChildViewById(rootView, id);
       if (txtPassword == null) {
@@ -82,7 +94,7 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLoginBinding((LinearLayout) rootView, btnIngreso, txtPassword,
+      return new ActivityLoginBinding((LinearLayout) rootView, btnIngreso, btnRegreso, txtPassword,
           txtUsername);
     }
     String missingId = rootView.getResources().getResourceName(id);

@@ -2654,6 +2654,8 @@ dimen mtrl_tooltip_minHeight
 dimen mtrl_tooltip_minWidth
 dimen mtrl_tooltip_padding
 dimen mtrl_transition_shared_axis_slide_distance
+dimen nav_header_height
+dimen nav_header_vertical_spacing
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -2759,6 +2761,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable background_blue
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2784,6 +2787,7 @@ drawable google
 drawable gorjeo
 drawable gradient_background
 drawable ic_arrow_back_black_24
+drawable ic_check
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_dashboard_black_24dp
@@ -2794,11 +2798,15 @@ drawable ic_launcher_foreground
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
+drawable ic_menu_camera
+drawable ic_menu_gallery
+drawable ic_menu_slideshow
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
+drawable ic_regresar
 drawable ic_search_black_24
 drawable instaa12
 drawable instagram
@@ -2877,10 +2885,15 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable side_nav_bar
 drawable test_level_drawable
 drawable title_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font hammersmith_one
+font poppins_medium
+font poppins_regular
+font san_francisco
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -2956,6 +2969,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_settings
 id action_text
 id actions
 id activity_chooser_view_content
@@ -2970,6 +2984,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id app_bar_home
 id arc
 id asConfigured
 id async
@@ -2991,6 +3006,7 @@ id bounceStart
 id btnIngreso
 id btnLoguin
 id btnRegistro
+id btnRegreso
 id button
 id button3
 id buttonPanel
@@ -3061,6 +3077,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawer_layout
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -3081,6 +3098,7 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab
 id fade
 id fill
 id fill_horizontal
@@ -3160,6 +3178,7 @@ id listMode
 id list_item
 id listaCursosDocentes
 id lista_estudiantes
+id ll_custom_toast_ok
 id locale
 id ltr
 id m3_side_sheet
@@ -3191,6 +3210,7 @@ id matrix
 id message
 id middle
 id mini
+id mobile_navigation
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -3223,9 +3243,14 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id nav_controller_view_tag
+id nav_gallery
 id nav_graph
 id nav_graph2
+id nav_home
 id nav_host_fragment_container
+id nav_host_fragment_content_home
+id nav_slideshow
+id nav_view
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3395,9 +3420,12 @@ id textView6
 id textView7
 id textView8
 id textView9
+id text_gallery
+id text_home
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
+id text_slideshow
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -3409,6 +3437,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -3422,6 +3451,7 @@ id transition_transform
 id triangle
 id tvDirector
 id tvTitulo
+id txtMensajeOk
 id txtPassword
 id txtUsername
 id unchecked
@@ -3555,6 +3585,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_asistencias
+layout activity_home
 layout activity_lista_estudiante
 layout activity_login
 layout activity_main
@@ -3564,7 +3595,10 @@ layout activity_sing_up
 layout activity_splash
 layout activity_vista_curso_docente
 layout activity_vista_curso_estudiante
+layout app_bar_home
+layout content_home
 layout custom_dialog
+layout custom_toast_ok
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -3582,6 +3616,9 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout elemenstos_programa_cursos
 layout elemento_mis_cursos
+layout fragment_gallery
+layout fragment_home
+layout fragment_slideshow
 layout lista_curso_layout
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3634,6 +3671,7 @@ layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout mtrl_search_bar
 layout mtrl_search_view
+layout nav_header_home
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -3644,9 +3682,12 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu activity_main_drawer
 menu bottom_nav_menu
+menu home
 mipmap ic_launcher
 mipmap ic_launcher_round
+navigation mobile_navigation
 navigation nav_graph
 navigation nav_graph2
 plurals mtrl_badge_content_description
@@ -3677,6 +3718,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_settings
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -3733,6 +3775,9 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string menu_gallery
+string menu_home
+string menu_slideshow
 string mtrl_badge_numberless_content_description
 string mtrl_checkbox_button_icon_path_checked
 string mtrl_checkbox_button_icon_path_group_name
@@ -3797,6 +3842,11 @@ string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
+string nav_header_desc
+string nav_header_subtitle
+string nav_header_title
+string navigation_drawer_close
+string navigation_drawer_open
 string next
 string password_toggle_content_description
 string path_password_eye
@@ -3813,6 +3863,7 @@ string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
 string title_activity_bottom_menu
+string title_activity_home
 string title_activity_login
 string title_activity_menu_inicio
 string title_activity_vista_cursos
@@ -4357,6 +4408,9 @@ style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
 style Theme_Gestion_Capacitaciones
+style Theme_Gestion_Capacitaciones_AppBarOverlay
+style Theme_Gestion_Capacitaciones_NoActionBar
+style Theme_Gestion_Capacitaciones_PopupOverlay
 style Theme_Material3_Dark
 style Theme_Material3_Dark_BottomSheetDialog
 style Theme_Material3_Dark_Dialog

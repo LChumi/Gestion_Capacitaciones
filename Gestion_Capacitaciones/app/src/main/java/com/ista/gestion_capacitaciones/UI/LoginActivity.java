@@ -2,15 +2,22 @@ package com.ista.gestion_capacitaciones.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.telecom.Call;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.ista.gestion_capacitaciones.MainActivity;
 import com.ista.gestion_capacitaciones.R;
 import com.ista.gestion_capacitaciones.api.clients.UsuariosApiClient;
 import com.ista.gestion_capacitaciones.db.DbPersona;
@@ -28,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     private UsuariosApiClient usuariosApiClient;
 
     Button btnIngreso;
+    ImageButton btnRegresar;
     TextInputEditText username,password;
 
     @Override
@@ -38,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         username=findViewById(R.id.txtUsername);
         password=findViewById(R.id.txtPassword);
         btnIngreso=findViewById(R.id.btnIngreso);
+        btnRegresar=findViewById(R.id.btnRegreso);
 
         btnIngreso.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +59,12 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+        btnRegresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Regresar();
+            }
+        });
     }
 
     public void Login(String username, String password) {
@@ -57,7 +72,8 @@ public class LoginActivity extends AppCompatActivity {
         DbUsuarios dbUsuarios = new DbUsuarios(LoginActivity.this);
 
         if(dbUsuarios.login(username,password)!=null){
-            Toast.makeText(LoginActivity.this, "Accseso Correcto", Toast.LENGTH_LONG).show();
+            //Toast.makeText(LoginActivity.this, "Accseso Correcto", Toast.LENGTH_LONG).show();
+            ToastCorrecto("Correcto");
         }else{
             //consumo de api-Rest
             retrofit2.Call<Usuario> call = usuariosApiClient.login(username, password);
@@ -67,8 +83,8 @@ public class LoginActivity extends AppCompatActivity {
                 public void onResponse(retrofit2.Call<Usuario> call, Response<Usuario> response) {
                     if (response.isSuccessful()) {
                         Usuario usuario = response.body();
-                        Toast.makeText(LoginActivity.this, "Acceso correcto " + usuario.getUsername(), Toast.LENGTH_LONG).show();
-
+                        //Toast.makeText(LoginActivity.this, "Acceso correcto " + usuario.getUsername(), Toast.LENGTH_LONG).show();
+                            ToastCorrecto("Correcto");
                         //base de datos
                         DbPersona dbPersona = new DbPersona(LoginActivity.this);
                         PersonaDTO personaDTO = new PersonaDTO(usuario.getPersona());
@@ -105,10 +121,23 @@ public class LoginActivity extends AppCompatActivity {
                 }
             });
         }
+    }
 
+    public void Regresar(){
+        Intent regresar=new Intent(this, MainActivity.class);
+        startActivity(regresar);
+    }
+    public void ToastCorrecto(String mensaje){
+        LayoutInflater layoutInflater=getLayoutInflater();
+        View view=layoutInflater.inflate(R.layout.custom_toast_ok,(ViewGroup) findViewById(R.id.ll_custom_toast_ok));
+        TextView txtMesnaje=view.findViewById(R.id.txtMensajeOk);
+        txtMesnaje.setText(mensaje);
 
-
-
+        Toast toast=new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.BOTTOM,0,200);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(view);
+        toast.show();
     }
 
 

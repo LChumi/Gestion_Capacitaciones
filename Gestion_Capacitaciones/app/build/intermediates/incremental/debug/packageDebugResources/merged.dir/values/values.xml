@@ -18,6 +18,9 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <string name="action_settings">Settings</string>
     <string name="app_name">Gestion_Capacitaciones</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="lorem_ipsum">
@@ -56,10 +59,19 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="title_activity_bottom_menu">BottomMenuActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_menu_inicio">MenuInicioActivity</string>
     <string name="title_activity_vista_cursos">VistaCursos</string>
@@ -83,4 +95,10 @@
         <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
         
     </style>
+    <style name="Theme.Gestion_Capacitaciones.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.Gestion_Capacitaciones.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Gestion_Capacitaciones.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 </resources>

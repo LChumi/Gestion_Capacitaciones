@@ -29,6 +29,11 @@
         android:testOnly="true"
         android:theme="@style/Theme.Gestion_Capacitaciones" >
         <activity
+            android:name="com.ista.gestion_capacitaciones.UI.HomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.Gestion_Capacitaciones.NoActionBar" />
+        <activity
             android:name="com.ista.gestion_capacitaciones.UI.Sing_Up_Activity"
             android:exported="false" />
         <activity
