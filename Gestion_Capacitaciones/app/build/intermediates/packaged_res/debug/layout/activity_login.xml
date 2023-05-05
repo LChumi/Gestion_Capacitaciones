@@ -53,7 +53,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:hint="Username"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/user">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:inputType="text"
@@ -69,14 +70,15 @@
         android:hint="Password"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/pass">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:inputType="textPassword"
             android:fontFamily="@font/poppins_medium"
             android:id="@+id/txtPassword"
             android:textSize="15sp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:layout_width="match_parent"

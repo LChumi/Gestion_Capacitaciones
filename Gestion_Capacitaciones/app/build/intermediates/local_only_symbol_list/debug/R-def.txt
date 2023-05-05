@@ -50,8 +50,10 @@ drawable intro_top_background
 drawable layers_2
 drawable layers_color
 drawable logo
+drawable pass
 drawable side_nav_bar
 drawable title_background
+drawable user
 font hammersmith_one
 font poppins_medium
 font poppins_regular

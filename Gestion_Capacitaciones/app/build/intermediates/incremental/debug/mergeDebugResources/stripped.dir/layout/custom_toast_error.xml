@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/ll_custom_toast_err"
-    android:orientation="horizontal"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/background_red"
     android:gravity="center|center_horizontal"
+    android:orientation="horizontal"
     android:padding="10dp">
 
     <ImageView
