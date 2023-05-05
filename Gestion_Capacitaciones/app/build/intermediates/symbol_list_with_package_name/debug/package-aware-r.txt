@@ -2762,6 +2762,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable background_blue
+drawable background_red
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2791,6 +2792,7 @@ drawable ic_check
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_dashboard_black_24dp
+drawable ic_err
 drawable ic_home_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -3178,6 +3180,7 @@ id listMode
 id list_item
 id listaCursosDocentes
 id lista_estudiantes
+id ll_custom_toast_err
 id ll_custom_toast_ok
 id locale
 id ltr
@@ -3451,6 +3454,9 @@ id transition_transform
 id triangle
 id tvDirector
 id tvTitulo
+id txtInputPassword
+id txtInputUsuario
+id txtMensajeErr
 id txtMensajeOk
 id txtPassword
 id txtUsername
@@ -3598,6 +3604,7 @@ layout activity_vista_curso_estudiante
 layout app_bar_home
 layout content_home
 layout custom_dialog
+layout custom_toast_error
 layout custom_toast_ok
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

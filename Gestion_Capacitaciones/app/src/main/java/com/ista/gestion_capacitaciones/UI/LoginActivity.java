@@ -2,6 +2,7 @@ package com.ista.gestion_capacitaciones.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.telecom.Call;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.ista.gestion_capacitaciones.MainActivity;
 import com.ista.gestion_capacitaciones.R;
 import com.ista.gestion_capacitaciones.api.clients.UsuariosApiClient;
@@ -34,9 +36,11 @@ public class LoginActivity extends AppCompatActivity {
 
     private UsuariosApiClient usuariosApiClient;
 
-    Button btnIngreso;
-    ImageButton btnRegresar;
-    TextInputEditText username,password;
+    private Button btnIngreso;
+    private ImageButton btnRegresar;
+    private TextInputEditText username,password;
+    private TextInputLayout txtInputUsuario,txtInputPassword;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +51,9 @@ public class LoginActivity extends AppCompatActivity {
         password=findViewById(R.id.txtPassword);
         btnIngreso=findViewById(R.id.btnIngreso);
         btnRegresar=findViewById(R.id.btnRegreso);
+        txtInputUsuario=findViewById(R.id.txtInputUsuario);
+        txtInputPassword=findViewById(R.id.txtInputPassword);
+
 
         btnIngreso.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,58 +75,66 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void Login(String username, String password) {
-        UsuariosApiClient usuariosApiClient = new UsuariosApiClient();
-        DbUsuarios dbUsuarios = new DbUsuarios(LoginActivity.this);
+        try {
+            if(validar()){
+                UsuariosApiClient usuariosApiClient = new UsuariosApiClient();
+                DbUsuarios dbUsuarios = new DbUsuarios(LoginActivity.this);
 
-        if(dbUsuarios.login(username,password)!=null){
-            //Toast.makeText(LoginActivity.this, "Accseso Correcto", Toast.LENGTH_LONG).show();
-            ToastCorrecto("Correcto");
-        }else{
-            //consumo de api-Rest
-            retrofit2.Call<Usuario> call = usuariosApiClient.login(username, password);
+                if(dbUsuarios.login(username,password)!=null){
+                    //Toast.makeText(LoginActivity.this, "Accseso Correcto", Toast.LENGTH_LONG).show();
+                    ToastCorrecto("Correcto");
+                }else{
+                    //consumo de api-Rest
+                    retrofit2.Call<Usuario> call = usuariosApiClient.login(username, password);
 
-            call.enqueue(new Callback<Usuario>() {
-                @Override
-                public void onResponse(retrofit2.Call<Usuario> call, Response<Usuario> response) {
-                    if (response.isSuccessful()) {
-                        Usuario usuario = response.body();
-                        //Toast.makeText(LoginActivity.this, "Acceso correcto " + usuario.getUsername(), Toast.LENGTH_LONG).show();
-                            ToastCorrecto("Correcto");
-                        //base de datos
-                        DbPersona dbPersona = new DbPersona(LoginActivity.this);
-                        PersonaDTO personaDTO = new PersonaDTO(usuario.getPersona());
-                        long perId = personaDTO.getPer_id();
-                        if (dbPersona.obtenerPersona(perId) == null) {
-                            long per = dbPersona.insertaPersona(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento().toString(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
-                            if (per > 0) {
-                                Toast.makeText(LoginActivity.this, "Persona guardada", Toast.LENGTH_LONG).show();
+                    call.enqueue(new Callback<Usuario>() {
+                        @Override
+                        public void onResponse(retrofit2.Call<Usuario> call, Response<Usuario> response) {
+                            if (response.isSuccessful()) {
+                                Usuario usuario = response.body();
+                                //Toast.makeText(LoginActivity.this, "Acceso correcto " + usuario.getUsername(), Toast.LENGTH_LONG).show();
+                                ToastCorrecto("Correcto");
+                                //base de datos
+                                DbPersona dbPersona = new DbPersona(LoginActivity.this);
+                                PersonaDTO personaDTO = new PersonaDTO(usuario.getPersona());
+                                long perId = personaDTO.getPer_id();
+                                if (dbPersona.obtenerPersona(perId) == null) {
+                                    long per = dbPersona.insertaPersona(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento().toString(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
+                                    if (per > 0) {
+                                        Toast.makeText(LoginActivity.this, "Persona guardada", Toast.LENGTH_LONG).show();
+                                    } else {
+                                        Toast.makeText(LoginActivity.this, "Error al guardar persona", Toast.LENGTH_LONG).show();
+                                    }
+                                }
+
+
+                                long usuId=usuario.getId_usuario();
+                                if (dbUsuarios.obtenerUsuario(usuId) == null) {
+                                    long us = dbUsuarios.insertaUsuario(username, password, perId);
+                                    if (us > 0) {
+                                        Toast.makeText(LoginActivity.this, "Usuario guardado", Toast.LENGTH_LONG).show();
+                                    } else {
+                                        Toast.makeText(LoginActivity.this, "Error al guardar usuario", Toast.LENGTH_LONG).show();
+                                    }
+                                }
+
                             } else {
-                                Toast.makeText(LoginActivity.this, "Error al guardar persona", Toast.LENGTH_LONG).show();
+                                Toast.makeText(LoginActivity.this, "Credenciales inválidas o problema de conexión", Toast.LENGTH_SHORT).show();
+                                Log.e("LoginActivity", "Error al iniciar sesión: " + response.code() + " - " + response.message());
                             }
                         }
 
-
-                        long usuId=usuario.getId_usuario();
-                        if (dbUsuarios.obtenerUsuario(usuId) == null) {
-                            long us = dbUsuarios.insertaUsuario(username, password, perId);
-                            if (us > 0) {
-                                Toast.makeText(LoginActivity.this, "Usuario guardado", Toast.LENGTH_LONG).show();
-                            } else {
-                                Toast.makeText(LoginActivity.this, "Error al guardar usuario", Toast.LENGTH_LONG).show();
-                            }
+                        @Override
+                        public void onFailure(retrofit2.Call<Usuario> call, Throwable t) {
+                            Log.e("Error", t.getMessage());
                         }
-
-                    } else {
-                        Toast.makeText(LoginActivity.this, "Credenciales inválidas o problema de conexión", Toast.LENGTH_SHORT).show();
-                        Log.e("LoginActivity", "Error al iniciar sesión: " + response.code() + " - " + response.message());
-                    }
+                    });
                 }
-
-                @Override
-                public void onFailure(retrofit2.Call<Usuario> call, Throwable t) {
-                    Log.e("Error", t.getMessage());
-                }
-            });
+            }else{
+                ToastIncorrecto("Por favor llene todos los datos ");
+            }
+        }catch (Exception e){
+            ToastIncorrecto("Se ha producido un error"+e.getMessage() );
         }
     }
 
@@ -138,6 +153,38 @@ public class LoginActivity extends AppCompatActivity {
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(view);
         toast.show();
+    }
+
+    public void ToastIncorrecto(String mensaje){
+        LayoutInflater layoutInflater=getLayoutInflater();
+        View view=layoutInflater.inflate(R.layout.custom_toast_error,(ViewGroup)  findViewById(R.id.ll_custom_toast_err));
+        TextView txtMensaje=view.findViewById(R.id.txtMensajeErr);
+        txtMensaje.setText(mensaje);
+
+        Toast toast=new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.BOTTOM,0,200);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(view);
+        toast.show();
+    }
+
+    private boolean validar(){
+        Boolean retorno=true;
+        String usuario,password1;
+        usuario=username.getText().toString();
+        password1=password.getText().toString();
+        if(usuario.isEmpty()){
+            txtInputUsuario.setError("Ingrese su Usuario");
+            retorno=false;
+        }else{
+            txtInputUsuario.setErrorEnabled(false);
+        }
+        if(password1.isEmpty()){
+            txtInputPassword.setError("Ingrese su contraseña");
+        }else{
+            txtInputPassword.setErrorEnabled(false);
+        }
+        return retorno;
     }
 
 

@@ -36,4 +36,6 @@ public interface UsuarioApi {
     @GET("usuarios/login/{username}/{password}")
     Call<Usuario> login(@Path("username") String username, @Path("password") String password);
 
+
+
 }

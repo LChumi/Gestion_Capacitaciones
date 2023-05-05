@@ -21,6 +21,7 @@ dimen fab_margin
 dimen nav_header_height
 dimen nav_header_vertical_spacing
 drawable background_blue
+drawable background_red
 drawable button_background
 drawable circle
 drawable circle_orange
@@ -34,6 +35,7 @@ drawable gorjeo
 drawable gradient_background
 drawable ic_check
 drawable ic_dashboard_black_24dp
+drawable ic_err
 drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -98,6 +100,7 @@ id imageView9
 id ivImagen
 id listaCursosDocentes
 id lista_estudiantes
+id ll_custom_toast_err
 id ll_custom_toast_ok
 id mobile_navigation
 id nav_gallery
@@ -131,6 +134,9 @@ id text_slideshow
 id toolbar
 id tvDirector
 id tvTitulo
+id txtInputPassword
+id txtInputUsuario
+id txtMensajeErr
 id txtMensajeOk
 id txtPassword
 id txtUsername
@@ -147,6 +153,7 @@ layout activity_vista_curso_docente
 layout activity_vista_curso_estudiante
 layout app_bar_home
 layout content_home
+layout custom_toast_error
 layout custom_toast_ok
 layout elemenstos_programa_cursos
 layout elemento_mis_cursos

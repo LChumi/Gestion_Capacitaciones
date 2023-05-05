@@ -2761,6 +2761,7 @@ int drawable abc_vector_test 0x7f070077
 int drawable avd_hide_password 0x7f070078
 int drawable avd_show_password 0x7f070079
 int drawable background_blue 0x7f0700f4
+int drawable background_red 0x7f0700fb
 int drawable btn_checkbox_checked_mtrl 0x7f07007a
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f07007b
 int drawable btn_checkbox_unchecked_mtrl 0x7f07007c
@@ -2790,6 +2791,7 @@ int drawable ic_check 0x7f0700f5
 int drawable ic_clear_black_24 0x7f070093
 int drawable ic_clock_black_24dp 0x7f070094
 int drawable ic_dashboard_black_24dp 0x7f070095
+int drawable ic_err 0x7f0700fc
 int drawable ic_home_black_24dp 0x7f070096
 int drawable ic_keyboard_black_24dp 0x7f070097
 int drawable ic_launcher_background 0x7f070098
@@ -3177,6 +3179,7 @@ int id listMode 0x7f080113
 int id list_item 0x7f080114
 int id listaCursosDocentes 0x7f080115
 int id lista_estudiantes 0x7f080116
+int id ll_custom_toast_err 0x7f080247
 int id ll_custom_toast_ok 0x7f08023b
 int id locale 0x7f080117
 int id ltr 0x7f080118
@@ -3450,6 +3453,9 @@ int id transition_transform 0x7f080219
 int id triangle 0x7f08021a
 int id tvDirector 0x7f08021b
 int id tvTitulo 0x7f08021c
+int id txtInputPassword 0x7f080248
+int id txtInputUsuario 0x7f080249
+int id txtMensajeErr 0x7f08024a
 int id txtMensajeOk 0x7f080246
 int id txtPassword 0x7f08021d
 int id txtUsername 0x7f08021e
@@ -3597,6 +3603,7 @@ int layout activity_vista_curso_estudiante 0x7f0b0025
 int layout app_bar_home 0x7f0b0077
 int layout content_home 0x7f0b0078
 int layout custom_dialog 0x7f0b0026
+int layout custom_toast_error 0x7f0b007e
 int layout custom_toast_ok 0x7f0b0079
 int layout design_bottom_navigation_item 0x7f0b0027
 int layout design_bottom_sheet_dialog 0x7f0b0028
