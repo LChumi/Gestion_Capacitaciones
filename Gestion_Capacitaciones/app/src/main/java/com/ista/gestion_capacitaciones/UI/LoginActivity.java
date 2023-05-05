@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
                     PersonaDTO personaDTO = new PersonaDTO(usuario.getPersona());
                     long perId = personaDTO.getPer_id();
                     if (dbPersona.obtenerPersona(perId) == null) {
-                        long per = dbPersona.insertaPersona(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento().toString(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
+                        long per = dbPersona.insertaPersona(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
                         if (per > 0) {
                             Toast.makeText(LoginActivity.this, "Persona guardada", Toast.LENGTH_LONG).show();
                         } else {

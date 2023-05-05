@@ -149,7 +149,7 @@ id txtMensajeErr
 id txtMensajeOk
 id txtPassword
 id txtUsername
-id txtnombre
+id txtnombreUsuario
 layout activity_asistencias
 layout activity_home
 layout activity_lista_estudiante

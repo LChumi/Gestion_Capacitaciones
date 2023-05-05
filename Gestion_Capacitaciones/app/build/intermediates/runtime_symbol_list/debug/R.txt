@@ -3659,7 +3659,7 @@ int id txtMensajeErr 0x7f09024b
 int id txtMensajeOk 0x7f09024c
 int id txtPassword 0x7f09024d
 int id txtUsername 0x7f09024e
-int id txtnombre 0x7f09024f
+int id txtnombreUsuario 0x7f09026d
 int id unchecked 0x7f090250
 int id uniform 0x7f090251
 int id unlabeled 0x7f090252

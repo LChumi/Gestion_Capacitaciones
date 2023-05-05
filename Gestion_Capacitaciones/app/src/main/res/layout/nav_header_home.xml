@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/foto" />
 
     <TextView
-        android:id="@+id/txtnombre"
+        android:id="@+id/txtnombreUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"

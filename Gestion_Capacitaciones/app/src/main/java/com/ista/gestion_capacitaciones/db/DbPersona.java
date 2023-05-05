@@ -26,7 +26,7 @@ public class DbPersona extends SqlConexion{
         this.context=context;
     }
 
-    public long insertaPersona(Long id,String cedula, String nombres, String apellidos, String fechaNacimiento, String correo, boolean estado) {
+    public long insertaPersona(Long id,String cedula, String nombres, String apellidos, Date fechaNacimiento, String correo, boolean estado) {
         SQLiteDatabase db = this.getWritableDatabase();
         long result=-1;
         try {
@@ -35,7 +35,7 @@ public class DbPersona extends SqlConexion{
             valores.put("per_cedula", cedula);
             valores.put("per_nombres", nombres);
             valores.put("per_apellidos", apellidos);
-            valores.put("per_fechaNacimiento", fechaNacimiento);
+            valores.put("per_fechaNacimiento", fechaNacimiento.getTime());
             valores.put("per_correo", correo);
             valores.put("per_estado", estado);
 
@@ -49,6 +49,7 @@ public class DbPersona extends SqlConexion{
         return result;
     }
 
+
     public List<PersonaDTO> obtenerLista(){
         List<PersonaDTO> personas=new ArrayList<>();
         try(
@@ -58,14 +59,14 @@ public class DbPersona extends SqlConexion{
             if (cursor.moveToFirst()){
                 do{
                     PersonaDTO personaDTO= new PersonaDTO();
+                    personaDTO = new PersonaDTO();
                     personaDTO.setPer_id(cursor.getLong(0));
                     personaDTO.setPer_cedula(cursor.getString(1));
-                    personaDTO.setPer_apellidos(cursor.getString(2));
-                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-                    personaDTO.setPer_fechaNacimiento(sdf.parse(cursor.getString(3)));
-                    personaDTO.setPer_correo(cursor.getString(4));
-                    personaDTO.setPer_estado(cursor.getInt(5)==1);
-                    personas.add(personaDTO);
+                    personaDTO.setPer_nombres(cursor.getString(2));
+                    personaDTO.setPer_apellidos(cursor.getString(3));
+                    personaDTO.setPer_fechaNacimiento(new Date(cursor.getLong(4)));
+                    personaDTO.setPer_correo(cursor.getString(5));
+                    personaDTO.setPer_estado(cursor.getInt(6) == 1);
                 }while(cursor.moveToNext());
             }
         }catch (Exception e){
@@ -80,16 +81,20 @@ public class DbPersona extends SqlConexion{
                 SQLiteDatabase db=getReadableDatabase();
                 Cursor cursor=db.query(TABLE_PERSONA,null,"_rowid_=?",new String[]{String.valueOf(id)},null,null,null);
                 ){
-            if (cursor!=null && cursor.moveToFirst()){
-                personaDTO=new PersonaDTO();
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+            if (cursor != null && cursor.moveToFirst()) {
+                personaDTO = new PersonaDTO();
                 personaDTO.setPer_id(cursor.getLong(0));
                 personaDTO.setPer_cedula(cursor.getString(1));
-                personaDTO.setPer_apellidos(cursor.getString(2));
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-                personaDTO.setPer_fechaNacimiento(sdf.parse(cursor.getString(3)));
-                personaDTO.setPer_correo(cursor.getString(4));
-                personaDTO.setPer_estado(cursor.getInt(5)==1);
+                personaDTO.setPer_nombres(cursor.getString(2));
+                personaDTO.setPer_apellidos(cursor.getString(3));
+                personaDTO.setPer_fechaNacimiento(new Date(cursor.getLong(4)));
+                personaDTO.setPer_correo(cursor.getString(5));
+                personaDTO.setPer_estado(cursor.getInt(6) == 1);
+
+                return personaDTO;
             }
+
         }catch (Exception e){
             Log.e("DbPersona","Error al obtener persona",e);
         }

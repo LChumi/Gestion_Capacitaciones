@@ -3660,7 +3660,7 @@ id txtMensajeErr
 id txtMensajeOk
 id txtPassword
 id txtUsername
-id txtnombre
+id txtnombreUsuario
 id unchecked
 id uniform
 id unlabeled

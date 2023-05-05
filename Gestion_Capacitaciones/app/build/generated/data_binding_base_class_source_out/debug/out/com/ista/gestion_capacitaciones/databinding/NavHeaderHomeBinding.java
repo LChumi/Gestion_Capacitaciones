@@ -27,15 +27,15 @@ public final class NavHeaderHomeBinding implements ViewBinding {
   public final TextView txtDesc;
 
   @NonNull
-  public final TextView txtnombre;
+  public final TextView txtnombreUsuario;
 
   private NavHeaderHomeBinding(@NonNull LinearLayout rootView,
       @NonNull CircleImageView imgFotoPerfil, @NonNull TextView txtDesc,
-      @NonNull TextView txtnombre) {
+      @NonNull TextView txtnombreUsuario) {
     this.rootView = rootView;
     this.imgFotoPerfil = imgFotoPerfil;
     this.txtDesc = txtDesc;
-    this.txtnombre = txtnombre;
+    this.txtnombreUsuario = txtnombreUsuario;
   }
 
   @Override
@@ -77,13 +77,14 @@ public final class NavHeaderHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txtnombre;
-      TextView txtnombre = ViewBindings.findChildViewById(rootView, id);
-      if (txtnombre == null) {
+      id = R.id.txtnombreUsuario;
+      TextView txtnombreUsuario = ViewBindings.findChildViewById(rootView, id);
+      if (txtnombreUsuario == null) {
         break missingId;
       }
 
-      return new NavHeaderHomeBinding((LinearLayout) rootView, imgFotoPerfil, txtDesc, txtnombre);
+      return new NavHeaderHomeBinding((LinearLayout) rootView, imgFotoPerfil, txtDesc,
+          txtnombreUsuario);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
