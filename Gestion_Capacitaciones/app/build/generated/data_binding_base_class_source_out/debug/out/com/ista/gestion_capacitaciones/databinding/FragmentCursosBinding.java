@@ -4,9 +4,9 @@ package com.ista.gestion_capacitaciones.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.ista.gestion_capacitaciones.R;
 import java.lang.NullPointerException;
@@ -14,15 +14,15 @@ import java.lang.Override;
 
 public final class FragmentCursosBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
-  private FragmentCursosBinding(@NonNull ConstraintLayout rootView) {
+  private FragmentCursosBinding(@NonNull LinearLayout rootView) {
     this.rootView = rootView;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -47,6 +47,6 @@ public final class FragmentCursosBinding implements ViewBinding {
       throw new NullPointerException("rootView");
     }
 
-    return new FragmentCursosBinding((ConstraintLayout) rootView);
+    return new FragmentCursosBinding((LinearLayout) rootView);
   }
 }

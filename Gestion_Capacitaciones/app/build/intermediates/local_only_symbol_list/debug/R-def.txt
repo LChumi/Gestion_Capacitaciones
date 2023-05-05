@@ -30,6 +30,7 @@ drawable edittext_dorder_background
 drawable estilo
 drawable facebook
 drawable fondo
+drawable foto
 drawable google
 drawable gorjeo
 drawable gradient_background
@@ -45,8 +46,10 @@ drawable ic_menu_camera
 drawable ic_menu_gallery
 drawable ic_menu_slideshow
 drawable ic_mis_cursos
+drawable ic_more
 drawable ic_notifications_black_24dp
 drawable ic_regresar
+drawable ic_salir
 drawable instaa12
 drawable instagram
 drawable intro_top_background
@@ -57,6 +60,7 @@ drawable pass
 drawable side_nav_bar
 drawable title_background
 drawable user
+drawable whatsapp
 font hammersmith_one
 font poppins_medium
 font poppins_regular
@@ -69,7 +73,6 @@ id action_First2Fragment_to_Second2Fragment
 id action_FirstFragment_to_SecondFragment
 id action_Second2Fragment_to_First2Fragment
 id action_SecondFragment_to_FirstFragment
-id action_settings
 id app_bar_home
 id btnIngreso
 id btnLoguin
@@ -77,6 +80,7 @@ id btnRegistro
 id btnRegreso
 id button
 id button3
+id cerrarSecion
 id check_list_id
 id drawer_layout
 id editText
@@ -102,11 +106,13 @@ id imageView6
 id imageView7
 id imageView8
 id imageView9
+id imgFotoPerfil
 id ivImagen
 id listaCursosDocentes
 id lista_estudiantes
 id ll_custom_toast_err
 id ll_custom_toast_ok
+id mas
 id mobile_navigation
 id nav_cursos
 id nav_graph
@@ -136,12 +142,14 @@ id textView9
 id toolbar
 id tvDirector
 id tvTitulo
+id txtDesc
 id txtInputPassword
 id txtInputUsuario
 id txtMensajeErr
 id txtMensajeOk
 id txtPassword
 id txtUsername
+id txtnombre
 layout activity_asistencias
 layout activity_home
 layout activity_lista_estudiante

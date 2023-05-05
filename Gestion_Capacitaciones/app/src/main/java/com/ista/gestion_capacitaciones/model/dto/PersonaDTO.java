@@ -1,5 +1,7 @@
 package com.ista.gestion_capacitaciones.model.dto;
 
+import android.os.Parcelable;
+
 import com.ista.gestion_capacitaciones.model.Persona;
 
 import java.util.Date;
@@ -82,4 +84,10 @@ public class PersonaDTO {
     public void setPer_estado(boolean per_estado) {
         this.per_estado = per_estado;
     }
+
+    public String Datos(){
+        return this.per_nombres +" "+ this.per_apellidos;
+    }
+
+
 }

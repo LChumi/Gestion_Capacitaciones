@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.ista.gestion_capacitaciones.UI.HomeActivity;
 import com.ista.gestion_capacitaciones.UI.LoginActivity;
 import com.ista.gestion_capacitaciones.UI.RegisterActivity;
 
@@ -49,5 +50,6 @@ public class MainActivity extends AppCompatActivity {
         Intent loguin=new Intent(this, LoginActivity.class);
         startActivity(loguin);
     }
+
 
 }

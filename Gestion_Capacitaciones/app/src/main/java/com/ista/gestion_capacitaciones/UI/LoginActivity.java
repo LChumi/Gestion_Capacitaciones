@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private Button btnIngreso;
     private ImageButton btnRegresar;
-    private TextInputEditText username,password;
+    private TextInputEditText txtusername,txtpassword;
     private TextInputLayout txtInputUsuario,txtInputPassword;
 
 
@@ -47,8 +47,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        username=findViewById(R.id.txtUsername);
-        password=findViewById(R.id.txtPassword);
+        txtusername=findViewById(R.id.txtUsername);
+        txtpassword=findViewById(R.id.txtPassword);
         btnIngreso=findViewById(R.id.btnIngreso);
         btnRegresar=findViewById(R.id.btnRegreso);
         txtInputUsuario=findViewById(R.id.txtInputUsuario);
@@ -58,11 +58,11 @@ public class LoginActivity extends AppCompatActivity {
         btnIngreso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (TextUtils.isEmpty(username.getText().toString()) || TextUtils.isEmpty((password.getText().toString()))){
+                if (TextUtils.isEmpty(txtusername.getText().toString()) || TextUtils.isEmpty((txtpassword.getText().toString()))){
                     Toast.makeText(LoginActivity.this,"Username / Password Necesarios",Toast.LENGTH_LONG).show();
                 }else{
                     //funcion boton menu
-                    Login(username.getText().toString(),password.getText().toString());
+                    Login(txtusername.getText().toString(),txtpassword.getText().toString());
                 }
             }
         });
@@ -108,10 +108,12 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(LoginActivity.this, "Error al guardar usuario", Toast.LENGTH_LONG).show();
                         }
                     }
+                    Inicio(personaDTO.getPer_id());
                 } else {
                     Toast.makeText(LoginActivity.this, "Credenciales inválidas o problema de conexión", Toast.LENGTH_SHORT).show();
                     Log.e("LoginActivity", "Error al iniciar sesión: " + response.code() + " - " + response.message());
                     ToastIncorrecto("Credenciales inválidas o problema de conexión");
+                    Limpiar();
                 }
             }
 
@@ -130,12 +132,15 @@ public class LoginActivity extends AppCompatActivity {
             }
             DbUsuarios dbUsuarios = new DbUsuarios(LoginActivity.this);
             if(dbUsuarios.login(username,password)!=null){
+                UsuarioDTO user=dbUsuarios.login(username,password);
                 ToastCorrecto("Correcto");
+                Inicio(user.getPer_id());
             } else {
                 loginWithApi(username, password);
             }
         } catch (Exception e) {
             ToastIncorrecto("Se ha producido un error" + e.getMessage());
+            Limpiar();
         }
     }
 
@@ -173,8 +178,8 @@ public class LoginActivity extends AppCompatActivity {
     private boolean validar(){
         Boolean retorno=true;
         String usuario,password1;
-        usuario=username.getText().toString();
-        password1=password.getText().toString();
+        usuario=txtusername.getText().toString();
+        password1=txtpassword.getText().toString();
         if(usuario.isEmpty()){
             txtInputUsuario.setError("Ingrese su Usuario");
             retorno=false;
@@ -187,6 +192,18 @@ public class LoginActivity extends AppCompatActivity {
             txtInputPassword.setErrorEnabled(false);
         }
         return retorno;
+    }
+
+    public void Inicio(Long idpersona){
+        Intent inicio=new Intent(this, HomeActivity.class);
+        inicio.putExtra("personaId",idpersona);
+        Limpiar();
+        startActivity(inicio);
+    }
+
+    public void Limpiar(){
+        txtpassword.setText("");
+        txtusername.setText("");
     }
 
 
