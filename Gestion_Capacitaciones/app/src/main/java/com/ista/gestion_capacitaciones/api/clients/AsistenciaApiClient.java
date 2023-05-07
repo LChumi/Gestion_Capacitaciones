@@ -6,7 +6,9 @@ import com.ista.gestion_capacitaciones.model.Asistencia;
 import com.ista.gestion_capacitaciones.model.Usuario;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -16,8 +18,16 @@ public class AsistenciaApiClient {
     private AsistenciaApi asistenciaApi;
 
     public AsistenciaApiClient() {
+        OkHttpClient client = new OkHttpClient.Builder()
+                .connectTimeout(5, TimeUnit.SECONDS)
+                .readTimeout(5, TimeUnit.SECONDS)
+                .writeTimeout(5, TimeUnit.SECONDS)
+                .build();
+
+
         Retrofit retrofit=new Retrofit.Builder()
                 .baseUrl(ApiUrls.BASE_URL)
+                .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         asistenciaApi=retrofit.create(AsistenciaApi.class);

@@ -113,7 +113,7 @@ public class DbPersona extends SqlConexion{
         return result;
     }
 
-    public int Actualizar(Long id, String cedula, String nombres, String apellidos, String fechaNacimiento, String correo, boolean estado){
+    public int actualizar(Long id, String cedula, String nombres, String apellidos, Date fechaNacimiento, String correo, boolean estado){
         int result=0;
         try(
                 SQLiteDatabase db=getWritableDatabase();
@@ -123,10 +123,7 @@ public class DbPersona extends SqlConexion{
             values.put("per_cedula",cedula);
             values.put("per_nombres",nombres);
             values.put("per_apellidos",apellidos);
-
-            SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd",Locale.getDefault());
-            String asi_fechaFormatted=sdf.format(fechaNacimiento);
-            values.put("per_fechaNacimiento",asi_fechaFormatted);
+            values.put("per_fechaNacimiento",fechaNacimiento.getTime());
             values.put("per_correo",correo);
             values.put("per_estado",estado);
 

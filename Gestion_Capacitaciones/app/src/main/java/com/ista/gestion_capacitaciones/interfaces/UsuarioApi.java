@@ -19,7 +19,7 @@ public interface UsuarioApi {
     Call<List<Usuario>> getUsuariosList();
 
     @GET("usuarios/search/{username}")
-    Call<Usuario> obtenerUsuario(@Path("username")String id);
+    Call<Usuario> obtenerUsuario(@Path("username")String username);
 
     @POST("usuarios/signin")
     Call<Usuario> IniciarSesion(@Body Usuario usuario);

@@ -84,7 +84,7 @@ public class DbUsuarios extends SqlConexion{
         return usuarioDTO;
     }
 
-    public int EliminarUsuario(Long id){
+    public int eliminarUsuario(Long id){
         int result=0;
         try(
                 SQLiteDatabase db=getWritableDatabase();
@@ -96,7 +96,7 @@ public class DbUsuarios extends SqlConexion{
         return result;
     }
 
-    public int Actualizar(Long id,String usuario,String password,Long per_id){
+    public int actualizar(Long id,String usuario,String password,Long per_id){
         int result=0;
         try(
                 SQLiteDatabase db=getWritableDatabase();

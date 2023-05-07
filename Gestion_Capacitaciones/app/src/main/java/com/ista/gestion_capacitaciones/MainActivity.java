@@ -13,6 +13,8 @@ import com.ista.gestion_capacitaciones.UI.HomeActivity;
 import com.ista.gestion_capacitaciones.UI.LoginActivity;
 import com.ista.gestion_capacitaciones.UI.RegisterActivity;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btnRegistro;
@@ -49,6 +51,22 @@ public class MainActivity extends AppCompatActivity {
     public void Loguin(){
         Intent loguin=new Intent(this, LoginActivity.class);
         startActivity(loguin);
+    }
+
+    @Override
+    public void onBackPressed(){
+        new SweetAlertDialog(this,SweetAlertDialog.WARNING_TYPE).setTitleText("Deseas Salir")
+                .setContentText("Quieres cerrar la aplicacion ?")
+                .setCancelText("No, Cancelar!").setConfirmText("Si, Cerrar")
+                .showCancelButton(true).setCancelClickListener(sDialog ->{
+                    sDialog.dismissWithAnimation();
+                    new SweetAlertDialog(this,SweetAlertDialog.ERROR_TYPE).setTitleText("Operacion cancelada")
+                            .setContentText("No saliste de la app")
+                            .show();
+                }).setConfirmClickListener(sweetAlertDialog -> {
+                    sweetAlertDialog.dismissWithAnimation();
+                    System.exit(0);
+                }).show();
     }
 
 

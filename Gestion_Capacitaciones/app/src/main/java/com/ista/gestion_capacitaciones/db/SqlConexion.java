@@ -26,7 +26,7 @@ public class SqlConexion extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        crearTablas(db);
+        verificarTablas();
     }
 
     @Override
