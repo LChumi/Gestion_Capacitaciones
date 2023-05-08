@@ -22,7 +22,7 @@ public class DbUsuarios extends SqlConexion{
         this.context=context;
     }
 
-    public long insertaUsuario(String username, String password, Long personaId) {
+    public long insertaUsuario(String username, String password, Long personaId,Long rolId) {
         SQLiteDatabase db = this.getWritableDatabase();
         long result = -1;
         try{
@@ -30,6 +30,7 @@ public class DbUsuarios extends SqlConexion{
             values.put("usu_usuario", username);
             values.put("usu_password", password);
             values.put("per_id", personaId);
+            values.put("rol_id",rolId);
 
             result = db.insert(TABLE_USUARIOS, null, values);
 
@@ -55,6 +56,7 @@ public class DbUsuarios extends SqlConexion{
                 usuarioDTO.setUsu_password(cursor.getString(2));
 
                 usuarioDTO.setPer_id(cursor.getLong(3));
+                usuarioDTO.setRol_id(cursor.getLong(4));
                 usuarios.add(usuarioDTO);
                 }while(cursor.moveToNext());
             }
@@ -77,6 +79,7 @@ public class DbUsuarios extends SqlConexion{
                 usuarioDTO.setUsu_password(cursor.getString(2));
 
                 usuarioDTO.setPer_id(cursor.getLong(3));
+                usuarioDTO.setRol_id(cursor.getLong(4));
             }
         }catch (Exception e){
             Log.e("DbUsuario","Error al obtener usuario",e);
@@ -96,7 +99,7 @@ public class DbUsuarios extends SqlConexion{
         return result;
     }
 
-    public int actualizar(Long id,String usuario,String password,Long per_id){
+    public int actualizar(Long id,String usuario,String password,Long per_id,Long idRol){
         int result=0;
         try(
                 SQLiteDatabase db=getWritableDatabase();
@@ -106,6 +109,7 @@ public class DbUsuarios extends SqlConexion{
             values.put("usu_usuario",usuario);
             values.put("usu_password",password);
             values.put("per_id",per_id);
+            values.put("rol_id",idRol);
 
             result=db.update(TABLE_USUARIOS,values,"_rowid_=?",new String[]{String.valueOf(id)});
         }catch (Exception e){

@@ -9,6 +9,7 @@ public class UsuarioDTO {
     private String usu_password;
 
     private Long per_id;
+    private Long rol_id;
 
     public UsuarioDTO() {
     }
@@ -18,6 +19,7 @@ public class UsuarioDTO {
         this.usu_usuario = usuario.getUsername();
         this.usu_password = usuario.getPassword();
         this.per_id = usuario.getPersona().getId_persona();
+        this.rol_id=usuario.getRol().getId_rol();
     }
 
     public Long getUsu_id() {
@@ -50,5 +52,13 @@ public class UsuarioDTO {
 
     public void setPer_id(Long per_id) {
         this.per_id = per_id;
+    }
+
+    public Long getRol_id() {
+        return rol_id;
+    }
+
+    public void setRol_id(Long rol_id) {
+        this.rol_id = rol_id;
     }
 }

@@ -9,7 +9,7 @@
         app:showAsAction="always" >
         <menu>
             <item
-                android:id="@+id/cerrarSecion"
+                android:id="@+id/cerrarSesion"
                 android:icon="@drawable/ic_salir"
                 android:title="Cerrar sesion"/>
         </menu>

@@ -11,6 +11,8 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim above_in
+anim above_out
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -27,9 +29,14 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim down_in
+anim down_out
 anim error_frame_in
 anim error_x_in
 anim fragment_fast_out_extra_slow_in
+anim from_bottom_anim
+anim left_in
+anim left_out
 anim linear_indeterminate_line1_head_interpolator
 anim linear_indeterminate_line1_tail_interpolator
 anim linear_indeterminate_line2_head_interpolator
@@ -49,8 +56,13 @@ anim nav_default_enter_anim
 anim nav_default_exit_anim
 anim nav_default_pop_enter_anim
 anim nav_default_pop_exit_anim
+anim rigth_in
+anim rigth_out
+anim rotate_close_anim
+anim rotate_open_anim
 anim success_bow_roate
 anim success_mask_layout
+anim to_bottom_anim
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -3053,6 +3065,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable pass
+drawable photo
 drawable red_button_background
 drawable side_nav_bar
 drawable success_bow
@@ -3197,7 +3210,7 @@ id centerCrop
 id centerInside
 id center_horizontal
 id center_vertical
-id cerrarSecion
+id cerrarSesion
 id chain
 id chain2
 id chains

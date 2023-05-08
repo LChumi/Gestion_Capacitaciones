@@ -24,10 +24,12 @@ import com.ista.gestion_capacitaciones.MainActivity;
 import com.ista.gestion_capacitaciones.R;
 import com.ista.gestion_capacitaciones.api.clients.UsuariosApiClient;
 import com.ista.gestion_capacitaciones.db.DbPersona;
+import com.ista.gestion_capacitaciones.db.DbRol;
 import com.ista.gestion_capacitaciones.db.DbUsuarios;
 import com.ista.gestion_capacitaciones.interfaces.UsuarioApi;
 import com.ista.gestion_capacitaciones.model.Usuario;
 import com.ista.gestion_capacitaciones.model.dto.PersonaDTO;
+import com.ista.gestion_capacitaciones.model.dto.RolDTO;
 import com.ista.gestion_capacitaciones.model.dto.UsuarioDTO;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
@@ -91,18 +93,29 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (response.isSuccessful()) {
                     Usuario usuario = response.body();
+                    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("username", usuario.getUsername());
+                    editor.putString("pass",usuario.getPassword());
+                    Long idPer=usuario.getPersona().getId_persona();
+                    editor.putString("idPer",idPer.toString());
+                    editor.apply();
                     toastCorrecto("Correcto");
                     Log.i("mensaje"+response.body(),response.message());
 
                     DbPersona dbPersona = new DbPersona(LoginActivity.this);
                     DbUsuarios dbUsuarios = new DbUsuarios(LoginActivity.this);
+                    DbRol dbRol=new DbRol(LoginActivity.this);
+                    UsuarioDTO usuarioDTO=new UsuarioDTO(usuario);
                     PersonaDTO personaDTO = new PersonaDTO(usuario.getPersona());
+                    RolDTO rolDTO=new RolDTO(usuario.getRol());
                     long perId = personaDTO.getPer_id();
                     long usuId=usuario.getId_usuario();
                     if (dbPersona.obtenerPersona(perId) == null && dbUsuarios.obtenerUsuario(usuId) == null) {
                         long per = dbPersona.insertaPersona(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
-                        long us = dbUsuarios.insertaUsuario(username, password, perId);
-                        if (per > 0 && us > 0) {
+                        long us = dbUsuarios.insertaUsuario(username, password, perId,usuarioDTO.getRol_id());
+                        long rol=dbRol.insertarRol(rolDTO.getId_rol(),rolDTO.getRol_nombre(),rolDTO.getDescripcion(),rolDTO.getEnabled());
+                        if (per > 0 && us > 0 && rol>0) {
                             Toast.makeText(LoginActivity.this, "Datos guardados", Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(LoginActivity.this, "Error al guardar persona", Toast.LENGTH_LONG).show();
@@ -110,8 +123,9 @@ public class LoginActivity extends AppCompatActivity {
                     }else {
                         if (dbPersona.obtenerPersona(perId) != null && dbUsuarios.obtenerUsuario(usuId) != null) {
                             long per = dbPersona.actualizar(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
-                            long us = dbUsuarios.actualizar(usuario.getId_usuario(),usuario.getUsername(), usuario.getPassword(), usuario.getPersona().getId_persona());
-                            if (per > 0 && us > 0) {
+                            long us = dbUsuarios.actualizar(usuario.getId_usuario(),usuario.getUsername(), usuario.getPassword(), usuario.getPersona().getId_persona(),usuario.getRol().getId_rol());
+                            long rol=dbRol.actualizar(rolDTO.getId_rol(),rolDTO.getRol_nombre(),rolDTO.getDescripcion(),rolDTO.getEnabled());
+                            if (per > 0 && us > 0 && rol >0) {
                                 Toast.makeText(LoginActivity.this, "sync", Toast.LENGTH_LONG).show();
                             } else {
                                 Toast.makeText(LoginActivity.this, "Error al actualizar persona", Toast.LENGTH_LONG).show();
@@ -135,8 +149,15 @@ public class LoginActivity extends AppCompatActivity {
     private void Login(String username, String password) {
         try {
             DbUsuarios dbUsuarios = new DbUsuarios(LoginActivity.this);
-            if(dbUsuarios.login(username,password)!=null){
-                UsuarioDTO user=dbUsuarios.login(username,password);
+            if (dbUsuarios.login(username, password) != null) {
+                UsuarioDTO user = dbUsuarios.login(username, password);
+                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("username", user.getUsu_usuario());
+                editor.putString("pass",user.getUsu_password());
+                Long idPer=user.getPer_id();
+                editor.putString("idPer",idPer.toString());
+                editor.apply();
                 toastCorrecto("Correcto");
                 inicio(user.getPer_id());
             } else {
@@ -147,6 +168,7 @@ public class LoginActivity extends AppCompatActivity {
             limpiar();
         }
     }
+
 
     private void regresar(){
         Intent regresar=new Intent(this, MainActivity.class);
@@ -208,14 +230,27 @@ public class LoginActivity extends AppCompatActivity {
         txtusername.setText("");
     }
 
-    private void logout() {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.remove("mi_usuario"); // Cambiar "UsuarioJson" por "mi_usuario"
-        editor.apply();
-        this.finish();
-        //this.overridePendingTransition(R.anim.left_in, R.anim.left_out);
+    @Override
+    protected void onStart(){
+        super.onStart();
+        try {
+            SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
+            String pref=preferences.getString("username", "");
+            String prefp=preferences.getString("pass","");
+            String idPer=preferences.getString("idPer","");
+            if (!pref.equals("") && !prefp.equals("") && !idPer.equals("")){
+                toastCorrecto("Inicio activo "+pref);
+                Long id=Long.parseLong(idPer);
+                inicio(id);
+                this.startActivity(new Intent(this,HomeActivity.class));
+                this.overridePendingTransition(R.anim.left_in, R.anim.left_out);
+            }
+        } catch (Exception e) {
+            Log.e("TAG", "Error en onStart(): " + e.getMessage());
+        }
     }
+
+
 
 
 

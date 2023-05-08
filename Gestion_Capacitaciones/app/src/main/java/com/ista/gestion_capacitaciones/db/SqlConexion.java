@@ -10,13 +10,14 @@ import androidx.annotation.Nullable;
 
 public class SqlConexion extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION=1;
-    private static  final String DATABASE_NOMBRE="prueba1";
+    private static final int DATABASE_VERSION=2;
+    private static  final String DATABASE_NOMBRE="gestion_academica";
     public static final String TABLE_USUARIOS= "t_usuarios";
     public static final String TABLE_CURSO= "t_cursos";
     public static final String TABLE_ASISTENCIA= "t_asistencia";
     public static final String TABLE_PARTICIPANTE= "t_participante";
     public static final String TABLE_PERSONA="t_persona";
+    public static final String TABLE_ROL="t_rol";
 
     public SqlConexion(@Nullable Context context){
         super(context,DATABASE_NOMBRE,null,DATABASE_VERSION);
@@ -26,7 +27,7 @@ public class SqlConexion extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        verificarTablas();
+        crearTablas(db);
     }
 
     @Override
@@ -40,8 +41,9 @@ public class SqlConexion extends SQLiteOpenHelper {
                 "usu_usuario TEXT NOT NULL,"+
                 "usu_password TEXT NOT NULL,"+
                 "per_id INTEGER NOT NULL,"+
-                "FOREIGN KEY(per_id) REFERENCES "+TABLE_PERSONA+"(per_id) ON DELETE CASCADE)");
-
+                "rol_id INTEGER NOT NULL,"+
+                "FOREIGN KEY(per_id) REFERENCES "+TABLE_PERSONA+"(per_id) ON DELETE CASCADE,"+
+                "FOREIGN KEY(rol_id) REFERENCES "+TABLE_ROL+"(id_rol) ON DELETE CASCADE)");
 
         db.execSQL("CREATE TABLE IF NOT EXISTS "+ TABLE_CURSO +"("+
                 "cur_id INTEGER PRIMARY KEY AUTOINCREMENT,"+
@@ -84,10 +86,17 @@ public class SqlConexion extends SQLiteOpenHelper {
                 "per_correo TEXT NOT NULL,"+
                 "per_estado BOOLEAN NOT NULL"+
                 ")");
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_ROL + "(" +
+                "id_rol INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "rol_nombre TEXT NOT NULL, " +
+                "descripcion TEXT, " +
+                "enabled BOOLEAN NOT NULL" +
+                ")");
+
     }
 
 
-    private String[] TABLAS = {TABLE_USUARIOS,TABLE_PERSONA,TABLE_PARTICIPANTE,TABLE_ASISTENCIA,TABLE_CURSO};
+    private String[] TABLAS = {TABLE_USUARIOS,TABLE_PERSONA,TABLE_PARTICIPANTE,TABLE_ASISTENCIA,TABLE_CURSO,TABLE_ROL};
     private void verificarTablas() {
         try (
                 SQLiteDatabase db = getWritableDatabase();

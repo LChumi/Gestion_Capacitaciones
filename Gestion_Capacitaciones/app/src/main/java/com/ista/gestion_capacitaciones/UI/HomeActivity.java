@@ -1,7 +1,11 @@
 package com.ista.gestion_capacitaciones.UI;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.TextView;
@@ -15,6 +19,7 @@ import com.ista.gestion_capacitaciones.db.DbPersona;
 import com.ista.gestion_capacitaciones.db.DbUsuarios;
 import com.ista.gestion_capacitaciones.model.dto.PersonaDTO;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -96,9 +101,34 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.cerrarSesion:
+                this.logout();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_home);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    private void logout() {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.remove("username"); // Remueve el valor asociado con la clave "username"
+        editor.remove("pass"); // Remueve el valor asociado con la clave "pass"
+        editor.remove("idPer"); // Remueve el valor asociado con la clave "idPer"
+        editor.apply();
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK); // Elimina todas las actividades de la pila y crea una nueva instancia de LoginActivity
+        startActivity(intent);
+        finish(); // Cierra la actividad actual
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
+    }
+
 }

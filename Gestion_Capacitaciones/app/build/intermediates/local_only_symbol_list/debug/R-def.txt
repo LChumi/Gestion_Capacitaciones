@@ -1,5 +1,17 @@
 R_DEF: Internal format may change without notice
 local
+anim above_in
+anim above_out
+anim down_in
+anim down_out
+anim from_bottom_anim
+anim left_in
+anim left_out
+anim rigth_in
+anim rigth_out
+anim rotate_close_anim
+anim rotate_open_anim
+anim to_bottom_anim
 color black
 color colorAccent
 color colorPrimary
@@ -57,6 +69,7 @@ drawable layers_2
 drawable layers_color
 drawable logo
 drawable pass
+drawable photo
 drawable side_nav_bar
 drawable title_background
 drawable user
@@ -80,7 +93,7 @@ id btnRegistro
 id btnRegreso
 id button
 id button3
-id cerrarSecion
+id cerrarSesion
 id check_list_id
 id drawer_layout
 id editText

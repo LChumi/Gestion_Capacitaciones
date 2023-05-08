@@ -59,7 +59,6 @@ public class DbPersona extends SqlConexion{
             if (cursor.moveToFirst()){
                 do{
                     PersonaDTO personaDTO= new PersonaDTO();
-                    personaDTO = new PersonaDTO();
                     personaDTO.setPer_id(cursor.getLong(0));
                     personaDTO.setPer_cedula(cursor.getString(1));
                     personaDTO.setPer_nombres(cursor.getString(2));
@@ -67,6 +66,7 @@ public class DbPersona extends SqlConexion{
                     personaDTO.setPer_fechaNacimiento(new Date(cursor.getLong(4)));
                     personaDTO.setPer_correo(cursor.getString(5));
                     personaDTO.setPer_estado(cursor.getInt(6) == 1);
+                    personas.add(personaDTO);
                 }while(cursor.moveToNext());
             }
         }catch (Exception e){
