@@ -21,6 +21,7 @@
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:background="#FFFFFF"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:debuggable="true"
         android:fullBackupContent="@xml/backup_rules"

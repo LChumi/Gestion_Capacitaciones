@@ -34,6 +34,7 @@ dimen nav_header_height
 dimen nav_header_vertical_spacing
 drawable background_blue
 drawable background_red
+drawable bg_overlay
 drawable button_background
 drawable circle
 drawable circle_orange
@@ -62,6 +63,10 @@ drawable ic_more
 drawable ic_notifications_black_24dp
 drawable ic_regresar
 drawable ic_salir
+drawable img_docentes
+drawable img_inicio
+drawable img_institucion
+drawable img_mision
 drawable instaa12
 drawable instagram
 drawable intro_top_background
@@ -102,6 +107,7 @@ id editTextText3
 id editTextText4
 id editTextText5
 id fab
+id fl_shadow_container
 id guideline
 id guideline2
 id guideline3
@@ -121,6 +127,7 @@ id imageView8
 id imageView9
 id imgFotoPerfil
 id ivImagen
+id iv_auto_image_slider
 id listaCursosDocentes
 id lista_estudiantes
 id ll_custom_toast_err
@@ -140,6 +147,8 @@ id navigation_notifications
 id nombre_curso
 id nombre_estudiante_text
 id num_estudiante_text
+id rcvPlatillosRecomendados
+id svCarrusel
 id textView
 id textView10
 id textView11
@@ -155,6 +164,7 @@ id textView9
 id toolbar
 id tvDirector
 id tvTitulo
+id tv_auto_image_slider
 id txtDesc
 id txtInputPassword
 id txtInputUsuario
@@ -183,12 +193,14 @@ layout elemento_mis_cursos
 layout fragment_cursos
 layout fragment_inicio
 layout fragment_miscursos
+layout image_slider_layout_item
 layout lista_curso_layout
 layout nav_header_home
 menu activity_main_drawer
 menu bottom_nav_menu
 menu home
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation mobile_navigation
 navigation nav_graph

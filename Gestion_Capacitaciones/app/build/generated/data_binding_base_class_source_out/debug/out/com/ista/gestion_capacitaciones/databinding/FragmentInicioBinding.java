@@ -7,17 +7,30 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.ista.gestion_capacitaciones.R;
+import com.smarteist.autoimageslider.SliderView;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentInicioBinding implements ViewBinding {
   @NonNull
   private final LinearLayout rootView;
 
-  private FragmentInicioBinding(@NonNull LinearLayout rootView) {
+  @NonNull
+  public final RecyclerView rcvPlatillosRecomendados;
+
+  @NonNull
+  public final SliderView svCarrusel;
+
+  private FragmentInicioBinding(@NonNull LinearLayout rootView,
+      @NonNull RecyclerView rcvPlatillosRecomendados, @NonNull SliderView svCarrusel) {
     this.rootView = rootView;
+    this.rcvPlatillosRecomendados = rcvPlatillosRecomendados;
+    this.svCarrusel = svCarrusel;
   }
 
   @Override
@@ -43,10 +56,26 @@ public final class FragmentInicioBinding implements ViewBinding {
 
   @NonNull
   public static FragmentInicioBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.rcvPlatillosRecomendados;
+      RecyclerView rcvPlatillosRecomendados = ViewBindings.findChildViewById(rootView, id);
+      if (rcvPlatillosRecomendados == null) {
+        break missingId;
+      }
 
-    return new FragmentInicioBinding((LinearLayout) rootView);
+      id = R.id.svCarrusel;
+      SliderView svCarrusel = ViewBindings.findChildViewById(rootView, id);
+      if (svCarrusel == null) {
+        break missingId;
+      }
+
+      return new FragmentInicioBinding((LinearLayout) rootView, rcvPlatillosRecomendados,
+          svCarrusel);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

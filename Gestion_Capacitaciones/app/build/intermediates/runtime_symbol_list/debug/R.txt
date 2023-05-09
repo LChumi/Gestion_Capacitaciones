@@ -2921,6 +2921,7 @@ int drawable avd_hide_password 0x7f070078
 int drawable avd_show_password 0x7f070079
 int drawable background_blue 0x7f07007a
 int drawable background_red 0x7f07007b
+int drawable bg_overlay 0x7f070118
 int drawable blue_button_background 0x7f07007c
 int drawable btn_checkbox_checked_mtrl 0x7f07007d
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f07007e
@@ -2985,6 +2986,10 @@ int drawable ic_notifications_black_24dp 0x7f0700b8
 int drawable ic_regresar 0x7f0700b9
 int drawable ic_salir 0x7f0700ba
 int drawable ic_search_black_24 0x7f0700bb
+int drawable img_docentes 0x7f070119
+int drawable img_inicio 0x7f07011a
+int drawable img_institucion 0x7f07011b
+int drawable img_mision 0x7f07011c
 int drawable instaa12 0x7f0700bc
 int drawable instagram 0x7f0700bd
 int drawable intro_top_background 0x7f0700be
@@ -3309,6 +3314,7 @@ int id fitStart 0x7f0900e0
 int id fitToContents 0x7f0900e1
 int id fitXY 0x7f0900e2
 int id fixed 0x7f0900e3
+int id fl_shadow_container 0x7f09026d
 int id flip 0x7f0900e4
 int id floating 0x7f0900e5
 int id forever 0x7f0900e6
@@ -3365,6 +3371,7 @@ int id is_pooling_container_tag 0x7f090118
 int id italic 0x7f090119
 int id item_touch_helper_previous_elevation 0x7f09011a
 int id ivImagen 0x7f09011b
+int id iv_auto_image_slider 0x7f09026e
 int id jumpToEnd 0x7f09011c
 int id jumpToStart 0x7f09011d
 int id labeled 0x7f09011e
@@ -3511,6 +3518,7 @@ int id progress_dialog 0x7f0901aa
 int id progress_horizontal 0x7f0901ab
 int id radio 0x7f0901ac
 int id ratio 0x7f0901ad
+int id rcvPlatillosRecomendados 0x7f09026f
 int id rectangles 0x7f0901ae
 int id reverseSawtooth 0x7f0901af
 int id right 0x7f0901b0
@@ -3601,6 +3609,7 @@ int id submit_area 0x7f090204
 int id success_frame 0x7f090205
 int id success_tick 0x7f090206
 int id supportScrollUp 0x7f090207
+int id svCarrusel 0x7f090270
 int id swap 0x7f090208
 int id tabMode 0x7f090209
 int id tag_accessibility_actions 0x7f09020a
@@ -3665,6 +3674,7 @@ int id transition_transform 0x7f090244
 int id triangle 0x7f090245
 int id tvDirector 0x7f090246
 int id tvTitulo 0x7f090247
+int id tv_auto_image_slider 0x7f090271
 int id txtDesc 0x7f090248
 int id txtInputPassword 0x7f090249
 int id txtInputUsuario 0x7f09024a
@@ -3846,6 +3856,7 @@ int layout elemento_mis_cursos 0x7f0c003d
 int layout fragment_cursos 0x7f0c003e
 int layout fragment_inicio 0x7f0c003f
 int layout fragment_miscursos 0x7f0c0040
+int layout image_slider_layout_item 0x7f0c0089
 int layout lista_curso_layout 0x7f0c0041
 int layout m3_alert_dialog 0x7f0c0042
 int layout m3_alert_dialog_actions 0x7f0c0043
@@ -3922,6 +3933,7 @@ int menu activity_main_drawer 0x7f0e0000
 int menu bottom_nav_menu 0x7f0e0001
 int menu home 0x7f0e0002
 int mipmap ic_launcher 0x7f0f0000
+int mipmap ic_launcher_foreground 0x7f0f0002
 int mipmap ic_launcher_round 0x7f0f0001
 int navigation mobile_navigation 0x7f100000
 int navigation nav_graph 0x7f100001
