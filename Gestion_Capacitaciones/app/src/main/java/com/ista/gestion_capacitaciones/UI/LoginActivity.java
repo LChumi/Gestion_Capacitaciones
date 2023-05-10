@@ -238,13 +238,15 @@ public class LoginActivity extends AppCompatActivity {
             String pref=preferences.getString("username", "");
             String prefp=preferences.getString("pass","");
             String idPer=preferences.getString("idPer","");
+            Long id=Long.parseLong(idPer);
             if (!pref.equals("") && !prefp.equals("") && !idPer.equals("")){
-                toastCorrecto("Inicio activo "+pref);
-                Long id=Long.parseLong(idPer);
+                toastCorrecto("Inicio activo "+prefp);
                 inicio(id);
+                Log.i("mensaje",idPer);
                 this.startActivity(new Intent(this,HomeActivity.class));
                 this.overridePendingTransition(R.anim.left_in, R.anim.left_out);
             }
+            inicio(id);
         } catch (Exception e) {
             Log.e("TAG", "Error en onStart(): " + e.getMessage());
         }
