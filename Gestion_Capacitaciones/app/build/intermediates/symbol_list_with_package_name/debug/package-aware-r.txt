@@ -3995,7 +3995,6 @@ string first_fragment_label
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
-string lorem_ipsum
 string m3_sys_motion_easing_emphasized
 string m3_sys_motion_easing_emphasized_accelerate
 string m3_sys_motion_easing_emphasized_decelerate

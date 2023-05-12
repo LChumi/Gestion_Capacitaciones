@@ -208,7 +208,6 @@ navigation nav_graph2
 string action_settings
 string app_name
 string first_fragment_label
-string lorem_ipsum
 string menu_gallery
 string menu_home
 string menu_slideshow
