@@ -42,30 +42,22 @@
 
             </androidx.cardview.widget.CardView>
 
-
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/san_francisco"
-                android:text="Cursos"
+                android:text="@string/txtPrograma"
                 android:textColor="#fff"
                 android:textSize="24dp" />
-
-            <RelativeLayout
+            <GridView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:numColumns="3"
+                />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcvPlatillosRecomendados"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:layout_alignParentBottom="true"/>
-
-            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 

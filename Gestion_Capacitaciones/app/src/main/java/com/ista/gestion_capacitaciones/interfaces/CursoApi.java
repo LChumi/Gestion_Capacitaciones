@@ -29,4 +29,10 @@ public interface CursoApi {
     @DELETE("api/iCurso/eliminar/{id}")
     Call<Void> eliminar(@Path("id")Long id);
 
+    @GET("api/iCurso/findByUser/{id_persona}")
+    Call<List<Curso>> getByUser(@Path("id_persona")Long id_persona);
+
+    @GET("api/iCurso/findBycursosprograma/{idPrograma}")
+    Call<List<Curso>> getByPrograma(@Path("idPrograma")Long idPrograma);
+
 }

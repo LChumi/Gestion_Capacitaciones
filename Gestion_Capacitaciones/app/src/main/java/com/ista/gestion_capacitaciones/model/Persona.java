@@ -24,6 +24,7 @@ public class Persona {
     private Usuario usuario;
     private List<FichaInscripcion> fichaIncripcions;
     private List<Participante> participantes;
+    private List<Curso> cursos;
 
     public Long getId_persona() {
         return id_persona;
@@ -159,5 +160,13 @@ public class Persona {
 
     public void setParticipantes(List<Participante> participantes) {
         this.participantes = participantes;
+    }
+
+    public List<Curso> getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(List<Curso> cursos) {
+        this.cursos = cursos;
     }
 }

@@ -1,15 +1,16 @@
 package com.ista.gestion_capacitaciones.model;
 
+import java.util.Date;
 import java.util.List;
 
 public class ProgramaCapacitacion {
 
     private Long pcaId;
     private String pcaNombre;
-    private String pcaPeriodo;
+    private Date pcaFechainicio;
+    private Date pcaFechafin;
     private String pcaProceso;
     private Boolean pcaEstado;
-
     private List<Curso> cursos;
 
     public Long getPcaId() {
@@ -28,12 +29,20 @@ public class ProgramaCapacitacion {
         this.pcaNombre = pcaNombre;
     }
 
-    public String getPcaPeriodo() {
-        return pcaPeriodo;
+    public Date getPcaFechainicio() {
+        return pcaFechainicio;
     }
 
-    public void setPcaPeriodo(String pcaPeriodo) {
-        this.pcaPeriodo = pcaPeriodo;
+    public void setPcaFechainicio(Date pcaFechainicio) {
+        this.pcaFechainicio = pcaFechainicio;
+    }
+
+    public Date getPcaFechafin() {
+        return pcaFechafin;
+    }
+
+    public void setPcaFechafin(Date pcaFechafin) {
+        this.pcaFechafin = pcaFechafin;
     }
 
     public String getPcaProceso() {

@@ -4,6 +4,7 @@ import java.util.List;
 
 public class DatosSilabo {
     private Long dsiId;
+    private String dsiIdentificador;
     private String dsiPrerrequisitos;
     private String dsiDescripcioncurso;
     private String dsiObjetivogeneralc;
@@ -30,6 +31,14 @@ public class DatosSilabo {
 
     public void setDsiId(Long dsiId) {
         this.dsiId = dsiId;
+    }
+
+    public String getDsiIdentificador() {
+        return dsiIdentificador;
+    }
+
+    public void setDsiIdentificador(String dsiIdentificador) {
+        this.dsiIdentificador = dsiIdentificador;
     }
 
     public String getDsiPrerrequisitos() {

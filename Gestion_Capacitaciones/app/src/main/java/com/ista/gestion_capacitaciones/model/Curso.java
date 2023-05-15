@@ -41,6 +41,7 @@ public class Curso {
 
     private List<FichaEvaluacion> fichaEvaluacions;
 
+    private Persona pcurso;
     public Long getCurId() {
         return curId;
     }
@@ -215,5 +216,13 @@ public class Curso {
 
     public void setFichaEvaluacions(List<FichaEvaluacion> fichaEvaluacions) {
         this.fichaEvaluacions = fichaEvaluacions;
+    }
+
+    public Persona getPcurso() {
+        return pcurso;
+    }
+
+    public void setPcurso(Persona pcurso) {
+        this.pcurso = pcurso;
     }
 }

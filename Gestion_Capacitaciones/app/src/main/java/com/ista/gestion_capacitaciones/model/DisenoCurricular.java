@@ -5,6 +5,7 @@ import java.util.List;
 public class DisenoCurricular {
 
     private Long dcuId;
+    private String dcuIdentificador;
     private String dcuNiveles;
     private String dcuTemastransversales;
     private Boolean dcuEstado;
@@ -21,6 +22,14 @@ public class DisenoCurricular {
 
     public void setDcuId(Long dcuId) {
         this.dcuId = dcuId;
+    }
+
+    public String getDcuIdentificador() {
+        return dcuIdentificador;
+    }
+
+    public void setDcuIdentificador(String dcuIdentificador) {
+        this.dcuIdentificador = dcuIdentificador;
     }
 
     public String getDcuNiveles() {

@@ -6,6 +6,7 @@ import java.util.List;
 public class NecesidadCurso {
 
     private Long ncuId;
+    private String ncuIdentificador;
     private Date ncuFechaprevisfin;
     private Integer ncuNumparticipantes;
     private String ncuResumenyproyecto;
@@ -22,6 +23,14 @@ public class NecesidadCurso {
 
     public void setNcuId(Long ncuId) {
         this.ncuId = ncuId;
+    }
+
+    public String getNcuIdentificador() {
+        return ncuIdentificador;
+    }
+
+    public void setNcuIdentificador(String ncuIdentificador) {
+        this.ncuIdentificador = ncuIdentificador;
     }
 
     public Date getNcuFechaprevisfin() {
