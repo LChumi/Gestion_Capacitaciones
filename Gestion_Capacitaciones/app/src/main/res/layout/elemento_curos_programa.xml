@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/san_francisco"
-                android:text="Curso"
+                android:text="@string/txtNomCurso"
                 android:textColor="#000"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -49,7 +49,7 @@
                 android:layout_below="@+id/iv1"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/san_francisco"
-                android:text="En proceso"
+                android:text="@string/txtEstadoCurso"
                 android:textColor="#000"
                 android:textSize="16dp" />
             <Button

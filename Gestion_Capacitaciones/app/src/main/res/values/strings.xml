@@ -22,14 +22,37 @@
 
     <!-- tittles -->
     <string name="txtTitleCursoPrograma">Cursos</string>
+    <string name="txtTittle">Sistema de Gestion de Capacitaciones</string>
+    <string name="Tecazuay">TecAzuay</string>
+    <string name="txtTittleCursos">Cursos</string>
 
     <!-- textViews -->
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="txtPrograma">Programa</string>
+    <string name="txtLogin">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="txtListaAsiatencias">Lista Asistencias</string>
+    <string name="txtListasCursos">Lista Cursos</string>
+    <string name="txtNomPrograma">Programa 1</string>
+    <string name="txtNomCurso">Curso</string>
+    <string name="txtEstadoCurso">En proceso</string>
+    <string name="txtFechaInicio">Fecha Inicio</string>
+    <string name="txtFechaFin">Fecha Fin</string>
+    <string name="txtNombreEstudiante">Nombre Estudiante</string>
+    <string name="idEstudiante">1</string>
 
 
     <!-- botones -->
     <string name="btnRegistrarCurso">Registrarse</string>
+    <string name="btnLoguin">Iniciar Sesion</string>
+    <string name="btnRegresar">Regresar</string>
+    <string name="btnGuardarAsistencias">Guardar</string>
+
+    <!-- alerts -->
+    <string name="toastError">Ocurrio un Problema</string>
+    <string name="toastOk">Bienvenido</string>
+
 </resources>

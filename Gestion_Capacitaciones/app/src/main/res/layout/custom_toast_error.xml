@@ -21,7 +21,7 @@
         android:fontFamily="@font/san_francisco"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
-        android:text="Ocurrio un error"
+        android:text="@string/toastError"
         android:textColor="#fff"
         android:textStyle="bold"/>
 

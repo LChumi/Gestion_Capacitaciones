@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="175dp" />
+        app:layout_constraintGuide_begin="190dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -50,10 +50,10 @@
 
 
     <TextView
-        android:id="@+id/tvTitulo"
+        android:id="@+id/txtNombreCurso"
         android:layout_width="75dp"
         android:layout_height="26dp"
-        android:text="Curso"
+        android:text="@string/txtNomCurso"
         android:textColor="@color/text_color"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
@@ -62,16 +62,32 @@
         app:layout_constraintVertical_bias="0.58" />
 
     <TextView
-        android:id="@+id/tvDirector"
-        android:layout_width="76dp"
-        android:layout_height="23dp"
-        android:text="detalle"
+        android:id="@+id/txtFechaInicio"
+        android:layout_width="125dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/txtFechaInicio"
+        android:textColor="@color/text_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline6"
+        app:layout_constraintStart_toEndOf="@+id/ivImagen"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.211" />
+
+    <TextView
+        android:id="@+id/txtFechaFin"
+        android:layout_width="122dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="12dp"
+        android:text="@string/txtFechaFin"
         android:textColor="@color/text_color"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintLeft_toLeftOf="@+id/guideline6"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.8" />
 
     <ImageView
         android:id="@+id/ivImagen"
