@@ -37,9 +37,6 @@
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.Gestion_Capacitaciones.NoActionBar" />
         <activity
-            android:name="com.ista.gestion_capacitaciones.UI.Sing_Up_Activity"
-            android:exported="false" />
-        <activity
             android:name="com.ista.gestion_capacitaciones.UI.SplashActivity"
             android:exported="true" >
             <intent-filter>
@@ -58,10 +55,10 @@
             android:name="com.ista.gestion_capacitaciones.UI.ListaEstudianteActivity"
             android:exported="false" />
         <activity
-            android:name="com.ista.gestion_capacitaciones.UI.RegisterActivity"
+            android:name="com.ista.gestion_capacitaciones.UI.LoginActivity"
             android:exported="false" />
         <activity
-            android:name="com.ista.gestion_capacitaciones.UI.LoginActivity"
+            android:name="com.ista.gestion_capacitaciones.UI.ProgramaCursosActivity"
             android:exported="false" />
         <activity
             android:name="com.ista.gestion_capacitaciones.MainActivity"

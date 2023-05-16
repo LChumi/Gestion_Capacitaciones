@@ -52,6 +52,7 @@
                 android:textColor="#fff"
                 android:textSize="24dp" />
             <GridView
+                android:id="@+id/gvPrograma"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="8dp"

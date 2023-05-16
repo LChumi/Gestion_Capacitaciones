@@ -4,10 +4,10 @@ package com.ista.gestion_capacitaciones.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.ista.gestion_capacitaciones.R;
@@ -21,15 +21,15 @@ public final class FragmentInicioBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final RecyclerView rcvPlatillosRecomendados;
+  public final GridView gvPrograma;
 
   @NonNull
   public final SliderView svCarrusel;
 
-  private FragmentInicioBinding(@NonNull LinearLayout rootView,
-      @NonNull RecyclerView rcvPlatillosRecomendados, @NonNull SliderView svCarrusel) {
+  private FragmentInicioBinding(@NonNull LinearLayout rootView, @NonNull GridView gvPrograma,
+      @NonNull SliderView svCarrusel) {
     this.rootView = rootView;
-    this.rcvPlatillosRecomendados = rcvPlatillosRecomendados;
+    this.gvPrograma = gvPrograma;
     this.svCarrusel = svCarrusel;
   }
 
@@ -60,9 +60,9 @@ public final class FragmentInicioBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.rcvPlatillosRecomendados;
-      RecyclerView rcvPlatillosRecomendados = ViewBindings.findChildViewById(rootView, id);
-      if (rcvPlatillosRecomendados == null) {
+      id = R.id.gvPrograma;
+      GridView gvPrograma = ViewBindings.findChildViewById(rootView, id);
+      if (gvPrograma == null) {
         break missingId;
       }
 
@@ -72,8 +72,7 @@ public final class FragmentInicioBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentInicioBinding((LinearLayout) rootView, rcvPlatillosRecomendados,
-          svCarrusel);
+      return new FragmentInicioBinding((LinearLayout) rootView, gvPrograma, svCarrusel);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

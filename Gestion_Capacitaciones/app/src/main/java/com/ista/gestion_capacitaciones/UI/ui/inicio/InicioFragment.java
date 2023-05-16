@@ -5,14 +5,20 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.ista.gestion_capacitaciones.R;
+import com.ista.gestion_capacitaciones.adapter.ProgamaAdapter;
 import com.ista.gestion_capacitaciones.adapter.SliderAdapter;
+import com.ista.gestion_capacitaciones.model.ProgramaCapacitacion;
 import com.ista.gestion_capacitaciones.model.SliderItem;
+import com.ista.gestion_capacitaciones.viewmodel.ProgramaViewModel;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
@@ -22,6 +28,9 @@ import java.util.List;
 
 public class InicioFragment extends Fragment {
 
+    private ProgramaViewModel programaViewModel;
+    private GridView gvPrograma;
+    private ProgamaAdapter programaAdapter;
     private SliderView svCarrucel;
     private SliderAdapter sliderAdapter;
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -39,6 +48,9 @@ public class InicioFragment extends Fragment {
 
     private void init(View v){
         svCarrucel=v.findViewById(R.id.svCarrusel);
+        ViewModelProvider vmp=new ViewModelProvider(this);
+        programaViewModel =vmp.get(ProgramaViewModel.class);
+        gvPrograma=v.findViewById(R.id.gvPrograma);
     }
 
     private void initAdapter(){
@@ -51,6 +63,9 @@ public class InicioFragment extends Fragment {
         svCarrucel.setIndicatorUnselectedColor(Color.GRAY);
         svCarrucel.setScrollTimeInSec(4); //set scroll delay in seconds :
         svCarrucel.startAutoCycle();
+
+        programaAdapter=new ProgamaAdapter(getContext(),R.layout.elemenstos_programa_cursos,new ArrayList<>());
+        gvPrograma.setAdapter(programaAdapter);
     }
 
     private void loadData() {
@@ -61,5 +76,17 @@ public class InicioFragment extends Fragment {
         lista.add(new SliderItem(R.drawable.img_mision,"Mision"));
         lista.add(new SliderItem(R.drawable.img_institucion,"Insitucion"));
         sliderAdapter.updateItem(lista);
+
+        programaViewModel.listarProgramasCapacitacion().observe(getViewLifecycleOwner(), new Observer<List<ProgramaCapacitacion>>() {
+            @Override
+            public void onChanged(List<ProgramaCapacitacion> programas) {
+                programaAdapter.clear();
+                programaAdapter.addAll(programas);
+                programaAdapter.notifyDataSetChanged();
+            }
+        });
     }
+
+
+
 }

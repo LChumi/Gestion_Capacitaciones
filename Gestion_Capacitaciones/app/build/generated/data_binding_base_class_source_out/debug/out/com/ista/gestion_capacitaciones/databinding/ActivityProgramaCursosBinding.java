@@ -4,25 +4,43 @@ package com.ista.gestion_capacitaciones.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.google.android.material.appbar.AppBarLayout;
 import com.ista.gestion_capacitaciones.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityProgramaCursosBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
-  private ActivityProgramaCursosBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final AppBarLayout bar;
+
+  @NonNull
+  public final RecyclerView rcvCursosPrograma;
+
+  @NonNull
+  public final Toolbar toolbar;
+
+  private ActivityProgramaCursosBinding(@NonNull LinearLayout rootView, @NonNull AppBarLayout bar,
+      @NonNull RecyclerView rcvCursosPrograma, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
+    this.bar = bar;
+    this.rcvCursosPrograma = rcvCursosPrograma;
+    this.toolbar = toolbar;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -43,10 +61,32 @@ public final class ActivityProgramaCursosBinding implements ViewBinding {
 
   @NonNull
   public static ActivityProgramaCursosBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.bar;
+      AppBarLayout bar = ViewBindings.findChildViewById(rootView, id);
+      if (bar == null) {
+        break missingId;
+      }
 
-    return new ActivityProgramaCursosBinding((ConstraintLayout) rootView);
+      id = R.id.rcvCursosPrograma;
+      RecyclerView rcvCursosPrograma = ViewBindings.findChildViewById(rootView, id);
+      if (rcvCursosPrograma == null) {
+        break missingId;
+      }
+
+      id = R.id.toolbar;
+      Toolbar toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+
+      return new ActivityProgramaCursosBinding((LinearLayout) rootView, bar, rcvCursosPrograma,
+          toolbar);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

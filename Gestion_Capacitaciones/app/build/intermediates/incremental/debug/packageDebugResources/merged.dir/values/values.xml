@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="azulBajo">#2A3742</color>
     <color name="black">#FF000000</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorPrimary">#3d95d0</color>
@@ -22,6 +23,7 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <string name="action_settings">Settings</string>
     <string name="app_name">Gestion_Capacitaciones</string>
+    <string name="btnRegistrarCurso">Registrarse</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_home">Home</string>
@@ -42,6 +44,8 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_home">Home</string>
     <string name="title_notifications">Notifications</string>
+    <string name="txtPrograma">Programa</string>
+    <string name="txtTitleCursoPrograma">Cursos</string>
     <style name="Base.Theme.Gestion_Capacitaciones" parent="Theme.Material3.DayNight.NoActionBar">
         
         
