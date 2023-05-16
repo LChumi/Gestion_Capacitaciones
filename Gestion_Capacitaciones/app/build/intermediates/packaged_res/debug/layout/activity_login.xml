@@ -21,7 +21,7 @@
         android:layout_gravity="center_vertical"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="Login"
+        android:text="@string/txtLogin"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp" />
 
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_regresar"
-            android:contentDescription="regresar"
+            android:contentDescription="@string/btnRegresar"
             android:background="@null" />
 
         <View
@@ -52,7 +52,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:hint="Username"
+        android:hint="@string/username"
         android:layout_height="wrap_content"
         app:startIconDrawable="@drawable/user">
         <com.google.android.material.textfield.TextInputEditText
@@ -67,7 +67,7 @@
         android:id="@+id/txtInputPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:hint="Password"
+        android:hint="@string/password"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_margin="30dp"
-        android:text="Login"
+        android:text="@string/btnLoguin"
         android:id="@+id/btnIngreso"
         android:background="@color/colorPrimary"
         android:textColor="@color/colorWhite"

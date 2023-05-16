@@ -3003,6 +3003,7 @@ drawable intro_top_background
 drawable layers_2
 drawable layers_color
 drawable logo
+drawable logo_cuadrado
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3208,7 +3209,6 @@ id bounceStart
 id btnIngreso
 id btnLoguin
 id btnRegistrarCurso
-id btnRegistro
 id btnRegreso
 id button
 id buttonPanel
@@ -3335,13 +3335,6 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
-id guideline
-id guideline2
-id guideline3
-id guideline4
-id guideline5
-id guideline6
-id guideline7
 id gvPrograma
 id header_title
 id hideable
@@ -3372,7 +3365,6 @@ id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
 id iv1
-id ivImagen
 id iv_auto_image_slider
 id jumpToEnd
 id jumpToStart
@@ -3522,6 +3514,7 @@ id progress_horizontal
 id radio
 id ratio
 id rcvCursosPrograma
+id rcvMisCursos
 id rectangles
 id reverseSawtooth
 id right
@@ -3666,8 +3659,6 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id tvDirector
-id tvTitulo
 id tv_auto_image_slider
 id txtCurProceso
 id txtDesc
@@ -3937,6 +3928,7 @@ navigation nav_graph
 navigation nav_graph2
 plurals mtrl_badge_content_description
 string LOADING
+string Tecazuay
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3974,7 +3966,10 @@ string bottomsheet_action_expand
 string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
+string btnGuardarAsistencias
+string btnLoguin
 string btnRegistrarCurso
+string btnRegresar
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -3991,6 +3986,7 @@ string fab_transformation_sheet_behavior
 string first_fragment_label
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string idEstudiante
 string item_view_role_description
 string m3_sys_motion_easing_emphasized
 string m3_sys_motion_easing_emphasized_accelerate
@@ -4098,6 +4094,7 @@ string nav_header_title
 string navigation_drawer_close
 string navigation_drawer_open
 string next
+string password
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -4120,8 +4117,22 @@ string title_activity_vista_cursos
 string title_dashboard
 string title_home
 string title_notifications
+string toastError
+string toastOk
+string txtEstadoCurso
+string txtFechaFin
+string txtFechaInicio
+string txtListaAsiatencias
+string txtListasCursos
+string txtLogin
+string txtNomCurso
+string txtNomPrograma
+string txtNombreEstudiante
 string txtPrograma
 string txtTitleCursoPrograma
+string txtTittle
+string txtTittleCursos
+string username
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

@@ -23,7 +23,7 @@
         android:textStyle="bold"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
-        android:text="Bienvenido"
+        android:text="@string/toastOk"
         android:textColor="#fff"/>
 
 </LinearLayout>

@@ -33,7 +33,7 @@ public interface UsuarioApi {
     @DELETE("usuarios/delete/{usuarioId}")
     Call<Void> eliminar(@Path("id")Long id);
 
-    @GET("usuarios/login/{username}/{password}")
+    @GET("/usuarios/login/{username}/{password}")
     Call<Usuario> login(@Path("username") String username, @Path("password") String password);
 
 

@@ -1,5 +1,13 @@
 [
     {
+        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\elemnto_lista_estudiantes.xml",
+        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\elemnto_lista_estudiantes.xml"
+    },
+    {
+        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\fragment_perfil.xml",
+        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\fragment_perfil.xml"
+    },
+    {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\activity_lista_estudiante.xml",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\activity_lista_estudiante.xml"
     },
@@ -8,16 +16,12 @@
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\elemenstos_programa_cursos.xml"
     },
     {
-        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\custom_toast_error.xml",
-        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\custom_toast_error.xml"
-    },
-    {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\activity_vista_curso_docente.xml",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\activity_vista_curso_docente.xml"
     },
     {
-        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-51:/layout/activity_splash.xml",
-        "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/activity_splash.xml"
+        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\custom_toast_error.xml",
+        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\custom_toast_error.xml"
     },
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\nav_header_home.xml",
@@ -48,10 +52,6 @@
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\activity_vista_curso_estudiante.xml"
     },
     {
-        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-51:/layout/elemnto_lista_estudiantes.xml",
-        "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/elemnto_lista_estudiantes.xml"
-    },
-    {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\activity_programa_cursos.xml",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\activity_programa_cursos.xml"
     },
@@ -62,6 +62,10 @@
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\fragment_cursos.xml",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\fragment_cursos.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-51:/layout/activity_main.xml",
+        "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\activity_splash.xml",
@@ -94,10 +98,6 @@
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\lista_curso_layout.xml",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\lista_curso_layout.xml"
-    },
-    {
-        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-51:/layout/fragment_perfil.xml",
-        "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/fragment_perfil.xml"
     },
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\activity_login.xml",

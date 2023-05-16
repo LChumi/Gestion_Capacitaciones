@@ -40,7 +40,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/san_francisco"
-                android:text="Lists Cursos"
+                android:text="@string/txtListasCursos"
                 android:textColor="#fff"
                 android:textSize="24sp" />
             <LinearLayout

@@ -27,27 +27,27 @@ public class ProgramaViewModel extends AndroidViewModel {
 
 
 
-    public LiveData<List<ProgramaCapacitacion>> listarProgramasCapacitacion() {
-        capacitacionApi=new ProgramaCapacitacionApiClient();
-        LiveData<List<ProgramaCapacitacion>> liveData = new MutableLiveData<>();
+    public MutableLiveData<List<ProgramaCapacitacion>> listarProgramasCapacitacion() {
+        capacitacionApi = new ProgramaCapacitacionApiClient();
+        MutableLiveData<List<ProgramaCapacitacion>> liveData = new MutableLiveData<>();
         Call<List<ProgramaCapacitacion>> call = capacitacionApi.listar();
         call.enqueue(new Callback<List<ProgramaCapacitacion>>() {
             @Override
             public void onResponse(Call<List<ProgramaCapacitacion>> call, Response<List<ProgramaCapacitacion>> response) {
                 if (response.isSuccessful()) {
-                    ((MutableLiveData<List<ProgramaCapacitacion>>) liveData).setValue(response.body());
+                    liveData.setValue(response.body());
                 } else {
-                    ((MutableLiveData<List<ProgramaCapacitacion>>) liveData).setValue(null);
+                    liveData.setValue(null);
                 }
             }
 
             @Override
             public void onFailure(Call<List<ProgramaCapacitacion>> call, Throwable t) {
-                ((MutableLiveData<List<ProgramaCapacitacion>>) liveData).setValue(null);
+                liveData.setValue(null);
             }
         });
 
         return liveData;
-
     }
+
 }
