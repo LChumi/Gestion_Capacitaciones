@@ -35,6 +35,7 @@ dimen nav_header_height
 dimen nav_header_vertical_spacing
 drawable background_blue
 drawable background_red
+drawable bg
 drawable bg_overlay
 drawable button_background
 drawable certificate
@@ -65,6 +66,7 @@ drawable ic_more
 drawable ic_notifications_black_24dp
 drawable ic_regresar
 drawable ic_salir
+drawable ic_usuario
 drawable icon_grade_black
 drawable icon_grade_white
 drawable img_docentes
@@ -96,6 +98,7 @@ id action_FirstFragment_to_SecondFragment
 id action_Second2Fragment_to_First2Fragment
 id action_SecondFragment_to_FirstFragment
 id app_bar_home
+id backgroundLayout
 id bar
 id btnIngreso
 id btnLoguin
@@ -107,6 +110,7 @@ id cardPrograma
 id cerrarSesion
 id check_list_id
 id drawer_layout
+id end
 id fab
 id fl_shadow_container
 id guideline
@@ -130,6 +134,7 @@ id listaCursosDocentes
 id lista_estudiantes
 id ll_custom_toast_err
 id ll_custom_toast_ok
+id logo
 id mas
 id mobile_navigation
 id nav_cursos
@@ -146,6 +151,7 @@ id nombre_curso
 id nombre_estudiante_text
 id num_estudiante_text
 id rcvCursosPrograma
+id start
 id svCarrusel
 id textView
 id textView2
@@ -165,6 +171,7 @@ id txtPassword
 id txtPrograma
 id txtUsername
 id txtnombreUsuario
+id white_logo
 layout activity_asistencias
 layout activity_home
 layout activity_lista_estudiante
@@ -181,11 +188,11 @@ layout custom_toast_ok
 layout elemenstos_programa_cursos
 layout elemento_curos_programa
 layout elemento_mis_cursos
-layout fragment_cursos
+layout elemnto_lista_estudiantes
 layout fragment_inicio
 layout fragment_miscursos
+layout fragment_perfil
 layout image_slider_layout_item
-layout lista_curso_layout
 layout nav_header_home
 menu activity_main_drawer
 menu bottom_nav_menu
@@ -226,5 +233,6 @@ style Theme.Gestion_Capacitaciones
 style Theme.Gestion_Capacitaciones.AppBarOverlay
 style Theme.Gestion_Capacitaciones.NoActionBar
 style Theme.Gestion_Capacitaciones.PopupOverlay
+xml activity_splash_scene
 xml backup_rules
 xml data_extraction_rules

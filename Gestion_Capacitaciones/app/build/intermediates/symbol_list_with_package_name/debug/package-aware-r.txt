@@ -2923,6 +2923,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable background_blue
 drawable background_red
+drawable bg
 drawable bg_overlay
 drawable blue_button_background
 drawable btn_checkbox_checked_mtrl
@@ -2989,6 +2990,7 @@ drawable ic_notifications_black_24dp
 drawable ic_regresar
 drawable ic_salir
 drawable ic_search_black_24
+drawable ic_usuario
 drawable icon_grade_black
 drawable icon_grade_white
 drawable img_docentes
@@ -3190,6 +3192,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id back_and_forth
+id backgroundLayout
 id bar
 id barrier
 id baseline
@@ -3389,6 +3392,7 @@ id ll_custom_toast_err
 id ll_custom_toast_ok
 id loading
 id locale
+id logo
 id ltr
 id m3_side_sheet
 id marquee
@@ -3693,6 +3697,7 @@ id visible
 id visible_removing_fragment_view_tag
 id warning_frame
 id west
+id white_logo
 id withText
 id with_icon
 id withinBounds
@@ -3845,11 +3850,11 @@ layout design_text_input_start_icon
 layout elemenstos_programa_cursos
 layout elemento_curos_programa
 layout elemento_mis_cursos
-layout fragment_cursos
+layout elemnto_lista_estudiantes
 layout fragment_inicio
 layout fragment_miscursos
+layout fragment_perfil
 layout image_slider_layout_item
-layout lista_curso_layout
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -5399,5 +5404,6 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
+xml activity_splash_scene
 xml backup_rules
 xml data_extraction_rules

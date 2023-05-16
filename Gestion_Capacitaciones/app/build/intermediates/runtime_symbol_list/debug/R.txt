@@ -2922,6 +2922,7 @@ int drawable avd_hide_password 0x7f070078
 int drawable avd_show_password 0x7f070079
 int drawable background_blue 0x7f07007a
 int drawable background_red 0x7f07007b
+int drawable bg 0x7f070120
 int drawable bg_overlay 0x7f07007c
 int drawable blue_button_background 0x7f07007d
 int drawable btn_checkbox_checked_mtrl 0x7f07007e
@@ -2988,6 +2989,7 @@ int drawable ic_notifications_black_24dp 0x7f0700ba
 int drawable ic_regresar 0x7f0700bb
 int drawable ic_salir 0x7f0700bc
 int drawable ic_search_black_24 0x7f0700bd
+int drawable ic_usuario 0x7f070121
 int drawable icon_grade_black 0x7f0700be
 int drawable icon_grade_white 0x7f0700bf
 int drawable img_docentes 0x7f0700c0
@@ -3189,6 +3191,7 @@ int id autoComplete 0x7f09005f
 int id autoCompleteToEnd 0x7f090060
 int id autoCompleteToStart 0x7f090061
 int id back_and_forth 0x7f090062
+int id backgroundLayout 0x7f09027c
 int id bar 0x7f090275
 int id barrier 0x7f090063
 int id baseline 0x7f090064
@@ -3388,6 +3391,7 @@ int id ll_custom_toast_err 0x7f09012f
 int id ll_custom_toast_ok 0x7f090130
 int id loading 0x7f090131
 int id locale 0x7f090132
+int id logo 0x7f09027d
 int id ltr 0x7f090133
 int id m3_side_sheet 0x7f090134
 int id marquee 0x7f090135
@@ -3692,6 +3696,7 @@ int id visible 0x7f090265
 int id visible_removing_fragment_view_tag 0x7f090266
 int id warning_frame 0x7f090267
 int id west 0x7f090268
+int id white_logo 0x7f09027e
 int id withText 0x7f090269
 int id with_icon 0x7f09026a
 int id withinBounds 0x7f09026b
@@ -3844,11 +3849,11 @@ int layout design_text_input_start_icon 0x7f0c003b
 int layout elemenstos_programa_cursos 0x7f0c003c
 int layout elemento_curos_programa 0x7f0c008a
 int layout elemento_mis_cursos 0x7f0c003d
-int layout fragment_cursos 0x7f0c003e
+int layout elemnto_lista_estudiantes 0x7f0c008b
 int layout fragment_inicio 0x7f0c003f
 int layout fragment_miscursos 0x7f0c0040
+int layout fragment_perfil 0x7f0c008c
 int layout image_slider_layout_item 0x7f0c0041
-int layout lista_curso_layout 0x7f0c0042
 int layout m3_alert_dialog 0x7f0c0043
 int layout m3_alert_dialog_actions 0x7f0c0044
 int layout m3_alert_dialog_title 0x7f0c0045
@@ -7416,5 +7421,6 @@ int styleable ViewTransition_upDuration 13
 int styleable ViewTransition_viewTransitionMode 14
 int[] styleable include { 0x7f03011a }
 int styleable include_constraintSet 0
+int xml activity_splash_scene 0x7f150002
 int xml backup_rules 0x7f150000
 int xml data_extraction_rules 0x7f150001

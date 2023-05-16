@@ -4,9 +4,10 @@ package com.ista.gestion_capacitaciones.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.motion.widget.MotionLayout;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -17,19 +18,29 @@ import java.lang.String;
 
 public final class ActivitySplashBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final MotionLayout rootView;
 
   @NonNull
-  public final TextView textView;
+  public final ConstraintLayout backgroundLayout;
 
-  private ActivitySplashBinding(@NonNull ConstraintLayout rootView, @NonNull TextView textView) {
+  @NonNull
+  public final ImageView logo;
+
+  @NonNull
+  public final ImageView whiteLogo;
+
+  private ActivitySplashBinding(@NonNull MotionLayout rootView,
+      @NonNull ConstraintLayout backgroundLayout, @NonNull ImageView logo,
+      @NonNull ImageView whiteLogo) {
     this.rootView = rootView;
-    this.textView = textView;
+    this.backgroundLayout = backgroundLayout;
+    this.logo = logo;
+    this.whiteLogo = whiteLogo;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public MotionLayout getRoot() {
     return rootView;
   }
 
@@ -54,13 +65,25 @@ public final class ActivitySplashBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
-      if (textView == null) {
+      id = R.id.backgroundLayout;
+      ConstraintLayout backgroundLayout = ViewBindings.findChildViewById(rootView, id);
+      if (backgroundLayout == null) {
         break missingId;
       }
 
-      return new ActivitySplashBinding((ConstraintLayout) rootView, textView);
+      id = R.id.logo;
+      ImageView logo = ViewBindings.findChildViewById(rootView, id);
+      if (logo == null) {
+        break missingId;
+      }
+
+      id = R.id.white_logo;
+      ImageView whiteLogo = ViewBindings.findChildViewById(rootView, id);
+      if (whiteLogo == null) {
+        break missingId;
+      }
+
+      return new ActivitySplashBinding((MotionLayout) rootView, backgroundLayout, logo, whiteLogo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

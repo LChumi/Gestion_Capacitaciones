@@ -10,8 +10,8 @@
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_cursos"
-            android:icon="@drawable/ic_cursos"
-            android:title="Cursos" />
+            android:icon="@drawable/ic_usuario"
+            android:title="Perfil" />
         <item
             android:id="@+id/nav_misCursos"
             android:icon="@drawable/ic_mis_cursos"

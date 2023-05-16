@@ -1,12 +1,10 @@
 package com.ista.gestion_capacitaciones.adapter;
 
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ista.gestion_capacitaciones.R;
@@ -25,7 +23,7 @@ public class LlenarListaEstudiantesAdapter extends RecyclerView.Adapter<LlenarLi
     }
 
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.lista_curso_layout, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.elemnto_lista_estudiantes, parent, false);
         return new ViewHolder(itemView);
     }
 

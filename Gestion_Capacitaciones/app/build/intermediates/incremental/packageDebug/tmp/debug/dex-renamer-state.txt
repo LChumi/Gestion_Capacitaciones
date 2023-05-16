@@ -1,4 +1,4 @@
-#Tue May 16 01:20:45 ECT 2023
+#Tue May 16 10:17:01 ECT 2023
 base.0=C\:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
@@ -9,7 +9,7 @@ base.4=C\:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Cap
 base.5=C\:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
 base.6=C\:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
 base.7=C\:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
-base.8=C\:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.8=C\:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
 base.9=C\:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
@@ -21,7 +21,7 @@ path.4=12/classes.dex
 path.5=13/classes.dex
 path.6=15/classes.dex
 path.7=1/classes.dex
-path.8=2/classes.dex
+path.8=3/classes.dex
 path.9=5/classes.dex
 renamed.0=classes.dex
 renamed.1=classes2.dex
