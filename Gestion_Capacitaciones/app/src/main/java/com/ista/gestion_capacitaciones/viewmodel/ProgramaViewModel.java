@@ -1,15 +1,18 @@
 package com.ista.gestion_capacitaciones.viewmodel;
 
 import android.app.Application;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import com.ista.gestion_capacitaciones.UI.SplashActivity;
 import com.ista.gestion_capacitaciones.api.clients.ProgramaCapacitacionApiClient;
 import com.ista.gestion_capacitaciones.model.ProgramaCapacitacion;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -37,14 +40,17 @@ public class ProgramaViewModel extends AndroidViewModel {
                 if (response.isSuccessful()) {
                     ((MutableLiveData<List<ProgramaCapacitacion>>) liveData).setValue(response.body());
                 } else {
-                    ((MutableLiveData<List<ProgramaCapacitacion>>) liveData).setValue(null);
+                    ((MutableLiveData<List<ProgramaCapacitacion>>) liveData).setValue(new ArrayList<>());
+                    Toast.makeText(getApplication(), "Error de red Sin Conexión", Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<List<ProgramaCapacitacion>> call, Throwable t) {
-                ((MutableLiveData<List<ProgramaCapacitacion>>) liveData).setValue(null);
+                ((MutableLiveData<List<ProgramaCapacitacion>>) liveData).setValue(new ArrayList<>());
+                Toast.makeText(getApplication(), "Error de red Sin Conexión", Toast.LENGTH_LONG).show();
             }
+
         });
 
         return liveData;

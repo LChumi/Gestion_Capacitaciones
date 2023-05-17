@@ -46,15 +46,19 @@ public final class ElementoMisCursosBinding implements ViewBinding {
   public final ImageView ivImagen;
 
   @NonNull
-  public final TextView tvDirector;
+  public final TextView txtFechaFin;
 
   @NonNull
-  public final TextView tvTitulo;
+  public final TextView txtFechaInicio;
+
+  @NonNull
+  public final TextView txtNombreCurso;
 
   private ElementoMisCursosBinding(@NonNull ConstraintLayout rootView, @NonNull Guideline guideline,
       @NonNull Guideline guideline2, @NonNull Guideline guideline3, @NonNull Guideline guideline4,
       @NonNull Guideline guideline5, @NonNull Guideline guideline6, @NonNull Guideline guideline7,
-      @NonNull ImageView ivImagen, @NonNull TextView tvDirector, @NonNull TextView tvTitulo) {
+      @NonNull ImageView ivImagen, @NonNull TextView txtFechaFin, @NonNull TextView txtFechaInicio,
+      @NonNull TextView txtNombreCurso) {
     this.rootView = rootView;
     this.guideline = guideline;
     this.guideline2 = guideline2;
@@ -64,8 +68,9 @@ public final class ElementoMisCursosBinding implements ViewBinding {
     this.guideline6 = guideline6;
     this.guideline7 = guideline7;
     this.ivImagen = ivImagen;
-    this.tvDirector = tvDirector;
-    this.tvTitulo = tvTitulo;
+    this.txtFechaFin = txtFechaFin;
+    this.txtFechaInicio = txtFechaInicio;
+    this.txtNombreCurso = txtNombreCurso;
   }
 
   @Override
@@ -143,21 +148,27 @@ public final class ElementoMisCursosBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvDirector;
-      TextView tvDirector = ViewBindings.findChildViewById(rootView, id);
-      if (tvDirector == null) {
+      id = R.id.txtFechaFin;
+      TextView txtFechaFin = ViewBindings.findChildViewById(rootView, id);
+      if (txtFechaFin == null) {
         break missingId;
       }
 
-      id = R.id.tvTitulo;
-      TextView tvTitulo = ViewBindings.findChildViewById(rootView, id);
-      if (tvTitulo == null) {
+      id = R.id.txtFechaInicio;
+      TextView txtFechaInicio = ViewBindings.findChildViewById(rootView, id);
+      if (txtFechaInicio == null) {
+        break missingId;
+      }
+
+      id = R.id.txtNombreCurso;
+      TextView txtNombreCurso = ViewBindings.findChildViewById(rootView, id);
+      if (txtNombreCurso == null) {
         break missingId;
       }
 
       return new ElementoMisCursosBinding((ConstraintLayout) rootView, guideline, guideline2,
-          guideline3, guideline4, guideline5, guideline6, guideline7, ivImagen, tvDirector,
-          tvTitulo);
+          guideline3, guideline4, guideline5, guideline6, guideline7, ivImagen, txtFechaFin,
+          txtFechaInicio, txtNombreCurso);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

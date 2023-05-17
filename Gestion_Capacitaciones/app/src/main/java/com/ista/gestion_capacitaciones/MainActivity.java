@@ -13,7 +13,6 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnRegistro;
     Button btnLoguin;
 
     @Override
@@ -22,19 +21,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnLoguin=findViewById(R.id.btnLoguin);
-        btnRegistro=findViewById(R.id.btnRegistro);
+
 
         btnLoguin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Loguin();
-            }
-        });
-
-        btnRegistro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
             }
         });
 
