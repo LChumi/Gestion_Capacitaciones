@@ -52,6 +52,7 @@
                 android:text="@string/txtEstadoCurso"
                 android:textColor="#000"
                 android:textSize="16dp" />
+
             <Button
                 android:id="@+id/btnRegistrarCurso"
                 android:layout_width="wrap_content"
@@ -61,7 +62,7 @@
                 android:layout_marginRight="10dp"
                 android:backgroundTint="#FF8500"
                 android:fontFamily="@font/san_francisco"
-                android:text="@string/btnRegistrarCurso"
+                android:text="@string/btnAplicar"
                 android:textColor="#fff"
                 android:textSize="11dp"
                 android:textStyle="bold" />

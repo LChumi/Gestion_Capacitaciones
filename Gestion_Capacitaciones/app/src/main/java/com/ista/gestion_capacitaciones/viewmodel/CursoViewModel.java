@@ -10,6 +10,7 @@ import androidx.lifecycle.MutableLiveData;
 import com.ista.gestion_capacitaciones.api.clients.CursoApiClient;
 import com.ista.gestion_capacitaciones.model.Curso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -34,13 +35,35 @@ public class CursoViewModel extends AndroidViewModel {
                 if (response.isSuccessful()){
                     ((MutableLiveData<List<Curso>>) liveData).setValue(response.body());
                 }else{
-                    ((MutableLiveData<List<Curso>>) liveData).setValue(null);
+                    ((MutableLiveData<List<Curso>>) liveData).setValue(new ArrayList<>());
                 }
             }
 
             @Override
             public void onFailure(Call<List<Curso>> call, Throwable t) {
-                ((MutableLiveData<List<Curso>>) liveData).setValue(null);
+                ((MutableLiveData<List<Curso>>) liveData).setValue(new ArrayList<>());
+            }
+        });
+        return liveData;
+    }
+
+    public LiveData<List<Curso>> listarCursosDocente(Long id_persona){
+        cursoApi=new CursoApiClient();
+        LiveData<List<Curso>> liveData=new MutableLiveData<>();
+        Call<List<Curso>> call= cursoApi.getByUser(id_persona);
+        call.enqueue(new Callback<List<Curso>>() {
+            @Override
+            public void onResponse(Call<List<Curso>> call, Response<List<Curso>> response) {
+                if (response.isSuccessful()){
+                    ((MutableLiveData<List<Curso>>)liveData).setValue(response.body());
+                }else{
+                    ((MutableLiveData<List<Curso>>)liveData).setValue(new ArrayList<>());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Curso>> call, Throwable t) {
+                ((MutableLiveData<List<Curso>>)liveData).setValue(new ArrayList<>());
             }
         });
         return liveData;

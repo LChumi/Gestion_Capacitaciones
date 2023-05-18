@@ -1,47 +1,58 @@
 package com.ista.gestion_capacitaciones.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
 import com.ista.gestion_capacitaciones.R;
-import com.ista.gestion_capacitaciones.adapter.LlenarListaEstudiantesAdapter;
-import com.ista.gestion_capacitaciones.model.LlenarListaEstudiantes;
+import com.ista.gestion_capacitaciones.adapter.ListaEstudiantesAdapter;
+import com.ista.gestion_capacitaciones.model.Participante;
+import com.ista.gestion_capacitaciones.viewmodel.MisCursosViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AsistenciasActivity extends AppCompatActivity{
 
-    private RecyclerView listaEstudiantes;
-    private LlenarListaEstudiantesAdapter estudiantesAdapter;
-
-    private List<LlenarListaEstudiantes> estudiantesList;
+    private MisCursosViewModel cursosViewModel;
+    private ListaEstudiantesAdapter estudiantesAdapter;
+    private List<Participante> participantes=new ArrayList<>();
+    private RecyclerView rcvListaAsistencias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_asistencias);
-        getSupportActionBar().hide();
+        init();
+        initViewModel();
+        initAdapter();
+        loadData();
+    }
+    private void init() {
+        Toolbar toolbar=this.findViewById(R.id.toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_regresar);
+        toolbar.setNavigationOnClickListener(v->{
+            this.finish();
+            this.overridePendingTransition(R.anim.rigth_in,R.anim.rigth_out);
+        });
+    }
+    private void initViewModel() {
+        cursosViewModel=new ViewModelProvider(this).get(MisCursosViewModel.class);
+    }
+    private void initAdapter() {
+        estudiantesAdapter=new ListaEstudiantesAdapter(participantes);
+        rcvListaAsistencias=findViewById(R.id.lista_estudiantes);
+        rcvListaAsistencias.setAdapter(estudiantesAdapter);
+        rcvListaAsistencias.setLayoutManager(new LinearLayoutManager(this));
 
-        estudiantesList = new ArrayList<>();
+    }
+    private void loadData() {
 
-        listaEstudiantes = findViewById(R.id.lista_estudiantes);
-        listaEstudiantes.setLayoutManager((new LinearLayoutManager(this)));
-        estudiantesAdapter = new LlenarListaEstudiantesAdapter((this));
-        listaEstudiantes.setAdapter(estudiantesAdapter);
 
-        LlenarListaEstudiantes estudiante = new LlenarListaEstudiantes();
-        estudiante.setId(1);
-        estudiante.setNombre("Pepe El Toro");
-        estudiante.setStatus(0);
-
-        estudiantesList.add(estudiante);
-        estudiantesList.add(estudiante);
-        estudiantesList.add(estudiante);
-
-        estudiantesAdapter.setEstudiante(estudiantesList);
     }
 }

@@ -52,6 +52,7 @@
     <string name="btnLoguin">Iniciar Sesion</string>
     <string name="btnRegresar">Regresar</string>
     <string name="btnGuardarAsistencias">Guardar</string>
+    <string name="btnAplicar">Aplicar</string>
 
     <!-- alerts -->
     <string name="toastError">Ocurrio un Problema</string>

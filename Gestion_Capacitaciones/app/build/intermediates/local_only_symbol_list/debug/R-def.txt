@@ -79,6 +79,7 @@ drawable intro_top_background
 drawable layers_2
 drawable layers_color
 drawable logo
+drawable logo_cuadrado
 drawable pass
 drawable photo
 drawable side_nav_bar
@@ -112,19 +113,11 @@ id drawer_layout
 id end
 id fab
 id fl_shadow_container
-id guideline
-id guideline2
-id guideline3
-id guideline4
-id guideline5
-id guideline6
-id guideline7
 id gvPrograma
 id imgCurso
 id imgFotoPerfil
 id imgPrograma
 id iv1
-id ivImagen
 id iv_auto_image_slider
 id listaCursosDocentes
 id lista_estudiantes
@@ -147,6 +140,7 @@ id nombre_curso
 id nombre_estudiante_text
 id num_estudiante_text
 id rcvCursosPrograma
+id rcvMisCursos
 id start
 id svCarrusel
 id textView
@@ -155,8 +149,6 @@ id toolbar
 id tv_auto_image_slider
 id txtCurProceso
 id txtDesc
-id txtFechaFin
-id txtFechaInicio
 id txtInputPassword
 id txtInputUsuario
 id txtMensajeErr
@@ -201,6 +193,7 @@ navigation nav_graph2
 string Tecazuay
 string action_settings
 string app_name
+string btnAplicar
 string btnGuardarAsistencias
 string btnLoguin
 string btnRegistrarCurso

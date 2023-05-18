@@ -22,15 +22,20 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.ista.gestion_capacitaciones.MainActivity;
 import com.ista.gestion_capacitaciones.R;
+import com.ista.gestion_capacitaciones.UI.ui.misCursos.MisCursosFragment;
 import com.ista.gestion_capacitaciones.api.clients.UsuariosApiClient;
 import com.ista.gestion_capacitaciones.db.DbPersona;
 import com.ista.gestion_capacitaciones.db.DbRol;
 import com.ista.gestion_capacitaciones.db.DbUsuarios;
 import com.ista.gestion_capacitaciones.interfaces.UsuarioApi;
+import com.ista.gestion_capacitaciones.model.Rol;
 import com.ista.gestion_capacitaciones.model.Usuario;
 import com.ista.gestion_capacitaciones.model.dto.PersonaDTO;
 import com.ista.gestion_capacitaciones.model.dto.RolDTO;
 import com.ista.gestion_capacitaciones.model.dto.UsuarioDTO;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import retrofit2.Call;
@@ -51,7 +56,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        this.init();;
+        this.init();
+        this.insertarRoles();;
 
     }
 
@@ -99,6 +105,8 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putString("pass",usuario.getPassword());
                     Long idPer=usuario.getPersona().getId_persona();
                     editor.putString("idPer",idPer.toString());
+                    Long idRol=usuario.getRol().getId_rol();
+                    editor.putString("idRol",idRol.toString());
                     editor.apply();
                     toastCorrecto("Correcto");
                     Log.i("mensaje"+response.body(),response.message());
@@ -114,9 +122,23 @@ public class LoginActivity extends AppCompatActivity {
                     if (dbPersona.obtenerPersona(perId) == null && dbUsuarios.obtenerUsuario(usuId) == null) {
                         long per = dbPersona.insertaPersona(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
                         long us = dbUsuarios.insertaUsuario(username, password, perId,usuarioDTO.getRol_id());
-                        long rol=dbRol.insertarRol(rolDTO.getId_rol(),rolDTO.getRol_nombre(),rolDTO.getDescripcion(),rolDTO.getEnabled());
-                        if (per > 0 && us > 0 && rol>0) {
-                            Toast.makeText(LoginActivity.this, "Datos guardados", Toast.LENGTH_LONG).show();
+
+// Verificar si el rol ya existe en la base de datos
+                        if (dbRol.obtenerRol(rolDTO.getId_rol()) == null) {
+                            // El rol no existe, realizar la inserción
+                            long rol = dbRol.insertarRol(rolDTO.getId_rol(), rolDTO.getRol_nombre(), rolDTO.getDescripcion(), rolDTO.getEnabled());
+                            if (rol > 0) {
+                                Toast.makeText(LoginActivity.this, "Datos guardados" + idRol, Toast.LENGTH_LONG).show();
+                            } else {
+                                Toast.makeText(LoginActivity.this, "Error al guardar el rol", Toast.LENGTH_LONG).show();
+                            }
+                        } else {
+                            // El rol ya existe, no es necesario volver a insertarlo
+                            Toast.makeText(LoginActivity.this, "El rol ya existe", Toast.LENGTH_LONG).show();
+                        }
+
+                        if (per > 0 && us > 0) {
+                            Toast.makeText(LoginActivity.this, "Datos guardados"+idRol, Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(LoginActivity.this, "Error al guardar persona", Toast.LENGTH_LONG).show();
                         }
@@ -157,8 +179,10 @@ public class LoginActivity extends AppCompatActivity {
                 editor.putString("pass",user.getUsu_password());
                 Long idPer=user.getPer_id();
                 editor.putString("idPer",idPer.toString());
+                Long idRol=user.getRol_id();
+                editor.putString("idRol",idRol.toString());
                 editor.apply();
-                toastCorrecto("Correcto");
+                toastCorrecto("Correcto"+idRol);
                 inicio(user.getPer_id());
             } else {
                 loginWithApi(username, password);
@@ -238,11 +262,13 @@ public class LoginActivity extends AppCompatActivity {
             String pref=preferences.getString("username", "");
             String prefp=preferences.getString("pass","");
             String idPer=preferences.getString("idPer","");
+            String idRol=preferences.getString("idRol","");
             Long id=Long.parseLong(idPer);
-            if (!pref.equals("") && !prefp.equals("") && !idPer.equals("")){
+            if (!pref.equals("") && !prefp.equals("") && !idPer.equals("") &&!idPer.equals("")){
                 toastCorrecto("Inicio activo "+prefp);
                 inicio(id);
                 Log.i("mensaje",idPer);
+                Log.i("rol",idRol);
                 this.startActivity(new Intent(this,HomeActivity.class));
                 this.overridePendingTransition(R.anim.left_in, R.anim.left_out);
             }
@@ -252,7 +278,21 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    private void insertarRoles() {
+        DbRol dbRol = new DbRol(this);
 
+        // Verificar si los roles ya existen en la base de datos
+        if (dbRol.obtenerLista().isEmpty()) {
+            // Insertar los roles en la base de datos
+            List<RolDTO> roles = new ArrayList<>();
+            roles.add(new RolDTO(1L, "Participante", "Participante", true));
+            roles.add(new RolDTO(2L, "Docente", "Docente", true));
+            roles.add(new RolDTO(3L, "Admin", "Admin", true));
+            for (RolDTO rol : roles) {
+                dbRol.insertarRol(rol.getId_rol(),rol.getRol_nombre(),rol.getDescripcion(),rol.getEnabled());
+            }
+        }
+    }
 
 
 

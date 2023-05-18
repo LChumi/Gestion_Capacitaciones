@@ -30,7 +30,7 @@ public interface CursoApi {
     Call<Void> eliminar(@Path("id")Long id);
 
     @GET("api/Curso/findByUser/{id_persona}")
-    Call<List<Curso>> getByUser(@Path("id_persona")Long id_persona);
+    Call<List<Curso>> getByDocente(@Path("id_persona")Long id_persona);
 
     @GET("api/Curso/findBycursosprograma/{idPrograma}")
     Call<List<Curso>> getByPrograma(@Path("idPrograma")Long idPrograma);

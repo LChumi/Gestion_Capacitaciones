@@ -19,6 +19,13 @@ public class RolDTO {
         this.enabled=rol.isEnabled();
     }
 
+    public RolDTO(Long id_rol, String rol_nombre, String descripcion, Boolean enabled) {
+        this.id_rol = id_rol;
+        this.rol_nombre = rol_nombre;
+        this.descripcion = descripcion;
+        this.enabled = enabled;
+    }
+
     public Long getId_rol() {
         return id_rol;
     }

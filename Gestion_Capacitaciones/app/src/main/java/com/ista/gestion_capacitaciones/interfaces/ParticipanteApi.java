@@ -29,5 +29,10 @@ public interface ParticipanteApi {
     @DELETE("api/participante/eliminar/{id}")
     Call<Void> eliminar(@Path("id")Long id);
 
+    @GET("api/participante/participantesPersonaCurso/{idPersona}")
+    Call<List<Participante>> getCoursesByParticipante(@Path("idPersona")Long idPersona);
+
+    @GET("api/participante/listarparticipantes/{curId}")
+    Call<List<Participante>> getListParticipanteByCourses(@Path("curId") Long curId);
 
 }

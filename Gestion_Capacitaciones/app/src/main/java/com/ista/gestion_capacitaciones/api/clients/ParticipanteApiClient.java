@@ -46,4 +46,11 @@ public class ParticipanteApiClient {
     public Call<Void> eliminar(Long id){
         return participanteApi.eliminar(id);
     }
+    public Call<List<Participante>> getCourseByParticipante(Long idPersona){
+        return participanteApi.getCoursesByParticipante(idPersona);
+    }
+    public Call<List<Participante>> getListParticipanteByCourses(Long curId){
+        return participanteApi.getListParticipanteByCourses(curId);
+    }
+
 }

@@ -3003,6 +3003,7 @@ drawable intro_top_background
 drawable layers_2
 drawable layers_color
 drawable logo
+drawable logo_cuadrado
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3334,13 +3335,6 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
-id guideline
-id guideline2
-id guideline3
-id guideline4
-id guideline5
-id guideline6
-id guideline7
 id gvPrograma
 id header_title
 id hideable
@@ -3368,7 +3362,6 @@ id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
 id iv1
-id ivImagen
 id iv_auto_image_slider
 id jumpToEnd
 id jumpToStart
@@ -3518,6 +3511,7 @@ id progress_horizontal
 id radio
 id ratio
 id rcvCursosPrograma
+id rcvMisCursos
 id rectangles
 id reverseSawtooth
 id right
@@ -3664,8 +3658,6 @@ id triangle
 id tv_auto_image_slider
 id txtCurProceso
 id txtDesc
-id txtFechaFin
-id txtFechaInicio
 id txtInputPassword
 id txtInputUsuario
 id txtMensajeErr
@@ -3970,6 +3962,7 @@ string bottomsheet_action_expand
 string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
+string btnAplicar
 string btnGuardarAsistencias
 string btnLoguin
 string btnRegistrarCurso

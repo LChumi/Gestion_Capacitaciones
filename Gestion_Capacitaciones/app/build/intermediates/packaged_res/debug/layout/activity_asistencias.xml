@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#BEDEED"
+    android:orientation="vertical"
     tools:context=".UI.AsistenciasActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/purple_500"
+                app:navigationIcon="@drawable/ic_regresar"
+                app:title="@string/txtTitleCursoPrograma"/>
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,4 +65,4 @@
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
