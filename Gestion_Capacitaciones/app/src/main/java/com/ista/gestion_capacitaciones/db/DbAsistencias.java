@@ -24,7 +24,7 @@ public class DbAsistencias extends SqlConexion{
         super(context);
     }
 
-    public long insertarAsistencia(int numAsistencia, String fecha, int parId) {
+    public long insertarAsistencia(int numAsistencia, Date fecha, Long parId) {
         long result = -1;
         try (
                 SQLiteDatabase db = getWritableDatabase();

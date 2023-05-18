@@ -61,4 +61,15 @@ public class UsuarioDTO {
     public void setRol_id(Long rol_id) {
         this.rol_id = rol_id;
     }
+
+    @Override
+    public String toString() {
+        return "UsuarioDTO{" +
+                "usu_id=" + usu_id +
+                ", usu_usuario='" + usu_usuario + '\'' +
+                ", usu_password='" + usu_password + '\'' +
+                ", per_id=" + per_id +
+                ", rol_id=" + rol_id +
+                '}';
+    }
 }

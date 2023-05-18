@@ -18,13 +18,9 @@ public class AsistenciaDTO {
 
     public AsistenciaDTO(Asistencia asistencia) {
         this.asi_id = asistencia.getAsiId();
-        this.asi_numAsistencia = Integer.parseInt(asistencia.getAsiNumfaltas());
+        this.asi_numAsistencia = asistencia.getAsiNumfaltas();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        try {
-            this.asi_fecha = sdf.parse(asistencia.getAsiFecha());
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+        this.asi_fecha=asistencia.getAsiFecha();
         this.par_id = asistencia.getAsiParticipante().getParId();
     }
 

@@ -1,10 +1,12 @@
 package com.ista.gestion_capacitaciones.model;
 
+import java.util.Date;
+
 public class Asistencia {
 
     private Long asiId;
-    private String asiNumfaltas;
-    private String asiFecha;
+    private int asiNumfaltas;
+    private Date asiFecha;
     private Boolean asiEstado;
 
     private Participante asiParticipante;
@@ -17,19 +19,19 @@ public class Asistencia {
         this.asiId = asiId;
     }
 
-    public String getAsiNumfaltas() {
+    public int getAsiNumfaltas() {
         return asiNumfaltas;
     }
 
-    public void setAsiNumfaltas(String asiNumfaltas) {
+    public void setAsiNumfaltas(int asiNumfaltas) {
         this.asiNumfaltas = asiNumfaltas;
     }
 
-    public String getAsiFecha() {
+    public Date getAsiFecha() {
         return asiFecha;
     }
 
-    public void setAsiFecha(String asiFecha) {
+    public void setAsiFecha(Date asiFecha) {
         this.asiFecha = asiFecha;
     }
 

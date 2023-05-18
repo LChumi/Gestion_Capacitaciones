@@ -70,7 +70,8 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void cargarDatos(){
-        Long personId = getIntent().getLongExtra("personaId", -1);
+        Long personId = getIntent().getLongExtra("personaId", 0);
+        Log.i("ID",personId.toString());
         DbPersona dbPersona = new DbPersona(HomeActivity.this);
         final View vistaHeader = binding.navView.getHeaderView(0);
         final TextView txtNombre = vistaHeader.findViewById(R.id.txtnombreUsuario);
@@ -83,9 +84,10 @@ public class HomeActivity extends AppCompatActivity {
             Toast.makeText(HomeActivity.this, "Persona encontrada"+personaDTO.Datos()+personaDTO.getPer_correo()+personaDTO.getPer_apellidos(), Toast.LENGTH_LONG).show();
             txtNombre.setText(personaDTO.Datos());
             txtDesc.setText(personaDTO.getPer_correo());
-            Log.e(personaDTO.getPer_cedula(),"datos");
+            Log.i(personaDTO.getPer_cedula(),"datos");
             Log.i(personaDTO.getPer_apellidos(),"dato");
             Log.i(personaDTO.getPer_correo(),"dato");
+
         } else {
             txtNombre.setText("Not Found");
             txtDesc.setText("Not Found");
@@ -123,12 +125,15 @@ public class HomeActivity extends AppCompatActivity {
         editor.remove("username"); // Remueve el valor asociado con la clave "username"
         editor.remove("pass"); // Remueve el valor asociado con la clave "pass"
         editor.remove("idPer"); // Remueve el valor asociado con la clave "idPer"
+        editor.remove("idRol");
         editor.apply();
+
         Intent intent = new Intent(this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK); // Elimina todas las actividades de la pila y crea una nueva instancia de LoginActivity
         startActivity(intent);
         finish(); // Cierra la actividad actual
         overridePendingTransition(R.anim.left_in, R.anim.left_out);
     }
+
 
 }

@@ -57,26 +57,27 @@ public class MisCursosFragment extends Fragment {
         rcvMisCursos= view.findViewById(R.id.rcvMisCursos);
     }
     private void initViewModel() {
-        String idPer = preferences.getString("idPer", "");
-        String idRol=preferences.getString("idRol","");
-        if(idRol.equals("1")){
-            cursosViewModel= new ViewModelProvider(this).get(MisCursosViewModel.class);
-        }
-        if (idRol.equals("2")){
-            ViewModelProvider vmp=new ViewModelProvider(this);
-            viewModel=vmp.get(CursoViewModel.class);
-        }
+        Long idPer = preferences.getLong("idPer", 0);
+        Long idRol = preferences.getLong("idRol", 0);
 
+        if (idRol.equals(1L)) {
+            cursosViewModel = new ViewModelProvider(this).get(MisCursosViewModel.class);
+        }
+        if (idRol.equals(2L)) {
+            ViewModelProvider vmp = new ViewModelProvider(this);
+            viewModel = vmp.get(CursoViewModel.class);
+        }
     }
+
     private void initAdapter() {
-        String idPer = preferences.getString("idPer", "");
-        String idRol=preferences.getString("idRol","");
-        if(idRol.equals("1")){
+        Long idPer = preferences.getLong("idPer", 0);
+        Long idRol=preferences.getLong("idRol",0);
+        if(idRol.equals(1L)){
             cursosAdapter=new MisCursosAdapter(new ArrayList<>());
             rcvMisCursos.setLayoutManager(new GridLayoutManager(getContext(), 1));
             rcvMisCursos.setAdapter(cursosAdapter);
         }
-        if (idRol.equals("2")){
+        if (idRol.equals(2L)){
             docenteAdapter=new CursosDocenteAdapter(new ArrayList<>());
             rcvMisCursos.setLayoutManager(new GridLayoutManager(getContext(), 1));
             rcvMisCursos.setAdapter(docenteAdapter);
@@ -84,30 +85,30 @@ public class MisCursosFragment extends Fragment {
 
     }
     private void loadData() {
-        String idPer = preferences.getString("idPer", "");
-        String idRol=preferences.getString("idRol","");
-        if (idRol.equals("2")){
+        Long idPer = preferences.getLong("idPer", 0);
+        Long idRol = preferences.getLong("idRol", 0);
+
+        if (idRol.equals(2L)) {
             Toast.makeText(getContext(), "Docente", Toast.LENGTH_LONG).show();
-            if (!idPer.equals("")) {
-                Long id = Long.parseLong(idPer);
-                this.viewModel.listarCursosDocente(id).observe(getViewLifecycleOwner(),cursos -> {
+            if (idPer != 0L) {
+                Long id = idPer;
+                this.viewModel.listarCursosDocente(id).observe(getViewLifecycleOwner(), cursos -> {
                     docenteAdapter.updateItems(cursos);
                 });
             }
-
         }
-        if(idRol.equals("1")){
+
+        if (idRol.equals(1L)) {
             Toast.makeText(getContext(), "Participante", Toast.LENGTH_LONG).show();
-            if (!idPer.equals("")) {
-                Long id = Long.parseLong(idPer);
+            if (idPer != 0L) {
+                Long id = idPer;
                 this.cursosViewModel.ListarCursoPArticipante(id).observe(getViewLifecycleOwner(), participantes -> {
                     cursosAdapter.updateItems(participantes);
                 });
             }
         }
-
-
     }
+
 
 
 

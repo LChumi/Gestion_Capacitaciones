@@ -58,4 +58,14 @@ public class Usuario {
     public void setRol(Rol rol) {
         this.rol = rol;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id_usuario=" + id_usuario +
+                ", username='" + username + '\'' +
+                ", rol=" + rol.getDescripcion() +
+                ",rolid" +rol.getId_rol().toString()+
+                '}';
+    }
 }
