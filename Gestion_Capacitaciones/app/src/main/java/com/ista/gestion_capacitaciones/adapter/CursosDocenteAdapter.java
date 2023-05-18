@@ -59,6 +59,7 @@ public class CursosDocenteAdapter extends RecyclerView.Adapter<CursosDocenteAdap
 
         public void setItem(final Curso c) {
             // Código para cargar la imagen en el ImageView
+            txtNombreCurso.setTextSize(10);
             txtNombreCurso.setText(c.getCurNombre());
         }
     }
