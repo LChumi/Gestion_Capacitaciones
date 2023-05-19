@@ -11,10 +11,10 @@
         <item
             android:id="@+id/nav_cursos"
             android:icon="@drawable/ic_usuario"
-            android:title="Perfil" />
+            android:title="@string/txtTittlePerfil" />
         <item
             android:id="@+id/nav_misCursos"
             android:icon="@drawable/ic_mis_cursos"
-            android:title="MisCursos" />
+            android:title="@string/txtTittleMiscuros" />
     </group>
 </menu>

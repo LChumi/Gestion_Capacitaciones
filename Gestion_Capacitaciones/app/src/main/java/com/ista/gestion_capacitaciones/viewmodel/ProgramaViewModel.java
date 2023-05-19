@@ -8,8 +8,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.ista.gestion_capacitaciones.UI.SplashActivity;
-import com.ista.gestion_capacitaciones.api.clients.ProgramaCapacitacionApiClient;
+import com.ista.gestion_capacitaciones.constants.clients.ProgramaCapacitacionApiClient;
 import com.ista.gestion_capacitaciones.model.ProgramaCapacitacion;
 
 import java.util.ArrayList;

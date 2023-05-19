@@ -1,5 +1,8 @@
 package com.ista.gestion_capacitaciones.adapter;
 
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ista.gestion_capacitaciones.R;
+import com.ista.gestion_capacitaciones.UI.ListaEstudianteActivity;
 import com.ista.gestion_capacitaciones.model.Curso;
 import com.ista.gestion_capacitaciones.model.Participante;
 
@@ -53,14 +57,24 @@ public class CursosDocenteAdapter extends RecyclerView.Adapter<CursosDocenteAdap
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            this.txtNombreCurso=itemView.findViewById(R.id.txtPrograma);
 
+            this.txtNombreCurso = itemView.findViewById(R.id.txtPrograma);
+            itemView.setOnClickListener(v -> {
+                Context context = itemView.getContext();
+                Curso curso = listaCursoDocente.get(getAdapterPosition());
+                Intent i = new Intent(context, ListaEstudianteActivity.class);
+                i.putExtra("idCurso", curso.getCurId());
+                Log.i("curso",curso.getCurId().toString()+"|"+curso.getCurNombre());
+                context.startActivity(i);
+            });
         }
 
         public void setItem(final Curso c) {
             // Código para cargar la imagen en el ImageView
             txtNombreCurso.setTextSize(10);
             txtNombreCurso.setText(c.getCurNombre());
+
+
         }
     }
 }

@@ -1860,6 +1860,7 @@
     <item quantity="one"><ns2:g id="count">%d</ns2:g> new notification</item>
     <item quantity="other"><ns2:g id="count">%d</ns2:g> new notifications</item>
   </plurals>
+    <string name="Inicio">Inicio</string>
     <string name="LOADING">Loading...</string>
     <string name="Tecazuay">TecAzuay</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
@@ -2073,11 +2074,13 @@
     <string name="txtLogin">Login</string>
     <string name="txtNomCurso">Curso</string>
     <string name="txtNomPrograma">Programa 1</string>
-    <string name="txtNombreEstudiante">Nombre Estudiante</string>
+    <string name="txtNombreEstudiante">Luis Gustavo Chumi Paida</string>
     <string name="txtPrograma">Programa</string>
     <string name="txtTitleCursoPrograma">Cursos</string>
     <string name="txtTittle">Sistema de Gestion de Capacitaciones</string>
     <string name="txtTittleCursos">Cursos</string>
+    <string name="txtTittleMiscuros">Mis Cursos</string>
+    <string name="txtTittlePerfil">Perfil</string>
     <string name="username">Username</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

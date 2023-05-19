@@ -49,9 +49,6 @@
             android:name="com.ista.gestion_capacitaciones.UI.AsistenciasActivity"
             android:exported="false" />
         <activity
-            android:name="com.ista.gestion_capacitaciones.UI.VistaCursoDocenteActivity"
-            android:exported="false" />
-        <activity
             android:name="com.ista.gestion_capacitaciones.UI.ListaEstudianteActivity"
             android:exported="false" />
         <activity

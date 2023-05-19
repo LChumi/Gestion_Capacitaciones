@@ -7,7 +7,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.ista.gestion_capacitaciones.api.clients.CursoApiClient;
+import com.ista.gestion_capacitaciones.constants.clients.CursoApiClient;
 import com.ista.gestion_capacitaciones.model.Curso;
 
 import java.util.ArrayList;

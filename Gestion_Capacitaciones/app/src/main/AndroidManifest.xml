@@ -35,9 +35,6 @@
             android:name=".UI.AsistenciasActivity"
             android:exported="false" />
         <activity
-            android:name=".UI.VistaCursoDocenteActivity"
-            android:exported="false" />
-        <activity
             android:name=".UI.ListaEstudianteActivity"
             android:exported="false" />
         <activity

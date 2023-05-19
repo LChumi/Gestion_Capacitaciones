@@ -8,18 +8,18 @@
     <fragment
         android:id="@+id/nav_inicio"
         android:name="com.ista.gestion_capacitaciones.UI.ui.inicio.InicioFragment"
-        android:label="Inicio"
+        android:label="@string/Inicio"
         tools:layout="@layout/fragment_inicio" />
 
     <fragment
-        android:id="@+id/nav_cursos"
+        android:id="@+id/nav_perfil"
         android:name="com.ista.gestion_capacitaciones.UI.ui.perfil.PerfilFragment"
-        android:label="Cursos"
+        android:label="@string/txtTittleCursos"
         tools:layout="@layout/fragment_perfil" />
 
     <fragment
         android:id="@+id/nav_misCursos"
         android:name="com.ista.gestion_capacitaciones.UI.ui.misCursos.MisCursosFragment"
-            android:label="Mis Cursos"
+            android:label="@string/txtTittleMiscuros"
         tools:layout="@layout/fragment_miscursos" />
 </navigation>

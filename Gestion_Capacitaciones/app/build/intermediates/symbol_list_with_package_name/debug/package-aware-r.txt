@@ -2962,6 +2962,7 @@ drawable gorjeo
 drawable gradient_background
 drawable gray_button_background
 drawable green_button_background
+drawable ic_add_item
 drawable ic_arrow_back_black_24
 drawable ic_check
 drawable ic_clear_black_24
@@ -2988,6 +2989,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
 drawable ic_regresar
+drawable ic_remove_item
 drawable ic_salir
 drawable ic_search_black_24
 drawable ic_usuario
@@ -3208,6 +3210,8 @@ id bounceEnd
 id bounceStart
 id btnIngreso
 id btnLoguin
+id btnMas
+id btnMenos
 id btnRegistrarCurso
 id btnRegreso
 id button
@@ -3228,7 +3232,6 @@ id cerrarSesion
 id chain
 id chain2
 id chains
-id check_list_id
 id checkbox
 id checked
 id chronometer
@@ -3259,6 +3262,7 @@ id customPanel
 id custom_image
 id custom_view_container
 id cut
+id cvMisCompras
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3295,6 +3299,7 @@ id easeInOut
 id easeOut
 id east
 id edit_query
+id edtCantidad
 id elastic
 id embed
 id end
@@ -3375,7 +3380,6 @@ id line3
 id linear
 id listMode
 id list_item
-id listaCursosDocentes
 id lista_estudiantes
 id ll_custom_toast_err
 id ll_custom_toast_ok
@@ -3456,6 +3460,7 @@ id nav_host_fragment_container
 id nav_host_fragment_content_home
 id nav_inicio
 id nav_misCursos
+id nav_perfil
 id nav_view
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
@@ -3811,8 +3816,6 @@ layout activity_login
 layout activity_main
 layout activity_programa_cursos
 layout activity_splash
-layout activity_vista_curso_docente
-layout activity_vista_curso_estudiante
 layout alert_dialog
 layout app_bar_home
 layout content_home
@@ -3923,6 +3926,7 @@ navigation mobile_navigation
 navigation nav_graph
 navigation nav_graph2
 plurals mtrl_badge_content_description
+string Inicio
 string LOADING
 string Tecazuay
 string abc_action_bar_home_description
@@ -4131,6 +4135,8 @@ string txtPrograma
 string txtTitleCursoPrograma
 string txtTittle
 string txtTittleCursos
+string txtTittleMiscuros
+string txtTittlePerfil
 string username
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

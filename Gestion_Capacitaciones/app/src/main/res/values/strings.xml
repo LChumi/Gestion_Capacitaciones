@@ -25,6 +25,9 @@
     <string name="txtTittle">Sistema de Gestion de Capacitaciones</string>
     <string name="Tecazuay">TecAzuay</string>
     <string name="txtTittleCursos">Cursos</string>
+    <string name="txtTittlePerfil">Perfil</string>
+    <string name="txtTittleMiscuros">Mis Cursos</string>
+    <string name="Inicio">Inicio</string>
 
     <!-- textViews -->
     <string name="menu_home">Home</string>
@@ -41,7 +44,7 @@
     <string name="txtEstadoCurso">En proceso</string>
     <string name="txtFechaInicio">Fecha Inicio</string>
     <string name="txtFechaFin">Fecha Fin</string>
-    <string name="txtNombreEstudiante">Nombre Estudiante</string>
+    <string name="txtNombreEstudiante">Luis Gustavo Chumi Paida</string>
     <string name="idEstudiante">1</string>
     <string name="txtBienvenido">Bienvenido</string>
     <string name="txtInstituto">Instituto Tecnologico del Azuay</string>

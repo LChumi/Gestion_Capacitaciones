@@ -313,7 +313,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/person/baseline_person_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/add/baseline_add_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -323,7 +323,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_usuario" />
+                            <entry key="outputName" value="ic_add_item" />
                             <entry key="sourceFile" value="C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones" />
                           </map>
                         </option>

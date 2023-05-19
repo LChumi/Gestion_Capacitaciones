@@ -7,9 +7,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.ista.gestion_capacitaciones.api.clients.ParticipanteApiClient;
-import com.ista.gestion_capacitaciones.interfaces.ParticipanteApi;
-import com.ista.gestion_capacitaciones.model.Curso;
+import com.ista.gestion_capacitaciones.constants.clients.ParticipanteApiClient;
 import com.ista.gestion_capacitaciones.model.Participante;
 
 import java.util.ArrayList;

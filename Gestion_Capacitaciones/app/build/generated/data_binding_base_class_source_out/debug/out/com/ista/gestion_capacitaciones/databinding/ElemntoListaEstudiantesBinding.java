@@ -4,13 +4,15 @@ package com.ista.gestion_capacitaciones.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.card.MaterialCardView;
 import com.ista.gestion_capacitaciones.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -18,10 +20,19 @@ import java.lang.String;
 
 public final class ElemntoListaEstudiantesBinding implements ViewBinding {
   @NonNull
-  private final CardView rootView;
+  private final LinearLayout rootView;
 
   @NonNull
-  public final CheckBox checkListId;
+  public final ImageView btnMas;
+
+  @NonNull
+  public final ImageView btnMenos;
+
+  @NonNull
+  public final MaterialCardView cvMisCompras;
+
+  @NonNull
+  public final EditText edtCantidad;
 
   @NonNull
   public final TextView nombreEstudianteText;
@@ -29,17 +40,22 @@ public final class ElemntoListaEstudiantesBinding implements ViewBinding {
   @NonNull
   public final TextView numEstudianteText;
 
-  private ElemntoListaEstudiantesBinding(@NonNull CardView rootView, @NonNull CheckBox checkListId,
-      @NonNull TextView nombreEstudianteText, @NonNull TextView numEstudianteText) {
+  private ElemntoListaEstudiantesBinding(@NonNull LinearLayout rootView, @NonNull ImageView btnMas,
+      @NonNull ImageView btnMenos, @NonNull MaterialCardView cvMisCompras,
+      @NonNull EditText edtCantidad, @NonNull TextView nombreEstudianteText,
+      @NonNull TextView numEstudianteText) {
     this.rootView = rootView;
-    this.checkListId = checkListId;
+    this.btnMas = btnMas;
+    this.btnMenos = btnMenos;
+    this.cvMisCompras = cvMisCompras;
+    this.edtCantidad = edtCantidad;
     this.nombreEstudianteText = nombreEstudianteText;
     this.numEstudianteText = numEstudianteText;
   }
 
   @Override
   @NonNull
-  public CardView getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -64,9 +80,27 @@ public final class ElemntoListaEstudiantesBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.check_list_id;
-      CheckBox checkListId = ViewBindings.findChildViewById(rootView, id);
-      if (checkListId == null) {
+      id = R.id.btnMas;
+      ImageView btnMas = ViewBindings.findChildViewById(rootView, id);
+      if (btnMas == null) {
+        break missingId;
+      }
+
+      id = R.id.btnMenos;
+      ImageView btnMenos = ViewBindings.findChildViewById(rootView, id);
+      if (btnMenos == null) {
+        break missingId;
+      }
+
+      id = R.id.cvMisCompras;
+      MaterialCardView cvMisCompras = ViewBindings.findChildViewById(rootView, id);
+      if (cvMisCompras == null) {
+        break missingId;
+      }
+
+      id = R.id.edtCantidad;
+      EditText edtCantidad = ViewBindings.findChildViewById(rootView, id);
+      if (edtCantidad == null) {
         break missingId;
       }
 
@@ -82,8 +116,8 @@ public final class ElemntoListaEstudiantesBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ElemntoListaEstudiantesBinding((CardView) rootView, checkListId,
-          nombreEstudianteText, numEstudianteText);
+      return new ElemntoListaEstudiantesBinding((LinearLayout) rootView, btnMas, btnMenos,
+          cvMisCompras, edtCantidad, nombreEstudianteText, numEstudianteText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

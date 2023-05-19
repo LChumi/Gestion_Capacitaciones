@@ -40,10 +40,6 @@
         "source": "com.ista.gestion_capacitaciones.app-main-54:/drawable-v24/logo_cuadrado.png"
     },
     {
-        "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/layout_activity_vista_curso_docente.xml.flat",
-        "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/activity_vista_curso_docente.xml"
-    },
-    {
         "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/layout_activity_programa_cursos.xml.flat",
         "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/activity_programa_cursos.xml"
     },
@@ -296,12 +292,12 @@
         "source": "com.ista.gestion_capacitaciones.app-main-54:/menu/bottom_nav_menu.xml"
     },
     {
-        "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/anim_down_out.xml.flat",
-        "source": "com.ista.gestion_capacitaciones.app-main-54:/anim/down_out.xml"
-    },
-    {
         "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/menu_activity_main_drawer.xml.flat",
         "source": "com.ista.gestion_capacitaciones.app-main-54:/menu/activity_main_drawer.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/anim_down_out.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-54:/anim/down_out.xml"
     },
     {
         "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/drawable_logo.png.flat",
@@ -364,10 +360,6 @@
         "source": "com.ista.gestion_capacitaciones.app-main-54:/drawable/ic_more.xml"
     },
     {
-        "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/layout_activity_vista_curso_estudiante.xml.flat",
-        "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/activity_vista_curso_estudiante.xml"
-    },
-    {
         "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/drawable-ldpi_layers_color.png.flat",
         "source": "com.ista.gestion_capacitaciones.app-main-54:/drawable-ldpi/layers_color.png"
     },
@@ -378,6 +370,10 @@
     {
         "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/drawable-xxxhdpi_layers_2.png.flat",
         "source": "com.ista.gestion_capacitaciones.app-main-54:/drawable-xxxhdpi/layers_2.png"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/drawable_ic_add_item.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-54:/drawable/ic_add_item.xml"
     },
     {
         "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/drawable-ldpi_circle_orange.png.flat",
@@ -590,5 +586,9 @@
     {
         "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/anim_left_in.xml.flat",
         "source": "com.ista.gestion_capacitaciones.app-main-54:/anim/left_in.xml"
+    },
+    {
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/drawable_ic_remove_item.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-54:/drawable/ic_remove_item.xml"
     }
 ]

@@ -50,6 +50,7 @@ drawable foto
 drawable google
 drawable gorjeo
 drawable gradient_background
+drawable ic_add_item
 drawable ic_check
 drawable ic_cursos
 drawable ic_dashboard_black_24dp
@@ -65,6 +66,7 @@ drawable ic_mis_cursos
 drawable ic_more
 drawable ic_notifications_black_24dp
 drawable ic_regresar
+drawable ic_remove_item
 drawable ic_salir
 drawable ic_usuario
 drawable icon_grade_black
@@ -103,13 +105,16 @@ id backgroundLayout
 id bar
 id btnIngreso
 id btnLoguin
+id btnMas
+id btnMenos
 id btnRegistrarCurso
 id btnRegreso
 id button
 id cardPrograma
 id cerrarSesion
-id check_list_id
+id cvMisCompras
 id drawer_layout
+id edtCantidad
 id end
 id fab
 id fl_shadow_container
@@ -119,7 +124,6 @@ id imgFotoPerfil
 id imgPrograma
 id iv1
 id iv_auto_image_slider
-id listaCursosDocentes
 id lista_estudiantes
 id ll_custom_toast_err
 id ll_custom_toast_ok
@@ -132,6 +136,7 @@ id nav_graph2
 id nav_host_fragment_content_home
 id nav_inicio
 id nav_misCursos
+id nav_perfil
 id nav_view
 id navigation_dashboard
 id navigation_home
@@ -166,8 +171,6 @@ layout activity_login
 layout activity_main
 layout activity_programa_cursos
 layout activity_splash
-layout activity_vista_curso_docente
-layout activity_vista_curso_estudiante
 layout app_bar_home
 layout content_home
 layout custom_toast_error
@@ -190,6 +193,7 @@ mipmap ic_launcher_round
 navigation mobile_navigation
 navigation nav_graph
 navigation nav_graph2
+string Inicio
 string Tecazuay
 string action_settings
 string app_name
@@ -237,6 +241,8 @@ string txtPrograma
 string txtTitleCursoPrograma
 string txtTittle
 string txtTittleCursos
+string txtTittleMiscuros
+string txtTittlePerfil
 string username
 style Base.Theme.Gestion_Capacitaciones
 style Theme.Gestion_Capacitaciones

@@ -28,10 +28,6 @@
         "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/fragment_inicio.xml"
     },
     {
-        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-51:/layout/activity_vista_curso_estudiante.xml",
-        "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/activity_vista_curso_estudiante.xml"
-    },
-    {
         "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-51:/layout/elemento_curos_programa.xml",
         "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/elemento_curos_programa.xml"
     },
@@ -78,10 +74,6 @@
     {
         "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-51:/layout/fragment_perfil.xml",
         "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/fragment_perfil.xml"
-    },
-    {
-        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-51:/layout/activity_vista_curso_docente.xml",
-        "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/activity_vista_curso_docente.xml"
     },
     {
         "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-51:/layout/content_home.xml",

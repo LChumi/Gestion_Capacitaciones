@@ -32,7 +32,6 @@ public class ListaEstudiantesAdapter extends RecyclerView.Adapter<ListaEstudiant
     @Override
     public void onBindViewHolder(@NonNull ListaEstudiantesAdapter.ViewHolder holder, int position) {
         holder.setItem(this.listaParticipantes.get(position));
-        holder.txtIdEstudinate.setText(position);
     }
 
     @Override
@@ -50,17 +49,20 @@ public class ListaEstudiantesAdapter extends RecyclerView.Adapter<ListaEstudiant
 
         private TextView txtIdEstudinate;
         private TextView txtNombreEstudiante;
-        private CheckBox cbxCheckList;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             this.txtIdEstudinate=itemView.findViewById(R.id.num_estudiante_text);
             this.txtNombreEstudiante=itemView.findViewById(R.id.nombre_estudiante_text);
-            this.cbxCheckList=itemView.findViewById(R.id.check_list_id);
+
         }
 
         public void setItem(Participante p){
+            int numero = listaParticipantes.indexOf(p) + 1;
+            txtIdEstudinate.setText(String.valueOf(numero));
             txtNombreEstudiante.setText(p.getParPersona().getNombre()+" "+p.getParPersona().getApellido());
         }
+
 
     }
 }

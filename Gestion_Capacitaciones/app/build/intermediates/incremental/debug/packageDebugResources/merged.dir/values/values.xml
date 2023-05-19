@@ -21,6 +21,7 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <string name="Inicio">Inicio</string>
     <string name="Tecazuay">TecAzuay</string>
     <string name="action_settings">Settings</string>
     <string name="app_name">Gestion_Capacitaciones</string>
@@ -63,11 +64,13 @@
     <string name="txtLogin">Login</string>
     <string name="txtNomCurso">Curso</string>
     <string name="txtNomPrograma">Programa 1</string>
-    <string name="txtNombreEstudiante">Nombre Estudiante</string>
+    <string name="txtNombreEstudiante">Luis Gustavo Chumi Paida</string>
     <string name="txtPrograma">Programa</string>
     <string name="txtTitleCursoPrograma">Cursos</string>
     <string name="txtTittle">Sistema de Gestion de Capacitaciones</string>
     <string name="txtTittleCursos">Cursos</string>
+    <string name="txtTittleMiscuros">Mis Cursos</string>
+    <string name="txtTittlePerfil">Perfil</string>
     <string name="username">Username</string>
     <style name="Base.Theme.Gestion_Capacitaciones" parent="Theme.Material3.DayNight.NoActionBar">
         
