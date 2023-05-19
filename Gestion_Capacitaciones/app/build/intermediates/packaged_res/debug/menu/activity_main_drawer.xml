@@ -9,7 +9,7 @@
             android:icon="@drawable/ic_home"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_cursos"
+            android:id="@+id/nav_perfil"
             android:icon="@drawable/ic_usuario"
             android:title="@string/txtTittlePerfil" />
         <item

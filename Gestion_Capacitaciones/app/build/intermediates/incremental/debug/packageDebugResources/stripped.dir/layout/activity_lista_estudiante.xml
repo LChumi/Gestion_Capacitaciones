@@ -57,7 +57,8 @@
                 android:layout_height="480dp"
                 android:layout_below="@id/nombre_curso"
                 android:nestedScrollingEnabled="true"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                app:spanCount="2"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
 
             <Button
                 android:id="@+id/button"

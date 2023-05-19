@@ -32,7 +32,7 @@ public final class ElemntoListaEstudiantesBinding implements ViewBinding {
   public final MaterialCardView cvMisCompras;
 
   @NonNull
-  public final EditText edtCantidad;
+  public final EditText edtNumFaltas;
 
   @NonNull
   public final TextView nombreEstudianteText;
@@ -42,13 +42,13 @@ public final class ElemntoListaEstudiantesBinding implements ViewBinding {
 
   private ElemntoListaEstudiantesBinding(@NonNull LinearLayout rootView, @NonNull ImageView btnMas,
       @NonNull ImageView btnMenos, @NonNull MaterialCardView cvMisCompras,
-      @NonNull EditText edtCantidad, @NonNull TextView nombreEstudianteText,
+      @NonNull EditText edtNumFaltas, @NonNull TextView nombreEstudianteText,
       @NonNull TextView numEstudianteText) {
     this.rootView = rootView;
     this.btnMas = btnMas;
     this.btnMenos = btnMenos;
     this.cvMisCompras = cvMisCompras;
-    this.edtCantidad = edtCantidad;
+    this.edtNumFaltas = edtNumFaltas;
     this.nombreEstudianteText = nombreEstudianteText;
     this.numEstudianteText = numEstudianteText;
   }
@@ -98,9 +98,9 @@ public final class ElemntoListaEstudiantesBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.edtCantidad;
-      EditText edtCantidad = ViewBindings.findChildViewById(rootView, id);
-      if (edtCantidad == null) {
+      id = R.id.edtNumFaltas;
+      EditText edtNumFaltas = ViewBindings.findChildViewById(rootView, id);
+      if (edtNumFaltas == null) {
         break missingId;
       }
 
@@ -117,7 +117,7 @@ public final class ElemntoListaEstudiantesBinding implements ViewBinding {
       }
 
       return new ElemntoListaEstudiantesBinding((LinearLayout) rootView, btnMas, btnMenos,
-          cvMisCompras, edtCantidad, nombreEstudianteText, numEstudianteText);
+          cvMisCompras, edtNumFaltas, nombreEstudianteText, numEstudianteText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

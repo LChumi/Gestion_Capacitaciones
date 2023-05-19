@@ -1,6 +1,6 @@
 package com.ista.gestion_capacitaciones.utils;
 
-import com.ista.gestion_capacitaciones.constants.clients.AsistenciaApiClient;
+import com.ista.gestion_capacitaciones.api.clients.AsistenciaApiClient;
 import com.ista.gestion_capacitaciones.db.DbAsistencias;
 import com.ista.gestion_capacitaciones.model.Asistencia;
 import com.ista.gestion_capacitaciones.model.Participante;

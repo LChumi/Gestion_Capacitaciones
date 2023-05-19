@@ -65,12 +65,12 @@
                         android:id="@+id/btnMenos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toStartOf="@id/edtCantidad"
+                        android:layout_toStartOf="@id/edtNumFaltas"
                         android:background="#F4F2F2"
                         android:src="@drawable/ic_remove_item" />
 
                     <EditText
-                        android:id="@+id/edtCantidad"
+                        android:id="@+id/edtNumFaltas"
                         android:layout_width="50dp"
                         android:layout_height="35dp"
                         android:layout_toStartOf="@id/btnMas"

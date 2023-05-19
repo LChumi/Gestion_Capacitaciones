@@ -114,7 +114,7 @@ id cardPrograma
 id cerrarSesion
 id cvMisCompras
 id drawer_layout
-id edtCantidad
+id edtNumFaltas
 id end
 id fab
 id fl_shadow_container
@@ -130,7 +130,6 @@ id ll_custom_toast_ok
 id logo
 id mas
 id mobile_navigation
-id nav_cursos
 id nav_graph
 id nav_graph2
 id nav_host_fragment_content_home

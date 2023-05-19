@@ -19,7 +19,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.ista.gestion_capacitaciones.MainActivity;
 import com.ista.gestion_capacitaciones.R;
-import com.ista.gestion_capacitaciones.constants.clients.UsuariosApiClient;
+import com.ista.gestion_capacitaciones.api.clients.UsuariosApiClient;
 import com.ista.gestion_capacitaciones.db.DbPersona;
 import com.ista.gestion_capacitaciones.db.DbRol;
 import com.ista.gestion_capacitaciones.db.DbUsuarios;;

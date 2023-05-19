@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/nav_perfil"
         android:name="com.ista.gestion_capacitaciones.UI.ui.perfil.PerfilFragment"
-        android:label="@string/txtTittleCursos"
+        android:label="@string/txtTittlePerfil"
         tools:layout="@layout/fragment_perfil" />
 
     <fragment
