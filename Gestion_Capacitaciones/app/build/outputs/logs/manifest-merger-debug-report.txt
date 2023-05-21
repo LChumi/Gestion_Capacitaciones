@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-57:12
+ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-54:12
 MERGED from [androidx.databinding:viewbinding:8.0.1] C:\Users\luisc\.gradle\caches\transforms-3\73d2c8181e2118fe7c6d63b8f0496a90\transformed\jetified-viewbinding-8.0.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-ui:2.5.2] C:\Users\luisc\.gradle\caches\transforms-3\180fcc3a8486dd9d3d1dfa70b84b2b4c\transformed\navigation-ui-2.5.2\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\luisc\.gradle\caches\transforms-3\eb57593a0436d9518cb6b2ecd8c2078e\transformed\material-1.8.0\AndroidManifest.xml:17:1-26:12
@@ -80,22 +80,22 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\luisc\.gradle\caches\transforms-3\ef41ad1de6652bdfc935f1f371e39b47\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.pnikosis:materialish-progress:1.7] C:\Users\luisc\.gradle\caches\transforms-3\0f163860f210a49aee3368372d964420\transformed\jetified-materialish-progress-1.7\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.35.1] C:\Users\luisc\.gradle\caches\transforms-3\fd3d763bb807c878969819bc50422401\transformed\jetified-dagger-lint-aar-2.35.1\AndroidManifest.xml:16:1-19:12
-INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-54:12
 	package
 		INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-57:12
+		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-54:12
 		INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-57:12
+		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-54:12
 		INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-57:12
+		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:1-54:12
 		INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:2:11-69
@@ -112,7 +112,7 @@ ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capaci
 	android:name
 		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:7:22-75
 application
-ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:9:5-55:19
+ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:9:5-52:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\luisc\.gradle\caches\transforms-3\eb57593a0436d9518cb6b2ecd8c2078e\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\luisc\.gradle\caches\transforms-3\eb57593a0436d9518cb6b2ecd8c2078e\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\luisc\.gradle\caches\transforms-3\d3b64a44981f6730d3dc38c232befd32\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -197,36 +197,30 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:31:17-77
 	android:name
 		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:31:27-74
-activity#com.ista.gestion_capacitaciones.UI.AsistenciasActivity
+activity#com.ista.gestion_capacitaciones.UI.ListaEstudianteActivity
 ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:34:9-36:40
 	android:exported
 		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:35:13-51
-activity#com.ista.gestion_capacitaciones.UI.ListaEstudianteActivity
+		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:35:13-55
+activity#com.ista.gestion_capacitaciones.UI.LoginActivity
 ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:37:9-39:40
 	android:exported
 		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:39:13-37
 	android:name
-		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:38:13-55
-activity#com.ista.gestion_capacitaciones.UI.LoginActivity
-ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:40:9-42:40
+		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:38:13-45
+activity#com.ista.gestion_capacitaciones.UI.ProgramaCursosActivity
+ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:40:9-42:39
 	android:exported
 		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:41:13-45
-activity#com.ista.gestion_capacitaciones.UI.ProgramaCursosActivity
-ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:43:9-45:39
-	android:exported
-		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:45:13-37
-	android:name
-		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:44:13-54
+		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:41:13-54
 activity#com.ista.gestion_capacitaciones.MainActivity
-ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:46:9-54:20
+ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:43:9-51:20
 	android:exported
-		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:48:13-36
+		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:45:13-36
 	android:name
-		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:47:13-41
+		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:44:13-41
 uses-sdk
 INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml

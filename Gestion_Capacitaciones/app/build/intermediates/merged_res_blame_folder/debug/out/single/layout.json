@@ -16,10 +16,6 @@
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-51:/layout/elemnto_lista_estudiantes.xml",
-        "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/elemnto_lista_estudiantes.xml"
-    },
-    {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\activity_programa_cursos.xml",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\activity_programa_cursos.xml"
     },

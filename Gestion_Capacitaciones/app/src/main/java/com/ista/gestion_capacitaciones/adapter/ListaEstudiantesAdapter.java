@@ -14,17 +14,25 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ista.gestion_capacitaciones.R;
+import com.ista.gestion_capacitaciones.UI.ListaEstudianteActivity;
 import com.ista.gestion_capacitaciones.model.Participante;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 public class ListaEstudiantesAdapter extends RecyclerView.Adapter<ListaEstudiantesAdapter.ViewHolder> {
 
     private List<Participante> listaParticipantes;
 
+
+
     public ListaEstudiantesAdapter(List<Participante> listaParticipantes){
-        this.listaParticipantes=listaParticipantes;
+        this.listaParticipantes = listaParticipantes;
+        this.listaFaltas = new ArrayList<>(Collections.nCopies(listaParticipantes.size(), 0));
     }
+
 
     @NonNull
     @Override
@@ -46,10 +54,18 @@ public class ListaEstudiantesAdapter extends RecyclerView.Adapter<ListaEstudiant
     public void updateItems(List<Participante> participantesByCurso){
         this.listaParticipantes.clear();
         this.listaParticipantes.addAll(participantesByCurso);
+        this.listaFaltas = new ArrayList<>(Collections.nCopies(participantesByCurso.size(), 0));
         this.notifyDataSetChanged();
     }
 
+    private List<Integer> listaFaltas;
+
+    public List<Integer> getListaFaltas() {
+        return listaFaltas;  // Devolver la lista de faltas actualizada
+    }
+
     protected class ViewHolder extends RecyclerView.ViewHolder {
+
 
         private TextView txtIdEstudinate;
         private TextView txtNombreEstudiante;
@@ -70,6 +86,13 @@ public class ListaEstudiantesAdapter extends RecyclerView.Adapter<ListaEstudiant
                 if (numFaltas != 10) {
                     numFaltas++;
                     edtNumFaltas.setText(String.valueOf(numFaltas));
+
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        Participante participante = listaParticipantes.get(position);
+                        listaFaltas.set(position, numFaltas);  // Actualizar la lista de faltas
+                        Log.i(participante.getParPersona().getNombre(),String.valueOf(numFaltas));
+                    }
                 }
             });
 
@@ -78,6 +101,13 @@ public class ListaEstudiantesAdapter extends RecyclerView.Adapter<ListaEstudiant
                 if (numFaltas != 0) {
                     numFaltas--;
                     edtNumFaltas.setText(String.valueOf(numFaltas));
+
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        Participante participante = listaParticipantes.get(position);
+                        listaFaltas.set(position, numFaltas);  // Actualizar la lista de faltas
+                        Log.i(participante.getParPersona().getNombre(),String.valueOf(numFaltas));
+                    }
                 }
             });
         }
@@ -88,6 +118,9 @@ public class ListaEstudiantesAdapter extends RecyclerView.Adapter<ListaEstudiant
             txtNombreEstudiante.setText(p.getParPersona().getNombre() + " " + p.getParPersona().getApellido());
             edtNumFaltas.setText("0");
         }
+
+
+
     }
 
 }

@@ -3207,13 +3207,13 @@ int id bounce 0x7f09006c
 int id bounceBoth 0x7f09006d
 int id bounceEnd 0x7f09006e
 int id bounceStart 0x7f09006f
+int id btnGuardarAsis 0x7f09025e
 int id btnIngreso 0x7f090070
 int id btnLoguin 0x7f090071
 int id btnMas 0x7f090072
 int id btnMenos 0x7f090073
 int id btnRegistrarCurso 0x7f090074
 int id btnRegreso 0x7f090075
-int id button 0x7f090076
 int id buttonPanel 0x7f090077
 int id buttons_container 0x7f090078
 int id cache_measures 0x7f090079
@@ -3807,7 +3807,6 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0c0018
 int layout abc_search_view 0x7f0c0019
 int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
-int layout activity_asistencias 0x7f0c001c
 int layout activity_home 0x7f0c001d
 int layout activity_lista_estudiante 0x7f0c001e
 int layout activity_login 0x7f0c001f

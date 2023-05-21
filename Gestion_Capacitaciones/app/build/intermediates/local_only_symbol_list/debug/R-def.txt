@@ -103,13 +103,13 @@ id action_SecondFragment_to_FirstFragment
 id app_bar_home
 id backgroundLayout
 id bar
+id btnGuardarAsis
 id btnIngreso
 id btnLoguin
 id btnMas
 id btnMenos
 id btnRegistrarCurso
 id btnRegreso
-id button
 id cardPrograma
 id cerrarSesion
 id cvMisCompras
@@ -163,7 +163,6 @@ id txtPrograma
 id txtUsername
 id txtnombreUsuario
 id white_logo
-layout activity_asistencias
 layout activity_home
 layout activity_lista_estudiante
 layout activity_login

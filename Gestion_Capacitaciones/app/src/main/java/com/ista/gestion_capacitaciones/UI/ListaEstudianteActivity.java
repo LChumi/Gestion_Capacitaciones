@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.ista.gestion_capacitaciones.R;
@@ -20,6 +23,7 @@ public class ListaEstudianteActivity extends AppCompatActivity {
     private MisCursosViewModel cursosViewModel;
     private ListaEstudiantesAdapter adapter;
     RecyclerView rcvListaEstudiantes;
+    private Button btnGuardar;
 
 
     @Override
@@ -49,6 +53,14 @@ public class ListaEstudianteActivity extends AppCompatActivity {
         rcvListaEstudiantes=findViewById(R.id.lista_estudiantes);
         rcvListaEstudiantes.setAdapter(adapter);
         rcvListaEstudiantes.setLayoutManager(new LinearLayoutManager(this));
+
+        btnGuardar = findViewById(R.id.btnGuardarAsis);
+        btnGuardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
     private void loadData() {
         Long idCurso=getIntent().getLongExtra("idCurso",0);

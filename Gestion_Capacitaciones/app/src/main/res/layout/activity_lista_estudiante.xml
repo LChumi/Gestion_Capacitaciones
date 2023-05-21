@@ -61,7 +61,7 @@
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnGuardarAsis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFB300"

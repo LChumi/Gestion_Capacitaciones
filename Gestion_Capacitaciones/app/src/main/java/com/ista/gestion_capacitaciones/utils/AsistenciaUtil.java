@@ -17,22 +17,22 @@ public class AsistenciaUtil {
 
     private static final ArrayList<Participante> detalleAsistencia = new ArrayList<>();
 
-    public static String agregarAsistencias(List<Participante> participantes, int numFaltas, AsistenciaApiClient apiClient, DbAsistencias dbAsistencia) {
+    public  String agregarAsistencias(List<Participante> participantes, List<Integer> numFaltas, AsistenciaApiClient apiClient, DbAsistencias dbAsistencia) {
         for (Participante participante : participantes) {
-            Asistencia asistencia = new Asistencia();
-            asistencia.setAsiParticipante(participante);
-            asistencia.setAsiFecha(new Date());
-            asistencia.setAsiNumfaltas(numFaltas);
-            asistencia.setAsiEstado(true);
+            for (Integer num:numFaltas){
+                Asistencia asistencia = new Asistencia();
+                asistencia.setAsiParticipante(participante);
+                asistencia.setAsiFecha(new Date());
+                asistencia.setAsiNumfaltas(num);
+                asistencia.setAsiEstado(true);
+                // Agregar asistencia a la lista
+                participante.getAsistencias().add(asistencia);
+                // Guardar asistencia en la API
+                guardarAsistenciaEnApi(asistencia, apiClient);
+                // Guardar asistencia en la base de datos local
+                // guardarAsistenciaEnBaseDeDatos(asistencia, dbAsistencia);
+            }
 
-            // Agregar asistencia a la lista
-            participante.getAsistencias().add(asistencia);
-
-            // Guardar asistencia en la API
-            guardarAsistenciaEnApi(asistencia, apiClient);
-
-            // Guardar asistencia en la base de datos local
-            guardarAsistenciaEnBaseDeDatos(asistencia, dbAsistencia);
         }
 
         return "Asistencias guardadas";

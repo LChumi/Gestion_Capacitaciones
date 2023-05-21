@@ -27,7 +27,7 @@ public final class ActivityListaEstudianteBinding implements ViewBinding {
   public final AppBarLayout bar;
 
   @NonNull
-  public final Button button;
+  public final Button btnGuardarAsis;
 
   @NonNull
   public final RecyclerView listaEstudiantes;
@@ -39,11 +39,11 @@ public final class ActivityListaEstudianteBinding implements ViewBinding {
   public final Toolbar toolbar;
 
   private ActivityListaEstudianteBinding(@NonNull LinearLayout rootView, @NonNull AppBarLayout bar,
-      @NonNull Button button, @NonNull RecyclerView listaEstudiantes, @NonNull TextView nombreCurso,
-      @NonNull Toolbar toolbar) {
+      @NonNull Button btnGuardarAsis, @NonNull RecyclerView listaEstudiantes,
+      @NonNull TextView nombreCurso, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
     this.bar = bar;
-    this.button = button;
+    this.btnGuardarAsis = btnGuardarAsis;
     this.listaEstudiantes = listaEstudiantes;
     this.nombreCurso = nombreCurso;
     this.toolbar = toolbar;
@@ -82,9 +82,9 @@ public final class ActivityListaEstudianteBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.button;
-      Button button = ViewBindings.findChildViewById(rootView, id);
-      if (button == null) {
+      id = R.id.btnGuardarAsis;
+      Button btnGuardarAsis = ViewBindings.findChildViewById(rootView, id);
+      if (btnGuardarAsis == null) {
         break missingId;
       }
 
@@ -106,7 +106,7 @@ public final class ActivityListaEstudianteBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityListaEstudianteBinding((LinearLayout) rootView, bar, button,
+      return new ActivityListaEstudianteBinding((LinearLayout) rootView, bar, btnGuardarAsis,
           listaEstudiantes, nombreCurso, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);

@@ -292,10 +292,6 @@
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable\\edittext_dorder_background.xml"
     },
     {
-        "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/layout_elemnto_lista_estudiantes.xml.flat",
-        "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/elemnto_lista_estudiantes.xml"
-    },
-    {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable-xxhdpi_layers_color.png.flat",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable-xxhdpi\\layers_color.png"
     },
@@ -336,12 +332,12 @@
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable-mdpi\\circle_orange.png"
     },
     {
-        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable-v24_logo_cuadrado.png.flat",
-        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable-v24\\logo_cuadrado.png"
-    },
-    {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\layout_activity_lista_estudiante.xml.flat",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\activity_lista_estudiante.xml"
+    },
+    {
+        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable-v24_logo_cuadrado.png.flat",
+        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable-v24\\logo_cuadrado.png"
     },
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable-v24_icon_grade_white.jpg.flat",
