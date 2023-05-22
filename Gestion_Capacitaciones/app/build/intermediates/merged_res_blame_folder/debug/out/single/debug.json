@@ -32,12 +32,16 @@
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\anim\\rotate_close_anim.xml"
     },
     {
+        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable-xhdpi_circle_orange.png.flat",
+        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable-xhdpi\\circle_orange.png"
+    },
+    {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable_fondo.jpg.flat",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable\\fondo.jpg"
     },
     {
-        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable-xhdpi_circle_orange.png.flat",
-        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable-xhdpi\\circle_orange.png"
+        "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/layout_activity_programa_cursos.xml.flat",
+        "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/activity_programa_cursos.xml"
     },
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable-v24_img_inicio.jpg.flat",
@@ -52,16 +56,16 @@
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable\\instagram.png"
     },
     {
-        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable-xhdpi_google.png.flat",
-        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable-xhdpi\\google.png"
+        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable-xxxhdpi_layers_2.png.flat",
+        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable-xxxhdpi\\layers_2.png"
     },
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\navigation_nav_graph.xml.flat",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\navigation\\nav_graph.xml"
     },
     {
-        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable-xxxhdpi_layers_2.png.flat",
-        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable-xxxhdpi\\layers_2.png"
+        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable-xhdpi_google.png.flat",
+        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable-xhdpi\\google.png"
     },
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable_gorjeo.png.flat",
@@ -88,12 +92,12 @@
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable-hdpi\\circle_orange2.png"
     },
     {
-        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable_whatsapp.png.flat",
-        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable\\whatsapp.png"
-    },
-    {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable_title_background.xml.flat",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable\\title_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable_whatsapp.png.flat",
+        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable\\whatsapp.png"
     },
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable_button_background.xml.flat",
@@ -112,12 +116,12 @@
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable\\ic_usuario.xml"
     },
     {
-        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable_background_blue.xml.flat",
-        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable\\background_blue.xml"
-    },
-    {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\menu_bottom_nav_menu.xml.flat",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable_background_blue.xml.flat",
+        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable\\background_blue.xml"
     },
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\anim_left_out.xml.flat",
@@ -170,10 +174,6 @@
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable_ic_menu_slideshow.xml.flat",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable\\ic_menu_slideshow.xml"
-    },
-    {
-        "merged": "com.ista.gestion_capacitaciones.app-merged_res-52:/layout_elemenstos_programa_cursos.xml.flat",
-        "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/elemenstos_programa_cursos.xml"
     },
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\layout_elemento_curos_programa.xml.flat",
@@ -332,12 +332,12 @@
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable-mdpi\\circle_orange.png"
     },
     {
-        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\layout_activity_lista_estudiante.xml.flat",
-        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\activity_lista_estudiante.xml"
-    },
-    {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable-v24_logo_cuadrado.png.flat",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\drawable-v24\\logo_cuadrado.png"
+    },
+    {
+        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\layout_activity_lista_estudiante.xml.flat",
+        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\activity_lista_estudiante.xml"
     },
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable-v24_icon_grade_white.jpg.flat",
@@ -470,10 +470,6 @@
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\anim_rigth_out.xml.flat",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\anim\\rigth_out.xml"
-    },
-    {
-        "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\layout_activity_asistencias.xml.flat",
-        "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\activity_asistencias.xml"
     },
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-merged_res-52:\\drawable-ldpi_circle_orange2.png.flat",

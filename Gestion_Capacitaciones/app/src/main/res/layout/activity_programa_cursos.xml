@@ -22,7 +22,7 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/purple_500"
                 app:navigationIcon="@drawable/ic_regresar"
-                app:title="@string/txtTitleCursoPrograma"/>
+                app:title="@string/Inicio"/>
         </com.google.android.material.appbar.AppBarLayout>
     </LinearLayout>
 
