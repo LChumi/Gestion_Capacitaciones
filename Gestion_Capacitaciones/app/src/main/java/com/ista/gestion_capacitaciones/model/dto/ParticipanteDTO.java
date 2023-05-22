@@ -18,7 +18,7 @@ public class ParticipanteDTO {
 
     public ParticipanteDTO(Participante participante) {
         this.par_id = participante.getParId();
-        this.par_notaParcial = participante.getParNotaparcila();
+        this.par_notaParcial = participante.getParNotaparcial();
         this.par_notaFinal = participante.getParNotafinal();
         this.notaPromedio = participante.getParPromedio();
         this.par_observacion = participante.getParObservacion();

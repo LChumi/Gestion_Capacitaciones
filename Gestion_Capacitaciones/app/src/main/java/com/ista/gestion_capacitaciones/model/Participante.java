@@ -1,21 +1,34 @@
 package com.ista.gestion_capacitaciones.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class Participante {
 
+    @SerializedName("parId")
     private Long parId;
-    private Double parNotaparcila;
+    @SerializedName("parNotaparcial")
+    private Double parNotaparcial;
+    @SerializedName("parNotafinal")
     private Double parNotafinal;
+    @SerializedName("parPromedio")
     private Double parPromedio;
+    @SerializedName("parObservacion")
     private String parObservacion;
+    @SerializedName("parEstadoaprovacion")
     private String parEstadoaprovacion;
+    @SerializedName("parEstado")
     private Boolean parEstado;
-
+    @SerializedName("parPersona")
     private Persona parPersona;
+    @SerializedName("parCurso")
     private Curso parCurso;
+    @Expose(serialize = false, deserialize = false)
     private List<EntregaCertificado> entregaCertificados;
-    private List<Asistencia> asistencias;
+    @SerializedName("asistencias")
+    private transient List<Asistencia> asistencias;
 
     public Long getParId() {
         return parId;
@@ -25,12 +38,12 @@ public class Participante {
         this.parId = parId;
     }
 
-    public Double getParNotaparcila() {
-        return parNotaparcila;
+    public Double getParNotaparcial() {
+        return parNotaparcial;
     }
 
-    public void setParNotaparcila(Double parNotaparcila) {
-        this.parNotaparcila = parNotaparcila;
+    public void setParNotaparcial(Double parNotaparcial) {
+        this.parNotaparcial = parNotaparcial;
     }
 
     public Double getParNotafinal() {
@@ -103,5 +116,21 @@ public class Participante {
 
     public void setAsistencias(List<Asistencia> asistencias) {
         this.asistencias = asistencias;
+    }
+
+    @Override
+    public String toString() {
+        return "Participante{" +
+                "parId=" + parId +
+                ", parNotaparcial=" + parNotaparcial +
+                ", parNotafinal=" + parNotafinal +
+                ", parPromedio=" + parPromedio +
+                ", parObservacion='" + parObservacion + '\'' +
+                ", parEstadoaprovacion='" + parEstadoaprovacion + '\'' +
+                ", parEstado=" + parEstado +
+                ", parCurso=" + parCurso +
+                ", entregaCertificados=" + entregaCertificados +
+                ", asistencias=" + asistencias +
+                '}';
     }
 }

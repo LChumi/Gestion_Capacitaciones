@@ -79,7 +79,7 @@ public class MisCursosFragment extends Fragment {
         }
         if (idRol.equals(2L)){
             docenteAdapter=new CursosDocenteAdapter(new ArrayList<>());
-            rcvMisCursos.setLayoutManager(new GridLayoutManager(getContext(), 1));
+            rcvMisCursos.setLayoutManager(new GridLayoutManager(getContext(), 2));
             rcvMisCursos.setAdapter(docenteAdapter);
         }
 

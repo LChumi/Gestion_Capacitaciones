@@ -1,11 +1,15 @@
 package com.ista.gestion_capacitaciones.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.ista.gestion_capacitaciones.utils.CustomDateDeserializer;
+
 import java.util.Date;
 
 public class EntregaCertificado {
 
     private Long eceId;
     private String eceCodigocertificado;
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     private Date eceFecharetiro;
     private Boolean eceFirma;
     private Boolean eceEstado;

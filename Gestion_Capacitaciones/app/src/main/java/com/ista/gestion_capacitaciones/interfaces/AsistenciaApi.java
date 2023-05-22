@@ -2,6 +2,7 @@ package com.ista.gestion_capacitaciones.interfaces;
 
 
 import com.ista.gestion_capacitaciones.model.Asistencia;
+import com.ista.gestion_capacitaciones.model.Participante;
 
 import java.util.List;
 
@@ -29,4 +30,7 @@ public interface AsistenciaApi {
 
     @DELETE("api/asistencia/eliminar/{id}")
     Call<Void> eliminar(@Path("id")Long id);
+
+    @POST("api/asistencia/addParticipante/{idAsis}/{idPart}")
+    Call<Asistencia> addAsistencia(@Path("idAsis")Long idAsis,@Path("idPart")Long idPart);
 }

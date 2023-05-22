@@ -1,5 +1,8 @@
 package com.ista.gestion_capacitaciones.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.ista.gestion_capacitaciones.utils.CustomDateDeserializer;
+
 import java.util.Date;
 
 public class RegistroFotografico {
@@ -7,6 +10,7 @@ public class RegistroFotografico {
     private Long rfoId;
     private Integer rfoNumero;
     private String rfoDescripcion;
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     private Date rfoFecha;
     private Boolean rfoEstado;
     private String rfoFoto;

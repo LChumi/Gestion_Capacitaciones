@@ -1,5 +1,8 @@
 package com.ista.gestion_capacitaciones.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.ista.gestion_capacitaciones.utils.CustomDateDeserializer;
+
 import java.util.Date;
 import java.util.List;
 
@@ -9,6 +12,7 @@ public class Persona {
     private String cedula;
     private String nombre;
     private String apellido;
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     private Date fecha_nacimiento;
     private String email;
     private String direccion;
@@ -168,5 +172,29 @@ public class Persona {
 
     public void setCursos(List<Curso> cursos) {
         this.cursos = cursos;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "id_persona=" + id_persona +
+                ", cedula='" + cedula + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", fecha_nacimiento=" + fecha_nacimiento +
+                ", email='" + email + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", sexo='" + sexo + '\'' +
+                ", etnia='" + etnia + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", celular='" + celular + '\'' +
+                ", nivelintruccion='" + nivelintruccion + '\'' +
+                ", hojavida='" + hojavida + '\'' +
+                ", enabled=" + enabled +
+                ", usuario=" + usuario +
+                ", fichaIncripcions=" + fichaIncripcions +
+                ", participantes=" + participantes +
+                ", cursos=" + cursos +
+                '}';
     }
 }

@@ -1,5 +1,8 @@
 package com.ista.gestion_capacitaciones.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.ista.gestion_capacitaciones.utils.CustomDateDeserializer;
+
 import java.util.Date;
 import java.util.List;
 
@@ -7,6 +10,7 @@ public class NecesidadCurso {
 
     private Long ncuId;
     private String ncuIdentificador;
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     private Date ncuFechaprevisfin;
     private Integer ncuNumparticipantes;
     private String ncuResumenyproyecto;

@@ -1,5 +1,8 @@
 package com.ista.gestion_capacitaciones.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.ista.gestion_capacitaciones.utils.CustomDateDeserializer;
+
 import java.util.Date;
 import java.util.List;
 
@@ -8,7 +11,9 @@ public class Curso {
     private Long curId;
     private String curCodigo;
     private String curNombre;
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     private Date curFechainicio;
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     private Date curFechafin;
     private Integer curNumhoras;
     private String curProceso;

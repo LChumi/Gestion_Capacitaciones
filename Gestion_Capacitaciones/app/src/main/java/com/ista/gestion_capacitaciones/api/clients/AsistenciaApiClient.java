@@ -3,6 +3,7 @@ package com.ista.gestion_capacitaciones.api.clients;
 import com.ista.gestion_capacitaciones.constants.ApiUrls;
 import com.ista.gestion_capacitaciones.interfaces.AsistenciaApi;
 import com.ista.gestion_capacitaciones.model.Asistencia;
+import com.ista.gestion_capacitaciones.model.Participante;
 import com.ista.gestion_capacitaciones.model.Usuario;
 
 import java.util.List;
@@ -47,5 +48,8 @@ public class AsistenciaApiClient {
     }
     public Call<Void> eliminar(Long id){
         return asistenciaApi.eliminar(id);
+    }
+    public Call<Asistencia> addAsistencia(Long idAsis,Long p){
+        return asistenciaApi.addAsistencia(idAsis,p);
     }
 }

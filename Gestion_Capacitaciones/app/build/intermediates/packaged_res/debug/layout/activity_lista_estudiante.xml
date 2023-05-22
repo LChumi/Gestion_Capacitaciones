@@ -57,8 +57,7 @@
                 android:layout_height="480dp"
                 android:layout_below="@id/nombre_curso"
                 android:nestedScrollingEnabled="true"
-                app:spanCount="2"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
+               />
 
             <Button
                 android:id="@+id/btnGuardarAsis"

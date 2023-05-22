@@ -1,11 +1,15 @@
 package com.ista.gestion_capacitaciones.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.ista.gestion_capacitaciones.utils.CustomDateDeserializer;
+
 import java.util.Date;
 
 public class AsistenciaCurso {
 
     private Long acuId;
     private String acuObservacion;
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     private Date acuFechaelaboracion;
     private Boolean acuEstado;
 

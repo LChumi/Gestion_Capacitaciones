@@ -1,11 +1,15 @@
 package com.ista.gestion_capacitaciones.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.ista.gestion_capacitaciones.utils.CustomDateDeserializer;
+
 import java.util.Date;
 
 public class InformeFinal {
 
     private Long ifiId;
     private String ifiObservaciones;
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     private Date ifiFecha;
     private Boolean ifiEstado;
 

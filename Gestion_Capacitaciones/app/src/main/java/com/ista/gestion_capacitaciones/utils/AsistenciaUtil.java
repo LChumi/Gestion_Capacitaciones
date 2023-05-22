@@ -1,6 +1,9 @@
 package com.ista.gestion_capacitaciones.utils;
 
+import android.util.Log;
+
 import com.ista.gestion_capacitaciones.api.clients.AsistenciaApiClient;
+import com.ista.gestion_capacitaciones.api.clients.ParticipanteApiClient;
 import com.ista.gestion_capacitaciones.db.DbAsistencias;
 import com.ista.gestion_capacitaciones.model.Asistencia;
 import com.ista.gestion_capacitaciones.model.Participante;
@@ -17,45 +20,80 @@ public class AsistenciaUtil {
 
     private static final ArrayList<Participante> detalleAsistencia = new ArrayList<>();
 
-    public  String agregarAsistencias(List<Participante> participantes, List<Integer> numFaltas, AsistenciaApiClient apiClient, DbAsistencias dbAsistencia) {
-        for (Participante participante : participantes) {
-            for (Integer num:numFaltas){
-                Asistencia asistencia = new Asistencia();
-                asistencia.setAsiParticipante(participante);
-                asistencia.setAsiFecha(new Date());
-                asistencia.setAsiNumfaltas(num);
-                asistencia.setAsiEstado(true);
-                // Agregar asistencia a la lista
-                participante.getAsistencias().add(asistencia);
-                // Guardar asistencia en la API
-                guardarAsistenciaEnApi(asistencia, apiClient);
-                // Guardar asistencia en la base de datos local
-                // guardarAsistenciaEnBaseDeDatos(asistencia, dbAsistencia);
+    public static String agregarAsistencias(List<Participante> participantes, List<Integer> numFaltas) {
+        for (int i = 0; i < participantes.size(); i++) {
+            Participante participante = participantes.get(i);
+            // Verifica que asistencia no sea nula antes de agregarla a la lista
+            if (participante.getAsistencias() == null) {
+                participante.setAsistencias(new ArrayList<>());
             }
+
+            int num = numFaltas.get(i);
+            Asistencia asistencia = new Asistencia();
+            asistencia.setAsiNumfaltas(num);
+            asistencia.setAsiEstado(true);
+            asistencia.setAsiParticipante(participante);
+            // Agregar asistencia a la lista
+            participante.getAsistencias().add(asistencia);
+            // Guardar asistencia en la API
+            guardarAsistenciaEnApi(asistencia,participante);
+
+
 
         }
 
         return "Asistencias guardadas";
     }
 
-    private static void guardarAsistenciaEnApi(Asistencia asistencia, AsistenciaApiClient apiClient) {
+
+    private static void guardarAsistenciaEnApi(Asistencia asistencia,Participante p) {
+        AsistenciaApiClient apiClient = new AsistenciaApiClient();
         Call<Asistencia> call = apiClient.crear(asistencia);
         call.enqueue(new Callback<Asistencia>() {
             @Override
             public void onResponse(Call<Asistencia> call, Response<Asistencia> response) {
                 if (response.isSuccessful()) {
-                    // Asistencia guardada en la API correctamente
+                    Log.i("Datos", "Asistencia guardada correctamente: " + response.body());
+                    Log.i("aaaaa",String.valueOf(response.body().getAsiId()));
+                    Log.i("aaaa",p.toString());
+                    asignarParticipanteAsistencia(response.body().getAsiId(),p.getParId());
+
                 } else {
-                    // Error al guardar la asistencia en la API
+                    Log.i("Datos", "Error al guardar la asistencia. Código de error: " + response.code());
                 }
             }
 
             @Override
             public void onFailure(Call<Asistencia> call, Throwable t) {
-                // Error de conexión o fallo en la llamada a la API
+                Log.e("ERROR", "Error al guardar la asistencia: " + t.getMessage());
             }
         });
     }
+
+    private static  void asignarParticipanteAsistencia(Long id,Long p){
+        AsistenciaApiClient apiClient=new AsistenciaApiClient();
+        Call<Asistencia> call=apiClient.addAsistencia(id,p);
+
+        call.enqueue(new Callback<Asistencia>() {
+            @Override
+            public void onResponse(Call<Asistencia> call, Response<Asistencia> response) {
+                if (response.isSuccessful()){
+                    Log.i("Datos", "Asistencia guardada correctamente: " + response.body());
+                }
+                else {
+                    Log.i("Datos", "Error al guardar la asistencia. Código de error: " + response.code());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Asistencia> call, Throwable t) {
+                Log.e("ERROR", "Error al guardar la asistencia: " + t.getMessage());
+            }
+        });
+    }
+
+
+
 
     private static void guardarAsistenciaEnBaseDeDatos(Asistencia asistencia, DbAsistencias dbAsistencia) {
         long result = dbAsistencia.insertarAsistencia(asistencia.getAsiNumfaltas(), asistencia.getAsiFecha(), asistencia.getAsiParticipante().getParId());
