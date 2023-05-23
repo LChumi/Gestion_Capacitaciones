@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.ista.gestion_capacitaciones.app-mergeDebugResources-50:/values-night-v8/values-night-v8.xml",
+            "outputFile": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-50:\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
                     "source": "C:\\Users\\luisc\\.gradle\\caches\\transforms-3\\eb57593a0436d9518cb6b2ecd8c2078e\\transformed\\material-1.8.0\\res\\values-night-v8\\values-night-v8.xml",
@@ -46,6 +46,60 @@
                         "endLines": "19,14",
                         "endColumns": "12,12",
                         "endOffsets": "1121,845"
+                    },
+                    "to": {
+                        "startLines": "2,13",
+                        "startColumns": "4,4",
+                        "startOffsets": "100,862",
+                        "endLines": "5,25",
+                        "endColumns": "12,12",
+                        "endOffsets": "225,1470"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.ista.gestion_capacitaciones.app-mergeDebugResources-50:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\luisc\\.gradle\\caches\\transforms-3\\eb57593a0436d9518cb6b2ecd8c2078e\\transformed\\material-1.8.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,52,53,54,55,56,57,58,59",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1475,1550,1661,1750,1851,1958,2065,2164,2271,2374,2462,2586,2688,2790,2906,3008,3122,3250,3366,3488,3624,3744,3878,3998,4110,4325,4442,4566,4696,4818,4956,5090,5206",
+                        "endColumns": "74,110,88,100,106,106,98,106,102,87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,116,123,129,121,137,133,115,119",
+                        "endOffsets": "1545,1656,1745,1846,1953,2060,2159,2266,2369,2457,2581,2683,2785,2901,3003,3117,3245,3361,3483,3619,3739,3873,3993,4105,4231,4437,4561,4691,4813,4951,5085,5201,5321"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luisc\\.gradle\\caches\\transforms-3\\e823a5dda738fb7207ec40a9ecdd8129\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "6,7,8,9,10,11,12,51",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "230,300,384,468,564,666,768,4236",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "295,379,463,559,661,763,857,4320"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "31,17",
+                        "startColumns": "4,4",
+                        "startOffsets": "1651,864",
+                        "endLines": "34,29",
+                        "endColumns": "12,12",
+                        "endOffsets": "1883,1607"
                     },
                     "to": {
                         "startLines": "2,13",

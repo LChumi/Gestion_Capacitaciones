@@ -3188,6 +3188,7 @@ id animateToStart
 id antiClockwise
 id anticipate
 id app_bar_home
+id app_copyright
 id arc
 id asConfigured
 id async
@@ -3654,6 +3655,7 @@ id textStart
 id textTop
 id textView
 id textView1
+id textView2
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3998,6 +4000,7 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string action_settings
 string androidx_startup
+string app_copyright
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior

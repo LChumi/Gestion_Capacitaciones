@@ -15,6 +15,7 @@
 
 <resources>
     <string name="app_name">Gestion_Capacitaciones</string>
+    <string name="app_copyright">ⒸLChumi</string>
     <string name="title_activity_login">LoginActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

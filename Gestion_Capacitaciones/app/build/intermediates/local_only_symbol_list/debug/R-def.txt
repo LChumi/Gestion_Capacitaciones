@@ -102,6 +102,7 @@ id action_FirstFragment_to_SecondFragment
 id action_Second2Fragment_to_First2Fragment
 id action_SecondFragment_to_FirstFragment
 id app_bar_home
+id app_copyright
 id autocompleteTxt
 id backgroundLayout
 id bar
@@ -172,6 +173,7 @@ id start
 id svCarrusel
 id textView
 id textView1
+id textView2
 id toolbar
 id tv_auto_image_slider
 id txCelular
@@ -236,6 +238,7 @@ string Tecazuay
 string ValueComoDescubrio
 string ValueCursosSeguir
 string action_settings
+string app_copyright
 string app_name
 string btnAplicar
 string btnGuardarAsistencias

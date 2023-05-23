@@ -3187,6 +3187,7 @@ int id animateToStart 0x7f090058
 int id antiClockwise 0x7f090059
 int id anticipate 0x7f09005a
 int id app_bar_home 0x7f09005b
+int id app_copyright 0x7f090289
 int id arc 0x7f09005c
 int id asConfigured 0x7f09005d
 int id async 0x7f09005e
@@ -3653,6 +3654,7 @@ int id textStart 0x7f090215
 int id textTop 0x7f090216
 int id textView 0x7f090217
 int id textView1 0x7f090218
+int id textView2 0x7f09028a
 int id text_input_end_icon 0x7f090219
 int id text_input_error_icon 0x7f09021a
 int id text_input_start_icon 0x7f09021b
@@ -3997,6 +3999,7 @@ int string abc_shareactionprovider_share_with_application 0x7f12001d
 int string abc_toolbar_collapse_description 0x7f12001e
 int string action_settings 0x7f12001f
 int string androidx_startup 0x7f120020
+int string app_copyright 0x7f1200ed
 int string app_name 0x7f120021
 int string appbar_scrolling_view_behavior 0x7f120022
 int string bottom_sheet_behavior 0x7f120023

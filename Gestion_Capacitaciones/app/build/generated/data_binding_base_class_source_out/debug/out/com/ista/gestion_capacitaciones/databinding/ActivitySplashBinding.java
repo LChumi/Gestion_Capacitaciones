@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.motion.widget.MotionLayout;
@@ -21,6 +22,9 @@ public final class ActivitySplashBinding implements ViewBinding {
   private final MotionLayout rootView;
 
   @NonNull
+  public final TextView appCopyright;
+
+  @NonNull
   public final ConstraintLayout backgroundLayout;
 
   @NonNull
@@ -29,10 +33,11 @@ public final class ActivitySplashBinding implements ViewBinding {
   @NonNull
   public final ImageView whiteLogo;
 
-  private ActivitySplashBinding(@NonNull MotionLayout rootView,
+  private ActivitySplashBinding(@NonNull MotionLayout rootView, @NonNull TextView appCopyright,
       @NonNull ConstraintLayout backgroundLayout, @NonNull ImageView logo,
       @NonNull ImageView whiteLogo) {
     this.rootView = rootView;
+    this.appCopyright = appCopyright;
     this.backgroundLayout = backgroundLayout;
     this.logo = logo;
     this.whiteLogo = whiteLogo;
@@ -65,6 +70,12 @@ public final class ActivitySplashBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.app_copyright;
+      TextView appCopyright = ViewBindings.findChildViewById(rootView, id);
+      if (appCopyright == null) {
+        break missingId;
+      }
+
       id = R.id.backgroundLayout;
       ConstraintLayout backgroundLayout = ViewBindings.findChildViewById(rootView, id);
       if (backgroundLayout == null) {
@@ -83,7 +94,8 @@ public final class ActivitySplashBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySplashBinding((MotionLayout) rootView, backgroundLayout, logo, whiteLogo);
+      return new ActivitySplashBinding((MotionLayout) rootView, appCopyright, backgroundLayout,
+          logo, whiteLogo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
