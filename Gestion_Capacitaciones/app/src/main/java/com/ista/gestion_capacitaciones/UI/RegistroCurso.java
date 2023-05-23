@@ -36,6 +36,10 @@ public class RegistroCurso extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_curso);
+        init();
+    }
+
+    private void init(){
 
         autoCompleteTxt = findViewById(R.id.autocompleteTxt);
         adapterItems = new ArrayAdapter<>(this, R.layout.lista_items, items);
@@ -46,9 +50,19 @@ public class RegistroCurso extends AppCompatActivity {
                 String item = adapterView.getItemAtPosition(i).toString();
                 Log.i("item", item);
             }
-        });
+        });autoCompleteTxt = findViewById(R.id.autocompleteTxt);
+        adapterItems = new ArrayAdapter<>(this, R.layout.lista_items, items);
+        autoCompleteTxt.setAdapter(adapterItems);
 
+        autoCompleteTxt.setOnItemClickListener((adapterView, view, i, l) -> {
+            if (!isFinishing()) {
+                String item = adapterView.getItemAtPosition(i).toString();
+                Log.i("item", item);
+            }
+        });
     }
+
+
 
 }
 
