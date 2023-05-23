@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".UI.RegistroCurso">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="5dp"
+                android:elevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start">
+                    <ImageView
+                        android:id="@+id/imgCurso"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_grade_white"/>
+                    <TextView
+                        android:id="@+id/txtPrograma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/imgCurso"
+                        android:layout_alignRight="@+id/imgCurso"
+                        android:layout_alignBottom="@+id/imgCurso"
+                        android:layout_marginLeft="-1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginBottom="3dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="@string/txtNomPrograma"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="270dp"
+                        android:layout_height="110dp"
+                        android:layout_gravity="end"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/FichaInscripcion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/hammersmith_one"
+                            android:textSize="14dp"
+                            android:text="@string/FichaInscrpcion"/>
+
+                        <TextView
+                            android:id="@+id/edtCodigoCurso"
+                            android:layout_width="128dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/FichaInscripcion"
+                            android:fontFamily="@font/san_francisco"
+                            android:text="@string/valueCodigoCurso"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/txtCodCurso"
+                            android:layout_width="128dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edtCodigoCurso"
+                            android:fontFamily="@font/san_francisco"
+                            android:text="@string/valueCodigoCurso"
+                            android:textSize="14dp" />
+                        <TextView
+                            android:id="@+id/edtModalidad"
+                            android:layout_width="128dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtCodCurso"
+                            android:fontFamily="@font/san_francisco"
+                            android:text="@string/valueModalidad"
+                            android:textSize="10dp" />
+                        <TextView
+                            android:id="@+id/txtModalidad"
+                            android:layout_width="128dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edtModalidad"
+                            android:fontFamily="@font/san_francisco"
+                            android:text="@string/valueModalidad"
+                            android:textSize="14dp" />
+                        <TextView
+                            android:id="@+id/edtHorario"
+                            android:layout_width="128dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtModalidad"
+                            android:fontFamily="@font/san_francisco"
+                            android:text="@string/valueModalidad"
+                            android:textSize="10dp" />
+                        <TextView
+                            android:id="@+id/txtHorario"
+                            android:layout_width="128dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edtHorario"
+                            android:fontFamily="@font/san_francisco"
+                            android:text="@string/valueModalidad"
+                            android:textSize="14dp" />
+                    </RelativeLayout>
+                </ScrollView>
+            </com.google.android.material.card.MaterialCardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/san_francisco"
+                    android:text="@string/DatosPersonales"
+                    android:textStyle="bold"
+                    android:textSize="14dp" />
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp">
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/txtApellidos"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueApellidos"
+                                    android:textSize="10dp" />
+                                <TextView
+                                    android:id="@+id/edtApellidos"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueApellidos"
+                                    android:textSize="14dp" />
+                                <TextView
+                                    android:id="@+id/txtCedula"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueCedula"
+                                    android:textSize="10dp" />
+                                <TextView
+                                    android:id="@+id/edtCedula"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueCedula"
+                                    android:textSize="14dp" />
+                                <TextView
+                                    android:id="@+id/txtSexo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueSexo"
+                                    android:textSize="10dp" />
+                                <TextView
+                                    android:id="@+id/edtSexo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueSexo"
+                                    android:textSize="14dp" />
+                                <TextView
+                                    android:id="@+id/txtTelfConv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueNroTelefeono"
+                                    android:textSize="10dp" />
+                                <TextView
+                                    android:id="@+id/edtTelConv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueNroTelefeono"
+                                    android:textSize="14dp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/txtNombres"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueNombres"
+                                    android:textSize="10dp" />
+                                <TextView
+                                    android:id="@+id/edtNombres"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueNombres"
+                                    android:textSize="14dp" />
+                                <TextView
+                                    android:id="@+id/txtFechaNac"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueFechaNacimiento"
+                                    android:textSize="10dp" />
+                                <TextView
+                                    android:id="@+id/edtFechaNac"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueFechaNacimiento"
+                                    android:textSize="14dp" />
+                                <TextView
+                                    android:id="@+id/txtEtnia"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueEtnia"
+                                    android:textSize="10dp" />
+                                <TextView
+                                    android:id="@+id/edtEtnia"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueEtnia"
+                                    android:textSize="14dp" />
+                                <TextView
+                                    android:id="@+id/txCelular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueNroTelefonoCelular"
+                                    android:textSize="10dp" />
+                                <TextView
+                                    android:id="@+id/edtCelular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueNroTelefonoCelular"
+                                    android:textSize="14dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </ScrollView>
+                </com.google.android.material.card.MaterialCardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="5dp"
+                        android:elevation="5dp">
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/txtCorreo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueCorreo"
+                                    android:textSize="10dp" />
+                                <TextView
+                                    android:id="@+id/edtCorreo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueCorreo"
+                                    android:textSize="14dp" />
+                                <TextView
+                                    android:id="@+id/txtNivelInstruccion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueNivelInstruccion"
+                                    android:textSize="10dp" />
+                                <TextView
+                                    android:id="@+id/edtNivelInstruccion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueNivelInstruccion"
+                                    android:textSize="14dp" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </com.google.android.material.card.MaterialCardView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/san_francisco"
+                            android:text="@string/InformacionLaboral"
+                            android:textStyle="bold"
+                            android:textSize="14dp" />
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="10dp"
+                            android:layout_margin="5dp"
+                            android:elevation="5dp">
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+                                        android:layout_margin="10dp"
+                                        android:fontFamily="@font/san_francisco"
+                                        android:textSize="10dp" >
+                                        <EditText
+                                            android:id="@+id/edtTrabajoEst"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/san_francisco"
+                                            android:hint="@string/valueInstitucionTrabEst"
+                                            android:textSize="14dp" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+                                        android:layout_margin="10dp"
+                                        android:fontFamily="@font/san_francisco"
+                                        android:textSize="10dp" >
+                                        <EditText
+                                            android:id="@+id/edtDireccionInst"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/san_francisco"
+                                            android:hint="@string/valueDireccion"
+                                            android:textSize="14dp" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+                                        android:layout_margin="10dp"
+                                        android:fontFamily="@font/san_francisco"
+                                        android:textSize="10dp" >
+                                        <EditText
+                                            android:id="@+id/edtCorreoInsti"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/san_francisco"
+                                            android:hint="@string/valueCorreoElectronicoInstitucion"
+                                            android:textSize="14dp" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+                                        android:layout_margin="10dp"
+                                        android:fontFamily="@font/san_francisco"
+                                        android:textSize="10dp" >
+                                        <EditText
+                                            android:id="@+id/edtNumeroInstitucional"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/san_francisco"
+                                            android:hint="@string/valueNroTelefonoInstitucion"
+                                            android:textSize="14dp" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+                                        android:layout_margin="10dp"
+                                        android:fontFamily="@font/san_francisco"
+                                        android:textSize="10dp" >
+                                        <EditText
+                                            android:id="@+id/edtActividadInstitucion"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/san_francisco"
+                                            android:hint="@string/valueActividadInstitucion"
+                                            android:textSize="14dp" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+                                        android:layout_margin="10dp"
+                                        android:fontFamily="@font/san_francisco"
+                                        android:textSize="10dp" >
+                                        <EditText
+                                            android:id="@+id/edtComoSeEntero"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/san_francisco"
+                                            android:hint="@string/ValueComoDescubrio"
+                                            android:textSize="14dp" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+                                        android:layout_margin="10dp"
+                                        android:fontFamily="@font/san_francisco"
+                                        android:textSize="10dp" >
+                                        <EditText
+                                            android:id="@+id/edtCursosSeguir"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/san_francisco"
+                                            android:hint="@string/ValueCursosSeguir"
+                                            android:textSize="14dp" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+                            </ScrollView>
+                        </com.google.android.material.card.MaterialCardView>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="10dp"
+                                android:layout_margin="5dp"
+                                android:elevation="5dp">
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp">
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="16dp"
+                                        android:fontFamily="@font/san_francisco"
+                                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+                                        <AutoCompleteTextView
+                                            android:id="@+id/autocompleteTxt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="@string/valueElCursoAuspiciado"
+                                            android:textSize="10dp"
+                                            android:inputType="none"/>
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </ScrollView>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

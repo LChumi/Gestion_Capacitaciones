@@ -8,15 +8,18 @@
 
     <application
         android:allowBackup="true"
+        android:background="#FFFFFF"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:background="#FFFFFF"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gestion_Capacitaciones"
         tools:targetApi="31">
+        <activity
+            android:name=".UI.RegistroCurso"
+            android:exported="false" />
         <activity
             android:name=".UI.HomeActivity"
             android:exported="false"
@@ -39,7 +42,7 @@
             android:exported="false" />
         <activity
             android:name=".UI.ProgramaCursosActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -66,6 +66,7 @@ public class MisCursosAdapter extends RecyclerView.Adapter<MisCursosAdapter.View
 
             txtNombreCurso.setText(p.getParCurso().getCurNombre());
             txtCurProceso.setText(p.getParEstadoaprovacion());
+            btnAplicar.setText("Ingresar");
             btnAplicar.setOnClickListener(v -> {
                 // Código para registrar el curso
             });

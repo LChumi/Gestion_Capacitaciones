@@ -32,6 +32,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Gestion_Capacitaciones" >
         <activity
+            android:name="com.ista.gestion_capacitaciones.UI.RegistroCurso"
+            android:exported="false" />
+        <activity
             android:name="com.ista.gestion_capacitaciones.UI.HomeActivity"
             android:exported="false"
             android:label="@string/title_activity_home"

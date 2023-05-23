@@ -21,8 +21,13 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <string name="DatosPersonales">Datos Personales</string>
+    <string name="FichaInscrpcion">Ficha de Inscripcion a Cursos</string>
+    <string name="InformacionLaboral">Informacion Laboral/Estudios</string>
     <string name="Inicio">Inicio</string>
     <string name="Tecazuay">TecAzuay</string>
+    <string name="ValueComoDescubrio">¿Como se entero del curso?</string>
+    <string name="ValueCursosSeguir">¿Que otros cursos le gustaria seguir?</string>
     <string name="action_settings">Settings</string>
     <string name="app_name">Gestion_Capacitaciones</string>
     <string name="btnAplicar">Aplicar</string>
@@ -72,6 +77,26 @@
     <string name="txtTittleMiscuros">Mis Cursos</string>
     <string name="txtTittlePerfil">Perfil</string>
     <string name="username">Username</string>
+    <string name="valueActividadInstitucion">Actividad de la Isntitucion</string>
+    <string name="valueApellidos">Apellidos</string>
+    <string name="valueCedula">Cedula de ciudadania</string>
+    <string name="valueCodigoCurso">CodigoCurso</string>
+    <string name="valueCorreo">Correo Electronico</string>
+    <string name="valueCorreoElectronicoInstitucion">Correo Electronico de la Institucion</string>
+    <string name="valueDireccion">Direccion de la Institucion</string>
+    <string name="valueElCursoAuspiciado">¿El curso es auspiciado por la Institucion?</string>
+    <string name="valueEtnia">Etnia</string>
+    <string name="valueFechaNacimiento">Fecha de Nacimiento</string>
+    <string name="valueHorarios">Horarios del Curso</string>
+    <string name="valueInstitucionTrabEst">Institucion donde trabaja/estudia</string>
+    <string name="valueModalidad">Modalidad</string>
+    <string name="valueNivelInstruccion">Nivel de Instruccion</string>
+    <string name="valueNombreCurso">NombreCurso</string>
+    <string name="valueNombres">Nombres</string>
+    <string name="valueNroTelefeono">Nro de Telefono Convencional</string>
+    <string name="valueNroTelefonoCelular">Nro de Telefono Celular</string>
+    <string name="valueNroTelefonoInstitucion">Numero Telefonico Institucional</string>
+    <string name="valueSexo">Sexo</string>
     <style name="Base.Theme.Gestion_Capacitaciones" parent="Theme.Material3.DayNight.NoActionBar">
         
         
