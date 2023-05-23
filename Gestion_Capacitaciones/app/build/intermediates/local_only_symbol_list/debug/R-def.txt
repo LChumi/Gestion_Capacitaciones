@@ -65,6 +65,7 @@ drawable ic_menu_slideshow
 drawable ic_mis_cursos
 drawable ic_more
 drawable ic_notifications_black_24dp
+drawable ic_perfil_inicio
 drawable ic_regresar
 drawable ic_remove_item
 drawable ic_salir

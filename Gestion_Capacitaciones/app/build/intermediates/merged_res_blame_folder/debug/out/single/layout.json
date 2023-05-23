@@ -12,6 +12,10 @@
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\fragment_inicio.xml"
     },
     {
+        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-51:/layout/nav_header_home.xml",
+        "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/nav_header_home.xml"
+    },
+    {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\activity_main.xml",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\activity_main.xml"
     },
@@ -34,10 +38,6 @@
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\content_home.xml",
         "source": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-main-54:\\layout\\content_home.xml"
-    },
-    {
-        "merged": "com.ista.gestion_capacitaciones.app-mergeDebugResources-51:/layout/activity_splash.xml",
-        "source": "com.ista.gestion_capacitaciones.app-main-54:/layout/activity_splash.xml"
     },
     {
         "merged": "C:\\Users\\luisc\\.gradle\\daemon\\8.0\\com.ista.gestion_capacitaciones.app-mergeDebugResources-51:\\layout\\activity_splash.xml",

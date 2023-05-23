@@ -33,7 +33,7 @@
         android:layout_height="70dp"
         android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@drawable/photo" />
+        android:src="@drawable/ic_perfil_inicio" />
 
     <TextView
         android:id="@+id/txtnombreUsuario"

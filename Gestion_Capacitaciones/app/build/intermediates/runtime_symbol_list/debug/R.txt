@@ -2987,6 +2987,7 @@ int drawable ic_mtrl_chip_checked_black 0x7f0700b9
 int drawable ic_mtrl_chip_checked_circle 0x7f0700ba
 int drawable ic_mtrl_chip_close_circle 0x7f0700bb
 int drawable ic_notifications_black_24dp 0x7f0700bc
+int drawable ic_perfil_inicio 0x7f070125
 int drawable ic_regresar 0x7f0700bd
 int drawable ic_remove_item 0x7f0700be
 int drawable ic_salir 0x7f0700bf
