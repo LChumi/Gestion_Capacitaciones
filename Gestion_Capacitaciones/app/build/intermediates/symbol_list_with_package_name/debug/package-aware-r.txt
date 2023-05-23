@@ -3210,6 +3210,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnAplicar
 id btnGuardarAsis
 id btnIngreso
 id btnLoguin
@@ -3873,7 +3874,6 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout elemenstos_programa_cursos
 layout elemento_curos_programa
-layout elemento_mis_cursos
 layout elemnto_lista_estudiantes
 layout fragment_inicio
 layout fragment_miscursos

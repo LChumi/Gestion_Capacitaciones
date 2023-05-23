@@ -105,6 +105,7 @@ id app_bar_home
 id autocompleteTxt
 id backgroundLayout
 id bar
+id btnAplicar
 id btnGuardarAsis
 id btnIngreso
 id btnLoguin
@@ -211,7 +212,6 @@ layout custom_toast_error
 layout custom_toast_ok
 layout elemenstos_programa_cursos
 layout elemento_curos_programa
-layout elemento_mis_cursos
 layout elemnto_lista_estudiantes
 layout fragment_inicio
 layout fragment_miscursos

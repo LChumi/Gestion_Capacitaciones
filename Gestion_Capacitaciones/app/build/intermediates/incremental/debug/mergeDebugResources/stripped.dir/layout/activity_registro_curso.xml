@@ -477,11 +477,29 @@
                                             android:inputType="none"/>
                                     </com.google.android.material.textfield.TextInputLayout>
                                 </ScrollView>
-
                             </com.google.android.material.card.MaterialCardView>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start">
+
+                                <Button
+                                    android:id="@+id/btnAplicar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginStart="149dp"
+                                    android:layout_marginEnd="175dp"
+                                    android:backgroundTint="#FF8500"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/btnAplicar"
+                                    android:textColor="#fff"
+                                    android:textSize="11dp"
+                                    android:textStyle="bold"></Button>
+                            </RelativeLayout>
 
                         </LinearLayout>
-
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

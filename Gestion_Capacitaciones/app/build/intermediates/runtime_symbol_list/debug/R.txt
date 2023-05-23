@@ -3209,6 +3209,7 @@ int id bounce 0x7f09006d
 int id bounceBoth 0x7f09006e
 int id bounceEnd 0x7f09006f
 int id bounceStart 0x7f090070
+int id btnAplicar 0x7f090288
 int id btnGuardarAsis 0x7f090071
 int id btnIngreso 0x7f090072
 int id btnLoguin 0x7f090073
@@ -3872,7 +3873,6 @@ int layout design_text_input_end_icon 0x7f0c0036
 int layout design_text_input_start_icon 0x7f0c0037
 int layout elemenstos_programa_cursos 0x7f0c0038
 int layout elemento_curos_programa 0x7f0c0039
-int layout elemento_mis_cursos 0x7f0c003a
 int layout elemnto_lista_estudiantes 0x7f0c003b
 int layout fragment_inicio 0x7f0c003c
 int layout fragment_miscursos 0x7f0c003d

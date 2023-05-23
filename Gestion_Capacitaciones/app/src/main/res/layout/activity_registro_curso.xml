@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*
+  ~ *  Created Luis Chumi on 23/5/23 9:38
+  ~ *  Copyright Ⓒ 2023. All rights reserved Ⓒ 2023 http://freefuninfo.com/
+  ~ *  Last modified: 23/5/23 9:29
+  ~ *
+  ~ *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  ~ *  except in compliance with the License. You may obtain a copy of the License at
+  ~ *  http://www.apache.org/licenses/LICENS... Unless required by applicable law or agreed to in writing, software
+  ~ *   distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+  ~ *   either express or implied. See the License for the specific language governing permissions and
+  ~ *   limitations under the License.
+  ~ */
+  -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -477,11 +492,29 @@
                                             android:inputType="none"/>
                                     </com.google.android.material.textfield.TextInputLayout>
                                 </ScrollView>
-
                             </com.google.android.material.card.MaterialCardView>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start">
+
+                                <Button
+                                    android:id="@+id/btnAplicar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginStart="149dp"
+                                    android:layout_marginEnd="175dp"
+                                    android:backgroundTint="#FF8500"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/btnAplicar"
+                                    android:textColor="#fff"
+                                    android:textSize="11dp"
+                                    android:textStyle="bold"></Button>
+                            </RelativeLayout>
 
                         </LinearLayout>
-
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

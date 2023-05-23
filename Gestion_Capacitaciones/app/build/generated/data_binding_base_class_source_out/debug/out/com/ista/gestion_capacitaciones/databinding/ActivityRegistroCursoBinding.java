@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -27,6 +28,9 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
 
   @NonNull
   public final AutoCompleteTextView autocompleteTxt;
+
+  @NonNull
+  public final Button btnAplicar;
 
   @NonNull
   public final EditText edtActividadInstitucion;
@@ -135,23 +139,25 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
 
   private ActivityRegistroCursoBinding(@NonNull LinearLayout rootView,
       @NonNull TextView FichaInscripcion, @NonNull AutoCompleteTextView autocompleteTxt,
-      @NonNull EditText edtActividadInstitucion, @NonNull TextView edtApellidos,
-      @NonNull TextView edtCedula, @NonNull TextView edtCelular, @NonNull TextView edtCodigoCurso,
-      @NonNull EditText edtComoSeEntero, @NonNull TextView edtCorreo,
-      @NonNull EditText edtCorreoInsti, @NonNull EditText edtCursosSeguir,
-      @NonNull EditText edtDireccionInst, @NonNull TextView edtEtnia, @NonNull TextView edtFechaNac,
-      @NonNull TextView edtHorario, @NonNull TextView edtModalidad,
-      @NonNull TextView edtNivelInstruccion, @NonNull TextView edtNombres,
-      @NonNull EditText edtNumeroInstitucional, @NonNull TextView edtSexo,
-      @NonNull TextView edtTelConv, @NonNull EditText edtTrabajoEst, @NonNull ImageView imgCurso,
-      @NonNull TextView txCelular, @NonNull TextView txtApellidos, @NonNull TextView txtCedula,
-      @NonNull TextView txtCodCurso, @NonNull TextView txtCorreo, @NonNull TextView txtEtnia,
-      @NonNull TextView txtFechaNac, @NonNull TextView txtHorario, @NonNull TextView txtModalidad,
-      @NonNull TextView txtNivelInstruccion, @NonNull TextView txtNombres,
-      @NonNull TextView txtPrograma, @NonNull TextView txtSexo, @NonNull TextView txtTelfConv) {
+      @NonNull Button btnAplicar, @NonNull EditText edtActividadInstitucion,
+      @NonNull TextView edtApellidos, @NonNull TextView edtCedula, @NonNull TextView edtCelular,
+      @NonNull TextView edtCodigoCurso, @NonNull EditText edtComoSeEntero,
+      @NonNull TextView edtCorreo, @NonNull EditText edtCorreoInsti,
+      @NonNull EditText edtCursosSeguir, @NonNull EditText edtDireccionInst,
+      @NonNull TextView edtEtnia, @NonNull TextView edtFechaNac, @NonNull TextView edtHorario,
+      @NonNull TextView edtModalidad, @NonNull TextView edtNivelInstruccion,
+      @NonNull TextView edtNombres, @NonNull EditText edtNumeroInstitucional,
+      @NonNull TextView edtSexo, @NonNull TextView edtTelConv, @NonNull EditText edtTrabajoEst,
+      @NonNull ImageView imgCurso, @NonNull TextView txCelular, @NonNull TextView txtApellidos,
+      @NonNull TextView txtCedula, @NonNull TextView txtCodCurso, @NonNull TextView txtCorreo,
+      @NonNull TextView txtEtnia, @NonNull TextView txtFechaNac, @NonNull TextView txtHorario,
+      @NonNull TextView txtModalidad, @NonNull TextView txtNivelInstruccion,
+      @NonNull TextView txtNombres, @NonNull TextView txtPrograma, @NonNull TextView txtSexo,
+      @NonNull TextView txtTelfConv) {
     this.rootView = rootView;
     this.FichaInscripcion = FichaInscripcion;
     this.autocompleteTxt = autocompleteTxt;
+    this.btnAplicar = btnAplicar;
     this.edtActividadInstitucion = edtActividadInstitucion;
     this.edtApellidos = edtApellidos;
     this.edtCedula = edtCedula;
@@ -225,6 +231,12 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
       id = R.id.autocompleteTxt;
       AutoCompleteTextView autocompleteTxt = ViewBindings.findChildViewById(rootView, id);
       if (autocompleteTxt == null) {
+        break missingId;
+      }
+
+      id = R.id.btnAplicar;
+      Button btnAplicar = ViewBindings.findChildViewById(rootView, id);
+      if (btnAplicar == null) {
         break missingId;
       }
 
@@ -439,7 +451,7 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
       }
 
       return new ActivityRegistroCursoBinding((LinearLayout) rootView, FichaInscripcion,
-          autocompleteTxt, edtActividadInstitucion, edtApellidos, edtCedula, edtCelular,
+          autocompleteTxt, btnAplicar, edtActividadInstitucion, edtApellidos, edtCedula, edtCelular,
           edtCodigoCurso, edtComoSeEntero, edtCorreo, edtCorreoInsti, edtCursosSeguir,
           edtDireccionInst, edtEtnia, edtFechaNac, edtHorario, edtModalidad, edtNivelInstruccion,
           edtNombres, edtNumeroInstitucional, edtSexo, edtTelConv, edtTrabajoEst, imgCurso,
