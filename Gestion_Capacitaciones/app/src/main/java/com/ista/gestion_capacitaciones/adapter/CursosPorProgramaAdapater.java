@@ -18,7 +18,6 @@ package com.ista.gestion_capacitaciones.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +29,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ista.gestion_capacitaciones.R;
-import com.ista.gestion_capacitaciones.UI.RegistroCurso;
+import com.ista.gestion_capacitaciones.UI.RegistroCursoActivity;
 import com.ista.gestion_capacitaciones.model.Curso;
 
 import java.util.List;
@@ -86,7 +85,7 @@ public class CursosPorProgramaAdapater extends RecyclerView.Adapter<CursosPorPro
             txtCurProceso.setText(c.getCurProceso());
             btnRegistrarCurso.setOnClickListener(v -> {
                 Context context = itemView.getContext(); // Obtener el contexto
-                Intent registrar = new Intent(context, RegistroCurso.class);
+                Intent registrar = new Intent(context, RegistroCursoActivity.class);
                 registrar.putExtra("idCurso",c.getCurId());
                 context.startActivity(registrar); // Llamar a startActivity() en el contexto
             });

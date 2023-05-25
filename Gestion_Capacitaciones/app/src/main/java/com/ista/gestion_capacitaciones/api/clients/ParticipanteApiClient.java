@@ -67,5 +67,8 @@ public class ParticipanteApiClient {
     public Call<List<Participante>> getListParticipanteByCourses(Long curId){
         return participanteApi.getListParticipanteByCourses(curId);
     }
+    public Call<List<Participante>> getListByHorario(Long idCurso,Long idHorarios){
+        return participanteApi.getListByHorarios(idCurso, idHorarios);
+    }
 
 }

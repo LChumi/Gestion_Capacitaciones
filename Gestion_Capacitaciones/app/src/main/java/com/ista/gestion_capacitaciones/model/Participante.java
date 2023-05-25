@@ -40,6 +40,8 @@ public class Participante {
     private Persona parPersona;
     @SerializedName("parCurso")
     private Curso parCurso;
+    @SerializedName("hcuId")
+    private HorarioCurso parHorario;
     @Expose(serialize = false, deserialize = false)
     private List<EntregaCertificado> entregaCertificados;
     @SerializedName("asistencias")
@@ -115,6 +117,14 @@ public class Participante {
 
     public void setParCurso(Curso parCurso) {
         this.parCurso = parCurso;
+    }
+
+    public HorarioCurso getParHorario() {
+        return parHorario;
+    }
+
+    public void setParHorario(HorarioCurso parHorario) {
+        this.parHorario = parHorario;
     }
 
     public List<EntregaCertificado> getEntregaCertificados() {

@@ -28,11 +28,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.ista.gestion_capacitaciones.MainActivity;
 import com.ista.gestion_capacitaciones.R;
 import com.ista.gestion_capacitaciones.adapter.ListaEstudiantesAdapter;
-import com.ista.gestion_capacitaciones.api.clients.AsistenciaApiClient;
-import com.ista.gestion_capacitaciones.db.DbAsistencias;
 import com.ista.gestion_capacitaciones.model.Participante;
 import com.ista.gestion_capacitaciones.utils.AsistenciaUtil;
 import com.ista.gestion_capacitaciones.viewmodel.MisCursosViewModel;

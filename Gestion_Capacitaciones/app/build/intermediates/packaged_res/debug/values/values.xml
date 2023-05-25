@@ -26,6 +26,7 @@
     <string name="InformacionLaboral">Informacion Laboral/Estudios</string>
     <string name="Inicio">Inicio</string>
     <string name="Tecazuay">TecAzuay</string>
+    <string name="ValueCargo">Cargo</string>
     <string name="ValueComoDescubrio">¿Como se entero del curso?</string>
     <string name="ValueCursosSeguir">¿Que otros cursos le gustaria seguir?</string>
     <string name="action_settings">Settings</string>
@@ -61,6 +62,7 @@
     <string name="toastError">Ocurrio un Problema</string>
     <string name="toastOk">Bienvenido</string>
     <string name="txtBienvenido">Bienvenido</string>
+    <string name="txtCursosD">Cursos</string>
     <string name="txtEstadoCurso">En proceso</string>
     <string name="txtFechaFin">Fecha Fin</string>
     <string name="txtFechaInicio">Fecha Inicio</string>
@@ -71,6 +73,8 @@
     <string name="txtNomCurso">Curso</string>
     <string name="txtNomPrograma">Programa 1</string>
     <string name="txtNombreEstudiante">Luis Gustavo Chumi Paida</string>
+    <string name="txtPerfil">Perfil</string>
+    <string name="txtPerfilD">Perfil de Usuario</string>
     <string name="txtPrograma">Programa</string>
     <string name="txtTitleCursoPrograma">Cursos</string>
     <string name="txtTittle">Sistema de Gestion de Capacitaciones</string>
@@ -85,6 +89,7 @@
     <string name="valueCorreo">Correo Electronico</string>
     <string name="valueCorreoElectronicoInstitucion">Correo Electronico de la Institucion</string>
     <string name="valueDireccion">Direccion de la Institucion</string>
+    <string name="valueDireccionP">Direccion</string>
     <string name="valueElCursoAuspiciado">¿El curso es auspiciado por la Institucion?</string>
     <string name="valueEtnia">Etnia</string>
     <string name="valueFechaNacimiento">Fecha de Nacimiento</string>
@@ -98,6 +103,7 @@
     <string name="valueNroTelefonoCelular">Nro de Telefono Celular</string>
     <string name="valueNroTelefonoInstitucion">Numero Telefonico Institucional</string>
     <string name="valueSexo">Sexo</string>
+    <string name="valueUsuario">Usuario</string>
     <style name="Base.Theme.Gestion_Capacitaciones" parent="Theme.Material3.DayNight.NoActionBar">
         
         

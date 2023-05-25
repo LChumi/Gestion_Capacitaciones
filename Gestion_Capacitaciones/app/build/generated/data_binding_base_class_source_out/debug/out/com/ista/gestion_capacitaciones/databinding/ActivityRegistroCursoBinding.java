@@ -30,28 +30,16 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
   public final AutoCompleteTextView autocompleteTxt;
 
   @NonNull
-  public final Button btnAplicar;
+  public final AutoCompleteTextView autocompleteTxtHorario;
+
+  @NonNull
+  public final Button btnAplicarCurso;
 
   @NonNull
   public final EditText edtActividadInstitucion;
 
   @NonNull
-  public final TextView edtApellidos;
-
-  @NonNull
-  public final TextView edtCedula;
-
-  @NonNull
-  public final TextView edtCelular;
-
-  @NonNull
-  public final TextView edtCodigoCurso;
-
-  @NonNull
   public final EditText edtComoSeEntero;
-
-  @NonNull
-  public final TextView edtCorreo;
 
   @NonNull
   public final EditText edtCorreoInsti;
@@ -63,31 +51,7 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
   public final EditText edtDireccionInst;
 
   @NonNull
-  public final TextView edtEtnia;
-
-  @NonNull
-  public final TextView edtFechaNac;
-
-  @NonNull
-  public final TextView edtHorario;
-
-  @NonNull
-  public final TextView edtModalidad;
-
-  @NonNull
-  public final TextView edtNivelInstruccion;
-
-  @NonNull
-  public final TextView edtNombres;
-
-  @NonNull
   public final EditText edtNumeroInstitucional;
-
-  @NonNull
-  public final TextView edtSexo;
-
-  @NonNull
-  public final TextView edtTelConv;
 
   @NonNull
   public final EditText edtTrabajoEst;
@@ -96,13 +60,13 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
   public final ImageView imgCurso;
 
   @NonNull
-  public final TextView txCelular;
-
-  @NonNull
   public final TextView txtApellidos;
 
   @NonNull
   public final TextView txtCedula;
+
+  @NonNull
+  public final TextView txtCelular;
 
   @NonNull
   public final TextView txtCodCurso;
@@ -111,13 +75,13 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
   public final TextView txtCorreo;
 
   @NonNull
+  public final TextView txtCursoNombre;
+
+  @NonNull
   public final TextView txtEtnia;
 
   @NonNull
   public final TextView txtFechaNac;
-
-  @NonNull
-  public final TextView txtHorario;
 
   @NonNull
   public final TextView txtModalidad;
@@ -129,70 +93,102 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
   public final TextView txtNombres;
 
   @NonNull
-  public final TextView txtPrograma;
-
-  @NonNull
   public final TextView txtSexo;
 
   @NonNull
-  public final TextView txtTelfConv;
+  public final TextView txtTelConv;
+
+  @NonNull
+  public final TextView viewApellidos;
+
+  @NonNull
+  public final TextView viewCedula;
+
+  @NonNull
+  public final TextView viewCelular;
+
+  @NonNull
+  public final TextView viewCodigoCurso;
+
+  @NonNull
+  public final TextView viewCorreo;
+
+  @NonNull
+  public final TextView viewEtnia;
+
+  @NonNull
+  public final TextView viewFechaNac;
+
+  @NonNull
+  public final TextView viewModalidad;
+
+  @NonNull
+  public final TextView viewNivelInstruccion;
+
+  @NonNull
+  public final TextView viewNombres;
+
+  @NonNull
+  public final TextView viewSexo;
+
+  @NonNull
+  public final TextView viewTelfConv;
 
   private ActivityRegistroCursoBinding(@NonNull LinearLayout rootView,
       @NonNull TextView FichaInscripcion, @NonNull AutoCompleteTextView autocompleteTxt,
-      @NonNull Button btnAplicar, @NonNull EditText edtActividadInstitucion,
-      @NonNull TextView edtApellidos, @NonNull TextView edtCedula, @NonNull TextView edtCelular,
-      @NonNull TextView edtCodigoCurso, @NonNull EditText edtComoSeEntero,
-      @NonNull TextView edtCorreo, @NonNull EditText edtCorreoInsti,
-      @NonNull EditText edtCursosSeguir, @NonNull EditText edtDireccionInst,
-      @NonNull TextView edtEtnia, @NonNull TextView edtFechaNac, @NonNull TextView edtHorario,
-      @NonNull TextView edtModalidad, @NonNull TextView edtNivelInstruccion,
-      @NonNull TextView edtNombres, @NonNull EditText edtNumeroInstitucional,
-      @NonNull TextView edtSexo, @NonNull TextView edtTelConv, @NonNull EditText edtTrabajoEst,
-      @NonNull ImageView imgCurso, @NonNull TextView txCelular, @NonNull TextView txtApellidos,
-      @NonNull TextView txtCedula, @NonNull TextView txtCodCurso, @NonNull TextView txtCorreo,
-      @NonNull TextView txtEtnia, @NonNull TextView txtFechaNac, @NonNull TextView txtHorario,
-      @NonNull TextView txtModalidad, @NonNull TextView txtNivelInstruccion,
-      @NonNull TextView txtNombres, @NonNull TextView txtPrograma, @NonNull TextView txtSexo,
-      @NonNull TextView txtTelfConv) {
+      @NonNull AutoCompleteTextView autocompleteTxtHorario, @NonNull Button btnAplicarCurso,
+      @NonNull EditText edtActividadInstitucion, @NonNull EditText edtComoSeEntero,
+      @NonNull EditText edtCorreoInsti, @NonNull EditText edtCursosSeguir,
+      @NonNull EditText edtDireccionInst, @NonNull EditText edtNumeroInstitucional,
+      @NonNull EditText edtTrabajoEst, @NonNull ImageView imgCurso, @NonNull TextView txtApellidos,
+      @NonNull TextView txtCedula, @NonNull TextView txtCelular, @NonNull TextView txtCodCurso,
+      @NonNull TextView txtCorreo, @NonNull TextView txtCursoNombre, @NonNull TextView txtEtnia,
+      @NonNull TextView txtFechaNac, @NonNull TextView txtModalidad,
+      @NonNull TextView txtNivelInstruccion, @NonNull TextView txtNombres,
+      @NonNull TextView txtSexo, @NonNull TextView txtTelConv, @NonNull TextView viewApellidos,
+      @NonNull TextView viewCedula, @NonNull TextView viewCelular,
+      @NonNull TextView viewCodigoCurso, @NonNull TextView viewCorreo, @NonNull TextView viewEtnia,
+      @NonNull TextView viewFechaNac, @NonNull TextView viewModalidad,
+      @NonNull TextView viewNivelInstruccion, @NonNull TextView viewNombres,
+      @NonNull TextView viewSexo, @NonNull TextView viewTelfConv) {
     this.rootView = rootView;
     this.FichaInscripcion = FichaInscripcion;
     this.autocompleteTxt = autocompleteTxt;
-    this.btnAplicar = btnAplicar;
+    this.autocompleteTxtHorario = autocompleteTxtHorario;
+    this.btnAplicarCurso = btnAplicarCurso;
     this.edtActividadInstitucion = edtActividadInstitucion;
-    this.edtApellidos = edtApellidos;
-    this.edtCedula = edtCedula;
-    this.edtCelular = edtCelular;
-    this.edtCodigoCurso = edtCodigoCurso;
     this.edtComoSeEntero = edtComoSeEntero;
-    this.edtCorreo = edtCorreo;
     this.edtCorreoInsti = edtCorreoInsti;
     this.edtCursosSeguir = edtCursosSeguir;
     this.edtDireccionInst = edtDireccionInst;
-    this.edtEtnia = edtEtnia;
-    this.edtFechaNac = edtFechaNac;
-    this.edtHorario = edtHorario;
-    this.edtModalidad = edtModalidad;
-    this.edtNivelInstruccion = edtNivelInstruccion;
-    this.edtNombres = edtNombres;
     this.edtNumeroInstitucional = edtNumeroInstitucional;
-    this.edtSexo = edtSexo;
-    this.edtTelConv = edtTelConv;
     this.edtTrabajoEst = edtTrabajoEst;
     this.imgCurso = imgCurso;
-    this.txCelular = txCelular;
     this.txtApellidos = txtApellidos;
     this.txtCedula = txtCedula;
+    this.txtCelular = txtCelular;
     this.txtCodCurso = txtCodCurso;
     this.txtCorreo = txtCorreo;
+    this.txtCursoNombre = txtCursoNombre;
     this.txtEtnia = txtEtnia;
     this.txtFechaNac = txtFechaNac;
-    this.txtHorario = txtHorario;
     this.txtModalidad = txtModalidad;
     this.txtNivelInstruccion = txtNivelInstruccion;
     this.txtNombres = txtNombres;
-    this.txtPrograma = txtPrograma;
     this.txtSexo = txtSexo;
-    this.txtTelfConv = txtTelfConv;
+    this.txtTelConv = txtTelConv;
+    this.viewApellidos = viewApellidos;
+    this.viewCedula = viewCedula;
+    this.viewCelular = viewCelular;
+    this.viewCodigoCurso = viewCodigoCurso;
+    this.viewCorreo = viewCorreo;
+    this.viewEtnia = viewEtnia;
+    this.viewFechaNac = viewFechaNac;
+    this.viewModalidad = viewModalidad;
+    this.viewNivelInstruccion = viewNivelInstruccion;
+    this.viewNombres = viewNombres;
+    this.viewSexo = viewSexo;
+    this.viewTelfConv = viewTelfConv;
   }
 
   @Override
@@ -234,9 +230,15 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnAplicar;
-      Button btnAplicar = ViewBindings.findChildViewById(rootView, id);
-      if (btnAplicar == null) {
+      id = R.id.autocompleteTxtHorario;
+      AutoCompleteTextView autocompleteTxtHorario = ViewBindings.findChildViewById(rootView, id);
+      if (autocompleteTxtHorario == null) {
+        break missingId;
+      }
+
+      id = R.id.btnAplicarCurso;
+      Button btnAplicarCurso = ViewBindings.findChildViewById(rootView, id);
+      if (btnAplicarCurso == null) {
         break missingId;
       }
 
@@ -246,39 +248,9 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.edtApellidos;
-      TextView edtApellidos = ViewBindings.findChildViewById(rootView, id);
-      if (edtApellidos == null) {
-        break missingId;
-      }
-
-      id = R.id.edtCedula;
-      TextView edtCedula = ViewBindings.findChildViewById(rootView, id);
-      if (edtCedula == null) {
-        break missingId;
-      }
-
-      id = R.id.edtCelular;
-      TextView edtCelular = ViewBindings.findChildViewById(rootView, id);
-      if (edtCelular == null) {
-        break missingId;
-      }
-
-      id = R.id.edtCodigoCurso;
-      TextView edtCodigoCurso = ViewBindings.findChildViewById(rootView, id);
-      if (edtCodigoCurso == null) {
-        break missingId;
-      }
-
       id = R.id.edtComoSeEntero;
       EditText edtComoSeEntero = ViewBindings.findChildViewById(rootView, id);
       if (edtComoSeEntero == null) {
-        break missingId;
-      }
-
-      id = R.id.edtCorreo;
-      TextView edtCorreo = ViewBindings.findChildViewById(rootView, id);
-      if (edtCorreo == null) {
         break missingId;
       }
 
@@ -300,57 +272,9 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.edtEtnia;
-      TextView edtEtnia = ViewBindings.findChildViewById(rootView, id);
-      if (edtEtnia == null) {
-        break missingId;
-      }
-
-      id = R.id.edtFechaNac;
-      TextView edtFechaNac = ViewBindings.findChildViewById(rootView, id);
-      if (edtFechaNac == null) {
-        break missingId;
-      }
-
-      id = R.id.edtHorario;
-      TextView edtHorario = ViewBindings.findChildViewById(rootView, id);
-      if (edtHorario == null) {
-        break missingId;
-      }
-
-      id = R.id.edtModalidad;
-      TextView edtModalidad = ViewBindings.findChildViewById(rootView, id);
-      if (edtModalidad == null) {
-        break missingId;
-      }
-
-      id = R.id.edtNivelInstruccion;
-      TextView edtNivelInstruccion = ViewBindings.findChildViewById(rootView, id);
-      if (edtNivelInstruccion == null) {
-        break missingId;
-      }
-
-      id = R.id.edtNombres;
-      TextView edtNombres = ViewBindings.findChildViewById(rootView, id);
-      if (edtNombres == null) {
-        break missingId;
-      }
-
       id = R.id.edtNumeroInstitucional;
       EditText edtNumeroInstitucional = ViewBindings.findChildViewById(rootView, id);
       if (edtNumeroInstitucional == null) {
-        break missingId;
-      }
-
-      id = R.id.edtSexo;
-      TextView edtSexo = ViewBindings.findChildViewById(rootView, id);
-      if (edtSexo == null) {
-        break missingId;
-      }
-
-      id = R.id.edtTelConv;
-      TextView edtTelConv = ViewBindings.findChildViewById(rootView, id);
-      if (edtTelConv == null) {
         break missingId;
       }
 
@@ -366,12 +290,6 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txCelular;
-      TextView txCelular = ViewBindings.findChildViewById(rootView, id);
-      if (txCelular == null) {
-        break missingId;
-      }
-
       id = R.id.txtApellidos;
       TextView txtApellidos = ViewBindings.findChildViewById(rootView, id);
       if (txtApellidos == null) {
@@ -381,6 +299,12 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
       id = R.id.txtCedula;
       TextView txtCedula = ViewBindings.findChildViewById(rootView, id);
       if (txtCedula == null) {
+        break missingId;
+      }
+
+      id = R.id.txtCelular;
+      TextView txtCelular = ViewBindings.findChildViewById(rootView, id);
+      if (txtCelular == null) {
         break missingId;
       }
 
@@ -396,6 +320,12 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txtCursoNombre;
+      TextView txtCursoNombre = ViewBindings.findChildViewById(rootView, id);
+      if (txtCursoNombre == null) {
+        break missingId;
+      }
+
       id = R.id.txtEtnia;
       TextView txtEtnia = ViewBindings.findChildViewById(rootView, id);
       if (txtEtnia == null) {
@@ -405,12 +335,6 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
       id = R.id.txtFechaNac;
       TextView txtFechaNac = ViewBindings.findChildViewById(rootView, id);
       if (txtFechaNac == null) {
-        break missingId;
-      }
-
-      id = R.id.txtHorario;
-      TextView txtHorario = ViewBindings.findChildViewById(rootView, id);
-      if (txtHorario == null) {
         break missingId;
       }
 
@@ -432,32 +356,98 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txtPrograma;
-      TextView txtPrograma = ViewBindings.findChildViewById(rootView, id);
-      if (txtPrograma == null) {
-        break missingId;
-      }
-
       id = R.id.txtSexo;
       TextView txtSexo = ViewBindings.findChildViewById(rootView, id);
       if (txtSexo == null) {
         break missingId;
       }
 
-      id = R.id.txtTelfConv;
-      TextView txtTelfConv = ViewBindings.findChildViewById(rootView, id);
-      if (txtTelfConv == null) {
+      id = R.id.txtTelConv;
+      TextView txtTelConv = ViewBindings.findChildViewById(rootView, id);
+      if (txtTelConv == null) {
+        break missingId;
+      }
+
+      id = R.id.viewApellidos;
+      TextView viewApellidos = ViewBindings.findChildViewById(rootView, id);
+      if (viewApellidos == null) {
+        break missingId;
+      }
+
+      id = R.id.viewCedula;
+      TextView viewCedula = ViewBindings.findChildViewById(rootView, id);
+      if (viewCedula == null) {
+        break missingId;
+      }
+
+      id = R.id.viewCelular;
+      TextView viewCelular = ViewBindings.findChildViewById(rootView, id);
+      if (viewCelular == null) {
+        break missingId;
+      }
+
+      id = R.id.viewCodigoCurso;
+      TextView viewCodigoCurso = ViewBindings.findChildViewById(rootView, id);
+      if (viewCodigoCurso == null) {
+        break missingId;
+      }
+
+      id = R.id.viewCorreo;
+      TextView viewCorreo = ViewBindings.findChildViewById(rootView, id);
+      if (viewCorreo == null) {
+        break missingId;
+      }
+
+      id = R.id.viewEtnia;
+      TextView viewEtnia = ViewBindings.findChildViewById(rootView, id);
+      if (viewEtnia == null) {
+        break missingId;
+      }
+
+      id = R.id.viewFechaNac;
+      TextView viewFechaNac = ViewBindings.findChildViewById(rootView, id);
+      if (viewFechaNac == null) {
+        break missingId;
+      }
+
+      id = R.id.viewModalidad;
+      TextView viewModalidad = ViewBindings.findChildViewById(rootView, id);
+      if (viewModalidad == null) {
+        break missingId;
+      }
+
+      id = R.id.viewNivelInstruccion;
+      TextView viewNivelInstruccion = ViewBindings.findChildViewById(rootView, id);
+      if (viewNivelInstruccion == null) {
+        break missingId;
+      }
+
+      id = R.id.viewNombres;
+      TextView viewNombres = ViewBindings.findChildViewById(rootView, id);
+      if (viewNombres == null) {
+        break missingId;
+      }
+
+      id = R.id.viewSexo;
+      TextView viewSexo = ViewBindings.findChildViewById(rootView, id);
+      if (viewSexo == null) {
+        break missingId;
+      }
+
+      id = R.id.viewTelfConv;
+      TextView viewTelfConv = ViewBindings.findChildViewById(rootView, id);
+      if (viewTelfConv == null) {
         break missingId;
       }
 
       return new ActivityRegistroCursoBinding((LinearLayout) rootView, FichaInscripcion,
-          autocompleteTxt, btnAplicar, edtActividadInstitucion, edtApellidos, edtCedula, edtCelular,
-          edtCodigoCurso, edtComoSeEntero, edtCorreo, edtCorreoInsti, edtCursosSeguir,
-          edtDireccionInst, edtEtnia, edtFechaNac, edtHorario, edtModalidad, edtNivelInstruccion,
-          edtNombres, edtNumeroInstitucional, edtSexo, edtTelConv, edtTrabajoEst, imgCurso,
-          txCelular, txtApellidos, txtCedula, txtCodCurso, txtCorreo, txtEtnia, txtFechaNac,
-          txtHorario, txtModalidad, txtNivelInstruccion, txtNombres, txtPrograma, txtSexo,
-          txtTelfConv);
+          autocompleteTxt, autocompleteTxtHorario, btnAplicarCurso, edtActividadInstitucion,
+          edtComoSeEntero, edtCorreoInsti, edtCursosSeguir, edtDireccionInst,
+          edtNumeroInstitucional, edtTrabajoEst, imgCurso, txtApellidos, txtCedula, txtCelular,
+          txtCodCurso, txtCorreo, txtCursoNombre, txtEtnia, txtFechaNac, txtModalidad,
+          txtNivelInstruccion, txtNombres, txtSexo, txtTelConv, viewApellidos, viewCedula,
+          viewCelular, viewCodigoCurso, viewCorreo, viewEtnia, viewFechaNac, viewModalidad,
+          viewNivelInstruccion, viewNombres, viewSexo, viewTelfConv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -33,7 +33,7 @@
         android:theme="@style/Theme.Gestion_Capacitaciones"
         tools:targetApi="31">
         <activity
-            android:name=".UI.RegistroCurso"
+            android:name=".UI.RegistroCursoActivity"
             android:exported="false" />
         <activity
             android:name=".UI.HomeActivity"

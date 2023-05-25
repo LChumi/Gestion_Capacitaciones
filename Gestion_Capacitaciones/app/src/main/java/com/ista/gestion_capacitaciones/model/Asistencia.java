@@ -16,7 +16,6 @@
 package com.ista.gestion_capacitaciones.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.ista.gestion_capacitaciones.utils.CustomDateDeserializer;
 

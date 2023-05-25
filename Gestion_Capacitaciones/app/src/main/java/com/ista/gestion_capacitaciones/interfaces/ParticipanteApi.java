@@ -50,4 +50,7 @@ public interface ParticipanteApi {
     @GET("api/participante/listarparticipantes/{curId}")
     Call<List<Participante>> getListParticipanteByCourses(@Path("curId") Long curId);
 
+    @GET("api/participante/participantesPorhorarioc/{idCurso}/{idHorarioc}")
+    Call<List<Participante>> getListByHorarios(@Path("idCurso")Long idCurso,@Path("idHorarios")Long idHorarios);
+
 }

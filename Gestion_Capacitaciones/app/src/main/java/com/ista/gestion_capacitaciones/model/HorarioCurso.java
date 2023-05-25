@@ -15,6 +15,8 @@
 
 package com.ista.gestion_capacitaciones.model;
 
+import java.util.List;
+
 public class HorarioCurso {
 
     private Long hcuId;
@@ -23,6 +25,8 @@ public class HorarioCurso {
 
     private Horario horario;
     private Curso hcurso;
+    private List<FichaInscripcion> fichaInscripcions;
+    private List<Participante> participantes;
 
     public Long getHcuId() {
         return hcuId;
@@ -62,5 +66,21 @@ public class HorarioCurso {
 
     public void setHcurso(Curso hcurso) {
         this.hcurso = hcurso;
+    }
+
+    public List<FichaInscripcion> getFichaInscripcions() {
+        return fichaInscripcions;
+    }
+
+    public void setFichaInscripcions(List<FichaInscripcion> fichaInscripcions) {
+        this.fichaInscripcions = fichaInscripcions;
+    }
+
+    public List<Participante> getParticipantes() {
+        return participantes;
+    }
+
+    public void setParticipantes(List<Participante> participantes) {
+        this.participantes = participantes;
     }
 }

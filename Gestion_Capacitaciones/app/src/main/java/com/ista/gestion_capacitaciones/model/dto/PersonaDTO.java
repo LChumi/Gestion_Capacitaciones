@@ -104,5 +104,16 @@ public class PersonaDTO {
         return this.per_nombres +" "+ this.per_apellidos;
     }
 
-
+    @Override
+    public String toString() {
+        return "PersonaDTO{" +
+                "per_id=" + per_id +
+                ", per_cedula='" + per_cedula + '\'' +
+                ", per_nombres='" + per_nombres + '\'' +
+                ", per_apellidos='" + per_apellidos + '\'' +
+                ", per_fechaNacimiento=" + per_fechaNacimiento +
+                ", per_correo='" + per_correo + '\'' +
+                ", per_estado=" + per_estado +
+                '}';
+    }
 }

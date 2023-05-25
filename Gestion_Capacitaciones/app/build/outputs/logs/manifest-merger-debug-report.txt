@@ -171,12 +171,12 @@ MERGED from [com.pnikosis:materialish-progress:1.7] C:\Users\luisc\.gradle\cache
 		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:33:9-60
 	android:dataExtractionRules
 		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:27:9-65
-activity#com.ista.gestion_capacitaciones.UI.RegistroCurso
+activity#com.ista.gestion_capacitaciones.UI.RegistroCursoActivity
 ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:35:9-37:40
 	android:exported
 		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:37:13-37
 	android:name
-		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:36:13-45
+		ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:36:13-53
 activity#com.ista.gestion_capacitaciones.UI.HomeActivity
 ADDED from C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:38:9-42:79
 	android:label

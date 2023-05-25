@@ -33,6 +33,7 @@ public class FichaInscripcion {
     private Persona finPersona;
 
     private Curso finCurso;
+    private HorarioCurso finHorario;
 
     public Long getFinId() {
         return finId;
@@ -144,5 +145,13 @@ public class FichaInscripcion {
 
     public void setFinCurso(Curso finCurso) {
         this.finCurso = finCurso;
+    }
+
+    public HorarioCurso getFinHorario() {
+        return finHorario;
+    }
+
+    public void setFinHorario(HorarioCurso finHorario) {
+        this.finHorario = finHorario;
     }
 }

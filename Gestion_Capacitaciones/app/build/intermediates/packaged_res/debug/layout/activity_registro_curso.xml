@@ -20,7 +20,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".UI.RegistroCurso">
+    tools:context=".UI.RegistroCursoActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -49,7 +49,7 @@
                         android:layout_marginLeft="10dp"
                         android:src="@drawable/icon_grade_white"/>
                     <TextView
-                        android:id="@+id/txtPrograma"
+                        android:id="@+id/txtCursoNombre"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignLeft="@+id/imgCurso"
@@ -85,7 +85,7 @@
                             android:text="@string/FichaInscrpcion"/>
 
                         <TextView
-                            android:id="@+id/edtCodigoCurso"
+                            android:id="@+id/viewCodigoCurso"
                             android:layout_width="128dp"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/FichaInscripcion"
@@ -97,12 +97,12 @@
                             android:id="@+id/txtCodCurso"
                             android:layout_width="128dp"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/edtCodigoCurso"
+                            android:layout_below="@+id/viewCodigoCurso"
                             android:fontFamily="@font/san_francisco"
                             android:text="@string/valueCodigoCurso"
                             android:textSize="14dp" />
                         <TextView
-                            android:id="@+id/edtModalidad"
+                            android:id="@+id/viewModalidad"
                             android:layout_width="128dp"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/txtCodCurso"
@@ -113,26 +113,11 @@
                             android:id="@+id/txtModalidad"
                             android:layout_width="128dp"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/edtModalidad"
+                            android:layout_below="@+id/viewModalidad"
                             android:fontFamily="@font/san_francisco"
                             android:text="@string/valueModalidad"
                             android:textSize="14dp" />
-                        <TextView
-                            android:id="@+id/edtHorario"
-                            android:layout_width="128dp"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/txtModalidad"
-                            android:fontFamily="@font/san_francisco"
-                            android:text="@string/valueModalidad"
-                            android:textSize="10dp" />
-                        <TextView
-                            android:id="@+id/txtHorario"
-                            android:layout_width="128dp"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/edtHorario"
-                            android:fontFamily="@font/san_francisco"
-                            android:text="@string/valueModalidad"
-                            android:textSize="14dp" />
+
                     </RelativeLayout>
                 </ScrollView>
             </com.google.android.material.card.MaterialCardView>
@@ -167,56 +152,56 @@
                                 android:layout_weight="1"
                                 android:orientation="vertical">
                                 <TextView
-                                    android:id="@+id/txtApellidos"
+                                    android:id="@+id/viewApellidos"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
                                     android:text="@string/valueApellidos"
                                     android:textSize="10dp" />
                                 <TextView
-                                    android:id="@+id/edtApellidos"
+                                    android:id="@+id/txtApellidos"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
                                     android:text="@string/valueApellidos"
                                     android:textSize="14dp" />
+                                <TextView
+                                    android:id="@+id/viewCedula"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueCedula"
+                                    android:textSize="10dp" />
                                 <TextView
                                     android:id="@+id/txtCedula"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
                                     android:text="@string/valueCedula"
-                                    android:textSize="10dp" />
+                                    android:textSize="14dp" />
                                 <TextView
-                                    android:id="@+id/edtCedula"
+                                    android:id="@+id/viewSexo"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
-                                    android:text="@string/valueCedula"
-                                    android:textSize="14dp" />
+                                    android:text="@string/valueSexo"
+                                    android:textSize="10dp" />
                                 <TextView
                                     android:id="@+id/txtSexo"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
                                     android:text="@string/valueSexo"
-                                    android:textSize="10dp" />
-                                <TextView
-                                    android:id="@+id/edtSexo"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/san_francisco"
-                                    android:text="@string/valueSexo"
                                     android:textSize="14dp" />
                                 <TextView
-                                    android:id="@+id/txtTelfConv"
+                                    android:id="@+id/viewTelfConv"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
                                     android:text="@string/valueNroTelefeono"
                                     android:textSize="10dp" />
                                 <TextView
-                                    android:id="@+id/edtTelConv"
+                                    android:id="@+id/txtTelConv"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
@@ -229,56 +214,56 @@
                                 android:layout_weight="1"
                                 android:orientation="vertical">
                                 <TextView
-                                    android:id="@+id/txtNombres"
+                                    android:id="@+id/viewNombres"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
                                     android:text="@string/valueNombres"
                                     android:textSize="10dp" />
                                 <TextView
-                                    android:id="@+id/edtNombres"
+                                    android:id="@+id/txtNombres"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
                                     android:text="@string/valueNombres"
                                     android:textSize="14dp" />
+                                <TextView
+                                    android:id="@+id/viewFechaNac"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/san_francisco"
+                                    android:text="@string/valueFechaNacimiento"
+                                    android:textSize="10dp" />
                                 <TextView
                                     android:id="@+id/txtFechaNac"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
                                     android:text="@string/valueFechaNacimiento"
-                                    android:textSize="10dp" />
+                                    android:textSize="14dp" />
                                 <TextView
-                                    android:id="@+id/edtFechaNac"
+                                    android:id="@+id/viewEtnia"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
-                                    android:text="@string/valueFechaNacimiento"
-                                    android:textSize="14dp" />
+                                    android:text="@string/valueEtnia"
+                                    android:textSize="10dp" />
                                 <TextView
                                     android:id="@+id/txtEtnia"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
                                     android:text="@string/valueEtnia"
-                                    android:textSize="10dp" />
-                                <TextView
-                                    android:id="@+id/edtEtnia"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/san_francisco"
-                                    android:text="@string/valueEtnia"
                                     android:textSize="14dp" />
                                 <TextView
-                                    android:id="@+id/txCelular"
+                                    android:id="@+id/viewCelular"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
                                     android:text="@string/valueNroTelefonoCelular"
                                     android:textSize="10dp" />
                                 <TextView
-                                    android:id="@+id/edtCelular"
+                                    android:id="@+id/txtCelular"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
@@ -307,28 +292,28 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
                                 <TextView
-                                    android:id="@+id/txtCorreo"
+                                    android:id="@+id/viewCorreo"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
                                     android:text="@string/valueCorreo"
                                     android:textSize="10dp" />
                                 <TextView
-                                    android:id="@+id/edtCorreo"
+                                    android:id="@+id/txtCorreo"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
                                     android:text="@string/valueCorreo"
                                     android:textSize="14dp" />
                                 <TextView
-                                    android:id="@+id/txtNivelInstruccion"
+                                    android:id="@+id/viewNivelInstruccion"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
                                     android:text="@string/valueNivelInstruccion"
                                     android:textSize="10dp" />
                                 <TextView
-                                    android:id="@+id/edtNivelInstruccion"
+                                    android:id="@+id/txtNivelInstruccion"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/san_francisco"
@@ -401,6 +386,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:fontFamily="@font/san_francisco"
+                                            android:inputType="textEmailAddress"
                                             android:hint="@string/valueCorreoElectronicoInstitucion"
                                             android:textSize="14dp" />
                                     </com.google.android.material.textfield.TextInputLayout>
@@ -493,19 +479,45 @@
                                     </com.google.android.material.textfield.TextInputLayout>
                                 </ScrollView>
                             </com.google.android.material.card.MaterialCardView>
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="10dp"
+                                android:layout_margin="5dp"
+                                android:elevation="5dp">
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp">
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="16dp"
+                                        android:fontFamily="@font/san_francisco"
+                                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+                                        <AutoCompleteTextView
+                                            android:id="@+id/autocompleteTxtHorario"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="@string/valueHorarios"
+                                            android:textSize="10dp"
+                                            android:inputType="none"/>
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </ScrollView>
+                            </com.google.android.material.card.MaterialCardView>
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="start">
 
                                 <Button
-                                    android:id="@+id/btnAplicar"
+                                    android:id="@+id/btnAplicarCurso"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentStart="true"
                                     android:layout_alignParentEnd="true"
-                                    android:layout_marginStart="149dp"
-                                    android:layout_marginEnd="175dp"
+                                    android:layout_marginStart="160dp"
+                                    android:layout_marginEnd="160dp"
                                     android:backgroundTint="#FF8500"
                                     android:fontFamily="@font/san_francisco"
                                     android:text="@string/btnAplicar"
@@ -513,7 +525,6 @@
                                     android:textSize="11dp"
                                     android:textStyle="bold"></Button>
                             </RelativeLayout>
-
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>

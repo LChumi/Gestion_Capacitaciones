@@ -37,6 +37,9 @@
     <string name="action_settings">Settings</string>
 
     <!-- tittles -->
+    <string name="txtPerfil">Perfil</string>
+    <string name="txtCursosD">Cursos</string>
+    <string name="txtPerfilD">Perfil de Usuario</string>
     <string name="txtTitleCursoPrograma">Cursos</string>
     <string name="txtTittle">Sistema de Gestion de Capacitaciones</string>
     <string name="Tecazuay">TecAzuay</string>
@@ -81,12 +84,15 @@
     <string name="toastOk">Bienvenido</string>
     
     <!-- text field value  -->
+    <string name="valueUsuario">Usuario</string>
     <string name="valueCodigoCurso">CodigoCurso</string>
     <string name="valueNombreCurso">NombreCurso</string>
     <string name="valueModalidad">Modalidad</string>
     <string name="valueHorarios">Horarios del Curso</string>
     <string name="valueNombres">Nombres</string>
     <string name="valueApellidos">Apellidos</string>
+    <string name="valueDireccionP">Direccion</string>
+    <string name="ValueCargo">Cargo</string>
     <string name="valueCedula">Cedula de ciudadania</string>
     <string name="valueFechaNacimiento">Fecha de Nacimiento</string>
     <string name="valueSexo">Sexo</string>
