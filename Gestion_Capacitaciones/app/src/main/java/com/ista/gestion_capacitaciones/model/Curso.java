@@ -32,6 +32,7 @@ public class Curso {
     private Date curFechafin;
     private Integer curNumhoras;
     private String curProceso;
+    private transient byte[] curFoto;
     private Boolean curEstado;
     private ProgramaCapacitacion programaCapacitacion;
 

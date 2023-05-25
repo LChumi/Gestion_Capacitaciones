@@ -15,6 +15,8 @@
 
 package com.ista.gestion_capacitaciones.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class FichaInscripcion {
 
     private Long finId;
@@ -30,10 +32,12 @@ public class FichaInscripcion {
     private String finOtroscursosdesea;
     private Boolean finEstado;
 
-    private Persona finPersona;
-
-    private Curso finCurso;
-    private HorarioCurso finHorario;
+    @SerializedName("id_persona")
+    private   Persona finPersona;
+    @SerializedName("curId")
+    private   Curso finCurso;
+    @SerializedName("hcuId")
+    private  HorarioCurso finHorario;
 
     public Long getFinId() {
         return finId;
@@ -153,5 +157,26 @@ public class FichaInscripcion {
 
     public void setFinHorario(HorarioCurso finHorario) {
         this.finHorario = finHorario;
+    }
+
+    @Override
+    public String toString() {
+        return "FichaInscripcion{" +
+                "finId=" + finId +
+                ", finAprobacion=" + finAprobacion +
+                ", finInstituciontraest='" + finInstituciontraest + '\'' +
+                ", finDireccioninst='" + finDireccioninst + '\'' +
+                ", finCorreoinst='" + finCorreoinst + '\'' +
+                ", finTelefonoinst='" + finTelefonoinst + '\'' +
+                ", finActividadinst='" + finActividadinst + '\'' +
+                ", finAuspiciadoinst=" + finAuspiciadoinst +
+                ", finNombreauspicia='" + finNombreauspicia + '\'' +
+                ", finComoentero='" + finComoentero + '\'' +
+                ", finOtroscursosdesea='" + finOtroscursosdesea + '\'' +
+                ", finEstado=" + finEstado +
+                ", finPersona=" + finPersona +
+                ", finCurso=" + finCurso +
+                ", finHorario=" + finHorario +
+                '}';
     }
 }

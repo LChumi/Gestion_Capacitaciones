@@ -40,11 +40,10 @@ public class RegistroUtil {
 
     public static FichaInscripcion fichaInscripcion;
 
-    private static void guardarFichaEnApi(FichaInscripcion f, Curso c, Persona p){
+    public  void guardarFichaEnApi(FichaInscripcion f){
+        Log.i("Llegada",f.toString());
         f.setFinEstado(true);
         f.setFinAprobacion(0);
-        f.setFinCurso(c);
-        f.setFinPersona(p);
         FichaInscripcionApiClient apiClient=new FichaInscripcionApiClient();
         Call<FichaInscripcion> call=apiClient.crear(f);
         call.enqueue(new Callback<FichaInscripcion>() {
@@ -53,15 +52,13 @@ public class RegistroUtil {
                 if (response.isSuccessful()){
                     Log.i("Datos","Datos guardadosCorrectamente");
                 }else{
-                    Log.e("Error","Error al guardar la ficha");
+                    Log.e("Error","Error al guardar la ficha"+response.toString());
                 }
             }
-
             @Override
             public void onFailure(Call<FichaInscripcion> call, Throwable t) {
                 Log.e("ERROR","Error al guardar"+t.getMessage());
             }
         });
     }
-
 }

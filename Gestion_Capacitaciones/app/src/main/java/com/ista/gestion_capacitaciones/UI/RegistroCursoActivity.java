@@ -16,6 +16,7 @@
 package com.ista.gestion_capacitaciones.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.SharedPreferences;
@@ -29,6 +30,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.ista.gestion_capacitaciones.R;
+import com.ista.gestion_capacitaciones.model.FichaInscripcion;
 import com.ista.gestion_capacitaciones.model.HorarioCurso;
 import com.ista.gestion_capacitaciones.utils.RegistroUtil;
 import com.ista.gestion_capacitaciones.viewmodel.RegistroViewModel;
@@ -36,6 +38,7 @@ import com.ista.gestion_capacitaciones.viewmodel.RegistroViewModel;
 public class RegistroCursoActivity extends AppCompatActivity {
 
     private RegistroViewModel registroViewModel;
+    private FichaInscripcion fichaInscripcion;
     private RegistroUtil registroUtil;
     TextView txtCursoNombre, txtCodCurso,txtModalidadCurso,txtApellidos,txtCedula,txtSexo,txtTelConv,txtNombres,txtFechaNac,txtEtnia,txtCelular,txtCorreo,txtNivelIns;
     EditText edtTrabaEst,edtDireccionInsti,edtCorreoInstitucional,edtNumeroInstitucional,edtActividadInstitu,edtComoSeEntero,edtCursoSeguir;
@@ -62,6 +65,15 @@ public class RegistroCursoActivity extends AppCompatActivity {
     }
 
     private void init(){
+        //inicializacion y configuracion de boton de regreso
+        Toolbar toolbar=this.findViewById(R.id.toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_regresar);
+        toolbar.setNavigationOnClickListener(v->{
+            this.finish();
+            this.overridePendingTransition(R.anim.rigth_in,R.anim.rigth_out);
+        });
+
+        fichaInscripcion =new FichaInscripcion();
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
         registroUtil=new RegistroUtil();
         //inicializacion de texViews
@@ -98,9 +110,14 @@ public class RegistroCursoActivity extends AppCompatActivity {
             if (!isFinishing()) {
                 String item = adapterView.getItemAtPosition(i).toString();
                 Log.i("item", item);
+                if (item.equals("Si")){
+                    fichaInscripcion.setFinAuspiciadoinst(true);
+                }
+                if (item.equals("No")){
+                    fichaInscripcion.setFinAuspiciadoinst(false);
+                }
             }
         });
-
 
     }
 
@@ -111,6 +128,7 @@ public class RegistroCursoActivity extends AppCompatActivity {
         Log.i("CursoId",String.valueOf(idCurso));
         registroViewModel.getCurso(idCurso).observe(this,curso -> {
             if (curso!=null){
+                fichaInscripcion.setFinCurso(curso);
                 txtCursoNombre.setText(curso.getCurNombre());
                 txtCodCurso.setText(curso.getCurCodigo());
                 txtModalidadCurso.setText(curso.getMcursos().getMcuNombre());
@@ -128,11 +146,13 @@ public class RegistroCursoActivity extends AppCompatActivity {
                     HorarioCurso selectedHorario = horarioCursos.get(position); // Obtener el objeto HorarioCurso seleccionado
                     Long selectedId = selectedHorario.getHcuId();
                     Log.i("IDHorario",String.valueOf(selectedId));
+                    fichaInscripcion.setFinHorario(selectedHorario);
                 });
             }
         });
         registroViewModel.getPersona(idPer).observe(this,persona -> {
             if (persona!=null){
+                fichaInscripcion.setFinPersona(persona);
                 txtApellidos.setText(persona.getApellido());
                 txtCedula.setText(persona.getCedula());
                 txtSexo.setText(persona.getSexo());
@@ -146,7 +166,21 @@ public class RegistroCursoActivity extends AppCompatActivity {
             }
         });
 
-
+        btnAplicar.setOnClickListener(v -> {
+            fichaInscripcion.setFinId(0L);
+            fichaInscripcion.setFinAprobacion(0);
+            fichaInscripcion.setFinInstituciontraest("Ista");
+            fichaInscripcion.setFinEstado(true);
+            fichaInscripcion.setFinNombreauspicia("");
+            fichaInscripcion.setFinActividadinst(edtActividadInstitu.getText().toString());
+            fichaInscripcion.setFinDireccioninst(edtDireccionInsti.getText().toString());
+            fichaInscripcion.setFinCorreoinst(edtCorreoInstitucional.getText().toString());
+            fichaInscripcion.setFinTelefonoinst(edtNumeroInstitucional.getText().toString());
+            fichaInscripcion.setFinComoentero(edtComoSeEntero.getText().toString());
+            fichaInscripcion.setFinOtroscursosdesea(edtCursoSeguir.getText().toString());
+            Log.i("Dato",fichaInscripcion.toString());
+            registroUtil.guardarFichaEnApi(fichaInscripcion);
+        });
 
 
     }

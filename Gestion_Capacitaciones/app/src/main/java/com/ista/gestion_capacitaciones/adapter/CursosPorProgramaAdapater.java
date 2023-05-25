@@ -18,6 +18,8 @@ package com.ista.gestion_capacitaciones.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,9 +70,11 @@ public class CursosPorProgramaAdapater extends RecyclerView.Adapter<CursosPorPro
         private final ImageView imgCurso;
         private final TextView txtNombreCurso, txtCurProceso;
         private final Button btnRegistrarCurso;
+        private SharedPreferences preferences;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            preferences = PreferenceManager.getDefaultSharedPreferences(itemView.getContext());
             this.imgCurso = itemView.findViewById(R.id.imgCurso);
             this.txtNombreCurso = itemView.findViewById(R.id.txtNombreCurso);
             this.txtCurProceso = itemView.findViewById(R.id.txtCurProceso);
@@ -80,16 +84,21 @@ public class CursosPorProgramaAdapater extends RecyclerView.Adapter<CursosPorPro
 
         public void setItem(final Curso c) {
             // Código para cargar la imagen en el ImageView
-
+            Long idRol = preferences.getLong("idRol", 0);
             txtNombreCurso.setText(c.getCurNombre());
             txtCurProceso.setText(c.getCurProceso());
-            btnRegistrarCurso.setOnClickListener(v -> {
-                Context context = itemView.getContext(); // Obtener el contexto
-                Intent registrar = new Intent(context, RegistroCursoActivity.class);
-                registrar.putExtra("idCurso",c.getCurId());
-                context.startActivity(registrar); // Llamar a startActivity() en el contexto
-            });
+            if (idRol.equals(2L)) {
+                btnRegistrarCurso.setVisibility(View.GONE);
+            }
 
+            if (idRol.equals(1L)){
+                btnRegistrarCurso.setOnClickListener(v -> {
+                    Context context = itemView.getContext(); // Obtener el contexto
+                    Intent registrar = new Intent(context, RegistroCursoActivity.class);
+                    registrar.putExtra("idCurso",c.getCurId());
+                    context.startActivity(registrar); // Llamar a startActivity() en el contexto
+                });
+            }
         }
     }
 }
