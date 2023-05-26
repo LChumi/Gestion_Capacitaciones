@@ -29,6 +29,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.Gestion_Capacitaciones" >
         <activity
             android:name="com.ista.gestion_capacitaciones.UI.Modalidadctivity"

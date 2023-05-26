@@ -20,6 +20,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#82B1FF"
     tools:context=".UI.RegistroCursoActivity">
 
     <LinearLayout
@@ -34,7 +35,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#FF2171B8"
+                android:background="@drawable/side_nav_bar"
                 app:navigationIcon="@drawable/ic_regresar"
                 app:title="@string/Inicio"/>
         </com.google.android.material.appbar.AppBarLayout>

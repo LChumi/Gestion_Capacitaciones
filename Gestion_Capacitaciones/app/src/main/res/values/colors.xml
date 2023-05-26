@@ -23,10 +23,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#10D118</color>
-    <color name="yellow">#F1E57F</color>
+    <color name="yellow">#E9E4B7</color>
     <color name="red">#E82C1E</color>
     <color name="text_color">#FF000000</color>
-    <color name="colorPrimary">#3d95d0</color>
+    <color name="colorPrimary">#3378CE</color>
     <color name="colorPrimaryDark">#489855</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorWhite">#fff</color>

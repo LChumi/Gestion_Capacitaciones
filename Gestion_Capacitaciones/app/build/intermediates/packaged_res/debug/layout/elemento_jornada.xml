@@ -25,12 +25,16 @@
         app:cardCornerRadius="15dp"
         android:layout_margin="10dp"
         android:elevation="10dp">
+
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="68dp"
+            android:layout_height="63dp"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="15dp"
-            android:src="@drawable/icon_jornada"/>
+            android:rotationX="19"
+            android:rotationY="31"
+            android:src="@drawable/icon_jornada" />
+
         <RelativeLayout
             android:layout_width="270dp"
             android:layout_height="110dp"

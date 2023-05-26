@@ -74,6 +74,7 @@ drawable icon_grade_black
 drawable icon_grade_white
 drawable icon_jornada
 drawable img_docentes
+drawable img_fondo_dark
 drawable img_inicio
 drawable img_institucion
 drawable img_mision

@@ -30,7 +30,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/colorPrimary"
             app:popupTheme="@style/Theme.Gestion_Capacitaciones.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:backgroundTint="#1de956"
+        android:backgroundTint="#543BE46A"
         app:srcCompat="@drawable/whatsapp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
