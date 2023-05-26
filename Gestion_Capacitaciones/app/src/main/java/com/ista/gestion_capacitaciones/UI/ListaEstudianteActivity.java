@@ -91,7 +91,8 @@ public class ListaEstudianteActivity extends AppCompatActivity {
     }
     private void loadData() {
         Long idCurso=getIntent().getLongExtra("idCurso",0);
-        cursosViewModel.listaAsistencias(idCurso).observe(this,participantes -> {
+        Long idHorario=getIntent().getLongExtra("idHorario",0);
+        cursosViewModel.listaAsistenciasByHorario(idCurso,idHorario).observe(this,participantes -> {
             if (participantes != null){
                 adapter.updateItems(participantes);
                 participanteList=participantes;

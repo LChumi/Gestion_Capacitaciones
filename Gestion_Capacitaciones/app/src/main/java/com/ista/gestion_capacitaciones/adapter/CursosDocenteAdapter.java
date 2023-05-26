@@ -30,6 +30,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ista.gestion_capacitaciones.R;
 import com.ista.gestion_capacitaciones.UI.ListaEstudianteActivity;
+import com.ista.gestion_capacitaciones.UI.Modalidadctivity;
 import com.ista.gestion_capacitaciones.model.Curso;
 import com.ista.gestion_capacitaciones.model.Participante;
 
@@ -77,7 +78,7 @@ public class CursosDocenteAdapter extends RecyclerView.Adapter<CursosDocenteAdap
             itemView.setOnClickListener(v -> {
                 Context context = itemView.getContext();
                 Curso curso = listaCursoDocente.get(getAdapterPosition());
-                Intent i = new Intent(context, ListaEstudianteActivity.class);
+                Intent i = new Intent(context, Modalidadctivity.class);
                 i.putExtra("idCurso", curso.getCurId());
                 Log.i("curso",curso.getCurId().toString()+"|"+curso.getCurNombre());
                 context.startActivity(i);

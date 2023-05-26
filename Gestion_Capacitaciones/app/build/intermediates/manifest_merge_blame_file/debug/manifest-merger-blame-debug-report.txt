@@ -1,185 +1,176 @@
 1<?xml version="1.0" encoding="utf-8"?>
-2<!--
-3  ~ /*
-4  ~ *  Created Luis Chumi on 23/5/23 9:38
-5  ~ *  Copyright Ⓒ 2023. All rights reserved Ⓒ 2023 http://freefuninfo.com/
-6  ~ *  Last modified: 22/5/23 21:25
-7  ~ *
-8  ~ *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
-9  ~ *  except in compliance with the License. You may obtain a copy of the License at
-10  ~ *  http://www.apache.org/licenses/LICENS... Unless required by applicable law or agreed to in writing, software
-11  ~ *   distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
-12  ~ *   either express or implied. See the License for the specific language governing permissions and
-13  ~ *   limitations under the License.
-14  ~ */
-15-->
-16<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-17    package="com.ista.gestion_capacitaciones"
-18    android:versionCode="1"
-19    android:versionName="1.0" >
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ista.gestion_capacitaciones"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="22"
+8-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:5:5-79
+11-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:5:22-76
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:6:5-67
+12-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+13-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:7:5-78
+13-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:7:22-75
+14
+15    <permission
+15-->[androidx.core:core:1.9.0] C:\Users\luisc\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+16        android:name="com.ista.gestion_capacitaciones.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+16-->[androidx.core:core:1.9.0] C:\Users\luisc\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+17        android:protectionLevel="signature" />
+17-->[androidx.core:core:1.9.0] C:\Users\luisc\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+18
+19    <uses-permission android:name="com.ista.gestion_capacitaciones.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+19-->[androidx.core:core:1.9.0] C:\Users\luisc\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+19-->[androidx.core:core:1.9.0] C:\Users\luisc\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 20
-21    <uses-sdk
-22        android:minSdkVersion="22"
-22-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml
-23        android:targetSdkVersion="33" />
-23-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml
-24
-25    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-25-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:20:5-79
-25-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:20:22-76
-26    <uses-permission android:name="android.permission.INTERNET" />
-26-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:21:5-67
-26-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:21:22-64
-27    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-27-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:22:5-78
-27-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:22:22-75
-28
-29    <permission
-29-->[androidx.core:core:1.9.0] C:\Users\luisc\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
-30        android:name="com.ista.gestion_capacitaciones.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-30-->[androidx.core:core:1.9.0] C:\Users\luisc\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
-31        android:protectionLevel="signature" />
-31-->[androidx.core:core:1.9.0] C:\Users\luisc\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
-32
-33    <uses-permission android:name="com.ista.gestion_capacitaciones.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-33-->[androidx.core:core:1.9.0] C:\Users\luisc\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-33-->[androidx.core:core:1.9.0] C:\Users\luisc\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
-34
-35    <application
-35-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:24:5-70:19
-36        android:allowBackup="true"
-36-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:25:9-35
-37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-37-->[androidx.core:core:1.9.0] C:\Users\luisc\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
-38        android:background="#FFFFFF"
-38-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:26:9-37
-39        android:dataExtractionRules="@xml/data_extraction_rules"
-39-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:27:9-65
-40        android:debuggable="true"
-41        android:fullBackupContent="@xml/backup_rules"
-41-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:28:9-54
-42        android:icon="@mipmap/ic_launcher"
-42-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:29:9-43
-43        android:label="@string/app_name"
-43-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:30:9-41
-44        android:roundIcon="@mipmap/ic_launcher_round"
-44-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:31:9-54
-45        android:supportsRtl="true"
-45-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:32:9-35
-46        android:testOnly="true"
-47        android:theme="@style/Theme.Gestion_Capacitaciones" >
-47-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:33:9-60
-48        <activity
-48-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:35:9-37:40
-49            android:name="com.ista.gestion_capacitaciones.UI.RegistroCursoActivity"
-49-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:36:13-53
-50            android:exported="false" />
-50-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:37:13-37
-51        <activity
-51-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:38:9-42:79
-52            android:name="com.ista.gestion_capacitaciones.UI.HomeActivity"
-52-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:39:13-44
-53            android:exported="false"
-53-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:40:13-37
-54            android:label="@string/title_activity_home"
-54-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:41:13-56
-55            android:theme="@style/Theme.Gestion_Capacitaciones.NoActionBar" />
-55-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:42:13-76
+21    <application
+21-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:9:5-58:19
+22        android:allowBackup="true"
+22-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:10:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.9.0] C:\Users\luisc\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+24        android:background="#FFFFFF"
+24-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:11:9-37
+25        android:dataExtractionRules="@xml/data_extraction_rules"
+25-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:12:9-65
+26        android:debuggable="true"
+27        android:fullBackupContent="@xml/backup_rules"
+27-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:13:9-54
+28        android:icon="@mipmap/ic_launcher"
+28-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:14:9-43
+29        android:label="@string/app_name"
+29-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:15:9-41
+30        android:roundIcon="@mipmap/ic_launcher_round"
+30-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:16:9-54
+31        android:supportsRtl="true"
+31-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:17:9-35
+32        android:theme="@style/Theme.Gestion_Capacitaciones" >
+32-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:18:9-60
+33        <activity
+33-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:20:9-22:40
+34            android:name="com.ista.gestion_capacitaciones.UI.Modalidadctivity"
+34-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:21:13-48
+35            android:exported="false" />
+35-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:22:13-37
+36        <activity
+36-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:23:9-25:40
+37            android:name="com.ista.gestion_capacitaciones.UI.RegistroCursoActivity"
+37-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:24:13-53
+38            android:exported="false" />
+38-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:25:13-37
+39        <activity
+39-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:26:9-30:79
+40            android:name="com.ista.gestion_capacitaciones.UI.HomeActivity"
+40-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:27:13-44
+41            android:exported="false"
+41-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:28:13-37
+42            android:label="@string/title_activity_home"
+42-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:29:13-56
+43            android:theme="@style/Theme.Gestion_Capacitaciones.NoActionBar" />
+43-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:30:13-76
+44        <activity
+44-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:31:9-39:20
+45            android:name="com.ista.gestion_capacitaciones.UI.SplashActivity"
+45-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:32:13-46
+46            android:exported="true" >
+46-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:33:13-36
+47            <intent-filter>
+47-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:34:13-38:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:35:17-69
+48-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:35:25-66
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:37:17-77
+50-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:37:27-74
+51            </intent-filter>
+52        </activity>
+53        <activity
+53-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:40:9-42:40
+54            android:name="com.ista.gestion_capacitaciones.UI.ListaEstudianteActivity"
+54-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:41:13-55
+55            android:exported="false" />
+55-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:42:13-37
 56        <activity
-56-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:43:9-51:20
-57            android:name="com.ista.gestion_capacitaciones.UI.SplashActivity"
-57-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:44:13-46
-58            android:exported="true" >
-58-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:45:13-36
-59            <intent-filter>
-59-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:46:13-50:29
-60                <action android:name="android.intent.action.MAIN" />
-60-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:47:17-69
-60-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:47:25-66
-61
-62                <category android:name="android.intent.category.LAUNCHER" />
-62-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:49:17-77
-62-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:49:27-74
-63            </intent-filter>
-64        </activity>
-65        <activity
-65-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:52:9-54:40
-66            android:name="com.ista.gestion_capacitaciones.UI.ListaEstudianteActivity"
-66-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:53:13-55
-67            android:exported="false" />
-67-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:54:13-37
-68        <activity
-68-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:55:9-57:40
-69            android:name="com.ista.gestion_capacitaciones.UI.LoginActivity"
-69-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:56:13-45
-70            android:exported="false" />
-70-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:57:13-37
-71        <activity
-71-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:58:9-60:40
-72            android:name="com.ista.gestion_capacitaciones.UI.ProgramaCursosActivity"
-72-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:59:13-54
-73            android:exported="false" />
-73-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:60:13-37
-74        <activity
-74-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:61:9-69:20
-75            android:name="com.ista.gestion_capacitaciones.MainActivity"
-75-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:62:13-41
-76            android:exported="true" >
-76-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:63:13-36
-77            <intent-filter>
-77-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:46:13-50:29
-78                <action android:name="android.intent.action.MAIN" />
-78-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:47:17-69
-78-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:47:25-66
-79
-80                <category android:name="android.intent.category.LAUNCHER" />
-80-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:49:17-77
-80-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:49:27-74
-81            </intent-filter>
-82        </activity>
-83
-84        <provider
-84-->[com.squareup.picasso:picasso:2.71828] C:\Users\luisc\.gradle\caches\transforms-3\2b68ef2dc033095e007172087d35ef3b\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
-85            android:name="com.squareup.picasso.PicassoProvider"
-85-->[com.squareup.picasso:picasso:2.71828] C:\Users\luisc\.gradle\caches\transforms-3\2b68ef2dc033095e007172087d35ef3b\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
-86            android:authorities="com.ista.gestion_capacitaciones.com.squareup.picasso"
-86-->[com.squareup.picasso:picasso:2.71828] C:\Users\luisc\.gradle\caches\transforms-3\2b68ef2dc033095e007172087d35ef3b\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
-87            android:exported="false" />
-87-->[com.squareup.picasso:picasso:2.71828] C:\Users\luisc\.gradle\caches\transforms-3\2b68ef2dc033095e007172087d35ef3b\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
-88        <provider
-88-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luisc\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-89            android:name="androidx.startup.InitializationProvider"
-89-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luisc\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-90            android:authorities="com.ista.gestion_capacitaciones.androidx-startup"
-90-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luisc\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-91            android:exported="false" >
-91-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luisc\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-92            <meta-data
-92-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luisc\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-93                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-93-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luisc\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-94                android:value="androidx.startup" />
-94-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luisc\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-95            <meta-data
-95-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\luisc\.gradle\caches\transforms-3\af1c2d516b5a921a26b5da097a1ba1a1\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-96                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-96-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\luisc\.gradle\caches\transforms-3\af1c2d516b5a921a26b5da097a1ba1a1\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-97                android:value="androidx.startup" />
-97-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\luisc\.gradle\caches\transforms-3\af1c2d516b5a921a26b5da097a1ba1a1\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-98        </provider>
-99
-100        <uses-library
-100-->[androidx.window:window:1.0.0] C:\Users\luisc\.gradle\caches\transforms-3\4b1c6a66ace00c704b349b323d0e278a\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
-101            android:name="androidx.window.extensions"
-101-->[androidx.window:window:1.0.0] C:\Users\luisc\.gradle\caches\transforms-3\4b1c6a66ace00c704b349b323d0e278a\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
-102            android:required="false" />
-102-->[androidx.window:window:1.0.0] C:\Users\luisc\.gradle\caches\transforms-3\4b1c6a66ace00c704b349b323d0e278a\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
-103        <uses-library
-103-->[androidx.window:window:1.0.0] C:\Users\luisc\.gradle\caches\transforms-3\4b1c6a66ace00c704b349b323d0e278a\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
-104            android:name="androidx.window.sidecar"
-104-->[androidx.window:window:1.0.0] C:\Users\luisc\.gradle\caches\transforms-3\4b1c6a66ace00c704b349b323d0e278a\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
-105            android:required="false" />
-105-->[androidx.window:window:1.0.0] C:\Users\luisc\.gradle\caches\transforms-3\4b1c6a66ace00c704b349b323d0e278a\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
-106    </application>
-107
-108</manifest>
+56-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:43:9-45:40
+57            android:name="com.ista.gestion_capacitaciones.UI.LoginActivity"
+57-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:44:13-45
+58            android:exported="false" />
+58-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:45:13-37
+59        <activity
+59-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:46:9-48:40
+60            android:name="com.ista.gestion_capacitaciones.UI.ProgramaCursosActivity"
+60-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:47:13-54
+61            android:exported="false" />
+61-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:48:13-37
+62        <activity
+62-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:49:9-57:20
+63            android:name="com.ista.gestion_capacitaciones.MainActivity"
+63-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:50:13-41
+64            android:exported="true" >
+64-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:51:13-36
+65            <intent-filter>
+65-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:34:13-38:29
+66                <action android:name="android.intent.action.MAIN" />
+66-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:35:17-69
+66-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:35:25-66
+67
+68                <category android:name="android.intent.category.LAUNCHER" />
+68-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:37:17-77
+68-->C:\Users\luisc\Documents\GitHub\Gestion_Capacitaciones\Gestion_Capacitaciones\app\src\main\AndroidManifest.xml:37:27-74
+69            </intent-filter>
+70        </activity>
+71
+72        <provider
+72-->[com.squareup.picasso:picasso:2.71828] C:\Users\luisc\.gradle\caches\transforms-3\2b68ef2dc033095e007172087d35ef3b\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+73            android:name="com.squareup.picasso.PicassoProvider"
+73-->[com.squareup.picasso:picasso:2.71828] C:\Users\luisc\.gradle\caches\transforms-3\2b68ef2dc033095e007172087d35ef3b\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+74            android:authorities="com.ista.gestion_capacitaciones.com.squareup.picasso"
+74-->[com.squareup.picasso:picasso:2.71828] C:\Users\luisc\.gradle\caches\transforms-3\2b68ef2dc033095e007172087d35ef3b\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+75            android:exported="false" />
+75-->[com.squareup.picasso:picasso:2.71828] C:\Users\luisc\.gradle\caches\transforms-3\2b68ef2dc033095e007172087d35ef3b\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+76        <provider
+76-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luisc\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+77            android:name="androidx.startup.InitializationProvider"
+77-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luisc\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+78            android:authorities="com.ista.gestion_capacitaciones.androidx-startup"
+78-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luisc\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+79            android:exported="false" >
+79-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luisc\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+80            <meta-data
+80-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luisc\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+81                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+81-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luisc\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+82                android:value="androidx.startup" />
+82-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luisc\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+83            <meta-data
+83-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\luisc\.gradle\caches\transforms-3\af1c2d516b5a921a26b5da097a1ba1a1\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+84                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+84-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\luisc\.gradle\caches\transforms-3\af1c2d516b5a921a26b5da097a1ba1a1\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+85                android:value="androidx.startup" />
+85-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\luisc\.gradle\caches\transforms-3\af1c2d516b5a921a26b5da097a1ba1a1\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+86        </provider>
+87
+88        <uses-library
+88-->[androidx.window:window:1.0.0] C:\Users\luisc\.gradle\caches\transforms-3\4b1c6a66ace00c704b349b323d0e278a\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+89            android:name="androidx.window.extensions"
+89-->[androidx.window:window:1.0.0] C:\Users\luisc\.gradle\caches\transforms-3\4b1c6a66ace00c704b349b323d0e278a\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+90            android:required="false" />
+90-->[androidx.window:window:1.0.0] C:\Users\luisc\.gradle\caches\transforms-3\4b1c6a66ace00c704b349b323d0e278a\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+91        <uses-library
+91-->[androidx.window:window:1.0.0] C:\Users\luisc\.gradle\caches\transforms-3\4b1c6a66ace00c704b349b323d0e278a\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+92            android:name="androidx.window.sidecar"
+92-->[androidx.window:window:1.0.0] C:\Users\luisc\.gradle\caches\transforms-3\4b1c6a66ace00c704b349b323d0e278a\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+93            android:required="false" />
+93-->[androidx.window:window:1.0.0] C:\Users\luisc\.gradle\caches\transforms-3\4b1c6a66ace00c704b349b323d0e278a\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+94    </application>
+95
+96</manifest>

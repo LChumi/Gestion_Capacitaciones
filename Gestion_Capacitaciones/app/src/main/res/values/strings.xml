@@ -82,7 +82,7 @@
     <!-- alerts -->
     <string name="toastError">Ocurrio un Problema</string>
     <string name="toastOk">Bienvenido</string>
-    
+
     <!-- text field value  -->
     <string name="valueUsuario">Usuario</string>
     <string name="valueCodigoCurso">CodigoCurso</string>

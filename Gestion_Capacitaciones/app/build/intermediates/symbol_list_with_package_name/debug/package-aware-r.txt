@@ -2996,6 +2996,7 @@ drawable ic_search_black_24
 drawable ic_usuario
 drawable icon_grade_black
 drawable icon_grade_white
+drawable icon_jornada
 drawable img_docentes
 drawable img_inicio
 drawable img_institucion
@@ -3538,6 +3539,7 @@ id progress_horizontal
 id radio
 id ratio
 id rcvCursosPrograma
+id rcvHorarios
 id rcvMisCursos
 id rectangles
 id reverseSawtooth
@@ -3720,6 +3722,7 @@ id txtModalidad
 id txtNivelD
 id txtNivelInstruccion
 id txtNombreCurso
+id txtNombreHorario
 id txtNombres
 id txtNombresP
 id txtPassword
@@ -3886,6 +3889,7 @@ layout activity_home
 layout activity_lista_estudiante
 layout activity_login
 layout activity_main
+layout activity_modalidadctivity
 layout activity_programa_cursos
 layout activity_registro_curso
 layout activity_splash
@@ -3912,6 +3916,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout elemenstos_programa_cursos
 layout elemento_curos_programa
+layout elemento_jornada
 layout elemnto_lista_estudiantes
 layout fragment_inicio
 layout fragment_miscursos

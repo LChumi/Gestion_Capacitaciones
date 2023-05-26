@@ -34,6 +34,7 @@ import retrofit2.Response;
 
 public class MisCursosViewModel extends AndroidViewModel {
 
+    private MutableLiveData<List<Participante>> participanteLiveData=new MutableLiveData<>();
     private ParticipanteApiClient participanteApi;
 
     public MisCursosViewModel(@NonNull Application application) {
@@ -81,6 +82,27 @@ public class MisCursosViewModel extends AndroidViewModel {
             }
         });
         return liveData;
+    }
+
+    public LiveData<List<Participante>> listaAsistenciasByHorario(Long idCurso,Long idHorario){
+        ParticipanteApiClient apiClient=new ParticipanteApiClient();
+        Call<List<Participante>> call=apiClient.getListByHorario(idCurso, idHorario);
+        call.enqueue(new Callback<List<Participante>>() {
+            @Override
+            public void onResponse(Call<List<Participante>> call, Response<List<Participante>> response) {
+                if (response.isSuccessful()){
+                    participanteLiveData.setValue(response.body());
+                }else{
+                    participanteLiveData.setValue(new ArrayList<>());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Participante>> call, Throwable t) {
+                participanteLiveData.setValue(new ArrayList<>());
+            }
+        });
+        return participanteLiveData;
     }
 
 }

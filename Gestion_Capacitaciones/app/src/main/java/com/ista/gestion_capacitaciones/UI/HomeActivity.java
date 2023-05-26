@@ -17,6 +17,7 @@ package com.ista.gestion_capacitaciones.UI;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -61,9 +62,13 @@ public class HomeActivity extends AppCompatActivity {
         binding.appBarHome.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
+                String phoneNumber = "0995363076"; // +593 99 536 3076
+                Uri uri = Uri.parse("tel:" + phoneNumber);
+                String url = "https://wa.me/+593995363076";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+                 }
         });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
@@ -103,9 +108,6 @@ public class HomeActivity extends AppCompatActivity {
             Log.i(personaDTO.getPer_apellidos(),"dato");
             Log.i(personaDTO.getPer_correo(),"dato");
 
-        } else {
-            txtNombre.setText("Not Found");
-            txtDesc.setText("Not Found");
         }
     }
 
