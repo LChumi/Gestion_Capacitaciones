@@ -108,6 +108,7 @@
     <string name="valueActividadInstitucion">Actividad de la Isntitucion</string>
     <string name="valueElCursoAuspiciado">¿El curso es auspiciado por la Institucion?</string>
     <string name="ValueComoDescubrio">¿Como se entero del curso?</string>
+    <string name="ValueNombreAuspicinate">Indique el nombre de Auspiciante</string>
     <string name="ValueCursosSeguir">¿Que otros cursos le gustaria seguir?</string>
 
 </resources>

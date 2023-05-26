@@ -40,7 +40,7 @@ public class RegistroUtil {
 
     public static FichaInscripcion fichaInscripcion;
 
-    public  void guardarFichaEnApi(FichaInscripcion f){
+    public  void guardarFichaEnApi(FichaInscripcion f,Long idPerson,Long idCurso,Long idHorario){
         Log.i("Llegada",f.toString());
         f.setFinEstado(true);
         f.setFinAprobacion(0);
@@ -50,7 +50,7 @@ public class RegistroUtil {
             @Override
             public void onResponse(Call<FichaInscripcion> call, Response<FichaInscripcion> response) {
                 if (response.isSuccessful()){
-                    Log.i("Datos","Datos guardadosCorrectamente");
+                    addDependencies(idPerson,idCurso,idHorario,response.body().getFinId());
                 }else{
                     Log.e("Error","Error al guardar la ficha"+response.toString());
                 }
@@ -61,4 +61,24 @@ public class RegistroUtil {
             }
         });
     }
+
+    public void addDependencies(Long idPersona,Long idCurso,Long idHorario,Long idFicha){
+        FichaInscripcionApiClient apiClient=new FichaInscripcionApiClient();
+        Call<FichaInscripcion> call=apiClient.saveByIds(idPersona,idCurso,idHorario,idFicha);
+        call.enqueue(new Callback<FichaInscripcion>() {
+            @Override
+            public void onResponse(Call<FichaInscripcion> call, Response<FichaInscripcion> response) {
+                if (response.isSuccessful()){
+                    Log.i("Exito","Datos asignados");
+                }else{
+                    Log.e("Error","Error al asignar"+response.toString());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<FichaInscripcion> call, Throwable t) {
+                Log.e("ERROR","Error al guardar"+t.getMessage());
+            }
+        });
+;    }
 }

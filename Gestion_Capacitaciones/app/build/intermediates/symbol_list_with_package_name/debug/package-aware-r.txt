@@ -3316,6 +3316,7 @@ id edtCursosSeguir
 id edtDireccionInst
 id edtDirecciónD
 id edtEmailD
+id edtNombreAus
 id edtNumFaltas
 id edtNumeroInstitucional
 id edtTelefonoD
@@ -3997,6 +3998,7 @@ string Tecazuay
 string ValueCargo
 string ValueComoDescubrio
 string ValueCursosSeguir
+string ValueNombreAuspicinate
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

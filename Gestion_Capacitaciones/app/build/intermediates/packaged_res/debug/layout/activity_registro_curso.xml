@@ -464,23 +464,6 @@
                                             android:hint="@string/ValueCursosSeguir"
                                             android:textSize="14dp" />
                                     </com.google.android.material.textfield.TextInputLayout>
-                                </LinearLayout>
-                            </ScrollView>
-                        </com.google.android.material.card.MaterialCardView>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-                            <com.google.android.material.card.MaterialCardView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                app:cardCornerRadius="10dp"
-                                android:layout_margin="5dp"
-                                android:elevation="5dp">
-                                <ScrollView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:padding="10dp">
                                     <com.google.android.material.textfield.TextInputLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
@@ -495,8 +478,33 @@
                                             android:textSize="10dp"
                                             android:inputType="none"/>
                                     </com.google.android.material.textfield.TextInputLayout>
-                                </ScrollView>
-                            </com.google.android.material.card.MaterialCardView>
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:fontFamily="@font/san_francisco"
+                                        android:textSize="10dp" >
+                                        <EditText
+                                            android:id="@+id/edtNombreAus"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/san_francisco"
+                                            android:hint="@string/ValueNombreAuspicinate"
+                                            android:textSize="14dp" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+                            </ScrollView>
+                        </com.google.android.material.card.MaterialCardView>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/valueHorarios">
+
+                            </TextView>
                             <com.google.android.material.card.MaterialCardView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

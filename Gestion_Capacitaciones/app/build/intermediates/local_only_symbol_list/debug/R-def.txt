@@ -131,6 +131,7 @@ id edtCursosSeguir
 id edtDireccionInst
 id edtDirecciónD
 id edtEmailD
+id edtNombreAus
 id edtNumFaltas
 id edtNumeroInstitucional
 id edtTelefonoD
@@ -263,6 +264,7 @@ string Tecazuay
 string ValueCargo
 string ValueComoDescubrio
 string ValueCursosSeguir
+string ValueNombreAuspicinate
 string action_settings
 string app_copyright
 string app_name

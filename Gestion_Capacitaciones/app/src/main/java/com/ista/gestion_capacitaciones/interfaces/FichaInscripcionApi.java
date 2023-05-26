@@ -43,4 +43,7 @@ public interface FichaInscripcionApi {
 
     @PUT("/api/FichaInscripcion/actualizar/{id}")
     Call<FichaInscripcion> actualizar(@Path("id")Long id,@Body FichaInscripcion fichaInscripcion);
+
+    @POST("/api/FichaInscripcion/crearByIds/{idPersona}/{idCurso}/{idHorario}/{idFicha}")
+    Call<FichaInscripcion> saveByIds(@Path("idPersona")Long idPersona,@Path("idCurso")Long idCurso,@Path("idHorario")Long idHorario,@Path("idFicha")Long idFicha);
 }

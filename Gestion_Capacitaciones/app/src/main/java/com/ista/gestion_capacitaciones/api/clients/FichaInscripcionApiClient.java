@@ -61,4 +61,7 @@ public class FichaInscripcionApiClient {
     public Call<Void> eliminar(Long id){
         return fichaInscripcionApi.eliminar(id);
     }
+    public Call<FichaInscripcion> saveByIds(Long idPersona,Long idCurso,Long idHorario,Long idFicha){
+        return fichaInscripcionApi.saveByIds(idPersona,idCurso,idHorario,idFicha);
+    }
 }

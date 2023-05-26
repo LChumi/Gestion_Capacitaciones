@@ -3315,6 +3315,7 @@ int id edtCursosSeguir 0x7f0900d2
 int id edtDireccionInst 0x7f0900d3
 int id edtDirecciónD 0x7f090289
 int id edtEmailD 0x7f09028a
+int id edtNombreAus 0x7f0902a3
 int id edtNumFaltas 0x7f0900d4
 int id edtNumeroInstitucional 0x7f0900d5
 int id edtTelefonoD 0x7f09028f
@@ -3996,6 +3997,7 @@ int string Tecazuay 0x7f120005
 int string ValueCargo 0x7f1200ee
 int string ValueComoDescubrio 0x7f120006
 int string ValueCursosSeguir 0x7f120007
+int string ValueNombreAuspicinate 0x7f1200f4
 int string abc_action_bar_home_description 0x7f120008
 int string abc_action_bar_up_description 0x7f120009
 int string abc_action_menu_overflow_description 0x7f12000a

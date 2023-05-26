@@ -35,19 +35,22 @@ import com.ista.gestion_capacitaciones.model.HorarioCurso;
 import com.ista.gestion_capacitaciones.utils.RegistroUtil;
 import com.ista.gestion_capacitaciones.viewmodel.RegistroViewModel;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 public class RegistroCursoActivity extends AppCompatActivity {
 
     private RegistroViewModel registroViewModel;
     private FichaInscripcion fichaInscripcion;
     private RegistroUtil registroUtil;
     TextView txtCursoNombre, txtCodCurso,txtModalidadCurso,txtApellidos,txtCedula,txtSexo,txtTelConv,txtNombres,txtFechaNac,txtEtnia,txtCelular,txtCorreo,txtNivelIns;
-    EditText edtTrabaEst,edtDireccionInsti,edtCorreoInstitucional,edtNumeroInstitucional,edtActividadInstitu,edtComoSeEntero,edtCursoSeguir;
+    EditText edtTrabaEst,edtDireccionInsti,edtCorreoInstitucional,edtNumeroInstitucional,edtActividadInstitu,edtComoSeEntero,edtCursoSeguir,edtNombreAus;
     private SharedPreferences preferences;
     Button btnAplicar;
     String[] items = {"Si", "No"};
     AutoCompleteTextView autoCompleteTxt,autocompleteTxtHorario;
     ArrayAdapter<String> adapterItems;
     ArrayAdapter<String> adapterHorarios;
+    Long personaId,cursoId,horarioId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +101,7 @@ public class RegistroCursoActivity extends AppCompatActivity {
         edtActividadInstitu=findViewById(R.id.edtActividadInstitucion);
         edtComoSeEntero=findViewById(R.id.edtComoSeEntero);
         edtCursoSeguir=findViewById(R.id.edtCursosSeguir);
+        edtNombreAus=findViewById(R.id.edtNombreAus);
         //inicializacion de buttons
         btnAplicar=findViewById(R.id.btnAplicarCurso);
         //inicializacion de Autocompete(combobox)
@@ -123,11 +127,10 @@ public class RegistroCursoActivity extends AppCompatActivity {
 
     public void loadData(){
         Long idPer = preferences.getLong("idPer", 0);
-        Log.i("Valor",String.valueOf(idPer));
         Long idCurso= getIntent().getLongExtra("idCurso",0);
-        Log.i("CursoId",String.valueOf(idCurso));
         registroViewModel.getCurso(idCurso).observe(this,curso -> {
             if (curso!=null){
+                cursoId=curso.getCurId();
                 fichaInscripcion.setFinCurso(curso);
                 txtCursoNombre.setText(curso.getCurNombre());
                 txtCodCurso.setText(curso.getCurCodigo());
@@ -145,13 +148,14 @@ public class RegistroCursoActivity extends AppCompatActivity {
                 autocompleteTxtHorario.setOnItemClickListener((adapterView, view, position, id) -> {
                     HorarioCurso selectedHorario = horarioCursos.get(position); // Obtener el objeto HorarioCurso seleccionado
                     Long selectedId = selectedHorario.getHcuId();
-                    Log.i("IDHorario",String.valueOf(selectedId));
+                    horarioId=selectedId;
                     fichaInscripcion.setFinHorario(selectedHorario);
                 });
             }
         });
         registroViewModel.getPersona(idPer).observe(this,persona -> {
             if (persona!=null){
+                personaId=persona.getId_persona();
                 fichaInscripcion.setFinPersona(persona);
                 txtApellidos.setText(persona.getApellido());
                 txtCedula.setText(persona.getCedula());
@@ -167,19 +171,28 @@ public class RegistroCursoActivity extends AppCompatActivity {
         });
 
         btnAplicar.setOnClickListener(v -> {
-            fichaInscripcion.setFinId(0L);
-            fichaInscripcion.setFinAprobacion(0);
-            fichaInscripcion.setFinInstituciontraest("Ista");
-            fichaInscripcion.setFinEstado(true);
-            fichaInscripcion.setFinNombreauspicia("");
-            fichaInscripcion.setFinActividadinst(edtActividadInstitu.getText().toString());
-            fichaInscripcion.setFinDireccioninst(edtDireccionInsti.getText().toString());
-            fichaInscripcion.setFinCorreoinst(edtCorreoInstitucional.getText().toString());
-            fichaInscripcion.setFinTelefonoinst(edtNumeroInstitucional.getText().toString());
-            fichaInscripcion.setFinComoentero(edtComoSeEntero.getText().toString());
-            fichaInscripcion.setFinOtroscursosdesea(edtCursoSeguir.getText().toString());
-            Log.i("Dato",fichaInscripcion.toString());
-            registroUtil.guardarFichaEnApi(fichaInscripcion);
+
+            new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
+                    .setTitleText("Información")
+                    .setContentText("Se ha registrado a este curso")
+                    .setConfirmText("Aceptar")
+                    .setConfirmClickListener(sweetAlertDialog -> {
+                        fichaInscripcion.setFinId(0L);
+                        fichaInscripcion.setFinAprobacion(0);
+                        fichaInscripcion.setFinInstituciontraest("Ista");
+                        fichaInscripcion.setFinEstado(true);
+                        fichaInscripcion.setFinNombreauspicia(edtNombreAus.getText().toString());
+                        fichaInscripcion.setFinActividadinst(edtActividadInstitu.getText().toString());
+                        fichaInscripcion.setFinDireccioninst(edtDireccionInsti.getText().toString());
+                        fichaInscripcion.setFinCorreoinst(edtCorreoInstitucional.getText().toString());
+                        fichaInscripcion.setFinTelefonoinst(edtNumeroInstitucional.getText().toString());
+                        fichaInscripcion.setFinComoentero(edtComoSeEntero.getText().toString());
+                        fichaInscripcion.setFinOtroscursosdesea(edtCursoSeguir.getText().toString());
+                        Log.i("Dato",fichaInscripcion.toString());
+                        registroUtil.guardarFichaEnApi(fichaInscripcion,personaId,cursoId,horarioId);
+                        finish(); // Ejemplo: cerrar la actividad actual
+                    })
+                    .show();
         });
 
 

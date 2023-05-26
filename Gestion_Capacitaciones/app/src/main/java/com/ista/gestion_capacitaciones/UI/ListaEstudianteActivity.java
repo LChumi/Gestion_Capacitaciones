@@ -104,7 +104,7 @@ public class ListaEstudianteActivity extends AppCompatActivity {
     }
 
     public void alert(){
-        new SweetAlertDialog(this,SweetAlertDialog.WARNING_TYPE).setTitleText("Guardar la lista de asistencias")
+        new SweetAlertDialog(this,SweetAlertDialog.SUCCESS_TYPE).setTitleText("Guardar la lista de asistencias")
                 .setContentText("Desea guardar la lista de asistencia ?")
                 .setCancelText("No, Cancelar!").setConfirmText("Si, Guardar")
                 .showCancelButton(true).setCancelClickListener(sDialog ->{

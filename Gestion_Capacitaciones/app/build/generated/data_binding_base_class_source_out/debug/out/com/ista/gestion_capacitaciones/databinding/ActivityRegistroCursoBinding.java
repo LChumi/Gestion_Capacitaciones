@@ -56,6 +56,9 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
   public final EditText edtDireccionInst;
 
   @NonNull
+  public final EditText edtNombreAus;
+
+  @NonNull
   public final EditText edtNumeroInstitucional;
 
   @NonNull
@@ -148,11 +151,11 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
       @NonNull Button btnAplicarCurso, @NonNull EditText edtActividadInstitucion,
       @NonNull EditText edtComoSeEntero, @NonNull EditText edtCorreoInsti,
       @NonNull EditText edtCursosSeguir, @NonNull EditText edtDireccionInst,
-      @NonNull EditText edtNumeroInstitucional, @NonNull EditText edtTrabajoEst,
-      @NonNull ImageView imgCurso, @NonNull Toolbar toolbar, @NonNull TextView txtApellidos,
-      @NonNull TextView txtCedula, @NonNull TextView txtCelular, @NonNull TextView txtCodCurso,
-      @NonNull TextView txtCorreo, @NonNull TextView txtCursoNombre, @NonNull TextView txtEtnia,
-      @NonNull TextView txtFechaNac, @NonNull TextView txtModalidad,
+      @NonNull EditText edtNombreAus, @NonNull EditText edtNumeroInstitucional,
+      @NonNull EditText edtTrabajoEst, @NonNull ImageView imgCurso, @NonNull Toolbar toolbar,
+      @NonNull TextView txtApellidos, @NonNull TextView txtCedula, @NonNull TextView txtCelular,
+      @NonNull TextView txtCodCurso, @NonNull TextView txtCorreo, @NonNull TextView txtCursoNombre,
+      @NonNull TextView txtEtnia, @NonNull TextView txtFechaNac, @NonNull TextView txtModalidad,
       @NonNull TextView txtNivelInstruccion, @NonNull TextView txtNombres,
       @NonNull TextView txtSexo, @NonNull TextView txtTelConv, @NonNull TextView viewApellidos,
       @NonNull TextView viewCedula, @NonNull TextView viewCelular,
@@ -171,6 +174,7 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
     this.edtCorreoInsti = edtCorreoInsti;
     this.edtCursosSeguir = edtCursosSeguir;
     this.edtDireccionInst = edtDireccionInst;
+    this.edtNombreAus = edtNombreAus;
     this.edtNumeroInstitucional = edtNumeroInstitucional;
     this.edtTrabajoEst = edtTrabajoEst;
     this.imgCurso = imgCurso;
@@ -286,6 +290,12 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
       id = R.id.edtDireccionInst;
       EditText edtDireccionInst = ViewBindings.findChildViewById(rootView, id);
       if (edtDireccionInst == null) {
+        break missingId;
+      }
+
+      id = R.id.edtNombreAus;
+      EditText edtNombreAus = ViewBindings.findChildViewById(rootView, id);
+      if (edtNombreAus == null) {
         break missingId;
       }
 
@@ -465,7 +475,7 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
 
       return new ActivityRegistroCursoBinding((LinearLayout) rootView, FichaInscripcion,
           autocompleteTxt, autocompleteTxtHorario, bar, btnAplicarCurso, edtActividadInstitucion,
-          edtComoSeEntero, edtCorreoInsti, edtCursosSeguir, edtDireccionInst,
+          edtComoSeEntero, edtCorreoInsti, edtCursosSeguir, edtDireccionInst, edtNombreAus,
           edtNumeroInstitucional, edtTrabajoEst, imgCurso, toolbar, txtApellidos, txtCedula,
           txtCelular, txtCodCurso, txtCorreo, txtCursoNombre, txtEtnia, txtFechaNac, txtModalidad,
           txtNivelInstruccion, txtNombres, txtSexo, txtTelConv, viewApellidos, viewCedula,
