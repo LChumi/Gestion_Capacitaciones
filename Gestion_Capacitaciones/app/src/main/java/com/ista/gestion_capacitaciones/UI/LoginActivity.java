@@ -96,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
         long idRol = preferences.getLong("idRol", 0);
 
         if (!username.isEmpty() && !password.isEmpty() && idPer != 0 && idRol != 0) {
-            toastCorrecto("Sesion Activa: ");
+            toastCorrecto("Bienvenido");
             inicio(idPer);
             overridePendingTransition(R.anim.left_in, R.anim.left_out);
         }
@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putLong("idPer", user.getPer_id());
                     editor.putLong("idRol", user.getRol_id());
                     editor.apply();
-                    toastCorrecto("Correcto");
+                    toastCorrecto("Bienvenido");
                     inicio(user.getPer_id());
 
             } else {
@@ -146,7 +146,7 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putLong("idPer", usuario.getPersona().getId_persona());
                     editor.putLong("idRol", usuario.getRol().getId_rol());
                     editor.apply();
-                    toastCorrecto("Correcto");
+                    toastCorrecto("Bienvenido");
 
                     DbPersona dbPersona = new DbPersona(LoginActivity.this);
                     DbUsuarios dbUsuarios = new DbUsuarios(LoginActivity.this);
