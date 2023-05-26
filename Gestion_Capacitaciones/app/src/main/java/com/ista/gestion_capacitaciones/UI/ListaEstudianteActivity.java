@@ -21,8 +21,10 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -104,29 +106,40 @@ public class ListaEstudianteActivity extends AppCompatActivity {
     }
 
     public void alert(){
-        new SweetAlertDialog(this,SweetAlertDialog.SUCCESS_TYPE).setTitleText("Guardar la lista de asistencias")
-                .setContentText("Desea guardar la lista de asistencia ?")
-                .setCancelText("No, Cancelar!").setConfirmText("Si, Guardar")
-                .showCancelButton(true).setCancelClickListener(sDialog ->{
-                    sDialog.dismissWithAnimation();
-                    new SweetAlertDialog(this,SweetAlertDialog.ERROR_TYPE).setTitleText("Operacion cancelada")
-                            .setContentText("No se guardo las asistencias")
-                            .show();
-                }).setConfirmClickListener(sweetAlertDialog -> {
-                    sweetAlertDialog.dismissWithAnimation();
-                    try {
-                        String resultado = AsistenciaUtil.agregarAsistencias(participanteList, numFaltas);
-                        Log.i(resultado, resultado);
-                        this.finish();
-                        this.overridePendingTransition(R.anim.rigth_in,R.anim.rigth_out);
-                        Intent regresar = new Intent(this, HomeActivity.class);
-                        startActivity(regresar);
-                    } catch (Exception e) {
-                        // Manejar la excepción o imprimir un mensaje de error
-                        e.printStackTrace();
-                        Log.e("Error", "Error al guardar las asistencias: " + e.getMessage());
+        ProgressDialog progressDialog = ProgressDialog.show(this, "", "Guardando lista de asistencias...", true);
+        progressDialog.setCancelable(false);
 
-                    }
-                }).show();
+        new Handler().postDelayed(() -> {
+            progressDialog.dismiss();
+
+            new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
+                    .setTitleText("Guardar la lista de asistencias")
+                    .setContentText("Desea guardar la lista de asistencia ?")
+                    .setCancelText("No, Cancelar!")
+                    .setConfirmText("Si, Guardar")
+                    .showCancelButton(true)
+                    .setCancelClickListener(sDialog -> {
+                        sDialog.dismissWithAnimation();
+                        new SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                                .setTitleText("Operacion cancelada")
+                                .setContentText("No se guardo las asistencias")
+                                .show();
+                    })
+                    .setConfirmClickListener(sweetAlertDialog -> {
+                        sweetAlertDialog.dismissWithAnimation();
+                        try {
+                            String resultado = AsistenciaUtil.agregarAsistencias(participanteList, numFaltas);
+                            Log.i(resultado, resultado);
+                            this.overridePendingTransition(R.anim.rigth_in, R.anim.rigth_out);
+                            Intent regresar = new Intent(this, HomeActivity.class);
+                            startActivity(regresar);
+                            finish();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            Log.e("Error", "Error al guardar las asistencias: " + e.getMessage());
+                        }
+                    })
+                    .show();
+        }, 2000); // Simula un tiempo de espera de 2 segundos antes de mostrar el cuadro de diálogo de éxito
     }
 }

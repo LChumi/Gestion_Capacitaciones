@@ -26,6 +26,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -231,7 +232,8 @@ public class LoginActivity extends AppCompatActivity {
         boolean esValido = true;
         TextInputLayout[] campos = {txtInputUsuario, txtInputPassword};
         for (TextInputLayout campo : campos) {
-            String valor = campo.getEditText().getText().toString();
+            EditText editText = campo.getEditText();
+            String valor = editText.getText().toString();
             if (valor.isEmpty()) {
                 campo.setError("Este campo es obligatorio");
                 campo.setErrorEnabled(true);
@@ -240,9 +242,16 @@ public class LoginActivity extends AppCompatActivity {
                 campo.setError(null);
                 campo.setErrorEnabled(false);
             }
+
+            editText.setOnTouchListener((v, event) -> {
+                campo.setError(null);
+                campo.setErrorEnabled(false);
+                return false;
+            });
         }
         return esValido;
     }
+
 
     private void inicio(Long idpersona) {
         Intent inicio = new Intent(this, HomeActivity.class);

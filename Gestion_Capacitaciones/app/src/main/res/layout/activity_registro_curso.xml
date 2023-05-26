@@ -366,6 +366,7 @@
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical">
                                     <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/txtInputTrabajoEst"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
@@ -380,6 +381,7 @@
                                             android:textSize="14dp" />
                                     </com.google.android.material.textfield.TextInputLayout>
                                     <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/txtInputDireccionInst"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
@@ -394,6 +396,7 @@
                                             android:textSize="14dp" />
                                     </com.google.android.material.textfield.TextInputLayout>
                                     <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/txtInputCorreoInsti"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
@@ -409,6 +412,7 @@
                                             android:textSize="14dp" />
                                     </com.google.android.material.textfield.TextInputLayout>
                                     <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/txtInputNumeroInstitucional"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
@@ -420,9 +424,11 @@
                                             android:layout_height="wrap_content"
                                             android:fontFamily="@font/san_francisco"
                                             android:hint="@string/valueNroTelefonoInstitucion"
-                                            android:textSize="14dp" />
+                                            android:textSize="14dp"
+                                            android:inputType="number"/>
                                     </com.google.android.material.textfield.TextInputLayout>
                                     <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/txtInputActividadInstitucion"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
@@ -437,6 +443,7 @@
                                             android:textSize="14dp" />
                                     </com.google.android.material.textfield.TextInputLayout>
                                     <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/txtInputComoSeEntero"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
@@ -451,6 +458,7 @@
                                             android:textSize="14dp" />
                                     </com.google.android.material.textfield.TextInputLayout>
                                     <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/txtInputCursosSeguir"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
@@ -465,6 +473,7 @@
                                             android:textSize="14dp" />
                                     </com.google.android.material.textfield.TextInputLayout>
                                     <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/txtInputAutocomplete"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="16dp"
@@ -479,6 +488,7 @@
                                             android:inputType="none"/>
                                     </com.google.android.material.textfield.TextInputLayout>
                                     <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/txtInputNombreAus"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
@@ -516,6 +526,7 @@
                                     android:layout_height="wrap_content"
                                     android:padding="10dp">
                                     <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/txtInputHorario"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="16dp"

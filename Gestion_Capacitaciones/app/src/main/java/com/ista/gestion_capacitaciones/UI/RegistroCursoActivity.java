@@ -19,8 +19,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.ArrayAdapter;
@@ -29,6 +32,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.ista.gestion_capacitaciones.R;
 import com.ista.gestion_capacitaciones.model.FichaInscripcion;
 import com.ista.gestion_capacitaciones.model.HorarioCurso;
@@ -43,6 +47,7 @@ public class RegistroCursoActivity extends AppCompatActivity {
     private FichaInscripcion fichaInscripcion;
     private RegistroUtil registroUtil;
     TextView txtCursoNombre, txtCodCurso,txtModalidadCurso,txtApellidos,txtCedula,txtSexo,txtTelConv,txtNombres,txtFechaNac,txtEtnia,txtCelular,txtCorreo,txtNivelIns;
+    TextInputLayout txtInputTrabaEst,txtInputDireccionInsti,txtInputCorreoInstitucional,txtInputNumeroInstitucional,txtInputActividadInstitu,txtInputComoSeEntero,txtInputCursoSeguir,txtInputNombreAus,txtInputHorario,txtInputAutocomplete;
     EditText edtTrabaEst,edtDireccionInsti,edtCorreoInstitucional,edtNumeroInstitucional,edtActividadInstitu,edtComoSeEntero,edtCursoSeguir,edtNombreAus;
     private SharedPreferences preferences;
     Button btnAplicar;
@@ -93,6 +98,17 @@ public class RegistroCursoActivity extends AppCompatActivity {
         txtCelular=findViewById(R.id.txtCelular);
         txtCorreo=findViewById(R.id.txtCorreo);
         txtNivelIns=findViewById(R.id.txtNivelInstruccion);
+        //inicializacion de textInputs
+        txtInputTrabaEst=findViewById(R.id.txtInputTrabajoEst);
+        txtInputDireccionInsti=findViewById(R.id.txtInputDireccionInst);
+        txtInputCorreoInstitucional=findViewById(R.id.txtInputCorreoInsti);
+        txtInputNumeroInstitucional=findViewById(R.id.txtInputNumeroInstitucional);
+        txtInputActividadInstitu=findViewById(R.id.txtInputActividadInstitucion);
+        txtInputComoSeEntero=findViewById(R.id.txtInputComoSeEntero);
+        txtInputCursoSeguir=findViewById(R.id.txtInputCursosSeguir);
+        txtInputNombreAus=findViewById(R.id.txtInputNombreAus);
+        txtInputHorario=findViewById(R.id.txtInputHorario);
+        txtInputAutocomplete=findViewById(R.id.txtInputAutocomplete);
         //inicializacion de editText
         edtTrabaEst=findViewById(R.id.edtTrabajoEst);
         edtDireccionInsti=findViewById(R.id.edtDireccionInst);
@@ -170,13 +186,14 @@ public class RegistroCursoActivity extends AppCompatActivity {
             }
         });
 
-        btnAplicar.setOnClickListener(v -> {
 
-            new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
-                    .setTitleText("Información")
-                    .setContentText("Se ha registrado a este curso")
-                    .setConfirmText("Aceptar")
-                    .setConfirmClickListener(sweetAlertDialog -> {
+        btnAplicar.setOnClickListener(v -> {
+            if (validar()) {
+                ProgressDialog progressDialog = ProgressDialog.show(this, "", "Registrando curso...", true);
+                progressDialog.setCancelable(false);
+
+                new Handler().postDelayed(() -> {
+                    if (!isFinishing()){
                         fichaInscripcion.setFinId(0L);
                         fichaInscripcion.setFinAprobacion(0);
                         fichaInscripcion.setFinInstituciontraest("Ista");
@@ -190,12 +207,71 @@ public class RegistroCursoActivity extends AppCompatActivity {
                         fichaInscripcion.setFinOtroscursosdesea(edtCursoSeguir.getText().toString());
                         Log.i("Dato",fichaInscripcion.toString());
                         registroUtil.guardarFichaEnApi(fichaInscripcion,personaId,cursoId,horarioId);
-                        finish(); // Ejemplo: cerrar la actividad actual
-                    })
-                    .show();
+
+                    }
+
+
+                    progressDialog.dismiss();
+
+                    new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
+                            .setTitleText("Información")
+                            .setContentText("Se ha registrado a este curso")
+                            .setConfirmText("Aceptar")
+                            .setConfirmClickListener(sweetAlertDialog -> {
+                                // Código adicional después de aceptar
+                                this.overridePendingTransition(R.anim.rigth_in, R.anim.rigth_out);
+                                Intent regresar = new Intent(this, HomeActivity.class);
+                                startActivity(regresar);
+                            })
+                            .show();
+                }, 2000); // Simula un tiempo de espera de 2 segundos antes de registrar el curso y mostrar el diálogo de éxito
+            }
         });
 
 
+    }
+    private boolean validar(){
+        boolean estado=true;
+        TextInputLayout[] campos={txtInputTrabaEst,txtInputDireccionInsti,txtInputComoSeEntero,txtInputCorreoInstitucional,txtInputNumeroInstitucional,txtInputActividadInstitu,txtInputCursoSeguir,txtInputNombreAus};
+        for(TextInputLayout campo:campos){
+            EditText editText=campo.getEditText();
+            String valor =editText.getText().toString();
+            if (valor.isEmpty()){
+                campo.setError("Este campo es obligatorio");
+                campo.setErrorEnabled(true);
+                estado=false;
+            }else {
+                campo.setError(null);
+                campo.setErrorEnabled(false);
+            }
+            editText.setOnTouchListener((v,event)->{
+                campo.setError(null);
+                campo.setErrorEnabled(false);
+                return false;
+            });
+        }
+        String horarioSeleccionado = autocompleteTxtHorario.getText().toString();
+        if (horarioSeleccionado.isEmpty()) {
+            // Mostrar error en el autocompletado de horarios
+            autocompleteTxtHorario.setError("Seleccione un horario");
+            estado = false;
+        } else {
+            // No hay error, limpiar el error en el autocompletado de horarios
+            autocompleteTxtHorario.setError(null);
+        }
+
+        // Validación del autocompletado de opciones
+        String opcionSeleccionada = autoCompleteTxt.getText().toString();
+        if (opcionSeleccionada.isEmpty()) {
+            // Mostrar error en el autocompletado de opciones
+            autoCompleteTxt.setError("Seleccione una opción");
+            estado = false;
+        } else {
+            // No hay error, limpiar el error en el autocompletado de opciones
+            autoCompleteTxt.setError(null);
+        }
+
+        return estado;
     }
 
 }

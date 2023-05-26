@@ -3701,7 +3701,17 @@ int id txtEtniaD 0x7f090295
 int id txtFechaD 0x7f090296
 int id txtFechaNac 0x7f090249
 int id txtGeneroD 0x7f090297
+int id txtInputActividadInstitucion 0x7f0902a4
+int id txtInputAutocomplete 0x7f0902a5
+int id txtInputComoSeEntero 0x7f0902a6
+int id txtInputCorreoInsti 0x7f0902a7
+int id txtInputCursosSeguir 0x7f0902a8
+int id txtInputDireccionInst 0x7f0902a9
+int id txtInputHorario 0x7f0902aa
+int id txtInputNombreAus 0x7f0902ab
+int id txtInputNumeroInstitucional 0x7f0902ac
 int id txtInputPassword 0x7f09024b
+int id txtInputTrabajoEst 0x7f0902ad
 int id txtInputUsuario 0x7f09024c
 int id txtMensajeErr 0x7f09024d
 int id txtMensajeOk 0x7f09024e

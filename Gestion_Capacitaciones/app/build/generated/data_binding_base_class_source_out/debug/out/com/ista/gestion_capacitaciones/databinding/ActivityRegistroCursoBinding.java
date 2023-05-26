@@ -16,6 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.textfield.TextInputLayout;
 import com.ista.gestion_capacitaciones.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -95,6 +96,36 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
   public final TextView txtFechaNac;
 
   @NonNull
+  public final TextInputLayout txtInputActividadInstitucion;
+
+  @NonNull
+  public final TextInputLayout txtInputAutocomplete;
+
+  @NonNull
+  public final TextInputLayout txtInputComoSeEntero;
+
+  @NonNull
+  public final TextInputLayout txtInputCorreoInsti;
+
+  @NonNull
+  public final TextInputLayout txtInputCursosSeguir;
+
+  @NonNull
+  public final TextInputLayout txtInputDireccionInst;
+
+  @NonNull
+  public final TextInputLayout txtInputHorario;
+
+  @NonNull
+  public final TextInputLayout txtInputNombreAus;
+
+  @NonNull
+  public final TextInputLayout txtInputNumeroInstitucional;
+
+  @NonNull
+  public final TextInputLayout txtInputTrabajoEst;
+
+  @NonNull
   public final TextView txtModalidad;
 
   @NonNull
@@ -155,7 +186,14 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
       @NonNull EditText edtTrabajoEst, @NonNull ImageView imgCurso, @NonNull Toolbar toolbar,
       @NonNull TextView txtApellidos, @NonNull TextView txtCedula, @NonNull TextView txtCelular,
       @NonNull TextView txtCodCurso, @NonNull TextView txtCorreo, @NonNull TextView txtCursoNombre,
-      @NonNull TextView txtEtnia, @NonNull TextView txtFechaNac, @NonNull TextView txtModalidad,
+      @NonNull TextView txtEtnia, @NonNull TextView txtFechaNac,
+      @NonNull TextInputLayout txtInputActividadInstitucion,
+      @NonNull TextInputLayout txtInputAutocomplete, @NonNull TextInputLayout txtInputComoSeEntero,
+      @NonNull TextInputLayout txtInputCorreoInsti, @NonNull TextInputLayout txtInputCursosSeguir,
+      @NonNull TextInputLayout txtInputDireccionInst, @NonNull TextInputLayout txtInputHorario,
+      @NonNull TextInputLayout txtInputNombreAus,
+      @NonNull TextInputLayout txtInputNumeroInstitucional,
+      @NonNull TextInputLayout txtInputTrabajoEst, @NonNull TextView txtModalidad,
       @NonNull TextView txtNivelInstruccion, @NonNull TextView txtNombres,
       @NonNull TextView txtSexo, @NonNull TextView txtTelConv, @NonNull TextView viewApellidos,
       @NonNull TextView viewCedula, @NonNull TextView viewCelular,
@@ -187,6 +225,16 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
     this.txtCursoNombre = txtCursoNombre;
     this.txtEtnia = txtEtnia;
     this.txtFechaNac = txtFechaNac;
+    this.txtInputActividadInstitucion = txtInputActividadInstitucion;
+    this.txtInputAutocomplete = txtInputAutocomplete;
+    this.txtInputComoSeEntero = txtInputComoSeEntero;
+    this.txtInputCorreoInsti = txtInputCorreoInsti;
+    this.txtInputCursosSeguir = txtInputCursosSeguir;
+    this.txtInputDireccionInst = txtInputDireccionInst;
+    this.txtInputHorario = txtInputHorario;
+    this.txtInputNombreAus = txtInputNombreAus;
+    this.txtInputNumeroInstitucional = txtInputNumeroInstitucional;
+    this.txtInputTrabajoEst = txtInputTrabajoEst;
     this.txtModalidad = txtModalidad;
     this.txtNivelInstruccion = txtNivelInstruccion;
     this.txtNombres = txtNombres;
@@ -371,6 +419,66 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txtInputActividadInstitucion;
+      TextInputLayout txtInputActividadInstitucion = ViewBindings.findChildViewById(rootView, id);
+      if (txtInputActividadInstitucion == null) {
+        break missingId;
+      }
+
+      id = R.id.txtInputAutocomplete;
+      TextInputLayout txtInputAutocomplete = ViewBindings.findChildViewById(rootView, id);
+      if (txtInputAutocomplete == null) {
+        break missingId;
+      }
+
+      id = R.id.txtInputComoSeEntero;
+      TextInputLayout txtInputComoSeEntero = ViewBindings.findChildViewById(rootView, id);
+      if (txtInputComoSeEntero == null) {
+        break missingId;
+      }
+
+      id = R.id.txtInputCorreoInsti;
+      TextInputLayout txtInputCorreoInsti = ViewBindings.findChildViewById(rootView, id);
+      if (txtInputCorreoInsti == null) {
+        break missingId;
+      }
+
+      id = R.id.txtInputCursosSeguir;
+      TextInputLayout txtInputCursosSeguir = ViewBindings.findChildViewById(rootView, id);
+      if (txtInputCursosSeguir == null) {
+        break missingId;
+      }
+
+      id = R.id.txtInputDireccionInst;
+      TextInputLayout txtInputDireccionInst = ViewBindings.findChildViewById(rootView, id);
+      if (txtInputDireccionInst == null) {
+        break missingId;
+      }
+
+      id = R.id.txtInputHorario;
+      TextInputLayout txtInputHorario = ViewBindings.findChildViewById(rootView, id);
+      if (txtInputHorario == null) {
+        break missingId;
+      }
+
+      id = R.id.txtInputNombreAus;
+      TextInputLayout txtInputNombreAus = ViewBindings.findChildViewById(rootView, id);
+      if (txtInputNombreAus == null) {
+        break missingId;
+      }
+
+      id = R.id.txtInputNumeroInstitucional;
+      TextInputLayout txtInputNumeroInstitucional = ViewBindings.findChildViewById(rootView, id);
+      if (txtInputNumeroInstitucional == null) {
+        break missingId;
+      }
+
+      id = R.id.txtInputTrabajoEst;
+      TextInputLayout txtInputTrabajoEst = ViewBindings.findChildViewById(rootView, id);
+      if (txtInputTrabajoEst == null) {
+        break missingId;
+      }
+
       id = R.id.txtModalidad;
       TextView txtModalidad = ViewBindings.findChildViewById(rootView, id);
       if (txtModalidad == null) {
@@ -477,7 +585,10 @@ public final class ActivityRegistroCursoBinding implements ViewBinding {
           autocompleteTxt, autocompleteTxtHorario, bar, btnAplicarCurso, edtActividadInstitucion,
           edtComoSeEntero, edtCorreoInsti, edtCursosSeguir, edtDireccionInst, edtNombreAus,
           edtNumeroInstitucional, edtTrabajoEst, imgCurso, toolbar, txtApellidos, txtCedula,
-          txtCelular, txtCodCurso, txtCorreo, txtCursoNombre, txtEtnia, txtFechaNac, txtModalidad,
+          txtCelular, txtCodCurso, txtCorreo, txtCursoNombre, txtEtnia, txtFechaNac,
+          txtInputActividadInstitucion, txtInputAutocomplete, txtInputComoSeEntero,
+          txtInputCorreoInsti, txtInputCursosSeguir, txtInputDireccionInst, txtInputHorario,
+          txtInputNombreAus, txtInputNumeroInstitucional, txtInputTrabajoEst, txtModalidad,
           txtNivelInstruccion, txtNombres, txtSexo, txtTelConv, viewApellidos, viewCedula,
           viewCelular, viewCodigoCurso, viewCorreo, viewEtnia, viewFechaNac, viewModalidad,
           viewNivelInstruccion, viewNombres, viewSexo, viewTelfConv);

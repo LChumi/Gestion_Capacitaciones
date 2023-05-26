@@ -193,7 +193,17 @@ id txtEtniaD
 id txtFechaD
 id txtFechaNac
 id txtGeneroD
+id txtInputActividadInstitucion
+id txtInputAutocomplete
+id txtInputComoSeEntero
+id txtInputCorreoInsti
+id txtInputCursosSeguir
+id txtInputDireccionInst
+id txtInputHorario
+id txtInputNombreAus
+id txtInputNumeroInstitucional
 id txtInputPassword
+id txtInputTrabajoEst
 id txtInputUsuario
 id txtMensajeErr
 id txtMensajeOk
