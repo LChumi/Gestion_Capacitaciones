@@ -96,8 +96,7 @@ public class LoginActivity extends AppCompatActivity {
         long idRol = preferences.getLong("idRol", 0);
 
         if (!username.isEmpty() && !password.isEmpty() && idPer != 0 && idRol != 0) {
-            toastCorrecto("Inicio activo: " + password);
-            Log.i("ID", idPer + "|" + idRol);
+            toastCorrecto("Sesion Activa: ");
             inicio(idPer);
             overridePendingTransition(R.anim.left_in, R.anim.left_out);
         }
@@ -114,9 +113,8 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putString("pass", user.getUsu_password());
                     editor.putLong("idPer", user.getPer_id());
                     editor.putLong("idRol", user.getRol_id());
-                    Log.i("usuarioRol", user.getRol_id().toString());
                     editor.apply();
-                    toastCorrecto("Correcto" + user.getRol_id());
+                    toastCorrecto("Correcto");
                     inicio(user.getPer_id());
 
             } else {
@@ -149,22 +147,19 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putLong("idRol", usuario.getRol().getId_rol());
                     editor.apply();
                     toastCorrecto("Correcto");
-                    Log.i("Usuario entró a backend", response.body().toString());
 
                     DbPersona dbPersona = new DbPersona(LoginActivity.this);
                     DbUsuarios dbUsuarios = new DbUsuarios(LoginActivity.this);
                     PersonaDTO personaDTO = new PersonaDTO(usuario.getPersona());
-                    long perId = personaDTO.getPer_id();
-                    long usuId = usuario.getId_usuario();
-                    Log.i("rol", usuario.getRol().getDescripcion());
+                    Long perId = personaDTO.getPer_id();
+                    Long usuId = usuario.getId_usuario();
+
 
                     if (dbPersona.obtenerPersona(perId) == null && dbUsuarios.obtenerUsuario(usuId) == null) {
-                        long per = dbPersona.insertaPersona(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
-                        long us = dbUsuarios.insertaUsuario(username, password, perId, usuario.getRol().getId_rol());
-                        Log.i("insercion",usuario.getRol().getId_rol().toString());
+                        Long per = dbPersona.insertaPersona(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
+                        Long us = dbUsuarios.insertaUsuario(username, password, perId, usuario.getRol().getId_rol());
                         if (per > 0 && us > 0) {
-                            Toast.makeText(LoginActivity.this, "Datos guardados", Toast.LENGTH_LONG).show();
-                            Log.i("Guardado", perId + "|" + usuario.getRol().getDescripcion());
+                            Log.i("Exito","OK");
                         } else {
                             Toast.makeText(LoginActivity.this, "Error al guardar persona", Toast.LENGTH_LONG).show();
                             Log.e("Error", "No se guardó");
@@ -175,7 +170,6 @@ public class LoginActivity extends AppCompatActivity {
                             long us = dbUsuarios.actualizar(usuario.getId_usuario(), usuario.getUsername(), usuario.getPassword(), usuario.getPersona().getId_persona(), usuario.getRol().getId_rol());
                             if (per > 0 && us > 0) {
                                 Toast.makeText(LoginActivity.this, "sync", Toast.LENGTH_LONG).show();
-                                Log.i("sync", "Actualizado");
                             } else {
                                 Toast.makeText(LoginActivity.this, "Error al actualizar persona", Toast.LENGTH_LONG).show();
                                 Log.e("Error", "Actualización fallida");
@@ -277,10 +271,7 @@ public class LoginActivity extends AppCompatActivity {
             roles.add(new RolDTO(3L, "Admin", "Admin", true));
             for (RolDTO rol : roles) {
                 dbRol.insertarRol(rol.getId_rol(), rol.getRol_nombre(), rol.getDescripcion(), rol.getEnabled());
-                Log.i("Roles creados", rol.getDescripcion());
             }
-        } else {
-            Log.i("Roles ya existen", "Roles ya existen");
         }
     }
 }

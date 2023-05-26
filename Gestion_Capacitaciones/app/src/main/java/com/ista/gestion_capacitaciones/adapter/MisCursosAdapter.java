@@ -15,6 +15,8 @@
 
 package com.ista.gestion_capacitaciones.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +28,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ista.gestion_capacitaciones.R;
+import com.ista.gestion_capacitaciones.UI.DetalleCursoActivity;
 import com.ista.gestion_capacitaciones.model.Curso;
 import com.ista.gestion_capacitaciones.model.Participante;
 
@@ -82,8 +85,12 @@ public class MisCursosAdapter extends RecyclerView.Adapter<MisCursosAdapter.View
             txtNombreCurso.setText(p.getParCurso().getCurNombre());
             txtCurProceso.setText(p.getParEstadoaprovacion());
             btnAplicar.setText("Ingresar");
+
             btnAplicar.setOnClickListener(v -> {
-                // Código para registrar el curso
+                Context context= itemView.getContext();
+                Intent verCurso=new Intent(context, DetalleCursoActivity.class);
+                verCurso.putExtra("idCurso",p.getParCurso().getCurId());
+                context.startActivity(verCurso);
             });
         }
     }

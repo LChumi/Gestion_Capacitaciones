@@ -80,7 +80,6 @@ public class CursosDocenteAdapter extends RecyclerView.Adapter<CursosDocenteAdap
                 Curso curso = listaCursoDocente.get(getAdapterPosition());
                 Intent i = new Intent(context, Modalidadctivity.class);
                 i.putExtra("idCurso", curso.getCurId());
-                Log.i("curso",curso.getCurId().toString()+"|"+curso.getCurNombre());
                 context.startActivity(i);
             });
         }
@@ -89,8 +88,6 @@ public class CursosDocenteAdapter extends RecyclerView.Adapter<CursosDocenteAdap
             // Código para cargar la imagen en el ImageView
             txtNombreCurso.setTextSize(10);
             txtNombreCurso.setText(c.getCurNombre());
-
-
         }
     }
 }

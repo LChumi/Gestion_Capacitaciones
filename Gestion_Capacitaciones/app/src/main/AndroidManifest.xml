@@ -18,6 +18,9 @@
         android:theme="@style/Theme.Gestion_Capacitaciones"
         tools:targetApi="31">
         <activity
+            android:name=".UI.DetalleCursoActivity"
+            android:exported="false" />
+        <activity
             android:name=".UI.Modalidadctivity"
             android:exported="false" />
         <activity

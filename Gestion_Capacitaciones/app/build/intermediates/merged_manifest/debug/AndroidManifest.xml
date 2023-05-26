@@ -32,6 +32,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Gestion_Capacitaciones" >
         <activity
+            android:name="com.ista.gestion_capacitaciones.UI.DetalleCursoActivity"
+            android:exported="false" />
+        <activity
             android:name="com.ista.gestion_capacitaciones.UI.Modalidadctivity"
             android:exported="false" />
         <activity

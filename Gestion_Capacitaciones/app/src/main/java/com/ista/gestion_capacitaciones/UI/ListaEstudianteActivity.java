@@ -97,9 +97,6 @@ public class ListaEstudianteActivity extends AppCompatActivity {
                 adapter.updateItems(participantes);
                 participanteList=participantes;
                 numFaltas=adapter.getListaFaltas();
-                for(Participante p:participantes){
-                    Log.i("participante",p.toString());
-                }
             }else{
                 Toast.makeText(this, "No se encontraron participantes", Toast.LENGTH_SHORT).show();
             }

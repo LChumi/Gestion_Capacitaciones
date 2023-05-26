@@ -68,13 +68,10 @@ public class AsistenciaUtil {
             @Override
             public void onResponse(Call<Asistencia> call, Response<Asistencia> response) {
                 if (response.isSuccessful()) {
-                    Log.i("Datos", "Asistencia guardada correctamente: " + response.body());
-                    Log.i("aaaaa",String.valueOf(response.body().getAsiId()));
-                    Log.i("aaaa",p.toString());
                     asignarParticipanteAsistencia(response.body().getAsiId(),p.getParId());
 
                 } else {
-                    Log.i("Datos", "Error al guardar la asistencia. Código de error: " + response.code());
+                    Log.e("error", "Error al guardar la asistencia. Código de error: " + response.code());
                 }
             }
 

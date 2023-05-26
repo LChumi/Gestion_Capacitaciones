@@ -77,7 +77,6 @@ public class HorariosAdapter extends RecyclerView.Adapter<HorariosAdapter.ViewHo
                 Intent i = new Intent(itemView.getContext(), ListaEstudianteActivity.class);
                 i.putExtra("idHorario", idHorario); // Pasar el ID como extra en el Intent
                 i.putExtra("idCurso",idCurso);
-                Log.i("Dato",String.valueOf(idHorario)+"|"+String.valueOf(idCurso));
                 itemView.getContext().startActivity(i);
             });
         }

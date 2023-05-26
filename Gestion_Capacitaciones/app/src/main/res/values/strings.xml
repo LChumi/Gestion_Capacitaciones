@@ -37,8 +37,10 @@
     <string name="action_settings">Settings</string>
 
     <!-- tittles -->
+    <string name="Institucion">Instituto Tecnologico del Azuay</string>
     <string name="txtPerfil">Perfil</string>
     <string name="txtCursosD">Cursos</string>
+    <string name="ViewCurso">Mi Curso</string>
     <string name="txtPerfilD">Perfil de Usuario</string>
     <string name="txtTitleCursoPrograma">Cursos</string>
     <string name="txtTittle">Sistema de Gestion de Capacitaciones</string>
@@ -110,5 +112,8 @@
     <string name="ValueComoDescubrio">¿Como se entero del curso?</string>
     <string name="ValueNombreAuspicinate">Indique el nombre de Auspiciante</string>
     <string name="ValueCursosSeguir">¿Que otros cursos le gustaria seguir?</string>
-
+    <string name="valueFecha">dd-MM-yyy</string>
+    <string name="valueDatosSilabo">Datos silabo</string>
+    <string name="valueCurricular">Diseño curricular</string>
+    <string name="valueEspecialidad">Especialidad</string>
 </resources>

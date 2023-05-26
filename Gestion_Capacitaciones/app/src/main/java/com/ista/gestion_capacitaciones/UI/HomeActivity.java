@@ -101,13 +101,8 @@ public class HomeActivity extends AppCompatActivity {
         PersonaDTO personaDTO = dbPersona.obtenerPersona(personId);
 
         if (personaDTO != null){
-            Toast.makeText(HomeActivity.this, "Persona encontrada"+personaDTO.Datos()+personaDTO.getPer_correo()+personaDTO.getPer_apellidos(), Toast.LENGTH_LONG).show();
             txtNombre.setText(personaDTO.Datos());
             txtDesc.setText(personaDTO.getPer_correo());
-            Log.i(personaDTO.getPer_cedula(),"datos");
-            Log.i(personaDTO.getPer_apellidos(),"dato");
-            Log.i(personaDTO.getPer_correo(),"dato");
-
         }
     }
 

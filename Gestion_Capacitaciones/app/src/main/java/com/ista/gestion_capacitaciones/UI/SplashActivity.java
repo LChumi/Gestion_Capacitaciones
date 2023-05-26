@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.ista.gestion_capacitaciones.MainActivity;
@@ -37,7 +38,7 @@ public class SplashActivity extends AppCompatActivity {
         SqlConexion concexion =new SqlConexion(SplashActivity.this);
         SQLiteDatabase db = concexion.getWritableDatabase();
         if (db!=null){
-            Toast.makeText(SplashActivity.this," BASE DE DATOS CREADA ",Toast.LENGTH_LONG).show();
+            Log.i("OK","OK");
         }else {
             Toast.makeText(SplashActivity.this," NO SE PUDO CREAR ",Toast.LENGTH_LONG).show();
         }
