@@ -18,5 +18,7 @@ package com.ista.gestion_capacitaciones.constants;
 import java.net.URL;
 
 public class ApiUrls {
+
+    //public static fina String BASE_URL=http://direccion web o ip de servidor
     public static final String BASE_URL="http://10.0.2.2:8080/";
 }
