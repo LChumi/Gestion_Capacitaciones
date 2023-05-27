@@ -39,6 +39,8 @@ import com.ista.gestion_capacitaciones.model.HorarioCurso;
 import com.ista.gestion_capacitaciones.utils.RegistroUtil;
 import com.ista.gestion_capacitaciones.viewmodel.RegistroViewModel;
 
+import java.text.SimpleDateFormat;
+
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class RegistroCursoActivity extends AppCompatActivity {
@@ -178,7 +180,9 @@ public class RegistroCursoActivity extends AppCompatActivity {
                 txtSexo.setText(persona.getSexo());
                 txtTelConv.setText(persona.getTelefono());
                 txtNombres.setText(persona.getNombre());
-                txtFechaNac.setText(persona.getFecha_nacimiento().toString());
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy"); // Define el formato deseado
+                String fechaFormateada = dateFormat.format(persona.getFecha_nacimiento()); // Formatea la fecha
+                txtFechaNac.setText(fechaFormateada);
                 txtEtnia.setText(persona.getEtnia());
                 txtCedula.setText(persona.getCelular());
                 txtCorreo.setText(persona.getEmail());
