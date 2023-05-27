@@ -35,18 +35,23 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.ista.gestion_capacitaciones.MainActivity;
 import com.ista.gestion_capacitaciones.R;
+import com.ista.gestion_capacitaciones.api.clients.AuthCtrlApiClient;
 import com.ista.gestion_capacitaciones.api.clients.UsuariosApiClient;
 import com.ista.gestion_capacitaciones.db.DbPersona;
 import com.ista.gestion_capacitaciones.db.DbRol;
 import com.ista.gestion_capacitaciones.db.DbUsuarios;;
+import com.ista.gestion_capacitaciones.model.LoginRequest;
+import com.ista.gestion_capacitaciones.model.UserInfoResponse;
 import com.ista.gestion_capacitaciones.model.Usuario;
 import com.ista.gestion_capacitaciones.model.dto.PersonaDTO;
 import com.ista.gestion_capacitaciones.model.dto.RolDTO;
 import com.ista.gestion_capacitaciones.model.dto.UsuarioDTO;
+import com.ista.gestion_capacitaciones.security.JwtResponse;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -118,7 +123,6 @@ public class LoginActivity extends AppCompatActivity {
                     inicio(user.getPer_id());
 
             } else {
-                Log.e("mensaje", "Usuario no existe en la base de datos");
                 loginWithApi(username, password);
             }
         } catch (Exception e) {
@@ -128,16 +132,59 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-
+    private LoginRequest loginRequest;
+    private AuthCtrlApiClient authCtrlApiClient;
     private void loginWithApi(String username, String password) {
-        UsuariosApiClient usuariosApiClient = new UsuariosApiClient();
-        Call<Usuario> call = usuariosApiClient.login(username, password);
-
+         loginRequest=new LoginRequest(username, password);
+         authCtrlApiClient=new AuthCtrlApiClient();
+        Call<JwtResponse> call = authCtrlApiClient.generarToken(loginRequest);
+        call.enqueue(new Callback<JwtResponse>() {
+            @Override
+            public void onResponse(Call<JwtResponse> call, Response<JwtResponse> response) {
+                if (response.isSuccessful()) {
+                    JwtResponse jwtResponse = response.body();
+                    String token = jwtResponse.getToken();
+                    Log.i("token",token);
+                    signin(loginRequest);
+                } else {
+                    toastIncorrecto("Credenciales Invalidos");
+                    limpiar();
+                }
+            }
+            @Override
+            public void onFailure(Call<JwtResponse> call, Throwable t) {
+                toastIncorrecto("Se ha producido un error" + t.getMessage());
+                limpiar();
+            }
+        });
+    }
+    private void signin(LoginRequest loginRequest){
+        authCtrlApiClient=new AuthCtrlApiClient();
+        Call<UserInfoResponse> call1 = authCtrlApiClient.authenticateUser(loginRequest);
+        call1.enqueue(new Callback<UserInfoResponse>() {
+            @Override
+            public void onResponse(Call<UserInfoResponse> call, Response<UserInfoResponse> response) {
+                if (response.isSuccessful()){
+                    getUsuario(response.body().getId_usuario());
+                }else{
+                    toastIncorrecto("Credenciales Invalidas");
+                    limpiar();
+                }
+            }
+            @Override
+            public void onFailure(Call<UserInfoResponse> call, Throwable t) {
+                Log.e("ERROR",t.getMessage());
+            }
+        });
+    }
+    private void getUsuario(Long id){
+        UsuariosApiClient apiClient=new UsuariosApiClient();
+        Call<Usuario> call=apiClient.getById(id);
         call.enqueue(new Callback<Usuario>() {
             @Override
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                if (response.isSuccessful()) {
-                    Log.i("Usuario", "Existe usuario en API");
+                if (response.isSuccessful()){
+                    Log.i("Exito","Exito");
                     Usuario usuario = response.body();
                     Log.i("Usuario",usuario.toString());
                     SharedPreferences.Editor editor = preferences.edit();
@@ -153,11 +200,9 @@ public class LoginActivity extends AppCompatActivity {
                     PersonaDTO personaDTO = new PersonaDTO(usuario.getPersona());
                     Long perId = personaDTO.getPer_id();
                     Long usuId = usuario.getId_usuario();
-
-
                     if (dbPersona.obtenerPersona(perId) == null && dbUsuarios.obtenerUsuario(usuId) == null) {
                         Long per = dbPersona.insertaPersona(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
-                        Long us = dbUsuarios.insertaUsuario(username, password, perId, usuario.getRol().getId_rol());
+                        Long us = dbUsuarios.insertaUsuario(usuario.getUsername(), usuario.getPassword(), perId, usuario.getRol().getId_rol());
                         if (per > 0 && us > 0) {
                             Log.i("Exito","OK");
                         } else {
@@ -179,17 +224,19 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                     inicio(personaDTO.getPer_id());
+                }else {
+                    toastIncorrecto("Credenciales Invalidas");
+                    limpiar();
                 }
+
             }
 
             @Override
             public void onFailure(Call<Usuario> call, Throwable t) {
-                toastIncorrecto("Credenciales inválidas o problema de conexión");
-                limpiar();
-                Log.e("Error", t.getMessage());
             }
         });
     }
+
 
     private void regresar() {
         Intent regresar = new Intent(this, MainActivity.class);

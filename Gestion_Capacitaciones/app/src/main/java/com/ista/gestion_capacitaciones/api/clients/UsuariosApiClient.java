@@ -74,6 +74,9 @@ public class UsuariosApiClient {
     public Call<Usuario> login(String usernme,String password){
         return usuarioApi.login(usernme,password);
     }
+    public Call<Usuario> getById(Long id){
+        return usuarioApi.getById(id);
+    }
 
 
 }

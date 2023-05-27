@@ -51,6 +51,8 @@ public interface UsuarioApi {
     @GET("/usuarios/login/{username}/{password}")
     Call<Usuario> login(@Path("username") String username, @Path("password") String password);
 
+    @GET("/usuarios/buscar/{id}")
+    Call<Usuario> getById(@Path("id")Long id);
 
 
 }

@@ -18,11 +18,15 @@ package com.ista.gestion_capacitaciones.api.clients;
 import com.ista.gestion_capacitaciones.constants.ApiUrls;
 import com.ista.gestion_capacitaciones.interfaces.AuthCtrlApi;
 import com.ista.gestion_capacitaciones.model.LoginRequest;
+import com.ista.gestion_capacitaciones.model.UserInfoResponse;
+import com.ista.gestion_capacitaciones.security.JwtResponse;
 
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -45,7 +49,11 @@ public class AuthCtrlApiClient {
         authCtrlApi=retrofit.create(AuthCtrlApi.class);
     }
 
-    public Call<LoginRequest> authenticateUser(LoginRequest loginRequest){
+    public Call<UserInfoResponse> authenticateUser(LoginRequest loginRequest) {
         return authCtrlApi.authenticateUser(loginRequest);
+    }
+
+    public Call<JwtResponse> generarToken(LoginRequest loginRequest) {
+        return authCtrlApi.generarToken(loginRequest);
     }
 }

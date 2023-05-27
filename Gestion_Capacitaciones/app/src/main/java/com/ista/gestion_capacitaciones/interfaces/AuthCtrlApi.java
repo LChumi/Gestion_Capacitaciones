@@ -16,14 +16,22 @@
 package com.ista.gestion_capacitaciones.interfaces;
 
 import com.ista.gestion_capacitaciones.model.LoginRequest;
+import com.ista.gestion_capacitaciones.model.UserInfoResponse;
+import com.ista.gestion_capacitaciones.security.JwtResponse;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.Response;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
 
 public interface AuthCtrlApi {
 
     @POST("/api/auth/signin")
-    Call<LoginRequest> authenticateUser(@Body LoginRequest loginRequest);
+    Call<UserInfoResponse> authenticateUser(@Body LoginRequest loginRequest);
+
+    @POST("/api/auth/generate-token")
+    Call<JwtResponse> generarToken(@Body LoginRequest loginRequest);
+
 
 }
