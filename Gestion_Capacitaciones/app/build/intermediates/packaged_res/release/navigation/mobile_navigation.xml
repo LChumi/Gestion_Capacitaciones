@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*
+  ~ *  Created Luis Chumi on 23/5/23 9:38
+  ~ *  Copyright Ⓒ 2023. All rights reserved Ⓒ 2023 http://freefuninfo.com/
+  ~ *  Last modified: 18/5/23 23:55
+  ~ *
+  ~ *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  ~ *  except in compliance with the License. You may obtain a copy of the License at
+  ~ *  http://www.apache.org/licenses/LICENS... Unless required by applicable law or agreed to in writing, software
+  ~ *   distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+  ~ *   either express or implied. See the License for the specific language governing permissions and
+  ~ *   limitations under the License.
+  ~ */
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_inicio">
+
+    <fragment
+        android:id="@+id/nav_inicio"
+        android:name="com.ista.gestion_capacitaciones.UI.ui.inicio.InicioFragment"
+        android:label="@string/Inicio"
+        tools:layout="@layout/fragment_inicio" />
+
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.ista.gestion_capacitaciones.UI.ui.perfil.PerfilFragment"
+        android:label="@string/txtTittlePerfil"
+        tools:layout="@layout/fragment_perfil" />
+
+    <fragment
+        android:id="@+id/nav_misCursos"
+        android:name="com.ista.gestion_capacitaciones.UI.ui.misCursos.MisCursosFragment"
+            android:label="@string/txtTittleMiscuros"
+        tools:layout="@layout/fragment_miscursos" />
+</navigation>

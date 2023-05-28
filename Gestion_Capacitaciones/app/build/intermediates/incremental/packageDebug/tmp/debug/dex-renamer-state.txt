@@ -1,4 +1,4 @@
-#Sat May 27 19:42:21 ECT 2023
+#Sat May 27 20:09:33 ECT 2023
 base.0=C\:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex

@@ -190,40 +190,41 @@ public class LoginActivity extends AppCompatActivity {
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("username", usuario.getUsername());
                     editor.putString("pass", usuario.getPassword());
-                    editor.putLong("idPer", usuario.getPersona().getId_persona());
                     editor.putLong("idRol", usuario.getRol().getId_rol());
-                    editor.apply();
-                    toastCorrecto("Bienvenido");
-
-                    DbPersona dbPersona = new DbPersona(LoginActivity.this);
-                    DbUsuarios dbUsuarios = new DbUsuarios(LoginActivity.this);
-                    PersonaDTO personaDTO = new PersonaDTO(usuario.getPersona());
-                    Long perId = personaDTO.getPer_id();
-                    Long usuId = usuario.getId_usuario();
-                    if (dbPersona.obtenerPersona(perId) == null && dbUsuarios.obtenerUsuario(usuId) == null) {
-                        Long per = dbPersona.insertaPersona(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
-                        Long us = dbUsuarios.insertaUsuario(usuario.getUsername(), usuario.getPassword(), perId, usuario.getRol().getId_rol());
-                        if (per > 0 && us > 0) {
-                            Log.i("Exito","OK");
-                        } else {
-                            Toast.makeText(LoginActivity.this, "Error al guardar persona", Toast.LENGTH_LONG).show();
-                            Log.e("Error", "No se guardó");
-                        }
-                    } else {
-                        if (dbPersona.obtenerPersona(perId) != null && dbUsuarios.obtenerUsuario(usuId) != null) {
-                            long per = dbPersona.actualizar(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
-                            long us = dbUsuarios.actualizar(usuario.getId_usuario(), usuario.getUsername(), usuario.getPassword(), usuario.getPersona().getId_persona(), usuario.getRol().getId_rol());
+                    if (usuario.getPersona()!=null){
+                        editor.putLong("idPer", usuario.getPersona().getId_persona());
+                        DbPersona dbPersona = new DbPersona(LoginActivity.this);
+                        DbUsuarios dbUsuarios = new DbUsuarios(LoginActivity.this);
+                        PersonaDTO personaDTO = new PersonaDTO(usuario.getPersona());
+                        Long perId = personaDTO.getPer_id();
+                        Long usuId = usuario.getId_usuario();
+                        if (dbPersona.obtenerPersona(perId) == null && dbUsuarios.obtenerUsuario(usuId) == null) {
+                            Long per = dbPersona.insertaPersona(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
+                            Long us = dbUsuarios.insertaUsuario(usuario.getUsername(), usuario.getPassword(), perId, usuario.getRol().getId_rol());
                             if (per > 0 && us > 0) {
-                                Toast.makeText(LoginActivity.this, "sync", Toast.LENGTH_LONG).show();
+                                Log.i("Exito","OK");
                             } else {
-                                Toast.makeText(LoginActivity.this, "Error al actualizar persona", Toast.LENGTH_LONG).show();
-                                Log.e("Error", "Actualización fallida");
+                                Toast.makeText(LoginActivity.this, "Error al guardar persona", Toast.LENGTH_LONG).show();
+                                Log.e("Error", "No se guardó");
                             }
                         } else {
-                            Toast.makeText(LoginActivity.this, "Usuario no existe", Toast.LENGTH_LONG).show();
+                            if (dbPersona.obtenerPersona(perId) != null && dbUsuarios.obtenerUsuario(usuId) != null) {
+                                long per = dbPersona.actualizar(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
+                                long us = dbUsuarios.actualizar(usuario.getId_usuario(), usuario.getUsername(), usuario.getPassword(), usuario.getPersona().getId_persona(), usuario.getRol().getId_rol());
+                                if (per > 0 && us > 0) {
+                                    Toast.makeText(LoginActivity.this, "sync", Toast.LENGTH_LONG).show();
+                                } else {
+                                    Toast.makeText(LoginActivity.this, "Error al actualizar persona", Toast.LENGTH_LONG).show();
+                                    Log.e("Error", "Actualización fallida");
+                                }
+                            } else {
+                                Toast.makeText(LoginActivity.this, "Usuario no existe", Toast.LENGTH_LONG).show();
+                            }
                         }
+                        inicio(personaDTO.getPer_id());
                     }
-                    inicio(personaDTO.getPer_id());
+                    editor.apply();
+                    toastCorrecto("Bienvenido");
                 }else {
                     toastIncorrecto("Credenciales Invalidas");
                     limpiar();
