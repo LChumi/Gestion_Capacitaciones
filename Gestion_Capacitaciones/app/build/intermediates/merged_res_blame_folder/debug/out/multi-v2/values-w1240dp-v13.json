@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.ista.gestion_capacitaciones.app-mergeDebugResources-50:/values-w1240dp-v13/values-w1240dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\luisc\\Documents\\GitHub\\Gestion_Capacitaciones\\Gestion_Capacitaciones\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
+                    "from": {
+                        "startLines": "16",
+                        "startColumns": "4",
+                        "startOffsets": "779",
+                        "endColumns": "42",
+                        "endOffsets": "817"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "42",
+                        "endOffsets": "93"
+                    }
+                }
+            ]
+        }
+    ]
+}
