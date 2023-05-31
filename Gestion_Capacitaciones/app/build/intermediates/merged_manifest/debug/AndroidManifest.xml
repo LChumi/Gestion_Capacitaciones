@@ -30,7 +30,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.Gestion_Capacitaciones" >
+        android:theme="@style/Theme.Gestion_Capacitaciones"
+        android:usesCleartextTraffic="true" >
         <activity
             android:name="com.ista.gestion_capacitaciones.UI.DetalleCursoActivity"
             android:exported="false" />

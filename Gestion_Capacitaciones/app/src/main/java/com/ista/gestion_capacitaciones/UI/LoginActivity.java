@@ -41,6 +41,7 @@ import com.ista.gestion_capacitaciones.db.DbPersona;
 import com.ista.gestion_capacitaciones.db.DbRol;
 import com.ista.gestion_capacitaciones.db.DbUsuarios;;
 import com.ista.gestion_capacitaciones.model.LoginRequest;
+import com.ista.gestion_capacitaciones.model.Persona;
 import com.ista.gestion_capacitaciones.model.UserInfoResponse;
 import com.ista.gestion_capacitaciones.model.Usuario;
 import com.ista.gestion_capacitaciones.model.dto.PersonaDTO;
@@ -49,6 +50,7 @@ import com.ista.gestion_capacitaciones.model.dto.UsuarioDTO;
 import com.ista.gestion_capacitaciones.security.JwtResponse;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import okhttp3.ResponseBody;
@@ -145,7 +147,7 @@ public class LoginActivity extends AppCompatActivity {
                     JwtResponse jwtResponse = response.body();
                     String token = jwtResponse.getToken();
                     Log.i("token",token);
-                    signin(loginRequest);
+                    signin(loginRequest,password);
                 } else {
                     toastIncorrecto("Credenciales Invalidos");
                     limpiar();
@@ -158,14 +160,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-    private void signin(LoginRequest loginRequest){
+    private void signin(LoginRequest loginRequest,String password){
         authCtrlApiClient=new AuthCtrlApiClient();
         Call<UserInfoResponse> call1 = authCtrlApiClient.authenticateUser(loginRequest);
         call1.enqueue(new Callback<UserInfoResponse>() {
             @Override
             public void onResponse(Call<UserInfoResponse> call, Response<UserInfoResponse> response) {
                 if (response.isSuccessful()){
-                    getUsuario(response.body().getId_usuario());
+                    getUsuario(response.body().getId_usuario(),password);
                 }else{
                     toastIncorrecto("Credenciales Invalidas");
                     limpiar();
@@ -177,7 +179,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-    private void getUsuario(Long id){
+    private void getUsuario(Long id,String password){
         UsuariosApiClient apiClient=new UsuariosApiClient();
         Call<Usuario> call=apiClient.getById(id);
         call.enqueue(new Callback<Usuario>() {
@@ -191,40 +193,53 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putString("username", usuario.getUsername());
                     editor.putString("pass", usuario.getPassword());
                     editor.putLong("idRol", usuario.getRol().getId_rol());
-                    if (usuario.getPersona()!=null){
+                    Persona p=new Persona();
+                    if (usuario.getPersona()==null){
+                        p.setId_persona(0l);
+                        p.setCedula("9999999999");
+                        p.setNombre("Super");
+                        p.setApellido("Admin");
+                        p.setFecha_nacimiento(new Date());
+                        p.setEmail("info@tecazuay.edu.ec");
+                        p.setTelefono("0995363076");
+                        p.setEnabled(true);
+                        editor.putLong("idPer",p.getId_persona());
+                    }else{
                         editor.putLong("idPer", usuario.getPersona().getId_persona());
-                        DbPersona dbPersona = new DbPersona(LoginActivity.this);
-                        DbUsuarios dbUsuarios = new DbUsuarios(LoginActivity.this);
-                        PersonaDTO personaDTO = new PersonaDTO(usuario.getPersona());
-                        Long perId = personaDTO.getPer_id();
-                        Long usuId = usuario.getId_usuario();
-                        if (dbPersona.obtenerPersona(perId) == null && dbUsuarios.obtenerUsuario(usuId) == null) {
-                            Long per = dbPersona.insertaPersona(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
-                            Long us = dbUsuarios.insertaUsuario(usuario.getUsername(), usuario.getPassword(), perId, usuario.getRol().getId_rol());
+                    }
+                    editor.apply();
+                    toastCorrecto("Bienvenido");
+
+                    DbPersona dbPersona = new DbPersona(LoginActivity.this);
+                    DbUsuarios dbUsuarios = new DbUsuarios(LoginActivity.this);
+                    PersonaDTO personaDTO;
+                    if (usuario.getPersona()==null){
+                        personaDTO=new PersonaDTO(p);
+                    }else{
+                        personaDTO = new PersonaDTO(usuario.getPersona());
+                    }
+                    Long usuId = usuario.getId_usuario();
+
+                    if (dbPersona.obtenerPersona(personaDTO.getPer_id()) == null && dbUsuarios.obtenerUsuario(usuId) == null) {
+                            Long per = dbPersona.insertaPersona(personaDTO.getPer_id(), personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
+                            Long us = dbUsuarios.insertaUsuario(usuario.getUsername(), password, personaDTO.getPer_id(), usuario.getRol().getId_rol());
                             if (per > 0 && us > 0) {
                                 Log.i("Exito","OK");
                             } else {
                                 Toast.makeText(LoginActivity.this, "Error al guardar persona", Toast.LENGTH_LONG).show();
                                 Log.e("Error", "No se guardó");
                             }
-                        } else {
-                            if (dbPersona.obtenerPersona(perId) != null && dbUsuarios.obtenerUsuario(usuId) != null) {
-                                long per = dbPersona.actualizar(perId, personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
-                                long us = dbUsuarios.actualizar(usuario.getId_usuario(), usuario.getUsername(), usuario.getPassword(), usuario.getPersona().getId_persona(), usuario.getRol().getId_rol());
+                    } else {
+                                long per = dbPersona.actualizar(personaDTO.getPer_id(), personaDTO.getPer_cedula(), personaDTO.getPer_nombres(), personaDTO.getPer_apellidos(), personaDTO.getPer_fechaNacimiento(), personaDTO.getPer_correo(), personaDTO.isPer_estado());
+                                long us = dbUsuarios.actualizar(usuario.getId_usuario(), usuario.getUsername(), password, usuario.getPersona().getId_persona(), usuario.getRol().getId_rol());
                                 if (per > 0 && us > 0) {
                                     Toast.makeText(LoginActivity.this, "sync", Toast.LENGTH_LONG).show();
                                 } else {
                                     Toast.makeText(LoginActivity.this, "Error al actualizar persona", Toast.LENGTH_LONG).show();
                                     Log.e("Error", "Actualización fallida");
                                 }
-                            } else {
-                                Toast.makeText(LoginActivity.this, "Usuario no existe", Toast.LENGTH_LONG).show();
-                            }
-                        }
-                        inicio(personaDTO.getPer_id());
                     }
-                    editor.apply();
-                    toastCorrecto("Bienvenido");
+                    inicio(personaDTO.getPer_id());
                 }else {
                     toastIncorrecto("Credenciales Invalidas");
                     limpiar();
@@ -314,9 +329,10 @@ public class LoginActivity extends AppCompatActivity {
         if (dbRol.obtenerLista().isEmpty()) {
             // Insertar los roles en la base de datos
             List<RolDTO> roles = new ArrayList<>();
-            roles.add(new RolDTO(1L, "Participante", "Participante", true));
-            roles.add(new RolDTO(2L, "Docente", "Docente", true));
-            roles.add(new RolDTO(3L, "Admin", "Admin", true));
+            roles.add(new RolDTO(1L, "ROLE_PARTICIPANTE", "Participante", true));
+            roles.add(new RolDTO(2L, "ROLE_DOCENTE", "Docente", true));
+            roles.add(new RolDTO(3L, "ROLE_ADMIN", "Admin", true));
+            roles.add(new RolDTO(4L,"ROLE_SUPADMIN","Supadmin",true));
             for (RolDTO rol : roles) {
                 dbRol.insertarRol(rol.getId_rol(), rol.getRol_nombre(), rol.getDescripcion(), rol.getEnabled());
             }

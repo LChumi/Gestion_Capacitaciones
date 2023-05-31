@@ -426,6 +426,7 @@
                                             android:fontFamily="@font/san_francisco"
                                             android:hint="@string/valueNroTelefonoInstitucion"
                                             android:textSize="14dp"
+                                            android:maxLength="10"
                                             android:inputType="number"/>
                                     </com.google.android.material.textfield.TextInputLayout>
                                     <com.google.android.material.textfield.TextInputLayout

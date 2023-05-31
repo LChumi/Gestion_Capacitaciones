@@ -19,6 +19,6 @@ import java.net.URL;
 
 public class ApiUrls {
 
-    public static final String BASE_URL="http://165.22.182.237:8080/";
+    public static final String BASE_URL="http://24.199.80.124:8080/";
     //public static final String BASE_URL="http://10.0.2.2:8080/";
 }

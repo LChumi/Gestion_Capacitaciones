@@ -25,7 +25,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.util.Patterns;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -66,7 +69,25 @@ public class RegistroCursoActivity extends AppCompatActivity {
         init();
         initViewModel();
         loadData();
+        edtCorreoInstitucional.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String email = s.toString();
+                if (isValidEmail(email)) {
+                    txtInputCorreoInstitucional.setError(null); // Elimina el mensaje de error si es válido
+                } else {
+                    txtInputCorreoInstitucional.setError("Correo electrónico no válido"); // Muestra el mensaje de error si no es válido
+                }
+            }
+        });
     }
 
     private void initViewModel() {
@@ -190,7 +211,6 @@ public class RegistroCursoActivity extends AppCompatActivity {
             }
         });
 
-
         btnAplicar.setOnClickListener(v -> {
             if (validar()) {
                 ProgressDialog progressDialog = ProgressDialog.show(this, "", "Registrando curso...", true);
@@ -276,6 +296,10 @@ public class RegistroCursoActivity extends AppCompatActivity {
         }
 
         return estado;
+    }
+
+    private boolean isValidEmail(CharSequence email) {
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
 }
